@@ -3,6 +3,9 @@ func = {}
 func[view_sample] = {
 	[target_sample] = function()
 		dlog("运行了func[view_sample][target_sample]...")
+	end,
+	[target_default] = function()
+		dlog("运行了func[view_sample][target_default]...")
 	end
 }
 

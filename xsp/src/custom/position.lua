@@ -38,7 +38,11 @@ function scale_init()
 end
 
 function do_scale(E)
-	E.anchor 	= (E.body or R.area) and (E.anchor or {0,0})	--有body或area时anchor默认居中
+--	E.anchor 	= (E.body or R.area) and (E.anchor or {0,0})	--有body或area时anchor默认居中
+	E.anchor	= E.anchor or (E.body and {0,0})
+	E.anchor	= E.anchor or (E.area and {0,0})
+	E.anchor	= E.anchor or (E.from and {0,0})
+	E.anchor	= E.anchor or (E.to and {0,0})
 	E.pivot		= E.pivot or E.anchor							--pivot默认与anchor相同
 	
 	E.body		= E.body and zoom_area(E.body,E.anchor,E.pivot)
@@ -46,6 +50,7 @@ function do_scale(E)
 	E.from		= E.from and zoom_area(E.from,E,anchor,E.pivot)	
 	E.to		= E.to   and zoom_area(E.to,E,anchor,E.pivot)
 	E.feature		= E.feature		and zoom_feature(E.feature)
+	E.disable		= E.disable		and zoom_feature(E.disable)
 	E.feature_off	= E.feature_off	and zoom_feature(E.feature_off)
 	E.items	= E.items and (function()
 		for i,v in ipairs(E.items) do
@@ -96,7 +101,7 @@ function zoom_feature(feature)
 	return feature
 end
 
---变换position
+--变换position，由于单点的中心等于自身，所以无需pivot
 --外部参数为pos.ds pos.cs
 function zoom_pos(x,y,anchor)
 	local dev_anchor = {}

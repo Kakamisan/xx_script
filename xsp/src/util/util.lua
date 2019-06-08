@@ -64,28 +64,26 @@ function in_table(E,t)
 end
 
 --timeout(function,args...)			首参数为函数
---timeout(count,function,args...)	首参数为超时计数，直到function返回真为止执行最多count次
+--timeout(opt,function,args...)		首参数为超时选项，直到function返回真为止执行最多count次，每次等待time毫秒
 function timeout(T,F,...)
 	if type(T) == "function" then
-		return timeout(timeout_count_default,T,F,...)
+		return timeout(timeout_opt_default,T,F,...)
 	end
+	assert(type(T)=="table")
 	assert(type(F)=="function")
+	T.count = T.count or timeout_opt_default.count
+	T.sleep = T.sleep or timeout_opt_default.sleep
 	local ret = F(...)
 	if ret then
 		return ret
 	end
-	if T <= 1 then
+	if T.count <= 1 then
 		dlog("timeout")
 		return false
 	end
-	mSleep(sleep_time_timeout)
-	return timeout(T-1,F,...)
-end
-
---set_ts(time_sleep)		设置timeout内的休眠时间
-function set_ts(Ts)
-	assert(type(Ts) == "number")
-	sleep_time_timeout = Ts
+	mSleep(T.sleep)
+	T.count = T.count - 1
+	return timeout(T,F,...)
 end
 
 -------------------------------button---------------------------------
@@ -243,6 +241,13 @@ function in_view(name)
 			end
 		end
 	end
+	if view[name].disable and #(view[name].disable) ~= 0 then
+		for i,v in ipairs(view[name].disable) do
+			if check_feature(pos.cs, {v}, view[name].degree or 100) then
+				return false
+			end
+		end
+	end
 	return true
 end
 
@@ -257,15 +262,14 @@ function check_view()
 end
 
 function update_view()
-	set_ts(400)
-	local v = timeout(check_view)
+	local v = timeout({sleep = 400},check_view)
 	if v then
 		state.view = v
 		return true
 	end
 	dlog("更新view超时，重新检测全部view")
 	state.view = 0
-	local v = timeout(1,check_view)
+	local v = timeout({count = 1},check_view)
 	if v then
 		state.view = v
 		return true

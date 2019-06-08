@@ -20,6 +20,7 @@ function check_feature(area,feature,degree)
 end
 
 --check_feature_pos(E)
+--查找item用
 function check_feature_pos(area,feature,degree)
 	if not degree then
 		return check_feature_pos(area.area or pos.cs,area.feature,area.degree or 100)
@@ -33,9 +34,10 @@ function check_feature_pos(area,feature,degree)
 end
 
 --check_feature_poss(E)
+--查找items用
 function check_feature_poss(area,feature,degree)
 	if not degree then
-		return check_feature_pos(area.area or pos.cs,area.feature,area.degree or 100)
+		return check_feature_poss(area.area or pos.cs,area.feature,area.degree or 100)
 	end
 	assert(feature)
 	local mp = findColors(area,feature,degree)
