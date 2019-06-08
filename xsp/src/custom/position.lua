@@ -1,7 +1,7 @@
 local pos = {}
 
 pos.rotate			= 1								--参考init的说明
-pos.dw,pos.dh		= 540,960						--开发环境分辨率(需按自适应UI的基准比例开发)
+pos.dw,pos.dh		= 720,1280						--开发环境分辨率(需按自适应UI的基准比例开发)
 pos.cw,pos.ch 		= getScreenSize()				--当前设备分辨率
 
 pos.dx,pos.dy		= (function()					--开发环境下横轴坐标最大值
@@ -29,12 +29,20 @@ init("0",pos.rotate)								--按rotate初始化脚本
 ----------------------------------坐标自适应函数----------------------------------------
 
 function scale_init()
-	local list = {btn,item,sld,switch,text,view}	--需要适配分辨率的物件种类列表
+	local list = {btn,item,sld,swc,text,view}	--需要适配分辨率的物件种类列表
 	for i,v in ipairs(list) do
 		for k,E in pairs(v) do
 			E = do_scale(E)							--对每个物件执行
+			v[k] = E
 		end
+		list[i] = v
 	end
+	btn = list[1]
+	item = list[2]
+	sld = list[3]
+	swc = list[4]
+	text = list[5]
+	view = list[6]
 end
 
 function do_scale(E)
