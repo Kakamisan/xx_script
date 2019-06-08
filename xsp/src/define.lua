@@ -1,4 +1,5 @@
 btn_sample		= 1
+btn_back_any	= 1		--默认的返回键按钮位置
 
 item_sample		= 1
 
@@ -23,6 +24,7 @@ view_bt_moving		= 11	--战斗中-赶路到下一波
 view_bt_over		= 12	--战斗中-总结算界面
 view_stop_repeat	= 13	--选择是否停止反复战斗
 view_ctn_mission	= 14	--主页-继续远征
+view_player_info	= 15	--主页-玩家信息
 
 
 target_default	= 0		--默认target

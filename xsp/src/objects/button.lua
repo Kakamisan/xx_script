@@ -12,4 +12,9 @@ btn[btn_sample]	= {
 	view		= {view_sample}		--按钮所在界面（可多个界面同一按钮，例 返回键）
 }
 
+btn[btn_back_any] = {
+	body = {10,30,108,63},
+	anchor = {-1,-1}
+}
+
 return btn
