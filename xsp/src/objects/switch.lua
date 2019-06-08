@@ -1,4 +1,4 @@
-local swc
+local swc = {}
 
 swc[swc_sample]	= {
 	body		= {30,30,70,70},	--有效点击区域
