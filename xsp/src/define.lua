@@ -8,6 +8,7 @@ swc_sample		= 1
 
 text_sample		= 1
 
+view_sample			= 1		--示例
 view_home			= 1		--主页
 view_slc_dg_type	= 2		--选择副本类型：每日，主线，活动等
 view_slc_dg_main	= 3		--选择主线副本，6-8，5-8e等
@@ -25,7 +26,7 @@ view_ctn_mission	= 14	--主页-继续远征
 
 
 target_default	= 0		--默认target
-target_sample	= 1
+target_sample	= 1		--示例
 
 
 

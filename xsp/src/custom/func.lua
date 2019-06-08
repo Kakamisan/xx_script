@@ -19,4 +19,10 @@ function func_default()
 	dlog("运行了func_default")
 end
 
+func[view_home] = {
+	[target_default] = function()
+		dlog("主页。。。")
+	end
+}
+
 return func

@@ -12,4 +12,21 @@ view[view_sample]	= {
 	}
 }
 
+view[view_home] = {
+	feature = {
+		{x=0+48,y=0+251,color=0x2fa2e0,anchor={-1,0}},
+		{x=-13+48,y=153+251,color=0x20d7f7,anchor={-1,0}},
+		{x=22+48,y=217+251,color=0xffffff,anchor={-1,0}},
+		{x=1212+48,y=-207+251,color=0xf1f9fc,anchor={1,0}},
+		{x=1004+48,y=260+251,color=0x45413a,anchor={1,0}},
+		{x=1019+48,y=260+251,color=0x45413a,anchor={1,0}}
+	}
+}
+
+view[view_slc_dg_type] = {
+	feature = {
+		
+	}
+}
+
 return view

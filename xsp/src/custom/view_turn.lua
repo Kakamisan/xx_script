@@ -1,6 +1,11 @@
 local vt = {}
 
-vt[0] 				= {view_sample}
-vt[view_sample] 	= {view_sample}
+vt[0] = {
+	1
+}
+
+vt[view_home] 	= {
+	view_home
+}
 
 return vt
