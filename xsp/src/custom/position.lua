@@ -46,9 +46,9 @@ function do_scale(E)
 	E.pivot		= E.pivot or E.anchor							--pivot默认与anchor相同
 	
 	E.body		= E.body and zoom_area(E.body,E.anchor,E.pivot)
-	E.area		= E.area and zoom_area(E.area,E,anchor,E.pivot)
-	E.from		= E.from and zoom_area(E.from,E,anchor,E.pivot)	
-	E.to		= E.to   and zoom_area(E.to,E,anchor,E.pivot)
+	E.area		= E.area and zoom_area(E.area,E.anchor,E.pivot)
+	E.from		= E.from and zoom_area(E.from,E.anchor,E.pivot)	
+	E.to		= E.to   and zoom_area(E.to,E.anchor,E.pivot)
 	E.feature		= E.feature		and zoom_feature(E.feature)
 	E.disable		= E.disable		and zoom_feature(E.disable)
 	E.feature_off	= E.feature_off	and zoom_feature(E.feature_off)

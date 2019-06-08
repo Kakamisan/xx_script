@@ -1,4 +1,4 @@
-local sld
+local sld = {}
 
 sld[sld_sample]	= {
 	from		= {0,0,10,10},			--起点区域
