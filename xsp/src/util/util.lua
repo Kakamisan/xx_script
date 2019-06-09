@@ -275,14 +275,14 @@ function check_view()
 end
 
 function update_view()
-	local v = timeout({sleep = 100,count = 50},check_view)
+	local v = timeout(timeout_opt_update_view1,check_view)
 	if v then
 		state.view = v
 		return true
 	end
 	dlog("更新view超时，重新检测全部view")
 	state.view = 0
-	local v = timeout({sleep = 200,count = 25},check_view)
+	local v = timeout(timeout_opt_update_view2,check_view)
 	if v then
 		state.view = v
 		return true
