@@ -188,11 +188,11 @@ function swc_on(name,check)
 		dlog("界面不符 swc.name = ",name)
 		return false
 	end
-	if check_feature(swc[name].feature) then
+	if check_feature(swc[name]) then
 		dlog("已经开启 swc.name = ",name)
 		return true
 	end
-	if swc[name].feature_off and check_feature(swc[name].feature_off) then
+	if swc[name].feature_off and check_feature(swc[name].area,swc[name].feature_off,swc[name].degree or 100) then
 		dlog("特征不符 swc.name = ",name)
 		return false
 	end
@@ -206,11 +206,11 @@ function swc_off(name)
 		dlog("界面不符 swc.name = ",name)
 		return false
 	end
-	if check_feature(swc[name].feature_off) then
+	if check_feature(swc[name].area,swc[name].feature_off,swc[name].degree or 100) then
 		dlog("已经关闭 swc.name = ",name)
 		return true
 	end
-	if check_feature(swc[name].feature) then
+	if check_feature(swc[name]) then
 		dlog("特征不符 swc.name = ",name)
 		return false
 	end
