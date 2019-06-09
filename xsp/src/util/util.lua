@@ -67,7 +67,7 @@ end
 --timeout(opt,function,args...)		首参数为超时选项，直到function返回真为止执行最多count次，每次等待time毫秒
 function timeout(T,F,...)
 	if type(T) == "function" then
-		return timeout(timeout_opt_default,T,F,...)
+		return timeout({count = timeout_opt_default.count,sleep = timeout_opt_default.sleep},T,F,...)
 	end
 	assert(type(T)=="table")
 	assert(type(F)=="function")
@@ -275,14 +275,14 @@ function check_view()
 end
 
 function update_view()
-	local v = timeout(timeout_opt_update_view1,check_view)
+	local v = timeout({count = timeout_opt_update_view1.count,sleep = timeout_opt_update_view1.sleep},check_view)
 	if v then
 		state.view = v
 		return true
 	end
 	dlog("更新view超时，重新检测全部view")
 	state.view = 0
-	local v = timeout(timeout_opt_update_view2,check_view)
+	local v = timeout({count = timeout_opt_update_view2.count,sleep = timeout_opt_update_view2.sleep},check_view)
 	if v then
 		state.view = v
 		return true
