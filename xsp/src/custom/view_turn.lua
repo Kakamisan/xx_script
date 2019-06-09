@@ -32,7 +32,6 @@ vt[view_slc_team] = {
 	view_slc_team
 	,view_slc_dg_main
 	,view_sys_online
-	,view_bt_moving
 	,view_bt_playing2
 	,view_bt_slc_acn
 --	,view_bt_playing
@@ -67,7 +66,6 @@ vt[view_bt_report] = {
 	,view_bt_waiting
 	,view_bt_get_waifu
 	,view_bt_next
-	,view_bt_moving
 	,view_bt_over
 	,view_stop_repeat
 }
@@ -77,7 +75,6 @@ vt[view_bt_waiting] = {
 	view_bt_waiting
 	,view_bt_get_waifu
 	,view_bt_next
-	,view_bt_moving
 	,view_bt_over
 	,view_stop_repeat
 }
@@ -87,14 +84,12 @@ vt[view_bt_get_waifu] = {
 	view_bt_get_waifu
 	,view_bt_waiting
 	,view_bt_next
-	,view_bt_moving
 	,view_bt_over
 }
 
 --11--战斗中-下一波
 vt[view_bt_next] = {
 	view_bt_next
-	,view_bt_moving
 	,view_bt_slc_acn
 	,view_bt_playing2
 }
@@ -103,7 +98,6 @@ vt[view_bt_next] = {
 vt[view_bt_moving] = {
 	view_bt_playing2
 	,view_bt_slc_acn
-	,view_bt_moving
 }
 
 --13--战斗中-总结算界面
@@ -118,7 +112,6 @@ vt[view_stop_repeat] = {
 	view_stop_repeat
 	,view_slc_team
 	,view_sys_online
-	,view_bt_moving
 	,view_bt_playing2
 	,view_bt_slc_acn
 }
@@ -138,7 +131,6 @@ vt[view_player_info] = {
 --17--载入
 vt[view_sys_online] = {
 	view_sys_online
-	,view_bt_moving
 	,view_bt_playing2
 	,view_bt_slc_acn
 }
