@@ -6,14 +6,17 @@ require "custom.init"
 
 function main_loop()
 	
+	if state.target ~= target_wait then
 	update_view()
 	
 	dlog("view = "
-	,to_view_desc(state.view)
+	,to_view_desc[state.view]
 	," target = "
-	,to_target_desc(state.target)
+	,to_target_desc[state.target]
 	," alarm = "
-	,floor((state.alarm - mTime()) / 1000))
+	,math.floor((state.alarm - mTime()) / 1000))
+	
+	end
 	
 	run()
 	

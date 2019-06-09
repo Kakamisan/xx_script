@@ -65,4 +65,11 @@ btn[btn_stop_repeat] = {
 	view = {view_stop_repeat}
 }
 
+--10--
+btn[btn_enter_bt] = {
+	body = {1050,647,1244,681},
+	view = {view_slc_team}
+}
+
+
 return btn

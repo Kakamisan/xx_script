@@ -521,7 +521,7 @@ swc[swc_mission_open1] = {
 	feature = {
 		{x=0,y=0,color=0xff7800}
 	},
-	degree = 95,
+	degree = 98,
 	view = {view_home}
 }
 
@@ -531,7 +531,7 @@ swc[swc_mission_open2] = {
 	feature = {
 		{x=0,y=0,color=0x71e500}
 	},
-	degree = 95,
+	degree = 98,
 	view = {view_home}
 }
 

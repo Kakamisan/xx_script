@@ -8,6 +8,7 @@ btn_ctn_mission	= 6		--继续远征
 btn_back_info	= 7		--个人信息的返回键
 btn_check_fb_state=8	--进入副本详情
 btn_stop_repeat	= 9		--停止反复刷图
+btn_enter_bt	= 10	--进入战斗
 
 
 
@@ -48,7 +49,7 @@ swc_fb_4b		= 18	--主线副本4b
 swc_fb_5b		= 19	--主线副本5b
 swc_fb_6b		= 20	--主线副本6b
 swc_fb_7b		= 21	--主线副本7b
-swc_fb_8e		= 22	--主线副本8b
+swc_fb_8b		= 22	--主线副本8b
 
 swc_fb_1e		= 23	--主线副本1e
 swc_fb_2e		= 24	--主线副本2e
@@ -105,6 +106,25 @@ view_ctn_mission	= 15	--主页-继续远征
 view_player_info	= 16	--主页-玩家信息
 
 
+to_view_desc = {
+	[0] = "默认"
+	,[view_home] = "主页"
+	,[view_slc_dg_type] = "副本类型"
+	,[view_slc_dg_main] = "主线副本"
+	,[view_slc_team] = "选择队伍"
+	,[view_bt_slc_acn] = "战斗中-选择行动"
+	,[view_bt_playing] = "战斗中-播报中-下面是绿色点"
+	,[view_bt_playing2] = "战斗中-播报中-下面是蓝色点"
+	,[view_bt_report] = "战斗中-战斗经验结算"
+	,[view_bt_waiting] = "战斗中-打捞老婆"
+	,[view_bt_get_waifu] = "战斗中-捞到老婆"
+	,[view_bt_next] = "战斗中-下一波"
+	,[view_bt_moving] = "战斗中-赶路到下一波"
+	,[view_bt_over] = "战斗中-总结算界面"
+	,[view_stop_repeat] = "是否停止反复战斗"
+	,[view_ctn_mission] = "主页-继续远征"
+	,[view_player_info] = "主页-玩家信息"
+}
 
 
 
@@ -116,7 +136,14 @@ target_atk		= 3		--主线出击
 target_mission	= 4		--远征
 target_reback	= 5		--分解
 
-
+to_target_desc = {
+	[0] = "默认"
+	,[target_wait] = "等待"
+	,[target_back] = "返回主页"
+	,[target_atk] = "主线出击"
+	,[target_mission] = "远征"
+	,[target_reback] = "分解"
+}
 
 
 
@@ -131,6 +158,7 @@ fmain_test		= 5		--测试坐标模式
 
 fextra_mission	= 0		--自动远征
 fextra_reback	= 1		--自动分解
+
 
 
 --------------------------------------default--------------------------------------

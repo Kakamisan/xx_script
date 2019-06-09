@@ -52,7 +52,7 @@ func[view_slc_dg_type] = {
 
 func[view_slc_dg_main] = {
 	[target_atk] = function()
-		timeout(click_sub_fb)
+		click_sub_fb()
 	end,
 	[target_default] = function()
 		click_btn(btn_back_any)
@@ -62,7 +62,9 @@ func[view_slc_dg_main] = {
 func[view_slc_team] = {
 	[target_atk] = function()
 		if check_mission_slc_team() then return true end
-		timeout(slc_team)
+		if slc_team() then
+			click_btn(btn_enter_bt)
+		end
 	end,
 	[target_default] = function()
 		click_btn(btn_back_any)
@@ -158,7 +160,7 @@ handle_change_target = {
 	[target_default] = function()
 		if can_to_target_atk() then return true end
 		if can_to_target_mission() then return true end
-		state.target = target_wait
+		state.target = target_back
 	end,
 	[target_wait] = function()
 		
@@ -175,7 +177,7 @@ handle_change_target = {
 	[target_reback] = function()
 		if can_to_target_mission() then return true end
 		if can_to_target_atk() then return true end
-		state.target = target_wait
+		state.target = target_back
 	end,
 }
 
@@ -284,7 +286,7 @@ handle_stop_repeat = {
 		if state.alarm < mTime() then
 			can_to_target_reback()
 			can_to_target_mission()
-			state.alarm = mTime() + max(cfg.alarm,9000)*1000
+			state.alarm = mTime() + math.max(cfg.alarm,9000)*1000
 		end
 	end,
 	[fmain_mission] = function()

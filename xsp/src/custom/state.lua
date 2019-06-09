@@ -10,6 +10,6 @@ state.alarm			= 0		--定时闹钟时间戳
 
 
 
-state.alarm = mTime() + max(cfg.alarm,9000)*1000	--最小9000秒，即2.5小时
+state.alarm = mTime() + math.max(cfg.alarm,9000)*1000	--最小9000秒，即2.5小时
 
 return state
