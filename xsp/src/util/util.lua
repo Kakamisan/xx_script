@@ -86,6 +86,19 @@ function timeout(T,F,...)
 	return timeout(T,F,...)
 end
 
+--返回复选框某项是否选择选择
+--复选框的格式是 0@1@3@4 代表选中了第0 1 3 4个选项
+--不要超过10个选项在一起
+function slc(FuncStr,Pos)
+	return string.find(FuncStr,Pos)
+end
+
+--返回删除某功能后的字符串
+function dc(FuncStr,Pos)
+	local ret,temp = string.gsub(FuncStr,Pos,"@")
+	return ret
+end
+
 -------------------------------button---------------------------------
 function click_btn(name)
 	assert(btn[name])
@@ -169,7 +182,7 @@ function drag(name)
 end
 
 -------------------------------switch--------------------------------
-function swc_on(name)
+function swc_on(name,check)
 	assert(swc[name])
 	if swc[name].view and #(swc[name].view) ~= 0 and not in_table(state.view, swc[name].view) then
 		dlog("界面不符 swc.name = ",name)
@@ -179,11 +192,11 @@ function swc_on(name)
 		dlog("已经开启 swc.name = ",name)
 		return true
 	end
-	if check_feature(swc[name].feature_off) then
+	if swc[name].feature_off and check_feature(swc[name].feature_off) then
 		dlog("特征不符 swc.name = ",name)
 		return false
 	end
-	click(swc[name].body)
+	if not check then click(swc[name].body) end
 	return false
 end
 
@@ -262,19 +275,19 @@ function check_view()
 end
 
 function update_view()
-	local v = timeout({sleep = 400},check_view)
+	local v = timeout({sleep = 100,count = 50},check_view)
 	if v then
 		state.view = v
 		return true
 	end
 	dlog("更新view超时，重新检测全部view")
 	state.view = 0
-	local v = timeout({count = 1},check_view)
+	local v = timeout({sleep = 200,count = 25},check_view)
 	if v then
 		state.view = v
 		return true
 	end
 	dlog("未检测到view，将执行默认操作：点击返回")
-	click_btn(btn_back_any)	--默认操作
+--	click_btn(btn_back_any)	--默认操作
 	return false
 end
