@@ -104,6 +104,7 @@ view_bt_over		= 13	--战斗中-总结算界面
 view_stop_repeat	= 14	--选择是否停止反复战斗
 view_ctn_mission	= 15	--主页-继续远征
 view_player_info	= 16	--主页-玩家信息
+view_sys_online		= 17	--载入
 
 
 to_view_desc = {
@@ -124,6 +125,7 @@ to_view_desc = {
 	,[view_stop_repeat] = "是否停止反复战斗"
 	,[view_ctn_mission] = "主页-继续远征"
 	,[view_player_info] = "主页-玩家信息"
+	,[view_sys_online] = "载入"
 }
 
 
@@ -170,11 +172,11 @@ timeout_opt_default	= {
 }
 
 timeout_opt_update_view1 = {
-	count = 10
+	count = 16
 	,sleep = 500
 }
 
 timeout_opt_update_view2 = {
-	count = 5
+	count = 8
 	,sleep = 1000
 }

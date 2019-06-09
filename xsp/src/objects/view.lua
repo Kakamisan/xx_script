@@ -207,4 +207,15 @@ view[view_player_info] = {
 	degree = 98
 }
 
+--17--载入
+view[view_sys_online] = {
+	feature = {
+	{x=0+682,y=0+348,color=0xffa756},
+	{x=38+682,y=0+348,color=0xffa857},
+	{x=77+682,y=0+348,color=0xffa857},
+	{x=-523+682,y=334+348,color=0xefb502},
+	{x=-429+682,y=346+348,color=0xe1a100}
+	},
+	degree = 98
+}
 return view

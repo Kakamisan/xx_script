@@ -73,6 +73,7 @@ function timeout(T,F,...)
 	assert(type(F)=="function")
 	T.count = T.count or timeout_opt_default.count
 	T.sleep = T.sleep or timeout_opt_default.sleep
+	dlog("count = ",T.count," sleep = ",T.sleep)
 	local ret = F(...)
 	if ret then
 		return ret

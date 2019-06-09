@@ -31,6 +31,7 @@ vt[view_slc_dg_main] = {
 vt[view_slc_team] = {
 	view_slc_team
 	,view_slc_dg_main
+	,view_sys_online
 	,view_bt_moving
 	,view_bt_playing2
 	,view_bt_slc_acn
@@ -55,6 +56,9 @@ vt[view_bt_playing2] = {
 	view_bt_playing2
 	,view_bt_report
 	,view_bt_slc_acn
+	,view_stop_repeat
+	,view_bt_waiting
+	,view_bt_over
 }
 
 --8--战斗中-战斗经验结算
@@ -65,6 +69,7 @@ vt[view_bt_report] = {
 	,view_bt_next
 	,view_bt_moving
 	,view_bt_over
+	,view_stop_repeat
 }
 
 --9--战斗中-打捞老婆
@@ -74,6 +79,7 @@ vt[view_bt_waiting] = {
 	,view_bt_next
 	,view_bt_moving
 	,view_bt_over
+	,view_stop_repeat
 }
 
 --10--战斗中-捞到老婆
@@ -111,6 +117,7 @@ vt[view_bt_over] = {
 vt[view_stop_repeat] = {
 	view_stop_repeat
 	,view_slc_team
+	,view_sys_online
 	,view_bt_moving
 	,view_bt_playing2
 	,view_bt_slc_acn
@@ -126,6 +133,14 @@ vt[view_ctn_mission] = {
 vt[view_player_info] = {
 	view_player_info
 	,view_home
+}
+
+--17--载入
+vt[view_sys_online] = {
+	view_sys_online
+	,view_bt_moving
+	,view_bt_playing2
+	,view_bt_slc_acn
 }
 
 return vt
