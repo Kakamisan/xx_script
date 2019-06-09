@@ -1,12 +1,20 @@
 {
-	"style" : "default",
-	"config" : "save_km_xx.dat",
-	"width" : 960,
-	"height" : 540,
-	"cancelscroll" : true,
-	"countdown" : 10,
-	"cancelname" : "取消",
-	"okname" : "确定",
-	"views" : [
-	]
+   "style" : "default",
+   "config" : "save_km_xx.dat",
+   "width" : 960,
+   "height" : 540,
+   "cancelscroll" : true,
+   "countdown" : 0,
+   "cancelname" : "取消",
+   "okname" : "确定",
+   "views" : [
+      {
+         "align" : "left",
+         "color" : "0,0,0",
+         "size" : 20,
+         "text" : "这个分辨率的UI还没写",
+         "bg" : "",
+         "type" : "Label"
+      }
+   ]
 }

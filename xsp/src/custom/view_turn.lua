@@ -24,6 +24,7 @@ vt[view_slc_dg_main] = {
 	view_slc_dg_main
 	,view_slc_team
 	,view_home
+	,view_ctn_mission
 }
 
 --4--选择队伍，队伍1，队伍5等
