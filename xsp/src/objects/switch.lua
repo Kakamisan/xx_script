@@ -535,4 +535,51 @@ swc[swc_mission_open2] = {
 	view = {view_home}
 }
 
+swc[swc_reback_ss] = {
+	body = {1297,207,1343,234},
+	area = {1347,203,1352,211},
+	feature = {
+		{x=0,y=0,color=0xffcc00}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x504f53}
+	},
+	view = {view_reback_waifu}
+}
+
+swc[swc_reback_s] = {
+	body = {1375,211,1417,234},
+	area = {1416,206,1422,216},
+	feature = {
+		{x=0,y=0,color=0xffcc00}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x504f53}
+	},
+	view = {view_reback_waifu}
+}
+
+swc[swc_reback_a] = {
+	body = {1299,274,1343,296},
+	area = {1341,269,1350,283},
+	feature = {
+		{x=0,y=0,color=0xffcc00}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x504f53}
+	},
+	view = {view_reback_waifu}
+}
+
+swc[swc_reback_b] = {
+	body = {1376,271,1420,297},
+	area = {1418,269,1426,280},
+	feature = {
+		{x=0,y=0,color=0xffcc00}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x504f53}
+	},
+	view = {view_reback_waifu}
+}
 return swc

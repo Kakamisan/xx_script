@@ -9,6 +9,14 @@ btn_back_info	= 7		--个人信息的返回键
 btn_check_fb_state=8	--进入副本详情
 btn_stop_repeat	= 9		--停止反复刷图
 btn_enter_bt	= 10	--进入战斗
+btn_start_turn	= 11	--开始回合
+btn_enter_reback= 12	--主页-进入分解
+btn_to_reback	= 13	--转到分解中心
+btn_reback_start= 14	--开始分解
+btn_reback_enter= 15	--分解中心进入老婆分解
+btn_reback_slc_ok=16	--老婆分解-确定选择
+btn_ack1		= 17	--通用弹窗-左取消右确定-点确定（分解二次确认）
+btn_ack_get		= 18	--分解得资源-点确定
 
 
 
@@ -16,6 +24,9 @@ item_sample			= 1
 item_mission_over	= 1		--停止反复战斗-远征完成
 item_mission_over2	= 2		--主页-远征完成
 item_mission_over3	= 3		--选择队伍-远征完成
+item_A_waifu		= 4		--A级老婆
+item_B_waifu		= 5		--B级老婆
+item_reback_scroll	= 6		--分解滚动条
 
 
 
@@ -74,12 +85,19 @@ swc_repeat		= 38	--选择队伍-反复战斗
 swc_mission_open1= 39	--主页-远征-橙色
 swc_mission_open2= 40	--主页-远征-绿色
 
+swc_reback_ss	= 41	--分解-筛选ss
+swc_reback_s	= 42	--分解-筛选s
+swc_reback_a	= 43	--分解-筛选a
+swc_reback_b	= 44	--分解-筛选b
 
 
 
 
 
-text_sample		= 1
+
+
+text_sample			= 1
+text_reback_gain	= 1		--分解获得资源数
 
 
 
@@ -105,6 +123,15 @@ view_stop_repeat	= 14	--选择是否停止反复战斗
 view_ctn_mission	= 15	--主页-继续远征
 view_player_info	= 16	--主页-玩家信息
 view_sys_online		= 17	--载入
+view_bt_enemy_acn	= 18	--战斗中-敌方行动
+view_creator		= 19	--建造中心
+view_reback			= 20	--分解中心
+view_reback_waifu	= 21	--老婆分解
+view_reback_waifu_al= 22	--老婆分解-分A级以上弹窗警告
+view_reback_waifu_ac= 23	--老婆分解-确定分解
+view_reback_get		= 24	--老婆分解-获得物品
+
+
 
 
 to_view_desc = {
@@ -126,6 +153,13 @@ to_view_desc = {
 	,[view_ctn_mission] = "主页-继续远征"
 	,[view_player_info] = "主页-玩家信息"
 	,[view_sys_online] = "载入"
+	,[view_bt_enemy_acn] = "战斗中-敌方行动"
+	,[view_creator] = "建造中心"
+	,[view_reback] = "分解中心"
+	,[view_reback_waifu] = "老婆分解"
+	,[view_reback_waifu_al] = "老婆分解-分A级以上弹窗警告"
+	,[view_reback_waifu_ac] = "老婆分解-确定分解"
+	,[view_reback_get] = "老婆分解-获得物品"
 }
 
 
@@ -161,6 +195,12 @@ fmain_test		= 5		--测试坐标模式
 fextra_mission	= 0		--自动远征
 fextra_reback	= 1		--自动分解
 
+
+
+freback_A_waifu	= 0		--A级老婆
+freback_B_waifu	= 1		--B级老婆
+--freback_A_eqm	= 2		--A级装备
+--freback_B_eqm	= 3		--B级装备
 
 
 --------------------------------------default--------------------------------------

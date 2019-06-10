@@ -9,4 +9,11 @@ text[text_sample]	= {
 	view			= {view_sample}		--所在界面
 }
 
+text[text_reback_gain] = {
+	area = {309,251,403,297},
+	white_list = "1234567890",
+	diff = {"0xe7e7e7-0x444444"},
+	view = {view_reback}
+}
+
 return text

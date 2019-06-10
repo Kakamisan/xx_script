@@ -218,4 +218,93 @@ view[view_sys_online] = {
 	},
 	degree = 98
 }
+
+--18--战斗中-敌方行动
+view[view_bt_enemy_acn] = {
+	feature = {
+	{x=0+12,y=0+26,color=0xffffff},
+	{x=1391+12,y=2+26,color=0xffcb00},
+	{x=1243+12,y=-5+26,color=0xffce00},
+	{x=1363+12,y=87+26,color=0x92f213},
+	{x=1029+12,y=512+26,color=0x21f7ff}
+	},
+	degree = 98
+}
+
+--19--建造中心
+view[view_creator] = {
+	feature = {
+	{x=0+30,y=0+47,color=0x232323},
+	{x=90+30,y=-25+47,color=0xffcc00},
+	{x=1402+30,y=59+47,color=0xffcc00},
+	{x=887+30,y=4+47,color=0x5aeffc},
+	{x=793+30,y=-25+47,color=0x9ed24b},
+	{x=891+30,y=-16+47,color=0x15eaff}
+	},
+	degree = 98
+}
+
+--20--分解中心
+view[view_reback] = {
+	feature = {
+	{x=0+28,y=0+46,color=0x232323},
+	{x=92+28,y=-23+46,color=0xffcc00},
+	{x=794+28,y=-14+46,color=0x3f392e},
+	{x=266+28,y=333+46,color=0x20d7f7},
+	{x=1402+28,y=445+46,color=0xffcc00},
+	{x=274+28,y=565+46,color=0x59e1f8}
+	},
+	degree = 98
+}
+
+--21--老婆分解
+view[view_reback_waifu] = {
+	feature = {
+	{x=0+28,y=0+47,color=0x000000},
+	{x=1262+28,y=81+47,color=0xffcc00},
+	{x=1397+28,y=659+47,color=0xffc900},
+	{x=7+28,y=356+47,color=0x20d7f7},
+	{x=441+28,y=16+47,color=0x9e9e9e}
+	},
+	degree = 98
+}
+
+--22--老婆分解-分A级以上弹窗警告
+view[view_reback_waifu_al] = {
+	feature = {
+	{x=0+28,y=0+45,color=0x000000},
+	{x=510+28,y=511+45,color=0xff6700},
+	{x=711+28,y=534+45,color=0xfec700},
+	{x=872+28,y=486+45,color=0xfecd00},
+	{x=7+28,y=358+45,color=0x106b7b}
+	},
+	degree = 98
+}
+
+--23--老婆分解-确定分解
+view[view_reback_waifu_ac] = {
+	feature = {
+	{x=0+29,y=0+46,color=0x111111},
+	{x=161+29,y=81+46,color=0xb6b6c7},
+	{x=540+29,y=496+46,color=0xff6200},
+	{x=739+29,y=494+46,color=0xffcc00},
+	{x=1398+29,y=450+46,color=0x7f6600},
+	{x=273+29,y=565+46,color=0x2c707c}
+	},
+	degree = 98
+}
+
+--24--老婆分解-获得物品
+view[view_reback_get] = {
+	feature = {
+	{x=0+28,y=0+47,color=0x111111},
+	{x=371+28,y=34+47,color=0xb6b6c7},
+	{x=612+28,y=562+47,color=0xfdc705},
+	{x=774+28,y=534+47,color=0xfeca01},
+	{x=810+28,y=185+47,color=0xfdffff},
+	{x=1163+28,y=616+47,color=0x7c6202}
+	},
+	degree = 98
+}
+
 return view

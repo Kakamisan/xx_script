@@ -612,7 +612,7 @@
             },
             {
                "id" : "reback",
-               "list" : "A级狗粮,B级狗粮,A级装备,B级装备",
+               "list" : "A级狗粮,B级狗粮",
                "select" : "0@2",
                "size" : 30,
                "type" : "CheckBoxGroup",

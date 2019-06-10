@@ -34,6 +34,7 @@ vt[view_slc_team] = {
 	,view_sys_online
 	,view_bt_playing2
 	,view_bt_slc_acn
+	,view_bt_enemy_acn
 --	,view_bt_playing
 }
 
@@ -47,6 +48,7 @@ vt[view_bt_slc_acn] = {
 vt[view_bt_playing] = {
 	view_bt_playing
 	,view_bt_slc_acn
+	,view_bt_enemy_acn
 	,view_bt_report
 }
 
@@ -91,6 +93,7 @@ vt[view_bt_get_waifu] = {
 vt[view_bt_next] = {
 	view_bt_next
 	,view_bt_slc_acn
+	,view_bt_enemy_acn
 	,view_bt_playing2
 }
 
@@ -98,6 +101,7 @@ vt[view_bt_next] = {
 vt[view_bt_moving] = {
 	view_bt_playing2
 	,view_bt_slc_acn
+	,view_bt_enemy_acn
 }
 
 --13--战斗中-总结算界面
@@ -114,6 +118,7 @@ vt[view_stop_repeat] = {
 	,view_sys_online
 	,view_bt_playing2
 	,view_bt_slc_acn
+	,view_bt_enemy_acn
 }
 
 --15--主页-继续远征
@@ -135,4 +140,51 @@ vt[view_sys_online] = {
 	,view_bt_slc_acn
 }
 
+--18--
+vt[view_bt_enemy_acn] = {
+	view_bt_enemy_acn
+	,view_bt_playing2
+	,view_bt_playing
+}
+
+--19--
+vt[view_creator] = {
+	view_creator
+	,view_reback
+	,view_home
+}
+
+--20--
+vt[view_reback] = {
+	view_reback
+	,view_reback_waifu
+	,view_reback_waifu_ac
+	,view_home
+	,view_ctn_mission
+}
+
+--21--
+vt[view_reback_waifu] = {
+	view_reback_waifu
+	,view_reback_waifu_al
+	,view_reback
+}
+
+--22--
+vt[view_reback_waifu_al] = {
+	view_reback_waifu_al
+	,view_reback
+}
+
+--23--
+vt[view_reback_waifu_ac] = {
+	view_reback_waifu_ac
+	,view_reback_get
+}
+
+--24--
+vt[view_reback_get] = {
+	view_reback_get
+	,view_reback
+}
 return vt

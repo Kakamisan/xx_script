@@ -34,7 +34,7 @@ func[view_home] = {
 		if ret then change_target() end
 	end,
 	[target_reback] = function()
-		dlog("主页-分解-还没写。。。")
+		click_btn(btn_enter_reback)
 	end,
 	[target_default] = function()
 		change_target()
@@ -80,12 +80,14 @@ func[view_bt_slc_acn] = {
 func[view_bt_playing] = {
 	[target_default] = function()
 		--do nothing
+		do_get_in_battle()
 	end
 }
 
 func[view_bt_playing2] = {
 	[target_default] = function()
 		--do nothing
+		do_get_in_battle()
 	end
 }
 
@@ -149,6 +151,65 @@ func[view_player_info] = {
 	end
 }
 
+func[view_bt_enemy_acn] = {
+	[target_default] = function()
+		click_btn(btn_start_turn)
+	end
+}
+
+func[view_creator] = {
+	[target_reback] = function()
+		click_btn(btn_to_reback)
+	end,
+	[target_default] = function()
+		click_btn(btn_back_any)
+	end
+}
+
+reback_just_now = false
+func[view_reback] = {
+	[target_reback] = function()
+		if handle_reback() then
+			reback_just_now = true
+			if can_to_target_mission() then return true end
+			if can_to_target_atk() then return true end
+			state.target = target_back
+		end
+	end,
+	[target_default] = function()
+		click_btn(btn_back_any)
+	end
+}
+
+func[view_reback_waifu] = {
+	[target_reback] = function()
+		if reback_waifu_slc() then
+			had_reback = true
+			click_btn(btn_reback_slc_ok)
+		end
+	end,
+	[target_default] = function()
+		click_btn(btn_back_any)
+	end
+}
+
+func[view_reback_waifu_al] = {
+	[target_default] = function()
+		click_btn(btn_ack1)
+	end
+}
+
+func[view_reback_waifu_ac] = {
+	[target_default] = function()
+		click_btn(btn_ack1)
+	end
+}
+
+func[view_reback_get] = {
+	[target_default] = function()
+		click_btn(btn_ack_get)
+	end
+}
 
 --------------------------------sub function--------------------------------
 
@@ -277,16 +338,26 @@ function stop_repeat()
 		handle_stop_repeat[default]()
 	end
 end
+stop_repeat_auto_count = 0
+had_do_stop_repeat = false
 handle_stop_repeat = {
 	[default] = function() end,
 	[fmain_auto] = function()
-		if find_item(item_mission_over) then can_to_target_mission() end
+		if not had_do_stop_repeat and find_item(item_mission_over) then
+			had_do_stop_repeat = true
+			if math.random(1,10) > 3 or stop_repeat_auto_count >= cfg.misscnt then
+				stop_repeat_auto_count = 0
+				can_to_target_mission()
+			else
+				stop_repeat_auto_count = stop_repeat_auto_count + 1
+			end
+		end
 	end,
 	[fmain_alarm] = function()
 		if state.alarm < mTime() then
-			can_to_target_reback()
-			can_to_target_mission()
 			state.alarm = mTime() + math.max(cfg.alarm,9000)*1000
+			if can_to_target_reback() then return true end
+			if can_to_target_mission() then return true end
 		end
 	end,
 	[fmain_mission] = function()
@@ -316,6 +387,70 @@ function check_mission_slc_team()
 	return false
 end
 
+had_reback = false
+function handle_reback()
+	local txt = get_text(text_reback_gain)
+	if not txt then return false end
+	txt = string.gsub(txt,"%s","")
+	txt = tonumber(txt)
+	if txt > 0 then
+		click_btn(btn_reback_start)
+		return false
+	end
+	if not had_reback then
+		click_btn(btn_reback_enter)
+		return false
+	end
+	had_reback = false
+	return true
+end
+
+function reback_waifu_slc()
+	if not swc_off(swc_reback_ss) then return false end
+	if not swc_off(swc_reback_s) then return false end
+	if slc(cfg.reback,freback_A_waifu) then
+		if not swc_on(swc_reback_a) then return false end
+	else
+		if not swc_off(swc_reback_a) then return false end
+	end
+	if slc(cfg.reback,freback_B_waifu) then
+		if not swc_on(swc_reback_b) then return false end
+	else
+		if not swc_off(swc_reback_b) then return false end
+	end
+	if slc(cfg.reback,freback_A_waifu) then
+		if find_item(item_A_waifu) then
+			click_item(item_A_waifu)
+			sleep(80,133)
+			click_item(item_A_waifu)
+			return false
+		end
+	end
+	if slc(cfg.reback,freback_B_waifu) then
+		if find_item(item_B_waifu) then
+			click_item(item_B_waifu)
+			sleep(80,133)
+			click_item(item_B_waifu)
+			return false
+		end
+	end
+	if find_item(item_reback_scroll) then
+		click_item(item_reback_scroll)
+		return false
+	end
+	return true
+end
+
+
+--进入战斗之后调整一些状态值
+function do_get_in_battle()
+	reback_just_now = false
+	had_do_stop_repeat = false
+end
+
+
+
+
 
 function can_to_target_mission()
 	if slc(cfg.extra,fextra_mission) then 
@@ -334,7 +469,7 @@ function can_to_target_atk()
 end
 
 function can_to_target_reback()
-	if slc(cfg.extra,fextra_reback) then 
+	if slc(cfg.extra,fextra_reback) and (slc(cfg.reback,freback_A_waifu) or slc(cfg.reback,freback_B_waifu)) then 
 		state.target = target_reback
 		return true
 	end

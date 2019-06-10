@@ -71,5 +71,50 @@ btn[btn_enter_bt] = {
 	view = {view_slc_team}
 }
 
+--11--
+btn[btn_start_turn] = {
+	body = {1309,386,1380,453},
+	view = {view_bt_slc_acn,view_bt_enemy_acn}
+}
 
+--12--
+btn[btn_enter_reback] = {
+	body = {1199,260,1269,311},
+	view = {view_home}
+}
+
+--13--
+btn[btn_to_reback] = {
+	body = {1330,493,1419,533},
+	view = {view_creator}
+}
+
+--14--
+btn[btn_reback_start] = {
+	body = {1049,645,1165,683},
+	view = {view_reback}
+}
+
+--15--
+btn[btn_reback_enter] = {
+	body = {477,159,545,267},
+	view = {view_reback}
+}
+
+--16--
+btn[btn_reback_slc_ok] = {
+	body = {1344,672,1418,704},
+	view = {view_reback_waifu}
+}
+
+--17--
+btn[btn_ack1] = {
+	body = {765,539,864,571}
+}
+
+--18--
+btn[btn_ack_get] = {
+	body = {668,583,766,620},
+	view = {view_reback_get}
+}
 return btn

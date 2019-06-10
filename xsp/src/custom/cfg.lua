@@ -9,5 +9,6 @@ cfg.subfb	= tonumber(cfg.subfb) + 1
 cfg.team	= tonumber(cfg.team) + 1
 cfg.main	= tonumber(cfg.main) + 1
 cfg.alarm	= tonumber(cfg.alarm)
+cfg.misscnt = tonumber(cfg.misscnt)
 
 return cfg
