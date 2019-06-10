@@ -47,7 +47,7 @@ view[view_slc_dg_main] = {
 		{x=1277+1+80,y=648+31,color=0xfdc705,anchor={0,0}},
 		{x=205+1+80,y=579+31,color=0x8cffff,anchor={0,0}}
 	},
-	degree = 98
+	degree = 95
 }
 
 --4--选择队伍，队伍1，队伍5等
@@ -116,7 +116,9 @@ view[view_bt_waiting] = {
 	{x=0+19,y=0+18,color=0xfdfdfd},
 	{x=1247+19,y=7+18,color=0xffce00},
 	{x=1384+19,y=9+18,color=0xffcb00},
-	{x=1322+19,y=6+18,color=0xffcc00}
+	{x=1322+19,y=6+18,color=0xffcc00},
+--	{x=1049,y=371,color=0xffb833},
+	{x=1244,y=47,color=0xfbc300}
 	},
 	degree = 98,
 	disable = {

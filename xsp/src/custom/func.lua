@@ -73,7 +73,7 @@ func[view_slc_team] = {
 
 func[view_bt_slc_acn] = {
 	[target_default] = function()
-		--do something
+		init_action()
 	end
 }
 
