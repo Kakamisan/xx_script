@@ -1,8 +1,10 @@
 local vt = {}
 
 vt[0] = {
-	1,2,3,4,5,6,7,8,9,10
+	1,2,3,4,5,6,7,8,10
 	,11,12,13,14,15,16
+	
+	,9
 }
 --1--主页
 vt[view_home] = {
@@ -42,6 +44,7 @@ vt[view_slc_team] = {
 vt[view_bt_slc_acn] = {
 	view_bt_slc_acn
 	,view_bt_playing
+	,view_bt_quit
 }
 
 --6--战斗中-播报中-下面是绿色点
@@ -56,37 +59,38 @@ vt[view_bt_playing] = {
 vt[view_bt_playing2] = {
 	view_bt_playing2
 	,view_bt_report
+	,view_bt_enemy_acn
 	,view_bt_slc_acn
 	,view_stop_repeat
-	,view_bt_waiting
 	,view_bt_over
+	,view_bt_waiting
 }
 
 --8--战斗中-战斗经验结算
 vt[view_bt_report] = {
 	view_bt_report
-	,view_bt_waiting
 	,view_bt_get_waifu
 	,view_bt_next
 	,view_bt_over
 	,view_stop_repeat
+	,view_bt_waiting
 }
 
 --9--战斗中-打捞老婆
 vt[view_bt_waiting] = {
-	view_bt_waiting
-	,view_bt_get_waifu
+	view_bt_get_waifu
 	,view_bt_next
 	,view_bt_over
 	,view_stop_repeat
+	,view_bt_waiting
 }
 
 --10--战斗中-捞到老婆
 vt[view_bt_get_waifu] = {
 	view_bt_get_waifu
-	,view_bt_waiting
 	,view_bt_next
 	,view_bt_over
+	,view_bt_waiting
 }
 
 --11--战斗中-下一波
@@ -186,5 +190,11 @@ vt[view_reback_waifu_ac] = {
 vt[view_reback_get] = {
 	view_reback_get
 	,view_reback
+}
+
+--25--
+vt[view_bt_quit] = {
+	view_bt_quit
+	,view_slc_team
 }
 return vt

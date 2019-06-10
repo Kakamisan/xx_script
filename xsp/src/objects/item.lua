@@ -75,4 +75,86 @@ item[item_reback_scroll] = {
 	degree = 98
 }
 
+item[item_move_reset] = {
+	body = {809-821,641-618,836-821,668-618},
+	area = {3,615,970,691},
+	feature = {
+	{x=0,y=0,color=0xffffff},
+	{x=1,y=27,color=0x000000},
+	{x=6,y=30,color=0x000000},
+	{x=0,y=38,color=0x000000},
+	{x=0,y=44,color=0x000000},
+	{x=-23,y=32,color=0xffffff},
+	{x=5,y=60,color=0xffffff},
+	{x=21,y=23,color=0xffffff}
+	},
+	degree = 98
+}
+
+item[item_turn_end] = {
+	area = {991,334,1404,502},
+	feature = {
+	{x=0,y=0,color=0xffc300},
+	{x=11,y=0,color=0xfdc100},
+	{x=-5,y=15,color=0xffc300},
+	{x=6,y=15,color=0xffc300},
+	{x=33,y=1,color=0xffc300},
+	{x=43,y=1,color=0xffc300},
+	{x=33,y=15,color=0xffc300},
+	{x=71,y=0,color=0xffc300},
+	{x=60,y=16,color=0xffc300},
+	{x=71,y=16,color=0xffc300},
+	{x=97,y=4,color=0xffc300},
+	{x=109,y=1,color=0xffc300},
+	{x=97,y=16,color=0xffc300},
+	{x=127,y=16,color=0xffc300},
+	{x=141,y=0,color=0xffc300},
+	{x=138,y=13,color=0xffc300}
+	},
+	degree = 99
+}
+
+item[item_target_self] = {
+	body = {531-483,254-225,554-483,281-225},
+	area = {9,5,716,713},
+	feature = {
+	{x=0,y=0,color=0xffa72b},
+	{x=131,y=75,color=0xffa72b},
+	{x=95,y=104,color=0xff9c29},
+	{x=22,y=101,color=0xffac2a},
+	{x=-12,y=41,color=0xffa826},
+	{x=108,y=-26,color=0xffac2a},
+	{x=41,y=104,color=0xffa529}
+	},
+	degree = 99
+}
+
+item[item_target_enemy] = {
+	body = {777-779,95-102,789-779,106-102},
+	area = {699,41,1421,559},
+	feature = {
+	{x=0,y=0,color=0xff404e},
+	{x=1,y=0,color=0xff404e},
+	{x=2,y=0,color=0xff404e},
+	{x=3,y=0,color=0xff404e},
+	{x=1,y=1,color=0xff3b53},
+	{x=2,y=1,color=0xff3b53}
+	},
+	degree = 99
+}
+
+item[item_target_friend] = {
+	body = {559-559,166-183,570-559,182-183},
+	area = {35,8,704,655},
+	feature = {
+	{x=0,y=0,color=0xe2f508},
+	{x=1,y=0,color=0xe3f508},
+	{x=2,y=0,color=0xe3f508},
+	{x=2,y=1,color=0xe6f908},
+	{x=1,y=1,color=0xe5f808},
+	{x=0,y=1,color=0xe4f708}
+	},
+	degree = 99
+}
+
 return item

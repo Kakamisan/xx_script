@@ -106,10 +106,19 @@
          "type" : "Page",
          "views" : [
             {
+               "id" : "extra_do",
+               "list" : "行动完后若没结束则自动,行动完后若没结束则撤退",
+               "select" : "0",
+               "size" : 30,
+               "type" : "RadioGroup",
+               "orientation" : "horizontal",
+               "color" : "0,0,225"
+            },
+            {
                "align" : "left",
                "color" : "0,0,0",
                "size" : 20,
-               "text" : "说明：\n请顺序输入回合行动模板编号，只管填己方有行动的回合操作，纯敌方行动回合不计入回合数，比如58e填“1,2”，那就是我方可行动第一回合执行模板1，第二回合执行模板2，实际上游戏内是第2 3回合，但不用管\n下面的输入框允许在输入真实的行动模板顺序前输入一个命名，用英文分号隔开，例“打58e;1,2”",
+               "text" : "说明：\n请顺序输入回合行动模板编号，只管填己方有行动的回合操作，纯敌方行动回合不计入回合数，比如58e填“1,2”，那就是我方可行动第一回合执行模板1，第二回合执行模板2，实际上游戏内是第2 3回合，但不用管\n下面的输入框必须在输入真实的行动模板顺序前输入一个命名，用英文分号隔开，例“打58e;1,2”,对于多个小关卡的地图，后面的行动用英文分号隔开,例“打44e;1,2;3;3;3”",
                "bg" : "255,255,255",
                "type" : "Label"
             },
@@ -229,10 +238,19 @@
          "type" : "Page",
          "views" : [
             {
+               "id" : "auto_xy",
+               "list" : "自动坐标",
+               "select" : "",
+               "size" : 30,
+               "type" : "CheckBoxGroup",
+               "orientation" : "horizontal",
+               "color" : "0,0,225"
+            },
+            {
                "align" : "left",
                "color" : "0,0,0",
                "size" : 20,
-               "text" : "说明：\n指令：\nS1/S2：技能1或技能2\nM：移动\nW：等待\n目标：\nE；敌人1~9\nF：友方1~9\nGE：敌方地板1~9\nGF：己方地板1~9\nSF：对自身释放\n每个行动由指令+数字+目标+数字组成，每个之间用英文逗号隔开，最后加上英文分号，比如“对敌人1使用技能1，接着对己方1使用技能2”，行动为“S1,E,1;S2,F,2”，等待后面不用加其他\n一个完整示例：\nW;M,GF,5;S2,F,1;S1,E,3;S2,SF;S2,GE,5\n试着解读一下含义：等待->移动到5->技能2点友方1->技能1点敌方3->技能2点自己->技能2点敌方5号地板\n其中双方地板是固定按九宫格数字，友方1~9和敌方1~9根据己方站位/敌方站位/射程不同，会产生变化，每个图设置前要用“测试坐标”功能来看自己的每个行动具体目标是哪个数字，数字排布的基本规律是从上到下，从左到右，说白了每次行动都会去识别敌人或己方身上的那个target标识，而识别出来的数字顺序肉眼不一定看得出",
+               "text" : "说明：\n指令：\nS1/S2：技能1或技能2\nM：移动\nW：等待\n目标：\nE；敌人1~9\nF：友方1~9\nGE：敌方地板1~9\nGF：己方地板1~9\nSF：对自身释放\n每个行动由指令+数字+目标+数字组成，每个之间用英文逗号隔开，最后加上英文分号，比如“对敌人1使用技能1，接着对己方1使用技能2”，行动为“S1,E,1;S2,F,2”，等待后面不用加其他\n一个完整示例：\nW;M,GF,5;S2,F,1;S1,E,3;S2,SF;S2,GE,5\n试着解读一下含义：等待->移动到5->技能2点友方1->技能1点敌方3->技能2点自己->技能2点敌方5号地板\n其中双方地板是固定按九宫格数字，使用自动识别时，友方1~9和敌方1~9根据己方站位/敌方站位/射程不同，会产生变化，数字排布的基本规律是从上到下，从左到右，使用坐标则自行设置坐标，x轴向右→，y轴向下↓，建议借用截屏工具上面显示的数字，坐标请设置为TARGET的RG的中间",
                "bg" : "",
                "type" : "Label"
             },
@@ -597,6 +615,704 @@
                "type" : "Edit"
             }
          ]
+      },
+	  {
+	      "text" : "坐标设置",
+	      "type" : "Page",
+	      "views" : [
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "说明：\nE为敌人，F为友军，分别最高设置到19",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E1",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E1",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E2",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E2",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E3",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E3",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E4",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E4",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E5",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E5",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E6",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E6",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E7",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E7",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E8",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E8",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E9",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E9",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E10",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E10",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F1",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F1",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F2",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F2",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F3",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F3",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F4",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F4",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F5",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F5",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F6",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F6",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F7",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F7",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F8",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F8",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F9",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F9",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F10",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F10",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E11",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E11",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E12",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E12",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E13",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E13",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E14",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E14",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E15",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E15",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E16",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E16",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E17",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E17",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E18",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E18",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "E19",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "E19",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F11",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F11",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F12",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F12",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F13",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F13",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F14",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F14",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F15",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F15",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F16",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F16",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F17",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F17",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F18",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F18",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          },
+		  {
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "size" : 20,
+	          "text" : "F19",
+	          "bg" : "",
+	          "type" : "Label"
+          },
+		  {
+	          "id" : "F19",
+	          "align" : "left",
+	          "color" : "0,0,0",
+	          "kbtype" : "number",
+	          "prompt" : "填坐标",
+	          "size" : 25,
+	          "text" : "",
+	          "type" : "Edit"
+          }
+	      ]
       },
       {
          "text" : "分解设置",

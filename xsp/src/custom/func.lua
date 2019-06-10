@@ -64,6 +64,7 @@ func[view_slc_team] = {
 		if check_mission_slc_team() then return true end
 		if slc_team() then
 			click_btn(btn_enter_bt)
+			round = 0
 		end
 	end,
 	[target_default] = function()
@@ -73,7 +74,9 @@ func[view_slc_team] = {
 
 func[view_bt_slc_acn] = {
 	[target_default] = function()
-		init_action()
+		if cfg.main == fmain_repeat then
+			slc_action()
+		end
 	end
 }
 
@@ -93,6 +96,13 @@ func[view_bt_playing2] = {
 
 func[view_bt_report] = {
 	[target_default] = function()
+		new_round = true
+		turn = 0
+		if cfg.extra_do == fextrado_auto and had_change_auto then
+			click_btn(btn_bt_auto)
+			had_change_auto = false
+			return true
+		end
 		click_btn(btn_normal)
 	end
 }
@@ -208,6 +218,12 @@ func[view_reback_waifu_ac] = {
 func[view_reback_get] = {
 	[target_default] = function()
 		click_btn(btn_ack_get)
+	end
+}
+
+func[view_bt_quit] = {
+	[target_default] = function()
+		click_btn(btn_ack_quit)
 	end
 }
 
@@ -370,7 +386,7 @@ handle_stop_repeat = {
 
 function check_mission()
 	if not swc_on(swc_mission_open1,true) and not swc_on(swc_mission_open2) then return false end
-	if find_item(item_mission_over2) then 
+	if find_item(item_mission_over2) then
 		click_item(item_mission_over2)
 		return false
 	end
@@ -381,7 +397,7 @@ end
 function check_mission_slc_team()
 	if find_item(item_mission_over3) then
 		if can_to_target_mission() then
-			return true 
+			return true
 		end
 	end
 	return false
@@ -452,8 +468,265 @@ end
 
 
 
+
+new_turn = true
+turn = 0
+new_round = true
+round = 0
+had_change_auto = false
+function slc_action(N)
+	
+	if find_item(item_turn_end) then
+		click_btn(btn_turn_over)
+		
+		local ret = timeout({count = 20,sleep = 300},in_view,view_bt_playing)
+		if not ret then
+			click_btn(btn_turn_over)
+		end
+		
+		new_turn = true
+		return true
+	end
+	
+	if new_round then
+		round = round + 1
+		new_round = false
+	end
+	
+	if new_turn then
+		turn = turn + 1
+		new_turn = false
+	end
+	
+	if not N then
+		N = 1
+	end
+	
+	dlog("round = ",round," turn = ",turn," N = ",N)
+	
+	if not action[round][turn] then
+		dlog("没有行动了。。。")
+		if cfg.extra_do == fextrado_auto then
+			click_btn(btn_bt_auto)
+			had_change_auto = true
+			return true
+		end
+		if cfg.extra_do == fextrado_quit then
+			click_btn(btn_bt_quit)
+			return true
+		end
+	end
+	
+	if do_action(action[round][turn][N]) then
+		return slc_action(N+1)
+	else
+		return false
+	end
+end
+
+function do_action(a)
+	
+	local x,y
+	local over
+	
+	local ret = timeout(find_items,item_move_reset)
+	
+	if ret and ret > 0 then
+		x = items_positions[item_move_reset][#(items_positions[item_move_reset])].x
+		y = items_positions[item_move_reset][#(items_positions[item_move_reset])].y
+	end
+	
+	if action_do_1[a[1]]() then
+		over = true
+	end
+	
+	if not over and action_do_2[a[2]]() then
+		over = true
+	end
+	
+	if not over and action_do_3[a[2]](a[3]) then
+		over = true
+	end
+	
+	if over then
+		sleep()
+		if find_item(item_turn_end) then
+			return true
+		end
+		local ret = timeout({count=7,sleep=200},find_items,item_move_reset)
+		if ret and ret > 0 then
+			local x1 = items_positions[item_move_reset][#(items_positions[item_move_reset])].x
+			local y1 = items_positions[item_move_reset][#(items_positions[item_move_reset])].y
+			if ((x-x1)^2+(y-y1)^2)^0.5 < 10 then
+				click({
+						item[item_move_reset].body[1]+x,
+						item[item_move_reset].body[2]+y,
+						item[item_move_reset].body[3]+x,
+						item[item_move_reset].body[4]+y
+					})
+				return do_action(a)
+			end
+		end
+	end
+	
+	return true
+end
+
+action_do_1 = {
+	["S1"] = function()
+		sleep(222,333)
+		return false
+	end,
+	["S2"] = function()
+		click_btn(btn_skill2)
+		sleep()
+		return false
+	end,
+	["W"] = function()
+		click_btn(btn_wait)
+		return true
+	end,
+	["M"] = function()
+		click_btn(btn_move)
+		sleep()
+		return false
+	end
+}
+
+action_do_2 = {
+	["SF"] = function()
+		if timeout({count=7,sleep=200},find_item,item_target_self) then
+			click_item(item_target_self)
+		end
+		return true
+	end,
+	["E"] = function() return false end,
+	["F"] = function() return false end,
+	["GE"] = function() return false end,
+	["GF"] = function() return false end,
+}
+
+action_do_3 = {
+	["E"] = function(A)
+		if slc(cfg.auto_xy,0) then
+			if timeout({count=7,sleep=200},find_items,item_target_enemy) then
+				local N = tonumber(A)
+				local x = items_positions[item_target_enemy][N].x
+				local y = items_positions[item_target_enemy][N].y
+				click({
+						item[item_target_enemy].body[1]+x,
+						item[item_target_enemy].body[2]+y,
+						item[item_target_enemy].body[3]+x,
+						item[item_target_enemy].body[4]+y
+					})
+				sleep(180,280)
+				click({
+						item[item_target_enemy].body[1]+x,
+						item[item_target_enemy].body[2]+y,
+						item[item_target_enemy].body[3]+x,
+						item[item_target_enemy].body[4]+y
+					})
+				return true
+			end
+		else
+			local x,y = E_pos[A][1],E_pos[A][2]
+			click({
+					item[item_target_enemy].body[1]+x,
+					item[item_target_enemy].body[2]+y,
+					item[item_target_enemy].body[3]+x,
+					item[item_target_enemy].body[4]+y
+				})
+			sleep(180,280)
+			click({
+					item[item_target_enemy].body[1]+x,
+					item[item_target_enemy].body[2]+y,
+					item[item_target_enemy].body[3]+x,
+					item[item_target_enemy].body[4]+y
+				})
+			return true
+		end
+	end,
+	["F"] = function(A)
+		if slc(cfg.auto_xy,0) then
+			if timeout({count=7,sleep=200},find_items,item_target_friend) then
+				local N = tonumber(A)
+				local x = items_positions[item_target_friend][N].x
+				local y = items_positions[item_target_friend][N].y
+				click({
+						item[item_target_friend].body[1]+x,
+						item[item_target_friend].body[2]+y,
+						item[item_target_friend].body[3]+x,
+						item[item_target_friend].body[4]+y
+					})
+				sleep(180,280)
+				click({
+						item[item_target_friend].body[1]+x,
+						item[item_target_friend].body[2]+y,
+						item[item_target_friend].body[3]+x,
+						item[item_target_friend].body[4]+y
+					})
+				return true
+			end
+		else
+			local x,y = F_pos[A][1],F_pos[A][2]
+			click({
+					item[item_target_enemy].body[1]+x,
+					item[item_target_enemy].body[2]+y,
+					item[item_target_enemy].body[3]+x,
+					item[item_target_enemy].body[4]+y
+				})
+			sleep(180,280)
+			click({
+					item[item_target_enemy].body[1]+x,
+					item[item_target_enemy].body[2]+y,
+					item[item_target_enemy].body[3]+x,
+					item[item_target_enemy].body[4]+y
+				})
+			return true
+		end
+	end,
+	["GE"] = function(A)
+		local name = GE_area[A]
+		click_btn(name)
+		sleep(180,280)
+		click_btn(name)
+		return true
+	end,
+	["FE"] = function(A)
+		local name = FE_area[A]
+		click_btn(name)
+		sleep(180,280)
+		click_btn(name)
+		return true
+	end
+}
+
+GE_area = {
+	["1"] = btn_ge_1,
+	["2"] = btn_ge_2,
+	["3"] = btn_ge_3,
+	["4"] = btn_ge_4,
+	["5"] = btn_ge_5,
+	["6"] = btn_ge_6,
+	["7"] = btn_ge_7,
+	["8"] = btn_ge_8,
+	["9"] = btn_ge_9
+}
+
+FE_area = {
+	["1"] = btn_fe_1,
+	["2"] = btn_fe_2,
+	["3"] = btn_fe_3,
+	["4"] = btn_fe_4,
+	["5"] = btn_fe_5,
+	["6"] = btn_fe_6,
+	["7"] = btn_fe_7,
+	["8"] = btn_fe_8,
+	["9"] = btn_fe_9
+}
+
 function can_to_target_mission()
-	if slc(cfg.extra,fextra_mission) then 
+	if slc(cfg.extra,fextra_mission) then
 		state.target = target_mission
 		return true
 	end
@@ -469,7 +742,7 @@ function can_to_target_atk()
 end
 
 function can_to_target_reback()
-	if slc(cfg.extra,fextra_reback) and (slc(cfg.reback,freback_A_waifu) or slc(cfg.reback,freback_B_waifu)) then 
+	if slc(cfg.extra,fextra_reback) and (slc(cfg.reback,freback_A_waifu) or slc(cfg.reback,freback_B_waifu)) then
 		state.target = target_reback
 		return true
 	end

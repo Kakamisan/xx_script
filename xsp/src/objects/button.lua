@@ -117,4 +117,93 @@ btn[btn_ack_get] = {
 	body = {668,583,766,620},
 	view = {view_reback_get}
 }
+
+--19--
+btn[btn_turn_over] = {
+	body = {1314,390,1375,450}
+}
+
+--20--
+btn[btn_skill2] = {
+	body = {1162,625,1190,687}
+}
+
+--21--
+btn[btn_wait] = {
+	body = {1327,628,1354,689}
+}
+
+--22--
+btn[btn_move] = {
+	body = {1244,624,1269,686}
+}
+
+--23--
+btn[btn_ge_1] = {
+	body = {893,219,915,240}
+}
+btn[btn_ge_2] = {
+	body = {1058,218,1088,244}
+}
+btn[btn_ge_3] = {
+	body = {1215,219,1243,243}
+}
+btn[btn_ge_4] = {
+	body = {909,323,935,346}
+}
+btn[btn_ge_5] = {
+	body = {1084,320,1105,343}
+}
+btn[btn_ge_6] = {
+	body = {1249,320,1276,343}
+}
+btn[btn_ge_7] = {
+	body = {924,433,947,457}
+}
+btn[btn_ge_8] = {
+	body = {1108,436,1132,461}
+}
+btn[btn_ge_9] = {
+	body = {1284,438,1309,463}
+}
+
+
+btn[btn_fe_1] = {
+	body = {204,220,226,242}
+}
+btn[btn_fe_2] = {
+	body = {366,218,389,240}
+}
+btn[btn_fe_3] = {
+	body = {518,215,539,237}
+}
+btn[btn_fe_4] = {
+	body = {175,318,196,342}
+}
+btn[btn_fe_5] = {
+	body = {347,322,367,344}
+}
+btn[btn_fe_6] = {
+	body = {510,321,532,344}
+}
+btn[btn_fe_7] = {
+	body = {137,439,159,461}
+}
+btn[btn_fe_8] = {
+	body = {319,440,342,462}
+}
+btn[btn_fe_9] = {
+	body = {502,439,523,461}
+}
+
+btn[btn_bt_auto] = {
+	body = {1141,19,1177,54}
+}
+btn[btn_bt_quit] = {
+	body = {21,11,74,37}
+}
+btn[btn_ack_quit] = {
+	body = {781,374,895,405}
+}
+
 return btn

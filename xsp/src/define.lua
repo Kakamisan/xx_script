@@ -17,6 +17,32 @@ btn_reback_enter= 15	--分解中心进入老婆分解
 btn_reback_slc_ok=16	--老婆分解-确定选择
 btn_ack1		= 17	--通用弹窗-左取消右确定-点确定（分解二次确认）
 btn_ack_get		= 18	--分解得资源-点确定
+btn_turn_over	= 19	--回合结束-点开始
+btn_skill2		= 20	--技能2
+btn_wait		= 21	--待机
+btn_move		= 22	--移动
+btn_ge_1		= 23	--敌方地板
+btn_ge_2		= 24
+btn_ge_3		= 25
+btn_ge_4		= 26
+btn_ge_5		= 27
+btn_ge_6		= 28
+btn_ge_7		= 29
+btn_ge_8		= 30
+btn_ge_9		= 31
+btn_fe_1		= 32	--己方地板
+btn_fe_2		= 33
+btn_fe_3		= 34
+btn_fe_4		= 35
+btn_fe_5		= 36
+btn_fe_6		= 37
+btn_fe_7		= 38
+btn_fe_8		= 39
+btn_fe_9		= 40
+
+btn_bt_auto		= 41	--自动
+btn_bt_quit		= 42	--退出
+btn_ack_quit	= 43	--确定退出
 
 
 
@@ -27,6 +53,11 @@ item_mission_over3	= 3		--选择队伍-远征完成
 item_A_waifu		= 4		--A级老婆
 item_B_waifu		= 5		--B级老婆
 item_reback_scroll	= 6		--分解滚动条
+item_move_reset		= 7		--行动条上那个圆圈问号
+item_turn_end		= 8		--回合结束-开始行动
+item_target_self	= 9		--技能目标是自己
+item_target_enemy	= 10	--目标是敌人
+item_target_friend	= 11	--目标自己人
 
 
 
@@ -130,6 +161,7 @@ view_reback_waifu	= 21	--老婆分解
 view_reback_waifu_al= 22	--老婆分解-分A级以上弹窗警告
 view_reback_waifu_ac= 23	--老婆分解-确定分解
 view_reback_get		= 24	--老婆分解-获得物品
+view_bt_quit		= 25	--战斗中-撤退
 
 
 
@@ -160,6 +192,7 @@ to_view_desc = {
 	,[view_reback_waifu_al] = "老婆分解-分A级以上弹窗警告"
 	,[view_reback_waifu_ac] = "老婆分解-确定分解"
 	,[view_reback_get] = "老婆分解-获得物品"
+	,[view_bt_quit] = "战斗中-撤退"
 }
 
 
@@ -201,6 +234,9 @@ freback_A_waifu	= 0		--A级老婆
 freback_B_waifu	= 1		--B级老婆
 --freback_A_eqm	= 2		--A级装备
 --freback_B_eqm	= 3		--B级装备
+
+fextrado_auto	= 0		--行动后自动
+fextrado_quit	= 1		--行动后退出
 
 
 --------------------------------------default--------------------------------------

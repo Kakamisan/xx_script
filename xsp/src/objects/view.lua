@@ -216,7 +216,7 @@ view[view_sys_online] = {
 	{x=38+682,y=0+348,color=0xffa857},
 	{x=77+682,y=0+348,color=0xffa857},
 	{x=-523+682,y=334+348,color=0xefb502},
-	{x=-429+682,y=346+348,color=0xe1a100}
+	{x=188,y=694,color=0xe1a100}
 	},
 	degree = 98
 }
@@ -305,6 +305,22 @@ view[view_reback_get] = {
 	{x=774+28,y=534+47,color=0xfeca01},
 	{x=810+28,y=185+47,color=0xfdffff},
 	{x=1163+28,y=616+47,color=0x7c6202}
+	},
+	degree = 98
+}
+
+--25--战斗中-撤退
+view[view_bt_quit] = {
+	feature = {
+	{x=0+1147,y=0+37,color=0x7d7d7d},
+	{x=8+1147,y=-7+37,color=0x7c7c7c},
+	{x=8+1147,y=8+37,color=0x7d7d7d},
+	{x=487+1147,y=392+37,color=0xff6200},
+	{x=663+1147,y=392+37,color=0xff6200},
+	{x=688+1147,y=338+37,color=0xff6200},
+	{x=726+1147,y=391+37,color=0xffcc00},
+	{x=928+1147,y=339+37,color=0xffcc00},
+	{x=904+1147,y=391+37,color=0xffcc00}
 	},
 	degree = 98
 }
