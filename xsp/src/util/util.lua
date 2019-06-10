@@ -146,8 +146,8 @@ function find_items(name)
 	if not mp then
 		return false
 	end
-	items_pos[name] = erase_near(mp)
-	return #(items_pos[name])
+	items_positions[name] = erase_near(mp)
+	return #(items_positions[name])
 end
 
 function click_items(name)
