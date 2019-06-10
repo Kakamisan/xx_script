@@ -65,6 +65,7 @@ func[view_slc_team] = {
 		if slc_team() then
 			click_btn(btn_enter_bt)
 			round = 0
+			turn = 0
 		end
 	end,
 	[target_default] = function()
