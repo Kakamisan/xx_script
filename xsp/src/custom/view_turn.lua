@@ -109,6 +109,7 @@ vt[view_bt_moving] = {
 	view_bt_playing2
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
+	,view_slc_dg_main
 }
 
 --13--战斗中-总结算界面

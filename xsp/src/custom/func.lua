@@ -161,6 +161,13 @@ func[view_player_info] = {
 	end
 }
 
+func[view_sys_online] = {
+	[target_default] = function()
+		--do nothing
+	end
+}
+
+
 func[view_bt_enemy_acn] = {
 	[target_default] = function()
 		click_btn(btn_start_turn)
@@ -229,7 +236,7 @@ func[view_bt_quit] = {
 
 func[view_full_bag] = {
 	[target_default] = function()
-		if can_to_target_reback() then
+		if not reback_just_now and can_to_target_reback() then
 			return true
 		end
 		state.target = target_back

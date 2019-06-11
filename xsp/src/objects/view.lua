@@ -40,20 +40,26 @@ view[view_slc_dg_type] = {
 --3--选择主线副本，6-8，5-8e等
 view[view_slc_dg_main] = {
 	feature = {
-		{x=0+1,y=0+31,color=0xffce01,anchor={-1,0}},
-		{x=24+1,y=6+31,color=0x282423,anchor={-1,0}},
-		{x=536+1+80,y=507+31,color=0xfdc705,anchor={0,0}},
-		{x=1115+1+80,y=516+31,color=0xffffff,anchor={0,0}},
-		{x=1277+1+80,y=648+31,color=0xfdc705,anchor={0,0}},
-		{x=205+1+80,y=579+31,color=0x8cffff,anchor={0,0}}
+	{x=0+19,y=0+29,color=0x242222},
+	{x=12+19,y=0+29,color=0x242222},
+--	{x=79+19,y=-15+29,color=0xffcc00},
+--	{x=79+19,y=31+29,color=0xffcc00},
+	{x=119+19,y=218+29,color=0xffffff},
+	{x=157+19,y=543+29,color=0x53524a},
+	{x=278+19,y=539+29,color=0xffc608},
+	{x=594+19,y=511+29,color=0xfdc705},
+	{x=623+19,y=543+29,color=0xfdc705},
+	{x=1176+19,y=525+29,color=0xffffff},
+	{x=1332+19,y=562+29,color=0xfdc705},
+	{x=1218+19,y=664+29,color=0xffc705}
 	},
-	degree = 95
+	degree = 97
 }
 
 --4--选择队伍，队伍1，队伍5等
 view[view_slc_team] = {
 	feature = {
-		{x=0+1,y=0+19,color=0xffcd00,anchor={-1,0}},
+	{x=0+1,y=0+19,color=0xffcd00,anchor={-1,0}},
 	{x=34+1,y=12+19,color=0x262423,anchor={-1,0}},
 	{x=256+1+80,y=12+19,color=0xfdfdfd,anchor={0,0}},
 	{x=1161+1+80,y=574+19,color=0x20d7f7,anchor={0,0}},
@@ -153,8 +159,11 @@ view[view_bt_next] = {
 --12--战斗中-赶路到下一波
 view[view_bt_moving] = {
 	feature = {
-	{x=0+20,y=0+17,color=0xfdfdfd},
-	{x=1383+20,y=10+17,color=0xffcb00}
+	{x=0+19,y=0+18,color=0xfdfdfd},
+	{x=-7+19,y=6+18,color=0xffffff},
+	{x=1+19,y=14+18,color=0xffffff},
+	{x=1388+19,y=13+18,color=0xffcb00},
+	{x=1371+19,y=18+18,color=0xfec900}
 	},
 	degree = 98,
 --	disable = {

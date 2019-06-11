@@ -18,7 +18,7 @@ function test()
 	return test()
 end
 
-test()
+--test()
 
 function main_loop()
 	
