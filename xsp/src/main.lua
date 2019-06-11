@@ -30,7 +30,9 @@ function main_loop()
 	," target = "
 	,to_target_desc[state.target]
 	," alarm = "
-	,math.floor((state.alarm - mTime()) / 1000))
+	,math.floor((state.alarm - mTime()) / 1000)
+	," reback just now = "
+	,reback_just_now)
 	
 	end
 	

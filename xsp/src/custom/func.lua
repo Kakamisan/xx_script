@@ -188,8 +188,14 @@ func[view_reback] = {
 	[target_reback] = function()
 		if handle_reback() then
 			reback_just_now = true
-			if can_to_target_mission() then return true end
+			if cfg.main == fmain_alarm then
+				if can_to_target_mission() then return true end
+				if can_to_target_atk() then return true end
+				state.target = target_back
+				return true
+			end
 			if can_to_target_atk() then return true end
+			if can_to_target_mission() then return true end
 			state.target = target_back
 		end
 	end,
@@ -236,10 +242,20 @@ func[view_bt_quit] = {
 
 func[view_full_bag] = {
 	[target_default] = function()
-		if not reback_just_now and can_to_target_reback() then
-			return true
+		if cfg.main == fmain_alarm then
+			if mTime() > state.alarm then
+				state.alarm = mTime() + math.max(cfg.alarm,9000)*1000
+				if not reback_just_now and can_to_target_reback() then
+					return true
+				end
+				state.target = target_back
+			end
+		else
+			if not reback_just_now and can_to_target_reback() then
+				return true
+			end
+			state.target = target_back
 		end
-		state.target = target_back
 	end,
 	[target_back] = function()
 		click_btn(btn_full_bag_close)
