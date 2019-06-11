@@ -198,11 +198,14 @@ view[view_stop_repeat] = {
 --15--主页-继续远征
 view[view_ctn_mission] = {
 	feature = {
-	{x=0+263,y=0+164,color=0xb6b6c7},
-	{x=7+263,y=407+164,color=0xfdca00},
-	{x=243+263,y=209+164,color=0xfec507},
-	{x=596+263,y=351+164,color=0xffcc00},
-	{x=601+263,y=-3+164,color=0x65656f}
+	{x=0+269,y=0+172,color=0xb6b6c7},
+	{x=114+269,y=25+172,color=0x6c6c7b},
+	{x=560+269,y=17+172,color=0x828290},
+	{x=567+269,y=12+172,color=0x828290},
+	{x=228+269,y=93+172,color=0xfdc705},
+	{x=227+269,y=195+172,color=0xfdc705},
+	{x=284+269,y=130+172,color=0x6ec21a},
+	{x=397+269,y=126+172,color=0x1aacc6}
 	},
 	degree = 98
 }
@@ -309,12 +312,16 @@ view[view_reback_waifu_ac] = {
 --24--老婆分解-获得物品
 view[view_reback_get] = {
 	feature = {
-	{x=0+28,y=0+47,color=0x111111},
-	{x=371+28,y=34+47,color=0xb6b6c7},
-	{x=612+28,y=562+47,color=0xfdc705},
-	{x=774+28,y=534+47,color=0xfeca01},
-	{x=810+28,y=185+47,color=0xfdffff},
-	{x=1163+28,y=616+47,color=0x7c6202}
+	{x=0+401,y=0+81,color=0xb6b6c7},
+	{x=14+401,y=31+81,color=0x8e8e9d},
+	{x=103+401,y=26+81,color=0x6c6c7b},
+	{x=629+401,y=26+81,color=0x292834},
+	{x=629+401,y=-1+81,color=0x636370},
+	{x=315+401,y=149+81,color=0xfdfdfd},
+	{x=328+401,y=143+81,color=0x87ed17},
+	{x=209+401,y=167+81,color=0x8e919c},
+	{x=438+401,y=150+81,color=0xfefefe},
+	{x=442+401,y=166+81,color=0x0ac3f7}
 	},
 	degree = 98
 }
