@@ -43,6 +43,8 @@ btn_fe_9		= 40
 btn_bt_auto		= 41	--自动
 btn_bt_quit		= 42	--退出
 btn_ack_quit	= 43	--确定退出
+btn_full_bag_close = 44	--关闭爆仓弹窗
+btn_enter_reback2 = 45	--满仓进入分解
 
 
 
@@ -163,6 +165,7 @@ view_reback_waifu_al= 22	--老婆分解-分A级以上弹窗警告
 view_reback_waifu_ac= 23	--老婆分解-确定分解
 view_reback_get		= 24	--老婆分解-获得物品
 view_bt_quit		= 25	--战斗中-撤退
+view_full_bag		= 26	--仓库满了
 
 
 
@@ -194,6 +197,7 @@ to_view_desc = {
 	,[view_reback_waifu_ac] = "老婆分解-确定分解"
 	,[view_reback_get] = "老婆分解-获得物品"
 	,[view_bt_quit] = "战斗中-撤退"
+	,[view_full_bag] = "仓库满了"
 }
 
 

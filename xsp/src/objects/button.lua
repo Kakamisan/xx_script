@@ -206,4 +206,13 @@ btn[btn_ack_quit] = {
 	body = {781,374,895,405}
 }
 
+btn[btn_full_bag_close] = {
+	body = {1200,144,1220,166}
+}
+
+btn[btn_enter_reback2] = {
+	body = {488,540,551,568}
+}
+
+
 return btn

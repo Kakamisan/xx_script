@@ -3,7 +3,8 @@ local vt = {}
 vt[0] = {
 	1,2,3,4,5,6,7,8,10
 	,11,12,13,14,15,16
-	
+	,17,18,19,20,21,22
+	,23,24,25,26
 	,9
 }
 --1--主页
@@ -38,6 +39,7 @@ vt[view_slc_team] = {
 	,view_bt_playing2
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
+	,view_full_bag
 --	,view_bt_playing
 }
 
@@ -114,6 +116,7 @@ vt[view_bt_over] = {
 	view_bt_over
 	,view_slc_team
 	,view_stop_repeat
+	,view_full_bag
 }
 
 --14--选择是否停止反复战斗
@@ -124,6 +127,7 @@ vt[view_stop_repeat] = {
 	,view_bt_playing2
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
+	,view_full_bag
 }
 
 --15--主页-继续远征
@@ -200,4 +204,13 @@ vt[view_bt_quit] = {
 	view_bt_quit
 	,view_slc_team
 }
+
+--26--
+vt[view_full_bag] = {
+	view_full_bag
+	,view_reback
+	,view_slc_team
+}
+
+
 return vt

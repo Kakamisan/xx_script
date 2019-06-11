@@ -313,17 +313,33 @@ view[view_reback_get] = {
 --25--战斗中-撤退
 view[view_bt_quit] = {
 	feature = {
-	{x=0+1147,y=0+37,color=0x7d7d7d},
-	{x=8+1147,y=-7+37,color=0x7c7c7c},
-	{x=8+1147,y=8+37,color=0x7d7d7d},
-	{x=487+1147,y=392+37,color=0xff6200},
-	{x=663+1147,y=392+37,color=0xff6200},
-	{x=688+1147,y=338+37,color=0xff6200},
-	{x=726+1147,y=391+37,color=0xffcc00},
-	{x=928+1147,y=339+37,color=0xffcc00},
-	{x=904+1147,y=391+37,color=0xffcc00}
+	{x=0+18,y=0+18,color=0x7d7d7d},
+	{x=1+18,y=14+18,color=0x7d7d7d},
+	{x=1315+18,y=8+18,color=0x7d6400},
+	{x=1385+18,y=11+18,color=0x7d6400},
+	{x=1360+18,y=97+18,color=0x487709},
+	{x=495+18,y=388+18,color=0xff6200},
+	{x=656+18,y=354+18,color=0xff6200},
+	{x=746+18,y=386+18,color=0xffcc00},
+	{x=907+18,y=360+18,color=0xffcc00}
 	},
 	degree = 98
 }
+
+--26--仓库满了
+view[view_full_bag] = {
+	feature = {
+	{x=0+193,y=0+134,color=0xb6b6c7},
+	{x=125+193,y=32+134,color=0x6c6c7a},
+	{x=255+193,y=439+134,color=0xff6200},
+	{x=451+193,y=441+134,color=0xffcc00},
+	{x=653+193,y=440+134,color=0xffcc00},
+	{x=803+193,y=400+134,color=0xffcc00}
+	},
+	degree = 98
+}
+
+
+
 
 return view

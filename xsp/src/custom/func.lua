@@ -227,7 +227,26 @@ func[view_bt_quit] = {
 	end
 }
 
---------------------------------sub function--------------------------------
+func[view_full_bag] = {
+	[target_default] = function()
+		if can_to_target_reback() then
+			return true
+		end
+		state.target = target_back
+	end,
+	[target_back] = function()
+		click_btn(btn_full_bag_close)
+	end,
+	[target_reback] = function()
+		click_btn(btn_enter_reback2)
+	end
+}
+
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------sub function------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 
 function change_target()
 	if handle_change_target[state.target]() then return true end
