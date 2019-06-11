@@ -157,4 +157,13 @@ item[item_target_friend] = {
 	degree = 99
 }
 
+item[item_target_set] = {
+	body = {954-963,190-196,974-963,204-196},
+	area = {0,0,1,1},
+	feature = {
+		{x=0,y=0,color=0xff00ff},
+		{x=1,y=1,color=0xffff00}
+	}
+}
+
 return item

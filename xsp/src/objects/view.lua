@@ -122,7 +122,8 @@ view[view_bt_waiting] = {
 	},
 	degree = 98,
 	disable = {
-	{x=1022+19,y=522+18,color=0xa4fd23}
+	{x=1022+19,y=522+18,color=0xa4fd23},
+	{x=1041,y=538,color=0x21f7ff}
 	}
 }
 

@@ -63,9 +63,8 @@ func[view_slc_team] = {
 	[target_atk] = function()
 		if check_mission_slc_team() then return true end
 		if slc_team() then
+			init_battle()
 			click_btn(btn_enter_bt)
-			round = 0
-			turn = 0
 		end
 	end,
 	[target_default] = function()
@@ -475,6 +474,15 @@ turn = 0
 new_round = true
 round = 0
 had_change_auto = false
+
+function init_battle()
+	round = 0
+	turn = 0
+	new_round = true
+	new_turn = true
+	had_change_auto = false
+end
+
 function slc_action(N)
 	
 	if find_item(item_turn_end) then
@@ -505,7 +513,7 @@ function slc_action(N)
 	
 	dlog("round = ",round," turn = ",turn," N = ",N)
 	
-	if not action[round][turn] then
+	if not action[round] or not action[round][turn] or not action[round][turn][N] then
 		dlog("没有行动了。。。")
 		if cfg.extra_do == fextrado_auto then
 			click_btn(btn_bt_auto)
@@ -632,17 +640,17 @@ action_do_3 = {
 		else
 			local x,y = E_pos[A][1],E_pos[A][2]
 			click({
-					item[item_target_enemy].body[1]+x,
-					item[item_target_enemy].body[2]+y,
-					item[item_target_enemy].body[3]+x,
-					item[item_target_enemy].body[4]+y
+					item[item_target_set].body[1]+x,
+					item[item_target_set].body[2]+y,
+					item[item_target_set].body[3]+x,
+					item[item_target_set].body[4]+y
 				})
 			sleep(180,280)
 			click({
-					item[item_target_enemy].body[1]+x,
-					item[item_target_enemy].body[2]+y,
-					item[item_target_enemy].body[3]+x,
-					item[item_target_enemy].body[4]+y
+					item[item_target_set].body[1]+x,
+					item[item_target_set].body[2]+y,
+					item[item_target_set].body[3]+x,
+					item[item_target_set].body[4]+y
 				})
 			return true
 		end
@@ -671,17 +679,17 @@ action_do_3 = {
 		else
 			local x,y = F_pos[A][1],F_pos[A][2]
 			click({
-					item[item_target_enemy].body[1]+x,
-					item[item_target_enemy].body[2]+y,
-					item[item_target_enemy].body[3]+x,
-					item[item_target_enemy].body[4]+y
+					item[item_target_set].body[1]+x,
+					item[item_target_set].body[2]+y,
+					item[item_target_set].body[3]+x,
+					item[item_target_set].body[4]+y
 				})
 			sleep(180,280)
 			click({
-					item[item_target_enemy].body[1]+x,
-					item[item_target_enemy].body[2]+y,
-					item[item_target_enemy].body[3]+x,
-					item[item_target_enemy].body[4]+y
+					item[item_target_set].body[1]+x,
+					item[item_target_set].body[2]+y,
+					item[item_target_set].body[3]+x,
+					item[item_target_set].body[4]+y
 				})
 			return true
 		end

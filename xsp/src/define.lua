@@ -58,6 +58,7 @@ item_turn_end		= 8		--回合结束-开始行动
 item_target_self	= 9		--技能目标是自己
 item_target_enemy	= 10	--目标是敌人
 item_target_friend	= 11	--目标自己人
+item_target_set		= 12	--目标是设置坐标
 
 
 
