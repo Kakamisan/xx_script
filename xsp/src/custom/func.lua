@@ -431,16 +431,17 @@ end
 
 had_reback = false
 function handle_reback()
+	if not had_reback then
+		click_btn(btn_reback_enter)
+		return false
+	end
 	local txt = get_text(text_reback_gain)
 	if not txt then return false end
 	txt = string.gsub(txt,"%s","")
+	txt = string.match(txt,"%d+")
 	txt = tonumber(txt)
-	if txt > 0 then
+	if txt and txt > 0 then
 		click_btn(btn_reback_start)
-		return false
-	end
-	if not had_reback then
-		click_btn(btn_reback_enter)
 		return false
 	end
 	had_reback = false

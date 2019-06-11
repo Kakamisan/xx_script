@@ -172,6 +172,7 @@ vt[view_reback] = {
 	,view_reback_waifu
 	,view_reback_waifu_ac
 	,view_home
+	,view_slc_team
 	,view_ctn_mission
 }
 
