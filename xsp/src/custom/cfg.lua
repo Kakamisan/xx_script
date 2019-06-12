@@ -11,6 +11,7 @@ cfg.main	= tonumber(cfg.main) + 1
 cfg.alarm	= tonumber(cfg.alarm)
 cfg.misscnt = tonumber(cfg.misscnt)
 cfg.extra_do= tonumber(cfg.extra_do)
+cfg.btcount = tonumber(cfg.btcount)
 
 cfg.actionslc = tonumber(cfg.actionslc)+1
 

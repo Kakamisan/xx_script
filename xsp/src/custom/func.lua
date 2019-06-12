@@ -33,7 +33,7 @@ func[view_home] = {
 		local ret = check_mission()
 		if ret then 
 			local ret2 = change_target()
-			if ret2 and cfg.main == fmain_mission then
+			if ret2 and (cfg.main == fmain_mission or state.had_bt >= cfg.btcount) then
 				only_mission_wait_ts = mTime() + math.random(140,170)*1000
 			end
 		end
@@ -100,6 +100,7 @@ func[view_bt_playing2] = {
 	end
 }
 
+rand_sleep_bt_report = true
 func[view_bt_report] = {
 	[target_default] = function()
 		new_round = true
@@ -107,8 +108,13 @@ func[view_bt_report] = {
 		if cfg.extra_do == fextrado_auto and had_change_auto then
 			click_btn(btn_bt_auto)
 			had_change_auto = false
+			rand_sleep_bt_report = false
 			return true
 		end
+		if rand_sleep_bt_report and cfg.main == fmain_repeat and math.random(1,100) < 17 then
+			sleep(7500,9500)
+		end
+		rand_sleep_bt_report = false
 		click_btn(btn_normal)
 	end
 }
@@ -151,6 +157,9 @@ func[view_stop_repeat] = {
 	[target_reback] = function()
 		click_btn(btn_stop_repeat)
 	end,
+	[target_back] = function()
+		click_btn(btn_stop_repeat)
+	end,
 	[target_default] = function()
 		stop_repeat()
 	end
@@ -168,9 +177,20 @@ func[view_player_info] = {
 	end
 }
 
+new_bt_add_count = true
 func[view_sys_online] = {
 	[target_default] = function()
 		--do nothing
+		if new_bt_add_count then
+			state.had_bt  = state.had_bt + 1
+			if state.had_bt >= cfg.btcount then
+				if can_to_target_mission() then
+				else
+					state.target = target_back
+				end
+			end
+			new_bt_add_count = false
+		end
 	end
 }
 
@@ -264,6 +284,9 @@ func[view_full_bag] = {
 			state.target = target_back
 		end
 	end,
+	[target_mission] = function()
+		click_btn(btn_full_bag_close)
+	end,
 	[target_back] = function()
 		click_btn(btn_full_bag_close)
 	end,
@@ -301,7 +324,7 @@ handle_change_target = {
 		return true
 	end,
 	[target_wait] = function()
-		if cfg.main == fmain_mission and mTime() > only_mission_wait_ts then
+		if (cfg.main == fmain_mission or state.had_bt >= cfg.btcount) and mTime() > only_mission_wait_ts then
 			state.target = target_mission
 			return true
 		end
@@ -533,6 +556,7 @@ end
 function do_get_in_battle()
 	reback_just_now = false
 	had_do_stop_repeat = false
+	new_bt_add_count = true
 end
 
 
@@ -565,6 +589,7 @@ function slc_action(N)
 		end
 		
 		new_turn = true
+		rand_sleep_bt_report = true
 		if N > 1 then
 			change_bt_playing_wait_time(2)
 		else
@@ -634,8 +659,9 @@ function do_action(a)
 	end
 	
 	if over then
-		sleep()
+		sleep(200,230)
 		if find_item(item_turn_end) then
+			sleep(10,300)
 			return true
 		end
 		local ret = timeout({count=7,sleep=200},find_items,item_move_reset)
@@ -659,12 +685,12 @@ end
 
 action_do_1 = {
 	["S1"] = function()
-		sleep(222,333)
 		return false
 	end,
 	["S2"] = function()
+		sleep(310,398)
 		click_btn(btn_skill2)
-		sleep()
+		sleep(20,150)
 		return false
 	end,
 	["W"] = function()
@@ -672,14 +698,15 @@ action_do_1 = {
 		return true
 	end,
 	["M"] = function()
+		sleep(310,398)
 		click_btn(btn_move)
-		sleep()
 		return false
 	end
 }
 
 action_do_2 = {
 	["SF"] = function()
+		sleep(310,398)
 		if timeout({count=7,sleep=200},find_item,item_target_self) then
 			click_item(item_target_self)
 		end
@@ -693,6 +720,7 @@ action_do_2 = {
 
 action_do_3 = {
 	["E"] = function(A)
+		sleep()
 		if slc(cfg.auto_xy,0) then
 			if timeout({count=7,sleep=200},find_items,item_target_enemy) then
 				local N = tonumber(A)
@@ -732,6 +760,7 @@ action_do_3 = {
 		end
 	end,
 	["F"] = function(A)
+		sleep()
 		if slc(cfg.auto_xy,0) then
 			if timeout({count=7,sleep=200},find_items,item_target_friend) then
 				local N = tonumber(A)
@@ -771,6 +800,7 @@ action_do_3 = {
 		end
 	end,
 	["GE"] = function(A)
+		sleep(310,398)
 		local name = GE_area[A]
 		click_btn(name)
 		sleep(180,280)
@@ -778,6 +808,7 @@ action_do_3 = {
 		return true
 	end,
 	["FE"] = function(A)
+		sleep(310,398)
 		local name = FE_area[A]
 		click_btn(name)
 		sleep(180,280)
@@ -828,7 +859,7 @@ function can_to_target_mission()
 end
 
 function can_to_target_atk()
-	if cfg.main ~= fmain_mission and cfg.main ~= fmain_test then
+	if cfg.main ~= fmain_mission and cfg.main ~= fmain_test and cfg.btcount > state.had_bt then
 		state.target = target_atk
 		return true
 	end

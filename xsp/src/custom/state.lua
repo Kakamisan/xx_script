@@ -3,6 +3,7 @@ local state = {}
 state.view 			= 0		--当前view
 state.target 		= 0		--当前target
 state.alarm			= 0		--定时闹钟时间戳
+state.had_bt		= 0		--已经进行的战斗场数
 
 
 

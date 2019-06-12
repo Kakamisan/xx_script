@@ -50,6 +50,24 @@
                "select" : "0",
                "size" : 30,
                "type" : "ComboBox"
+            },
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : 20,
+               "text" : "只打这么多次↓（暂时请手动计算资源能打几把）",
+               "bg" : "",
+               "type" : "Label"
+            },
+            {
+               "id" : "btcount",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "number",
+               "prompt" : "打的次数",
+               "size" : 25,
+               "text" : "10",
+               "type" : "Edit"
             }
          ]
       },

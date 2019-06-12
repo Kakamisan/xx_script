@@ -77,7 +77,7 @@ item[item_reback_scroll] = {
 
 item[item_move_reset] = {
 	body = {809-821,641-618,836-821,668-618},
-	area = {3,615,970,691},
+	area = {1,615,970,691},
 	feature = {
 	{x=0,y=0,color=0xffffff},
 	{x=1,y=27,color=0x000000},
