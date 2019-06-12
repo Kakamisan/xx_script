@@ -1,11 +1,12 @@
 local vt = {}
 
 vt[0] = {
-	1,2,3,4,5,6,7,8,10
-	,11,12,13,14,15,16
+	1,2,3,4,5,6,8,10
+	,11,13,14,15,16
 	,17,18,19,20,21,22
 	,23,24,25,26
-	,9
+	
+	,7,12,9
 }
 --1--主页
 vt[view_home] = {
@@ -36,7 +37,7 @@ vt[view_slc_team] = {
 	view_slc_team
 	,view_slc_dg_main
 	,view_sys_online
-	,view_bt_playing2
+	,view_bt_playing
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
 	,view_full_bag
@@ -60,7 +61,7 @@ vt[view_bt_playing] = {
 
 --7--战斗中-播报中-下面是蓝色点
 vt[view_bt_playing2] = {
-	view_bt_playing2
+	view_bt_playing
 	,view_bt_report
 	,view_bt_enemy_acn
 	,view_bt_slc_acn
@@ -82,6 +83,9 @@ vt[view_bt_report] = {
 --9--战斗中-打捞老婆
 vt[view_bt_waiting] = {
 	view_bt_get_waifu
+	,view_bt_slc_acn
+	,view_bt_enemy_acn
+	,view_bt_playing
 	,view_bt_next
 	,view_bt_over
 	,view_stop_repeat
@@ -101,12 +105,12 @@ vt[view_bt_next] = {
 	view_bt_next
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
-	,view_bt_playing2
+	,view_bt_playing
 }
 
 --12--战斗中-赶路到下一波
 vt[view_bt_moving] = {
-	view_bt_playing2
+	view_bt_playing
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
 	,view_slc_dg_main
@@ -125,7 +129,7 @@ vt[view_stop_repeat] = {
 	view_stop_repeat
 	,view_slc_team
 	,view_sys_online
-	,view_bt_playing2
+	,view_bt_playing
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
 	,view_full_bag
@@ -146,7 +150,7 @@ vt[view_player_info] = {
 --17--载入
 vt[view_sys_online] = {
 	view_sys_online
-	,view_bt_playing2
+	,view_bt_playing
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
 }
@@ -154,7 +158,6 @@ vt[view_sys_online] = {
 --18--
 vt[view_bt_enemy_acn] = {
 	view_bt_enemy_acn
-	,view_bt_playing2
 	,view_bt_playing
 }
 

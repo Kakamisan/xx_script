@@ -71,24 +71,41 @@ view[view_slc_team] = {
 --5--战斗中-选择行动
 view[view_bt_slc_acn] = {
 	feature = {
-		{x=0+19,y=0+18,color=0xfdfdfd},
-	{x=1245+19,y=9+18,color=0xffcb00},
-	{x=1383+19,y=9+18,color=0xffcb00},
-	{x=1356+19,y=97+18,color=0x93f212},
-	{x=1022+19,y=522+18,color=0xa4fd23},
-	{x=948+19,y=667+18,color=0xffcc00}
+		{x=0+19,y=0+17,color=0xfdfdfd},
+	{x=-7+19,y=7+17,color=0xffffff},
+	{x=1+19,y=15+17,color=0xffffff},
+	{x=1135+19,y=15+17,color=0xfef469},
+	{x=1138+19,y=27+17,color=0xfdf268},
+	{x=1144+19,y=21+17,color=0xfff167},
+	{x=1227+19,y=10+17,color=0xffcc00},
+	{x=1245+19,y=10+17,color=0xffcb00},
+	{x=1366+19,y=26+17,color=0xfcc500},
+	{x=1383+19,y=8+17,color=0xffcc00},
+	{x=1355+19,y=98+17,color=0x93f212},
+	{x=1391+19,y=113+17,color=0xf6feef},
+	{x=1391+19,y=141+17,color=0xf9fff2},
+	{x=1415+19,y=153+17,color=0xafe406},
+	{x=1321+19,y=664+17,color=0xffd800},
+	{x=948+19,y=667+17,color=0xffcc00}
 	},
 	degree = 98
 }
 
---6--战斗中-播报中-下面是绿色点
+--6--战斗中-播报中
 view[view_bt_playing] = {
 	feature = {
-	{x=0+1263,y=0+28,color=0xffcb00},
-	{x=140+1263,y=1+28,color=0xffcb00},
-	{x=112+1263,y=86+28,color=0x93f212},
-	{x=-190+1263,y=590+28,color=0xa4fd23},
-	{x=-296+1263,y=657+28,color=0xffcc00}
+	{x=0+1243,y=0+26,color=0xffcc00},
+	{x=22+1243,y=0+26,color=0xffce00},
+	{x=88+1243,y=0+26,color=0xffcc00},
+	{x=140+1243,y=16+26,color=0xfcc500},
+	{x=168+1243,y=8+26,color=0xffcb00},
+	{x=159+1243,y=1+26,color=0xffcb00},
+	{x=132+1243,y=89+26,color=0x93f212},
+	{x=167+1243,y=104+26,color=0xf6feef},
+	{x=167+1243,y=133+26,color=0xf9fff2},
+	{x=193+1243,y=145+26,color=0xafe406},
+	{x=-276+1243,y=659+26,color=0xffcc00},
+	{x=-193+1243,y=669+26,color=0xfffffe}
 	},
 	degree = 98
 }
@@ -123,7 +140,6 @@ view[view_bt_waiting] = {
 	{x=1247+19,y=7+18,color=0xffce00},
 	{x=1384+19,y=9+18,color=0xffcb00},
 	{x=1322+19,y=6+18,color=0xffcc00},
---	{x=1049,y=371,color=0xffb833},
 	{x=1244,y=47,color=0xfbc300}
 	},
 	degree = 98,
@@ -237,11 +253,24 @@ view[view_sys_online] = {
 --18--战斗中-敌方行动
 view[view_bt_enemy_acn] = {
 	feature = {
-	{x=0+12,y=0+26,color=0xffffff},
-	{x=1391+12,y=2+26,color=0xffcb00},
-	{x=1243+12,y=-5+26,color=0xffce00},
-	{x=1363+12,y=87+26,color=0x92f213},
-	{x=1029+12,y=512+26,color=0x21f7ff}
+	{x=0+20,y=0+17,color=0xfdfdfd},
+	{x=-8+20,y=8+17,color=0xffffff},
+	{x=0+20,y=14+17,color=0xffffff},
+	{x=1137+20,y=20+17,color=0xfff469},
+	{x=1225+20,y=11+17,color=0xffcc00},
+	{x=1245+20,y=11+17,color=0xffcc00},
+	{x=1364+20,y=26+17,color=0xfcc500},
+	{x=1390+20,y=17+17,color=0xffcb00},
+	{x=1382+20,y=10+17,color=0xffcb00},
+	{x=1048+20,y=595+17,color=0xcecece},
+	{x=1079+20,y=598+17,color=0xcecece},
+	{x=1132+20,y=598+17,color=0xcecece},
+	{x=1161+20,y=595+17,color=0xcecece},
+	{x=949+20,y=674+17,color=0xffcc00},
+	{x=1358+20,y=99+17,color=0x93f212},
+	{x=1412+20,y=153+17,color=0xafe406},
+	{x=1390+20,y=121+17,color=0xf6fdef},
+	{x=1323+20,y=661+17,color=0x313131}
 	},
 	degree = 98
 }
