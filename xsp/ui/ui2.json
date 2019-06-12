@@ -1,8 +1,8 @@
 {
    "style" : "default",
    "config" : "save_km_xx.dat",
-   "width" : 1150,
-   "height" : 700,
+   "width" : 2160,
+   "height" : 1080,
    "cancelscroll" : true,
    "countdown" : 0,
    "cancelname" : "关闭",
