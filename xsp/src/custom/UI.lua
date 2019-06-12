@@ -10,6 +10,10 @@ if ret ~= 1 then
 	lua_exit()
 end
 
+if UI.sshkey ~= "节奏123" then
+	lua_exit()
+end
+
 if debug_mode then
 	for k,v in pairs(UI) do
 		dlog("UI.",k,"\t= ",v)

@@ -68,6 +68,16 @@
                "size" : 25,
                "text" : "10",
                "type" : "Edit"
+            },
+			{
+	            "id" : "sshkey",
+	            "align" : "left",
+	            "color" : "0,0,0",
+	            "kbtype" : "number",
+	            "prompt" : "密钥",
+	            "size" : 25,
+	            "text" : "",
+	            "type" : "Edit"
             }
          ]
       },
