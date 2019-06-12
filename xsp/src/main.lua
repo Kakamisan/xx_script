@@ -36,12 +36,18 @@ function main_loop()
 
 
 	)
-	
+	else
+		dlog("mission time = ",math.floor((only_mission_wait_ts - mTime()) / 1000))
 	end
 	
 	run()
 	
 	sleep()
+	
+	--手动停脚本（转竖屏就停止脚本）（按home键）
+	if getScreenDirection() == 0 then
+		lua_exit()
+	end
 
 	return main_loop()
 	

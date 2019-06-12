@@ -31,7 +31,12 @@ func[view_home] = {
 	end,
 	[target_mission] = function()
 		local ret = check_mission()
-		if ret then change_target() end
+		if ret then 
+			local ret2 = change_target()
+			if ret2 and cfg.main == fmain_mission then
+				only_mission_wait_ts = mTime() + math.random(140,170)*1000
+			end
+		end
 	end,
 	[target_reback] = function()
 		click_btn(btn_enter_reback)
@@ -266,11 +271,22 @@ func[view_full_bag] = {
 }
 
 
+
+
+
+
+
 --------------------------------------------------------------------------------------------------
 --------------------------------------------sub function------------------------------------------
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
 
+
+
+
+
+
+only_mission_wait_ts = 0
 function change_target()
 	if handle_change_target[state.target]() then return true end
 	return false
@@ -280,23 +296,32 @@ handle_change_target = {
 		if can_to_target_atk() then return true end
 		if can_to_target_mission() then return true end
 		state.target = target_back
+		return true
 	end,
 	[target_wait] = function()
-		
+		if cfg.main == fmain_mission and mTime() > only_mission_wait_ts then
+			state.target = target_mission
+			return true
+		end
+		return false
 	end,
 	[target_back] = function()
 		state.target = target_wait
+		return true
 	end,
 	[target_atk] = function()
 		
 	end,
 	[target_mission] = function()
 		if can_to_target_atk() then return true end
+		state.target = target_back
+		return true
 	end,
 	[target_reback] = function()
 		if can_to_target_mission() then return true end
 		if can_to_target_atk() then return true end
 		state.target = target_back
+		return true
 	end,
 }
 
@@ -430,6 +455,7 @@ function check_mission()
 	if not swc_on(swc_mission_open1,true) and not swc_on(swc_mission_open2) then return false end
 	if find_item(item_mission_over2) then
 		click_item(item_mission_over2)
+		sleep()
 		return false
 	end
 	return true
