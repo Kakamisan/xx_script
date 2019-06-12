@@ -70,6 +70,7 @@ func[view_slc_team] = {
 		if slc_team() then
 			init_battle()
 			click_btn(btn_enter_bt)
+			change_bt_playing_wait_time(1)
 		end
 	end,
 	[target_default] = function()
@@ -127,6 +128,7 @@ func[view_bt_get_waifu] = {
 func[view_bt_next] = {
 	[target_default] = function()
 		click_btn(btn_bt_next)
+		change_bt_playing_wait_time(1)
 	end
 }
 
@@ -563,6 +565,11 @@ function slc_action(N)
 		end
 		
 		new_turn = true
+		if N > 1 then
+			change_bt_playing_wait_time(2)
+		else
+			change_bt_playing_wait_time(1)
+		end
 		return true
 	end
 	
@@ -802,6 +809,15 @@ FE_area = {
 	["8"] = btn_fe_8,
 	["9"] = btn_fe_9
 }
+
+
+change_bt_playing_wait_time_list = {
+	[1] = {555,1000},
+	[2] = {2333,6000}
+}
+function change_bt_playing_wait_time(Stage)
+	sleep_time[view_bt_playing] = change_bt_playing_wait_time_list[Stage]
+end
 
 function can_to_target_mission()
 	if slc(cfg.extra,fextra_mission) then
