@@ -31,7 +31,7 @@ func[view_home] = {
 	end,
 	[target_mission] = function()
 		local ret = check_mission()
-		if ret then 
+		if ret then
 			local ret2 = change_target()
 			if ret2 and (cfg.main == fmain_mission or state.had_bt >= cfg.btcount) then
 				only_mission_wait_ts = mTime() + math.random(140,170)*1000
@@ -580,24 +580,6 @@ end
 
 function slc_action(N)
 	
-	if find_item(item_turn_end) then
-		click_btn(btn_turn_over)
-		
-		local ret = timeout({count = 20,sleep = 300},in_view,view_bt_playing)
-		if not ret then
-			click_btn(btn_turn_over)
-		end
-		
-		new_turn = true
-		rand_sleep_bt_report = true
-		if N > 1 then
-			change_bt_playing_wait_time(2)
-		else
-			change_bt_playing_wait_time(1)
-		end
-		return true
-	end
-	
 	if new_round then
 		round = round + 1
 		new_round = false
@@ -610,6 +592,38 @@ function slc_action(N)
 	
 	if not N then
 		N = 1
+	end
+	
+	if not slc(cfg.auto_xy,fauto_xy_quick) then
+		if find_item(item_turn_end) then
+			click_btn(btn_turn_over)
+			
+			local ret = timeout({count = 20,sleep = 300},in_view,view_bt_playing)
+			if not ret then
+				click_btn(btn_turn_over)
+			end
+			
+			new_turn = true
+			rand_sleep_bt_report = true
+			if N > 1 then
+				change_bt_playing_wait_time(2)
+			else
+				change_bt_playing_wait_time(1)
+			end
+			return true
+		end
+	else
+		if action[round] and action[round][turn] and N > #(action[round][turn]) then
+			click_btn(btn_turn_over)
+			new_turn = true
+			rand_sleep_bt_report = true
+			if N > 1 then
+				change_bt_playing_wait_time(2)
+			else
+				change_bt_playing_wait_time(1)
+			end
+			return true
+		end
 	end
 	
 	dlog("round = ",round," turn = ",turn," N = ",N)
@@ -639,11 +653,13 @@ function do_action(a)
 	local x,y
 	local over
 	
-	local ret = timeout(find_items,item_move_reset)
-	
-	if ret and ret > 0 then
-		x = items_positions[item_move_reset][#(items_positions[item_move_reset])].x
-		y = items_positions[item_move_reset][#(items_positions[item_move_reset])].y
+	if not slc(cfg.auto_xy,fauto_xy_quick) then	--非快速模式才检查下面的行动头像下的问号
+		local ret = timeout(find_items,item_move_reset)
+		
+		if ret and ret > 0 then
+			x = items_positions[item_move_reset][#(items_positions[item_move_reset])].x
+			y = items_positions[item_move_reset][#(items_positions[item_move_reset])].y
+		end
 	end
 	
 	if action_do_1[a[1]]() then
@@ -661,21 +677,23 @@ function do_action(a)
 	if over then
 		sleep(200,230)
 		if find_item(item_turn_end) then
-			sleep(10,300)
+			sleep(100,300)
 			return true
 		end
-		local ret = timeout({count=7,sleep=200},find_items,item_move_reset)
-		if ret and ret > 0 then
-			local x1 = items_positions[item_move_reset][#(items_positions[item_move_reset])].x
-			local y1 = items_positions[item_move_reset][#(items_positions[item_move_reset])].y
-			if ((x-x1)^2+(y-y1)^2)^0.5 < 10 then
-				click({
-						item[item_move_reset].body[1]+x,
-						item[item_move_reset].body[2]+y,
-						item[item_move_reset].body[3]+x,
-						item[item_move_reset].body[4]+y
-					})
-				return do_action(a)
+		if not slc(cfg.auto_xy,fauto_xy_quick) then	--非快速模式才判断这次操作是否成功
+			local ret = timeout({count=7,sleep=200},find_items,item_move_reset)
+			if ret and ret > 0 then
+				local x1 = items_positions[item_move_reset][#(items_positions[item_move_reset])].x
+				local y1 = items_positions[item_move_reset][#(items_positions[item_move_reset])].y
+				if ((x-x1)^2+(y-y1)^2)^0.5 < 10 then
+					click({
+							item[item_move_reset].body[1]+x,
+							item[item_move_reset].body[2]+y,
+							item[item_move_reset].body[3]+x,
+							item[item_move_reset].body[4]+y
+						})
+					return do_action(a)
+				end
 			end
 		end
 	end
@@ -721,7 +739,7 @@ action_do_2 = {
 action_do_3 = {
 	["E"] = function(A)
 		sleep()
-		if slc(cfg.auto_xy,0) then
+		if slc(cfg.auto_xy,fauto_xy_0) then		--自动坐标进行识别检测
 			if timeout({count=7,sleep=200},find_items,item_target_enemy) then
 				local N = tonumber(A)
 				local x = items_positions[item_target_enemy][N].x
@@ -761,7 +779,7 @@ action_do_3 = {
 	end,
 	["F"] = function(A)
 		sleep()
-		if slc(cfg.auto_xy,0) then
+		if slc(cfg.auto_xy,fauto_xy_0) then		--自动坐标进行识别检测
 			if timeout({count=7,sleep=200},find_items,item_target_friend) then
 				local N = tonumber(A)
 				local x = items_positions[item_target_friend][N].x

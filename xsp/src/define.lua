@@ -243,6 +243,9 @@ freback_B_waifu	= 1		--B级老婆
 fextrado_auto	= 0		--行动后自动
 fextrado_quit	= 1		--行动后退出
 
+fauto_xy_0		= 0		--自动坐标
+fauto_xy_quick	= 1		--快速模式
+
 
 --------------------------------------default--------------------------------------
 default = 0
