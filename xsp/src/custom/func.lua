@@ -825,7 +825,7 @@ action_do_3 = {
 		click_btn(name)
 		return true
 	end,
-	["FE"] = function(A)
+	["GF"] = function(A)
 		sleep(310,398)
 		local name = FE_area[A]
 		click_btn(name)
