@@ -275,12 +275,14 @@ func[view_full_bag] = {
 				if not reback_just_now and can_to_target_reback() then
 					return true
 				end
+				if can_to_target_mission() then return true end
 				state.target = target_back
 			end
 		else
 			if not reback_just_now and can_to_target_reback() then
 				return true
 			end
+			if can_to_target_mission() then return true end
 			state.target = target_back
 		end
 	end,

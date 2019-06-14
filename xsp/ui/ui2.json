@@ -1,8 +1,8 @@
 {
    "style" : "default",
    "config" : "save_km_xx.dat",
-   "width" : 2160,
-   "height" : 1080,
+   "width" : 1400,
+   "height" : 700,
    "cancelscroll" : true,
    "countdown" : 0,
    "cancelname" : "关闭",
@@ -31,25 +31,37 @@
                "color" : "0,0,225"
             },
             {
-               "id" : "chapter",
-               "list" : "1,2,3,4,5,6",
-               "select" : "0",
-               "size" : 30,
-               "type" : "ComboBox"
-            },
-            {
-               "id" : "subfb",
-               "list" : "1,2,3,4,5,6,7,8,1b,2b,3b,4b,5b,6b,7b,8b,1e,2e,3e,4e,5e,6e,7e,8e",
-               "select" : "0",
-               "size" : 30,
-               "type" : "ComboBox"
-            },
-            {
-               "id" : "team",
-               "list" : "队伍1,队伍2,队伍3,队伍4,队伍5,队伍6,队伍7,队伍8",
-               "select" : "0",
-               "size" : 30,
-               "type" : "ComboBox"
+               "id" : "group1",
+               "width" : 1000,
+               "height" : 100,
+               "type" : "LinearLayout",
+               "views" : [
+                  //LinearLayout 控件内的所有子控件都需要加入width属性指定宽度
+                  {
+                     "id" : "chapter",
+                     "list" : "1,2,3,4,5,6",
+                     "select" : "0",
+                     "size" : 30,
+                     "width" : 300,
+                     "type" : "ComboBox"
+                  },
+                  {
+                     "id" : "subfb",
+                     "list" : "1,2,3,4,5,6,7,8,1b,2b,3b,4b,5b,6b,7b,8b,1e,2e,3e,4e,5e,6e,7e,8e",
+                     "select" : "0",
+                     "size" : 30,
+                     "width" : 300,
+                     "type" : "ComboBox"
+                  },
+                  {
+                     "id" : "team",
+                     "list" : "队伍1,队伍2,队伍3,队伍4,队伍5,队伍6,队伍7,队伍8",
+                     "select" : "0",
+                     "size" : 30,
+                     "width" : 300,
+                     "type" : "ComboBox"
+                  }
+               ]
             },
             {
                "align" : "left",
@@ -60,24 +72,35 @@
                "type" : "Label"
             },
             {
-               "id" : "btcount",
-               "align" : "left",
-               "color" : "0,0,0",
-               "kbtype" : "number",
-               "prompt" : "打的次数",
-               "size" : 25,
-               "text" : "10",
-               "type" : "Edit"
-            },
-			{
-	            "id" : "sshkey",
-	            "align" : "left",
-	            "color" : "0,0,0",
-	            "kbtype" : "number",
-	            "prompt" : "密钥",
-	            "size" : 25,
-	            "text" : "",
-	            "type" : "Edit"
+               "id" : "group1",
+               "width" : 1000,
+               "height" : 100,
+               "type" : "LinearLayout",
+               "views" : [
+                  //LinearLayout 控件内的所有子控件都需要加入width属性指定宽度
+                  {
+                     "id" : "btcount",
+                     "align" : "left",
+                     "color" : "0,0,0",
+                     "kbtype" : "number",
+                     "prompt" : "打的次数",
+                     "size" : 25,
+                     "text" : "10",
+                     "width" : 300,
+                     "type" : "Edit"
+                  },
+                  {
+                     "id" : "sshkey",
+                     "align" : "left",
+                     "color" : "0,0,0",
+                     "kbtype" : "number",
+                     "prompt" : "密钥",
+                     "size" : 25,
+                     "text" : "",
+                     "width" : 500,
+                     "type" : "Edit"
+                  }
+               ]
             }
          ]
       },
@@ -146,7 +169,7 @@
                "align" : "left",
                "color" : "0,0,0",
                "size" : 20,
-               "text" : "说明：\n请顺序输入回合行动模板编号，若敌方第一回合则不计入，比如58e填“1,2”，那就是我方可行动第一回合执行模板1，第二回合执行模板2，实际上游戏内是第2 3回合，但不用管\n下面的输入框必须在输入真实的行动模板顺序前输入一个命名，用英文分号隔开，例“打58e;1,2”,对于多个小关卡的地图，后面的行动用英文分号隔开,例“打44e;1,2;3;3;3”",
+               "text" : "说明：\n请顺序输入回合行动模板编号，若敌方第一回合则不计入，比如58e填“1,2”，那就是我方可行动第一回合执行模板1，第二回合执行模板2，实际上游戏内是第2 3回合，但不用管\n下面的输入框必须在输入真实的行动模板顺序前输入一个命名，用英文分号隔开，例“打58e;1,2”,对于多个小关卡的地图，后面的行动用英文分号隔开,例“打44e;1,2;3;3”",
                "bg" : "255,255,255",
                "type" : "Label"
             },
@@ -671,7 +694,7 @@
                "kbtype" : "number",
                "prompt" : "填坐标",
                "size" : 25,
-               "text" : "",
+               "text" : "1000,800",
                "type" : "Edit"
             },
             {

@@ -11,6 +11,7 @@ if ret ~= 1 then
 end
 
 if UI.sshkey ~= "节奏123" then
+	dialog("明文密钥错误",5)
 	lua_exit()
 end
 
