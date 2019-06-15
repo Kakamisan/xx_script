@@ -4,7 +4,7 @@ vt[0] = {
 	1,2,3,4,5,6,8,10
 	,11,13,14,15,16
 	,17,18,19,20,21,22
-	,23,24,25,26
+	,23,24,25,26,27
 	
 	,7,12,9
 }
@@ -77,6 +77,7 @@ vt[view_bt_report] = {
 	,view_bt_next
 	,view_bt_over
 	,view_stop_repeat
+	,view_level_up
 --	,view_bt_waiting
 }
 
@@ -97,6 +98,7 @@ vt[view_bt_get_waifu] = {
 	view_bt_get_waifu
 	,view_bt_next
 	,view_bt_over
+	,view_level_up
 --	,view_bt_waiting
 }
 
@@ -122,6 +124,7 @@ vt[view_bt_over] = {
 	,view_slc_team
 	,view_stop_repeat
 	,view_full_bag
+	,view_level_up
 }
 
 --14--选择是否停止反复战斗
@@ -215,6 +218,13 @@ vt[view_full_bag] = {
 	view_full_bag
 	,view_reback
 	,view_slc_team
+}
+
+--27--
+vt[view_level_up] = {
+	view_level_up
+	,view_slc_team
+	,view_stop_repeat
 }
 
 
