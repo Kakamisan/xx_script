@@ -4,7 +4,7 @@ vt[0] = {
 	1,2,3,4,5,6,8,10
 	,11,13,14,15,16
 	,17,18,19,20,21,22
-	,23,24,25,26,27
+	,23,24,25,26,27,28
 	
 	,7,12,9
 }
@@ -125,6 +125,7 @@ vt[view_bt_over] = {
 	,view_stop_repeat
 	,view_full_bag
 	,view_level_up
+	,view_need_repair
 }
 
 --14--选择是否停止反复战斗
@@ -211,6 +212,7 @@ vt[view_reback_get] = {
 vt[view_bt_quit] = {
 	view_bt_quit
 	,view_slc_team
+	,view_need_repair
 }
 
 --26--
@@ -227,5 +229,10 @@ vt[view_level_up] = {
 	,view_stop_repeat
 }
 
+--28--
+vt[view_need_repair] = {
+	view_need_repair
+	,view_slc_team
+}
 
 return vt

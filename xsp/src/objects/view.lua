@@ -411,6 +411,30 @@ view[view_level_up] = {
 	degree = 98
 }
 
-
+--28--修复
+view[view_need_repair] = {
+	feature = {
+	{x=0+272,y=0+24,color=0x5b5b63},
+	{x=7+272,y=12+24,color=0x5b5b63},
+	{x=62+272,y=5+24,color=0x7f7f7f},
+	{x=68+272,y=5+24,color=0x7f7f7f},
+	{x=65+272,y=13+24,color=0x7f7f7f},
+	{x=-76+272,y=112+24,color=0xb6b6c7},
+	{x=-75+272,y=129+24,color=0xb6b6c7},
+	{x=15+272,y=129+24,color=0x6c6c7b},
+	{x=277+272,y=552+24,color=0xff6200},
+	{x=296+272,y=515+24,color=0xff6200},
+	{x=327+272,y=510+24,color=0xff6200},
+	{x=350+272,y=512+24,color=0xff6200},
+	{x=371+272,y=512+24,color=0xff6200},
+	{x=406+272,y=514+24,color=0xff6200},
+	{x=421+272,y=522+24,color=0xff6200},
+	{x=409+272,y=538+24,color=0xff6200},
+	{x=397+272,y=551+24,color=0xff6200},
+	{x=474+272,y=552+24,color=0xffcc00},
+	{x=496+272,y=552+24,color=0xffcc00},
+	{x=539+272,y=552+24,color=0xffcc00}
+	}
+}
 
 return view

@@ -2,7 +2,7 @@
    "style" : "custom",
    "config" : "save_km_xx.dat",
    "width" : 1400,
-   "height" : 700,
+   "height" : 1000,
    "cancelscroll" : true,
    "countdown" : 0,
    "cancelname" : "关闭",

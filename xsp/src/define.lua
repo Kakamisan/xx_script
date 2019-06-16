@@ -46,6 +46,7 @@ btn_ack_quit	= 43	--确定退出
 btn_full_bag_close = 44	--关闭爆仓弹窗
 btn_enter_reback2 = 45	--满仓进入分解
 btn_ack2		= 46	--升级弹窗-点确定
+btn_cancel1		= 47	--取消1-取消修复
 
 
 
@@ -168,6 +169,7 @@ view_reback_get		= 24	--老婆分解-获得物品
 view_bt_quit		= 25	--战斗中-撤退
 view_full_bag		= 26	--仓库满了
 view_level_up		= 27	--升级
+view_need_repair	= 28	--要修复
 
 
 
@@ -201,6 +203,7 @@ to_view_desc = {
 	,[view_bt_quit] = "战斗中-撤退"
 	,[view_full_bag] = "仓库满了"
 	,[view_level_up] = "升级"
+	,[view_need_repair] = "要修复"
 }
 
 

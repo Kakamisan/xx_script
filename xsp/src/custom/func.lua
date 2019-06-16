@@ -21,6 +21,10 @@ end
 
 func[view_home] = {
 	[target_wait] = function()
+		if mTime() > state.clock then
+			click_btn(btn_enter_reback)
+			state.clock = mTime() + math.random(1000,2000)*1000
+		end
 		change_target()
 	end,
 	[target_back] = function()
@@ -303,6 +307,17 @@ func[view_level_up] = {
 	end
 }
 
+
+func[view_need_repair] = {
+	[target_default] = function()
+		cfg.btcount = 0
+		click_btn(btn_cancel1)
+		if can_to_target_mission() then
+		else
+			state.target = target_back
+		end
+	end
+}
 
 
 
