@@ -93,6 +93,11 @@ func[view_bt_slc_acn] = {
 func[view_bt_playing] = {
 	[target_default] = function()
 		--do nothing
+		if cfg.extra_do == fextrado_auto and had_change_auto then
+			click_btn(btn_bt_auto)
+			had_change_auto = false
+			return true
+		end
 		do_get_in_battle()
 	end
 }
@@ -109,12 +114,6 @@ func[view_bt_report] = {
 	[target_default] = function()
 		new_round = true
 		turn = 0
-		if cfg.extra_do == fextrado_auto and had_change_auto then
-			click_btn(btn_bt_auto)
-			had_change_auto = false
-			rand_sleep_bt_report = false
-			return true
-		end
 		if rand_sleep_bt_report and cfg.main == fmain_repeat and math.random(1,100) < 17 then
 			sleep(7500,9500)
 		end
