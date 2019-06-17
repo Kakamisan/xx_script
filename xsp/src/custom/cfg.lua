@@ -296,6 +296,14 @@ function decode_pos(txt)
 	if not txt or txt == "" then
 		return {}
 	end
+	
+	local t2 = split(txt,";")
+	if #t2 == 1 then
+		txt = t2[1]
+	else
+		txt = t2[2]
+	end
+	
 	local t = split(txt,",")
 	return {tonumber(t[1]),tonumber(t[2])}
 end
