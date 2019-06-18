@@ -222,4 +222,8 @@ btn[btn_cancel1] = {
 	body = {576,541,659,570}
 }
 
+btn[btn_ack3] = {
+	body = {673,541,766,565}
+}
+
 return btn

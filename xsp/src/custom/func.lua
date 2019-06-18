@@ -318,6 +318,12 @@ func[view_need_repair] = {
 	end
 }
 
+func[view_re_connect] = {
+	[target_default] = function()
+		click_btn(btn_ack3)
+	end
+}
+
 
 
 

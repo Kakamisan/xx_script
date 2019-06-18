@@ -437,4 +437,29 @@ view[view_need_repair] = {
 	}
 }
 
+view[view_re_connect] = {
+	feature = {
+	{x=0+193,y=0+131,color=0xb6b6c7},
+	{x=2+193,y=21+131,color=0xb6b6c7},
+	{x=14+193,y=30+131,color=0x8e8e9d},
+	{x=27+193,y=34+131,color=0x8d8d9d},
+	{x=16+193,y=-6+131,color=0x9999a6},
+	{x=19+193,y=4+131,color=0x6c6c7b},
+	{x=123+193,y=33+131,color=0x6c6c7b},
+	{x=1052+193,y=0+131,color=0x646470},
+	{x=949+193,y=26+131,color=0x5e5e6c},
+	{x=448+193,y=446+131,color=0xffcc00},
+	{x=472+193,y=446+131,color=0xffcc00},
+	{x=516+193,y=445+131,color=0xffcc00},
+	{x=552+193,y=445+131,color=0xffcc00},
+	{x=583+193,y=445+131,color=0xffcc00},
+	{x=603+193,y=419+131,color=0xffcc00},
+	{x=603+193,y=402+131,color=0xffcc00},
+	{x=471+193,y=404+131,color=0xffcc00},
+	{x=510+193,y=404+131,color=0xffcc00},
+	{x=536+193,y=404+131,color=0xffcc00},
+	{x=559+193,y=404+131,color=0xffcc00}
+	}
+}
+
 return view

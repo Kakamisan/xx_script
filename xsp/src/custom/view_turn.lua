@@ -5,6 +5,7 @@ vt[0] = {
 	,11,13,14,15,16
 	,17,18,19,20,21,22
 	,23,24,25,26,27,28
+	,29
 	
 	,7,12,9
 }
@@ -233,6 +234,11 @@ vt[view_level_up] = {
 vt[view_need_repair] = {
 	view_need_repair
 	,view_slc_team
+}
+
+vt[view_re_connect] = {
+	view_home
+	,view_re_connect
 }
 
 return vt
