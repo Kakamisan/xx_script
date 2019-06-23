@@ -1,20 +1,165 @@
 {
-   "style" : "default",
-   "config" : "save_km_xx.dat",
+   "style" : "custom",
+   "config" : "save_km_xx2.dat",
    "width" : 960,
-   "height" : 540,
+   "height" : 720,
    "cancelscroll" : true,
    "countdown" : 0,
    "cancelname" : "取消",
    "okname" : "确定",
    "views" : [
       {
-         "align" : "left",
-         "color" : "0,0,0",
-         "size" : 20,
-         "text" : "这个分辨率的UI还没写",
-         "bg" : "",
-         "type" : "Label"
+         "id" : "cfgslc",
+         "list" : "配置1,配置2,配置3,配置4,配置5,配置6,配置7,配置8,配置9,配置10,配置11,配置12,配置13",
+         "select" : "0",
+         "size" : 30,
+         "type" : "RadioGroup",
+         "orientation" : "vertical",
+         "rect" : "10,0,200,900",
+         "color" : "0,0,225"
+      },
+	  {
+	      "id" : "Edit1",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,0,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit2",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,62,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit3",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,124,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit4",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,186,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit5",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,248,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit6",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,310,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit7",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,372,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit8",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,434,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit9",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,496,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit10",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,558,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit11",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,620,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit12",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,682,740,60",
+	      "type" : "Edit"
+      },
+	  {
+	      "id" : "Edit13",
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "kbtype" : "number",
+	      "prompt" : "命名",
+	      "size" : 25,
+	      "text" : "",
+         "rect" : "210,744,740,60",
+	      "type" : "Edit"
       }
    ]
 }
