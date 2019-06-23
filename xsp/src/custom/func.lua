@@ -94,6 +94,7 @@ func[view_bt_playing] = {
 	[target_default] = function()
 		--do nothing
 		if cfg.extra_do == fextrado_auto and had_change_auto then
+			sleep(2000)
 			click_btn(btn_bt_auto)
 			had_change_auto = false
 			return true
@@ -746,7 +747,7 @@ action_do_1 = {
 		return false
 	end,
 	["S2"] = function()
-		sleep(310,398)
+		sleep(270,358)
 		click_btn(btn_skill2)
 		sleep(20,150)
 		return false
@@ -756,29 +757,41 @@ action_do_1 = {
 		return true
 	end,
 	["M"] = function()
-		sleep(310,398)
+		sleep(270,358)
 		click_btn(btn_move)
+		sleep(20,150)
 		return false
 	end
 }
 
 action_do_2 = {
 	["SF"] = function()
-		sleep(310,398)
+		sleep(270,358)
 		if timeout({count=7,sleep=200},find_item,item_target_self) then
 			click_item(item_target_self)
 		end
 		return true
 	end,
-	["E"] = function() return false end,
-	["F"] = function() return false end,
-	["GE"] = function() return false end,
-	["GF"] = function() return false end,
+	["E"] = function()
+		sleep(270,358)
+		return false
+	end,
+	["F"] = function()
+		sleep(270,358)
+		return false
+	end,
+	["GE"] = function()
+		sleep(270,358)
+		return false
+	end,
+	["GF"] = function()
+		sleep(270,358)
+		return false
+	end,
 }
 
 action_do_3 = {
 	["E"] = function(A)
-		sleep()
 		if slc(cfg.auto_xy,fauto_xy_0) then		--自动坐标进行识别检测
 			if timeout({count=7,sleep=200},find_items,item_target_enemy) then
 				local N = tonumber(A)
@@ -818,7 +831,6 @@ action_do_3 = {
 		end
 	end,
 	["F"] = function(A)
-		sleep()
 		if slc(cfg.auto_xy,fauto_xy_0) then		--自动坐标进行识别检测
 			if timeout({count=7,sleep=200},find_items,item_target_friend) then
 				local N = tonumber(A)
@@ -858,7 +870,6 @@ action_do_3 = {
 		end
 	end,
 	["GE"] = function(A)
-		sleep(310,398)
 		local name = GE_area[A]
 		click_btn(name)
 		sleep(180,280)
@@ -866,7 +877,6 @@ action_do_3 = {
 		return true
 	end,
 	["GF"] = function(A)
-		sleep(310,398)
 		local name = FE_area[A]
 		click_btn(name)
 		sleep(180,280)
