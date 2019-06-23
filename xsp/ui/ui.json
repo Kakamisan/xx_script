@@ -36,7 +36,7 @@
 	      "kbtype" : "number",
 	      "prompt" : "命名",
 	      "size" : 25,
-	      "text" : "",
+	      "text" : "这个是更新之前的配置",
          "rect" : "210,62,740,60",
 	      "type" : "Edit"
       },
