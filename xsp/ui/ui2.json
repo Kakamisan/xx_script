@@ -1,6 +1,6 @@
 {
    "style" : "custom",
-   "config" : "save_km_xx.dat",
+   "config" : "save_km_xx2.dat",
    "width" : 1400,
    "height" : 1000,
    "cancelscroll" : true,
