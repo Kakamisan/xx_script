@@ -54,14 +54,17 @@ item[item_A_waifu] = {
 }
 
 item[item_B_waifu] = {
-	body = {788-723,440-483,799-723,452-483},
+	body = {788-723,440-484,799-723,452-484},
 	area = {226,74,1136,709},
 	feature = {
-		{x=0,y=0,color=0x13cbee},
-	{x=-3,y=14,color=0x10c0e9},
-	{x=-3,y=45,color=0x06b1e5},
-	{x=1,y=47,color=0x05b1e3},
-	{x=0,y=24,color=0x0cbae6}
+		{x=0,y=0,color=0x25a814},
+	{x=-4,y=4,color=0x22a611},
+	{x=0,y=12,color=0x1fa20f},
+	{x=-5,y=16,color=0x1f9f0f},
+	{x=0,y=47,color=0x179a07},
+	{x=0,y=16,color=0x20a10f},
+	{x=-1,y=38,color=0x199c09},
+	{x=-4,y=33,color=0x1b9e0b}
 	},
 	degree = 98
 }
