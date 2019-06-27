@@ -119,7 +119,7 @@ func[view_bt_report] = {
 			sleep(7500,9500)
 		end
 		rand_sleep_bt_report = false
-		click_btn(btn_normal)
+		if cfg.main == fmain_repeat then click_btn(btn_normal) end
 	end
 }
 
@@ -131,7 +131,7 @@ func[view_bt_waiting] = {
 
 func[view_bt_get_waifu] = {
 	[target_default] = function()
-		click_btn(btn_normal)
+		if cfg.main == fmain_repeat then click_btn(btn_normal) end
 	end
 }
 
@@ -150,7 +150,7 @@ func[view_bt_moving] = {
 
 func[view_bt_over] = {
 	[target_default] = function()
-		click_btn(btn_normal)
+		if cfg.main == fmain_repeat then click_btn(btn_normal) end
 	end
 }
 
@@ -366,8 +366,7 @@ handle_change_target = {
 	end,
 	[target_wait] = function()
 		if (cfg.main == fmain_mission or state.had_bt >= cfg.btcount) and mTime() > only_mission_wait_ts then
-			state.target = target_mission
-			return true
+			if can_to_target_mission() then return true end
 		end
 		return false
 	end,
