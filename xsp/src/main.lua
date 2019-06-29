@@ -23,6 +23,7 @@ end
 
 function main_loop()
 	
+	while(true) do
 	if state.target ~= target_wait then
 	update_view()
 	
@@ -45,7 +46,9 @@ function main_loop()
 		lua_exit()
 	end
 
-	return main_loop()
+--	return main_loop()
+	
+	end
 	
 end
 
