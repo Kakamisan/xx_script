@@ -716,16 +716,19 @@ function do_action(a)
 	
 	if over then
 		sleep(200,230)
+		if slc(cfg.auto_xy,fauto_xy_quick) then	--快速模式直接跳出到下一步
+			return true
+		end
 		if find_item(item_turn_end) then
 			sleep(100,300)
 			return true
 		end
-		if not slc(cfg.auto_xy,fauto_xy_quick) then	--非快速模式才判断这次操作是否成功
+		if x and x > 0.057*pos.cx then	--在最左侧时不检测了
 			local ret = timeout({count=7,sleep=200},find_items,item_move_reset)
 			if ret and ret > 0 then
 				local x1 = items_positions[item_move_reset][#(items_positions[item_move_reset])].x
 				local y1 = items_positions[item_move_reset][#(items_positions[item_move_reset])].y
-				if ((x-x1)^2+(y-y1)^2)^0.5 < 10 then
+				if ((x-x1)^2+(y-y1)^2)^0.5 < 2.25 then
 					click({
 							item[item_move_reset].body[1]+x,
 							item[item_move_reset].body[2]+y,
