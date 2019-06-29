@@ -6,13 +6,16 @@ require "custom.init"
 
 function main_loop()
 	
+	while(true) do
 	update_view()
 	
 	run()
 	
 	sleep()
 
-	return main_loop()
+--	return main_loop()
+
+	end
 	
 end
 
