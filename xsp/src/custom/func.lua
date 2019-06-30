@@ -279,6 +279,7 @@ func[view_full_bag] = {
 				if not reback_just_now and can_to_target_reback() then
 					return true
 				end
+				cfg.btcount = 0
 				if can_to_target_mission() then return true end
 				state.target = target_back
 			end
@@ -286,6 +287,7 @@ func[view_full_bag] = {
 			if not reback_just_now and can_to_target_reback() then
 				return true
 			end
+			cfg.btcount = 0
 			if can_to_target_mission() then return true end
 			state.target = target_back
 		end
