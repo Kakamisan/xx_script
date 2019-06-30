@@ -434,9 +434,11 @@ view[view_need_repair] = {
 	{x=474+272,y=552+24,color=0xffcc00},
 	{x=496+272,y=552+24,color=0xffcc00},
 	{x=539+272,y=552+24,color=0xffcc00}
-	}
+	},
+	degree = 98
 }
 
+--29--重连
 view[view_re_connect] = {
 	feature = {
 	{x=0+193,y=0+131,color=0xb6b6c7},
@@ -459,7 +461,8 @@ view[view_re_connect] = {
 	{x=510+193,y=404+131,color=0xffcc00},
 	{x=536+193,y=404+131,color=0xffcc00},
 	{x=559+193,y=404+131,color=0xffcc00}
-	}
+	},
+	degree = 98
 }
 
 return view

@@ -1,13 +1,11 @@
 local vt = {}
 
 vt[0] = {
-	1,2,3,4,5,6,8,10
-	,11,13,14,15,16
-	,17,18,19,20,21,22
-	,23,24,25,26,27,28
-	,29
+	1	,2	,3	,4	,5	,6	,8	,10	,11	,13
+	,14	,15	,16	,29	,17	,18	,19	,20	,21	,22
+	,23	,24	,25	,26	,27	,28
 	
-	,7,12,9
+	,7	,12	,9
 }
 --1--主页
 vt[view_home] = {
@@ -127,6 +125,7 @@ vt[view_bt_over] = {
 	,view_full_bag
 	,view_level_up
 	,view_need_repair
+	,view_re_connect
 }
 
 --14--选择是否停止反复战斗
@@ -160,13 +159,13 @@ vt[view_sys_online] = {
 	,view_bt_enemy_acn
 }
 
---18--
+--18--战斗中-敌方行动
 vt[view_bt_enemy_acn] = {
 	view_bt_enemy_acn
 	,view_bt_playing
 }
 
---19--
+--19--建造中心
 vt[view_creator] = {
 	view_creator
 	,view_reback
@@ -174,7 +173,7 @@ vt[view_creator] = {
 	,view_ctn_mission
 }
 
---20--
+--20--分解中心
 vt[view_reback] = {
 	view_reback
 	,view_reback_waifu
@@ -184,61 +183,63 @@ vt[view_reback] = {
 	,view_ctn_mission
 }
 
---21--
+--21--老婆分解
 vt[view_reback_waifu] = {
 	view_reback_waifu
 	,view_reback_waifu_al
 	,view_reback
 }
 
---22--
+--22--老婆分解-分A级以上弹窗警告
 vt[view_reback_waifu_al] = {
 	view_reback_waifu_al
 	,view_reback
 }
 
---23--
+--23--老婆分解-确定分解
 vt[view_reback_waifu_ac] = {
 	view_reback_waifu_ac
 	,view_reback_get
 }
 
---24--
+--24--老婆分解-获得物品
 vt[view_reback_get] = {
 	view_reback_get
 	,view_reback
 }
 
---25--
+--25--战斗中-撤退
 vt[view_bt_quit] = {
 	view_bt_quit
 	,view_slc_team
 	,view_need_repair
 }
 
---26--
+--26--仓库满了
 vt[view_full_bag] = {
 	view_full_bag
 	,view_reback
 	,view_slc_team
 }
 
---27--
+--27--升级
 vt[view_level_up] = {
 	view_level_up
 	,view_slc_team
 	,view_stop_repeat
 }
 
---28--
+--28--要修复
 vt[view_need_repair] = {
 	view_need_repair
 	,view_slc_team
 }
 
+--29--掉线重连
 vt[view_re_connect] = {
 	view_home
 	,view_re_connect
+	,view_slc_team
 }
 
 return vt

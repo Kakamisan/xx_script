@@ -657,7 +657,7 @@ function slc_action(N)
 			click_btn(btn_turn_over)
 			new_turn = true
 			rand_sleep_bt_report = true
-			if N > 1 then
+			if N > 3 then
 				change_bt_playing_wait_time(2)
 			else
 				change_bt_playing_wait_time(1)
