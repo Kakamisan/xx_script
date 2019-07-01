@@ -10,25 +10,30 @@ if ret ~= 1 then
 	lua_exit()
 end
 
-local cfgslclist = {
-	[0] = "ui1.json",
-	[1] = "ui2.json",
-	[2] = "ui3.json",
-	[3] = "ui4.json",
-	[4] = "ui5.json",
-	[5] = "ui6.json",
-	[6] = "ui7.json",
-	[7] = "ui8.json",
-	[8] = "ui9.json",
-	[9] = "ui10.json",
-	[10] = "ui11.json",
-	[11] = "ui12.json",
-	[12] = "ui13.json"
-}
+--local cfgslclist = {
+--	[0] = "ui1.json",
+--	[1] = "ui2.json",
+--	[2] = "ui3.json",
+--	[3] = "ui4.json",
+--	[4] = "ui5.json",
+--	[5] = "ui6.json",
+--	[6] = "ui7.json",
+--	[7] = "ui8.json",
+--	[8] = "ui9.json",
+--	[9] = "ui10.json",
+--	[10] = "ui11.json",
+--	[11] = "ui12.json",
+--	[12] = "ui13.json"
+--}
 
-dlog(cfgslclist[tonumber(UI.cfgslc)])
+--dlog(cfgslclist[tonumber(UI.cfgslc)])
 
-content = getUIContent(cfgslclist[tonumber(UI.cfgslc)])
+--content = getUIContent(cfgslclist[tonumber(UI.cfgslc)])
+
+content = getUIContent("ui1.json")
+if tonumber(UI.cfgslc) ~= 0 then
+	content = string.gsub(content,"save_km_xx","save_km_xx"..(tonumber(UI.cfgslc)+1))
+end
 
 local ret,UI = showUI(content)
 
