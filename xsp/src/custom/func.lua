@@ -219,6 +219,21 @@ func[view_reback] = {
 	[target_reback] = function()
 		if handle_reback() then
 			reback_just_now = true
+			if can_to_target_reback2() then return true end
+			if cfg.main == fmain_alarm then
+				if can_to_target_mission() then return true end
+				if can_to_target_atk() then return true end
+				state.target = target_back
+				return true
+			end
+			if can_to_target_atk() then return true end
+			if can_to_target_mission() then return true end
+			state.target = target_back
+		end
+	end,
+	[target_reback2] = function()
+		if handle_reback2() then
+			reback_just_now = true
 			if cfg.main == fmain_alarm then
 				if can_to_target_mission() then return true end
 				if can_to_target_atk() then return true end
@@ -242,6 +257,12 @@ func[view_reback_waifu] = {
 			click_btn(btn_reback_slc_ok)
 		end
 	end,
+	[target_reback2] = function()
+		if reback_eqm_slc() then
+			had_reback2 = true
+			click_btn(btn_reback_slc_ok)
+		end
+	end,
 	[target_default] = function()
 		click_btn(btn_back_any)
 	end
@@ -260,6 +281,12 @@ func[view_reback_waifu_ac] = {
 }
 
 func[view_reback_get] = {
+	[target_default] = function()
+		click_btn(btn_ack_get)
+	end
+}
+
+func[view_reback_get2] = {
 	[target_default] = function()
 		click_btn(btn_ack_get)
 	end
@@ -540,6 +567,7 @@ end
 
 had_reback = false
 function handle_reback()
+	if cfg.reback == "" then return true end
 	if not had_reback then
 		click_btn(btn_reback_enter)
 		return false
@@ -554,6 +582,26 @@ function handle_reback()
 		return false
 	end
 	had_reback = false
+	return true
+end
+
+had_reback2 = false
+function handle_reback2()
+	if not swc_on(swc_change_eqm) then return false end
+	if not had_reback2 then
+		click_btn(btn_reback_enter)
+		return false
+	end
+	local txt = get_text(text_reback_gain)
+	if not txt then return false end
+	txt = string.gsub(txt,"%s","")
+	txt = string.match(txt,"%d+")
+	txt = tonumber(txt)
+	if txt and txt > 0 then
+		click_btn(btn_reback_start)
+		return false
+	end
+	had_reback2 = false
 	return true
 end
 
@@ -583,6 +631,42 @@ function reback_waifu_slc()
 			click_item(item_B_waifu)
 			sleep(80,133)
 			click_item(item_B_waifu)
+			return false
+		end
+	end
+	if find_item(item_reback_scroll) then
+		click_item(item_reback_scroll)
+		return false
+	end
+	return true
+end
+
+function reback_eqm_slc()
+	if not swc_off(swc_reback_ss) then return false end
+	if not swc_off(swc_reback_s) then return false end
+	if slc(cfg.reback2,freback_A_eqm) then
+		if not swc_on(swc_reback_a) then return false end
+	else
+		if not swc_off(swc_reback_a) then return false end
+	end
+	if slc(cfg.reback2,freback_B_eqm) then
+		if not swc_on(swc_reback_b) then return false end
+	else
+		if not swc_off(swc_reback_b) then return false end
+	end
+	if slc(cfg.reback2,freback_A_eqm) then
+		if find_item(item_A_eqm) then
+			click_item(item_A_eqm)
+			sleep(80,133)
+			click_item(item_A_eqm)
+			return false
+		end
+	end
+	if slc(cfg.reback2,freback_B_eqm) then
+		if find_item(item_B_eqm) then
+			click_item(item_B_eqm)
+			sleep(80,133)
+			click_item(item_B_eqm)
 			return false
 		end
 	end
@@ -939,8 +1023,16 @@ function can_to_target_atk()
 end
 
 function can_to_target_reback()
-	if slc(cfg.extra,fextra_reback) and (slc(cfg.reback,freback_A_waifu) or slc(cfg.reback,freback_B_waifu)) then
+	if slc(cfg.extra,fextra_reback) and (slc(cfg.reback,freback_A_waifu) or slc(cfg.reback,freback_B_waifu) or slc(cfg.reback2,freback_A_eqm) or slc(cfg.reback2,freback_B_eqm)) then
 		state.target = target_reback
+		return true
+	end
+	return false
+end
+
+function can_to_target_reback2()
+	if slc(cfg.extra,fextra_reback) and (slc(cfg.reback2,freback_A_eqm) or slc(cfg.reback2,freback_B_eqm)) then
+		state.target = target_reback2
 		return true
 	end
 	return false

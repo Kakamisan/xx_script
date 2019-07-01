@@ -115,7 +115,7 @@ btn[btn_ack1] = {
 --18--
 btn[btn_ack_get] = {
 	body = {668,583,766,620},
-	view = {view_reback_get}
+	view = {view_reback_get,view_reback_get2}
 }
 
 --19--

@@ -1502,9 +1502,19 @@
             {
                "id" : "reback",
                "list" : "A级狗粮,B级狗粮",
-               "select" : "0@2",
+               "select" : "0",
                "size" : 30,
                "rect" : "10,100,1380,100",
+               "type" : "CheckBoxGroup",
+               "orientation" : "horizontal",
+               "color" : "0,0,225"
+            },
+            {
+               "id" : "reback2",
+               "list" : "A级装备,B级装备",
+               "select" : "0",
+               "size" : 30,
+               "rect" : "10,200,1380,100",
                "type" : "CheckBoxGroup",
                "orientation" : "horizontal",
                "color" : "0,0,225"

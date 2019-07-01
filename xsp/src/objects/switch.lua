@@ -595,4 +595,17 @@ swc[swc_reback_b] = {
 	},
 	view = {view_reback_waifu}
 }
+
+swc[swc_change_eqm] = {
+	body = {1064,80,1148,105},
+	area = {1050,85,1063,98},
+	feature = {
+		{x=0,y=0,color=0xffcc00}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x535256}
+	},
+	view = {view_reback}
+}
+
 return swc

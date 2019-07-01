@@ -64,6 +64,8 @@ item_target_self	= 9		--技能目标是自己
 item_target_enemy	= 10	--目标是敌人
 item_target_friend	= 11	--目标自己人
 item_target_set		= 12	--目标是设置坐标
+item_A_eqm			= 13	--A级装备
+item_B_eqm			= 14	--B级装备
 
 
 
@@ -127,6 +129,8 @@ swc_reback_s	= 42	--分解-筛选s
 swc_reback_a	= 43	--分解-筛选a
 swc_reback_b	= 44	--分解-筛选b
 
+swc_change_eqm	= 45	--分解-转到装备分解
+
 
 
 
@@ -172,6 +176,7 @@ view_full_bag		= 26	--仓库满了
 view_level_up		= 27	--升级
 view_need_repair	= 28	--要修复
 view_re_connect		= 29	--掉线重连
+view_reback_get2	= 30	--装备分解-获得物品
 
 
 
@@ -206,6 +211,7 @@ to_view_desc = {
 	,[view_level_up] = "升级"
 	,[view_need_repair] = "要修复"
 	,[view_re_connect] = "掉线重连"
+	,[view_reback_get2] = "装备分解-获得物品"
 }
 
 
@@ -217,6 +223,7 @@ target_back		= 2		--返回主页
 target_atk		= 3		--主线出击
 target_mission	= 4		--远征
 target_reback	= 5		--分解
+target_reback2	= 6		--分解2（装备）
 
 to_target_desc = {
 	[0] = "默认"
@@ -245,8 +252,9 @@ fextra_reback	= 1		--自动分解
 
 freback_A_waifu	= 0		--A级老婆
 freback_B_waifu	= 1		--B级老婆
---freback_A_eqm	= 2		--A级装备
---freback_B_eqm	= 3		--B级装备
+
+freback_A_eqm	= 0		--A级装备
+freback_B_eqm	= 1		--B级装备
 
 fextrado_auto	= 0		--行动后自动
 fextrado_quit	= 1		--行动后退出

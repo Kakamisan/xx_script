@@ -3,7 +3,7 @@ local vt = {}
 vt[0] = {
 	1	,2	,3	,4	,5	,6	,8	,10	,11	,13
 	,14	,15	,16	,29	,17	,18	,19	,20	,21	,22
-	,23	,24	,25	,26	,27	,28
+	,23	,24	,25	,26	,27	,28	,30
 	
 	,7	,12	,9
 }
@@ -200,6 +200,7 @@ vt[view_reback_waifu_al] = {
 vt[view_reback_waifu_ac] = {
 	view_reback_waifu_ac
 	,view_reback_get
+	,view_reback_get2
 }
 
 --24--老婆分解-获得物品
@@ -240,6 +241,12 @@ vt[view_re_connect] = {
 	view_home
 	,view_re_connect
 	,view_slc_team
+}
+
+--30--装备分解-获得物品
+vt[view_reback_get2] = {
+	view_reback_get2
+	,view_reback
 }
 
 return vt

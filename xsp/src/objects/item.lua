@@ -169,4 +169,32 @@ item[item_target_set] = {
 	}
 }
 
+item[item_A_eqm] = {
+	body = {312-251,170-220,323-251,183-220},
+	area = {226,74,1136,709},
+	feature = {
+	{x=0,y=0,color=0x13caf0},
+	{x=-3,y=3,color=0x10c6ef},
+	{x=0,y=11,color=0x10c2ea},
+	{x=-3,y=16,color=0x10bfe8},
+	{x=0,y=34,color=0x08b5e4},
+	{x=0,y=47,color=0x05b0e3}
+	},
+	degree = 98
+}
+
+item[item_B_eqm] = {
+	body = {618-558,382-433,630-558,393-433},
+	area = {226,74,1136,709},
+	feature = {
+	{x=0,y=0,color=0x26a914},
+	{x=-5,y=5,color=0x21a910},
+	{x=0,y=10,color=0x22a60f},
+	{x=-5,y=16,color=0x20a011},
+	{x=0,y=24,color=0x1da00d},
+	{x=0,y=49,color=0x189808}
+	},
+	degree = 98
+}
+
 return item

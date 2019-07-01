@@ -465,4 +465,26 @@ view[view_re_connect] = {
 	degree = 98
 }
 
+--30--装备分解-获得物品
+view[view_reback_get2] = {
+	feature = {
+	{x=0+396,y=0+77,color=0xb6b6c7},
+	{x=18+396,y=-2+77,color=0x9999a6},
+	{x=1+396,y=31+77,color=0xb6b6c7},
+	{x=13+396,y=34+77,color=0x8e8e9d},
+	{x=106+396,y=-1+77,color=0x6c6c7b},
+	{x=124+396,y=35+77,color=0x6c6c7b},
+	{x=645+396,y=-2+77,color=0x64646f},
+	{x=540+396,y=30+77,color=0x5d5d6b},
+	{x=252+396,y=144+77,color=0x848691},
+	{x=385+396,y=156+77,color=0xfcffff},
+	{x=387+396,y=153+77,color=0xfffeff},
+	{x=410+396,y=498+77,color=0xfeca01},
+	{x=239+396,y=548+77,color=0xfdc804},
+	{x=265+396,y=497+77,color=0xfeca01},
+	{x=384+396,y=552+77,color=0xfdc803}
+	},
+	degree = 98
+}
+
 return view
