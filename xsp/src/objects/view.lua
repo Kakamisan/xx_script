@@ -487,4 +487,29 @@ view[view_reback_get2] = {
 	degree = 98
 }
 
+view[view_re_connect2] = {
+	feature = {
+	{x=0+191,y=0+129,color=0xb6b6c7},
+	{x=16+191,y=-2+129,color=0x9999a6},
+	{x=24+191,y=-4+129,color=0x9898a6},
+	{x=-1+191,y=30+129,color=0xb6b6c7},
+	{x=4+191,y=35+129,color=0x8e8e9d},
+	{x=28+191,y=37+129,color=0x8e8e9d},
+	{x=1055+191,y=-2+129,color=0x64646f},
+	{x=1053+191,y=4+129,color=0x63636f},
+	{x=966+191,y=13+129,color=0x61616e},
+	{x=950+191,y=30+129,color=0x5d5d6b},
+	{x=455+191,y=447+129,color=0xe1a000},
+	{x=479+191,y=448+129,color=0xe1a000},
+	{x=524+191,y=449+129,color=0xe1a000},
+	{x=579+191,y=447+129,color=0xe1a000},
+	{x=603+191,y=421+129,color=0xe1a000},
+	{x=601+191,y=408+129,color=0xe1a000},
+	{x=477+191,y=405+129,color=0xe1a000},
+	{x=532+191,y=405+129,color=0xe1a000},
+	{x=558+191,y=404+129,color=0xe1a000}
+	},
+	degree = 98
+}
+
 return view

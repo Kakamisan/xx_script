@@ -3,7 +3,7 @@ local vt = {}
 vt[0] = {
 	1	,2	,3	,4	,5	,6	,8	,10	,11	,13
 	,14	,15	,16	,29	,17	,18	,19	,20	,21	,22
-	,23	,24	,25	,26	,27	,28	,30
+	,23	,24	,25	,26	,27	,28	,30	,31
 	
 	,7	,12	,9
 }
@@ -247,6 +247,13 @@ vt[view_re_connect] = {
 vt[view_reback_get2] = {
 	view_reback_get2
 	,view_reback
+}
+
+--31--掉线重连
+vt[view_re_connect2] = {
+	view_home
+	,view_re_connect2
+	,view_slc_team
 }
 
 return vt

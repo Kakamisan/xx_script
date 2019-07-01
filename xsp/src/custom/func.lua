@@ -354,6 +354,12 @@ func[view_re_connect] = {
 	end
 }
 
+func[view_re_connect2] = {
+	[target_default] = function()
+		click_btn(btn_ack3)
+	end
+}
+
 
 
 

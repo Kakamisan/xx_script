@@ -177,6 +177,7 @@ view_level_up		= 27	--升级
 view_need_repair	= 28	--要修复
 view_re_connect		= 29	--掉线重连
 view_reback_get2	= 30	--装备分解-获得物品
+view_re_connect2	= 31	--掉线重连2
 
 
 
@@ -212,6 +213,7 @@ to_view_desc = {
 	,[view_need_repair] = "要修复"
 	,[view_re_connect] = "掉线重连"
 	,[view_reback_get2] = "装备分解-获得物品"
+	,[view_re_connect2] = "掉线重连2"
 }
 
 
