@@ -361,6 +361,14 @@ func[view_re_connect2] = {
 }
 
 
+func[view_title] = {
+	[target_default] = function()
+		click_btn(btn_normal)
+		sleep(10000)
+	end
+}
+
+
 
 
 

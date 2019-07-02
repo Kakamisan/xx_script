@@ -487,6 +487,7 @@ view[view_reback_get2] = {
 	degree = 98
 }
 
+--31--掉线重连2
 view[view_re_connect2] = {
 	feature = {
 	{x=0+191,y=0+129,color=0xb6b6c7},
@@ -508,6 +509,33 @@ view[view_re_connect2] = {
 	{x=477+191,y=405+129,color=0xe1a000},
 	{x=532+191,y=405+129,color=0xe1a000},
 	{x=558+191,y=404+129,color=0xe1a000}
+	},
+	degree = 98
+}
+
+--32--标题界面
+view[view_title] = {
+	feature = {
+	{x=0+540,y=0+344,color=0xffffff},
+	{x=5+540,y=3+344,color=0xffffff},
+	{x=15+540,y=7+344,color=0xffffff},
+	{x=36+540,y=-6+344,color=0xffffff},
+	{x=39+540,y=-21+344,color=0xffffff},
+	{x=4+540,y=-25+344,color=0xffffff},
+	{x=-7+540,y=-34+344,color=0xffffff},
+	{x=7+540,y=-55+344,color=0xffffff},
+	{x=30+540,y=-52+344,color=0xffffff},
+	{x=40+540,y=-46+344,color=0xffffff},
+	{x=30+540,y=-43+344,color=0xffffff},
+	{x=60+540,y=-49+344,color=0xffffff},
+	{x=-538+540,y=370+344,color=0x010101},
+	{x=80+540,y=-23+344,color=0xffffff},
+	{x=87+540,y=11+344,color=0xffffff},
+	{x=170+540,y=-65+344,color=0xffffff},
+	{x=191+540,y=-70+344,color=0xffffff},
+	{x=223+540,y=-72+344,color=0xffffff},
+	{x=247+540,y=-52+344,color=0xffffff},
+	{x=-537+540,y=-339+344,color=0x020202}
 	},
 	degree = 98
 }
