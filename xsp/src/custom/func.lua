@@ -488,7 +488,7 @@ sub_fb_swc = {
 
 
 function slc_team()
-	if not swc_on(slc_team_sld[cfg.team]) then return false end
+	if cfg.team > 4 and not swc_on(slc_team_sld[cfg.team]) then return false end
 	if not swc_on(slc_team_1[cfg.team]) then return false end
 	if cfg.main == fmain_repeat then
 		if not swc_off(swc_auto_atk) then return false end
@@ -754,6 +754,7 @@ function slc_action(N)
 		end
 	else
 		if action[round] and action[round][turn] and N > #(action[round][turn]) then
+			sleep(100,230)
 			click_btn(btn_turn_over)
 			new_turn = true
 			rand_sleep_bt_report = true
@@ -855,6 +856,7 @@ action_do_1 = {
 		return false
 	end,
 	["W"] = function()
+		sleep(50,100)
 		click_btn(btn_wait)
 		return true
 	end,
