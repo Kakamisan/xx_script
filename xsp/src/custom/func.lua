@@ -93,12 +93,6 @@ func[view_bt_slc_acn] = {
 func[view_bt_playing] = {
 	[target_default] = function()
 		--do nothing
-		if cfg.extra_do == fextrado_auto and had_change_auto then
-			sleep(2000)
-			click_btn(btn_bt_auto)
-			had_change_auto = false
-			return true
-		end
 		do_get_in_battle()
 	end
 }
@@ -708,14 +702,12 @@ new_turn = true
 turn = 0
 new_round = true
 round = 0
-had_change_auto = false
 
 function init_battle()
 	round = 0
 	turn = 0
 	new_round = true
 	new_turn = true
-	had_change_auto = false
 end
 
 function slc_action(N)
@@ -773,7 +765,8 @@ function slc_action(N)
 		dlog("没有行动了。。。")
 		if cfg.extra_do == fextrado_auto then
 			click_btn(btn_bt_auto)
-			had_change_auto = true
+			sleep(1800,2000)
+			click_btn(btn_bt_auto)
 			return true
 		end
 		if cfg.extra_do == fextrado_quit then
