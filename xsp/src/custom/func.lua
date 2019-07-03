@@ -21,7 +21,7 @@ end
 
 func[view_home] = {
 	[target_wait] = function()
-		if mTime() > state.clock then
+		if mTime() > state.clock and slc(cfg.extra,fextra_mission) then
 			click_btn(btn_enter_reback)
 			state.clock = mTime() + math.random(1000,2000)*1000
 		end
@@ -38,7 +38,7 @@ func[view_home] = {
 		if ret then
 			local ret2 = change_target()
 			if ret2 and (cfg.main == fmain_mission or state.had_bt >= cfg.btcount) then
-				only_mission_wait_ts = mTime() + math.random(140,170)*1000
+				only_mission_wait_ts = mTime() + math.random(120,170)*1000
 			end
 		end
 	end,
@@ -179,6 +179,14 @@ new_bt_add_count = true
 func[view_sys_online] = {
 	[target_default] = function()
 		--do nothing
+		if mTime() > state.clock_reback then
+			state.clock_reback = mTime() + math.random(3000,4000)*1000
+			if can_to_target_reback() then
+				
+			else 
+				can_to_target_mission()
+			end
+		end
 		if new_bt_add_count then
 			state.had_bt  = state.had_bt + 1
 			if state.had_bt >= cfg.btcount then
