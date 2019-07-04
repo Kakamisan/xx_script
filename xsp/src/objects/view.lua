@@ -30,9 +30,11 @@ view[view_slc_dg_type] = {
 	feature = {
 		{x=0+1,y=0+20,color=0xffcb00,anchor={-1,0}},
 		{x=34+1,y=21+20,color=0x000000,anchor={-1,0}},
-		{x=1025+1+80,y=515+20,color=0x49b1f2,anchor={0,0}},
+		{x=1025+1+80,y=515+20,color=0x45b2ea,anchor={0,0}},
 		{x=950+1+80,y=558+20,color=0x47b2ef,anchor={0,0}},
-		{x=1210+1+80,y=216+20,color=0xffffff,anchor={0,0}}
+		{x=1210+1+80,y=216+20,color=0xffffff,anchor={0,0}},
+		{x=1108,y=502,color=0xffffff},
+		{x=972,y=499,color=0xffffff}
 	},
 	degree = 98
 }
@@ -74,9 +76,9 @@ view[view_bt_slc_acn] = {
 		{x=0+19,y=0+17,color=0xfdfdfd},
 	{x=-7+19,y=7+17,color=0xffffff},
 	{x=1+19,y=15+17,color=0xffffff},
-	{x=1135+19,y=15+17,color=0xfef469},
-	{x=1138+19,y=27+17,color=0xfdf268},
-	{x=1144+19,y=21+17,color=0xfff167},
+--	{x=1135+19,y=15+17,color=0xfef469},
+--	{x=1138+19,y=27+17,color=0xfdf268},
+--	{x=1144+19,y=21+17,color=0xfff167},
 	{x=1227+19,y=10+17,color=0xffcc00},
 	{x=1245+19,y=10+17,color=0xffcb00},
 	{x=1366+19,y=26+17,color=0xfcc500},
@@ -536,6 +538,29 @@ view[view_title] = {
 	{x=223+540,y=-72+344,color=0xffffff},
 	{x=247+540,y=-52+344,color=0xffffff},
 	{x=-537+540,y=-339+344,color=0x020202}
+	},
+	degree = 98
+}
+
+--33--EVENT活动信息页
+view[view_event] = {
+	feature = {
+	{x=0+23,y=0+28,color=0x232323},
+	{x=11+23,y=0+28,color=0x222222},
+	{x=10+23,y=12+28,color=0x232323},
+	{x=0+23,y=12+28,color=0x232323},
+	{x=1080+23,y=99+28,color=0xfdc705},
+	{x=1250+23,y=102+28,color=0xfdc705},
+	{x=1170+23,y=182+28,color=0xfdc705},
+	{x=1109+23,y=164+28,color=0xfdc705},
+	{x=1149+23,y=179+28,color=0xfed850},
+	{x=1311+23,y=102+28,color=0x90f927},
+	{x=1316+23,y=102+28,color=0x90f927},
+	{x=1292+23,y=101+28,color=0x90f927},
+	{x=1244+23,y=163+28,color=0x90f927},
+	{x=1274+23,y=163+28,color=0x90f927},
+	{x=1297+23,y=164+28,color=0x90f927},
+	{x=1312+23,y=164+28,color=0x90f927}
 	},
 	degree = 98
 }

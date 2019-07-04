@@ -48,6 +48,8 @@ btn_enter_reback2 = 45	--满仓进入分解
 btn_ack2		= 46	--升级弹窗-点确定
 btn_cancel1		= 47	--取消1-取消修复
 btn_ack3		= 48	--重连-确定
+btn_event		= 49	--选副本类型-活动EVENT
+btn_event_enter = 50	--活动EVENT-进入
 
 
 
@@ -179,6 +181,7 @@ view_re_connect		= 29	--掉线重连
 view_reback_get2	= 30	--装备分解-获得物品
 view_re_connect2	= 31	--掉线重连2
 view_title			= 32	--标题界面
+view_event			= 33	--EVENT活动信息页
 
 
 
@@ -216,6 +219,7 @@ to_view_desc = {
 	,[view_reback_get2] = "装备分解-获得物品"
 	,[view_re_connect2] = "掉线重连2"
 	,[view_title] = "标题界面"
+	,[view_event] = "EVENT活动信息页"
 }
 
 

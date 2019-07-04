@@ -226,4 +226,12 @@ btn[btn_ack3] = {
 	body = {673,541,766,565}
 }
 
+btn[btn_event] = {
+	body = {445,242,536,330}
+}
+
+btn[btn_event_enter] = {
+	body = {1310,139,1341,190}
+}
+
 return btn

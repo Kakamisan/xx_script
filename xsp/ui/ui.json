@@ -9,157 +9,187 @@
    "okname" : "确定",
    "views" : [
       {
-         "id" : "cfgslc",
-         "list" : "配置1,配置2,配置3,配置4,配置5,配置6,配置7,配置8,配置9,配置10,配置11,配置12,配置13",
-         "select" : "0",
-         "size" : 30,
-         "type" : "RadioGroup",
-         "orientation" : "vertical",
-         "rect" : "10,0,200,900",
-         "color" : "0,0,225"
+         "text" : "配置选择",
+         "type" : "Page",
+         "views" : [
+            {
+               "id" : "cfgslc",
+               "list" : "配置1,配置2,配置3,配置4,配置5,配置6,配置7,配置8,配置9,配置10,配置11,配置12,配置13",
+               "select" : "0",
+               "size" : 30,
+               "type" : "RadioGroup",
+               "orientation" : "vertical",
+               "rect" : "10,0,200,900",
+               "color" : "0,0,225"
+            },
+            {
+               "id" : "Edit1",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "重命名配置1",
+               "rect" : "210,0,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit2",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,62,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit3",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,124,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit4",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,186,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit5",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,248,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit6",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,310,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit7",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,372,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit8",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,434,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit9",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,496,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit10",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,558,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit11",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,620,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit12",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,682,740,60",
+               "type" : "Edit"
+            },
+            {
+               "id" : "Edit13",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "acsii",
+               "prompt" : "命名",
+               "size" : 15,
+               "text" : "",
+               "rect" : "210,744,740,60",
+               "type" : "Edit"
+            }
+         ]
       },
-	  {
-	      "id" : "Edit1",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "重命名配置1",
-         "rect" : "210,0,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit2",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,62,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit3",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,124,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit4",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,186,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit5",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,248,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit6",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,310,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit7",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,372,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit8",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,434,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit9",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,496,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit10",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,558,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit11",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,620,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit12",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,682,740,60",
-	      "type" : "Edit"
-      },
-	  {
-	      "id" : "Edit13",
-	      "align" : "left",
-	      "color" : "0,0,0",
-	      "kbtype" : "acsii",
-	      "prompt" : "命名",
-	      "size" : 15,
-	      "text" : "",
-         "rect" : "210,744,740,60",
-	      "type" : "Edit"
+      {
+         "text" : "更新说明",
+         "type" : "Page",
+         "views" : [
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : 20,
+               "text" : "2019.07.04\n- 同步新版本识别细节改动\n- 章节选择新增e1，e2",
+               "bg" : "",
+               "type" : "Label",
+               "rect" : "10,0,940,300"
+            },
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : 20,
+               "text" : "2019.07.03\n- 强制添加随机时间进行主动分解（若勾选自动分解），闹钟模式下无效",
+               "bg" : "",
+               "type" : "Label",
+               "rect" : "10,150,940,300"
+            }
+         ]
       }
    ]
 }

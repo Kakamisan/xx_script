@@ -52,6 +52,10 @@ func[view_home] = {
 
 func[view_slc_dg_type] = {
 	[target_atk] = function()
+		if is_event(cfg.chapter) then
+			click_btn(btn_event)
+			return true
+		end
 		click_btn(btn_main_story)
 	end,
 	[target_default] = function()
@@ -179,7 +183,7 @@ new_bt_add_count = true
 func[view_sys_online] = {
 	[target_default] = function()
 		--do nothing
-		if mTime() > state.clock_reback then
+		if mTime() > state.clock_reback and cfg.main ~= fmain_alarm then
 			state.clock_reback = mTime() + math.random(3000,4000)*1000
 			if can_to_target_reback() then
 				
@@ -371,6 +375,12 @@ func[view_title] = {
 }
 
 
+func[view_event] = {
+	[target_default] = function()
+		click_btn(btn_event_enter)
+	end
+}
+
 
 
 
@@ -438,6 +448,13 @@ handle_change_target = {
 
 
 
+--章节是否是活动章节
+function is_event(Chapter)
+	if Chapter == 7 or Chapter == 8 then return true end
+	return false
+end
+
+
 function click_sub_fb()
 	if not swc_on(chapter_swc[cfg.chapter]) then return false end
 	if not swc_on(sub_fb_swc[cfg.subfb]) then return false end
@@ -453,7 +470,9 @@ chapter_swc = {
 	[3] = swc_chapter3,
 	[4] = swc_chapter4,
 	[5] = swc_chapter5,
-	[6] = swc_chapter6
+	[6] = swc_chapter6,
+	[7] = swc_chapter1,
+	[8] = swc_chapter2
 }
 sub_fb_swc = {
 	[1] = swc_fb_1,

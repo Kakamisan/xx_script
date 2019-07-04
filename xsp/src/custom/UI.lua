@@ -48,7 +48,7 @@ end
 
 if debug_mode then
 	for k,v in pairs(UI) do
-		dlog("UI.",k,"\t= ",v)
+--		dlog("UI.",k,"\t= ",v)
 	end
 end
 

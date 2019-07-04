@@ -47,7 +47,7 @@ function decode_action(txt)
 	end
 	for i,v in ipairs(t2) do
 		for i2,v2 in ipairs(v) do
-			dlog("action ",i," ",i2," ",v2)
+--			dlog("action ",i," ",i2," ",v2)
 		end
 	end
 	return t2
@@ -88,7 +88,7 @@ function decode_move(txt)
 	end
 	for i,v in ipairs(t2) do
 		for i2,v2 in ipairs(v) do
-			dlog("move ",i," ",i2," ",v2)
+--			dlog("move ",i," ",i2," ",v2)
 		end
 	end
 	return t2
