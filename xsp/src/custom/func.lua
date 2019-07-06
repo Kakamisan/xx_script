@@ -76,7 +76,7 @@ func[view_slc_team] = {
 	[target_atk] = function()
 		if check_mission_slc_team() then return true end
 		if slc_team() then
-			init_battle()
+			init_repeat_battle()
 			click_btn(btn_enter_bt)
 			change_bt_playing_wait_time(1)
 		end
@@ -111,8 +111,6 @@ func[view_bt_playing2] = {
 rand_sleep_bt_report = true
 func[view_bt_report] = {
 	[target_default] = function()
-		new_round = true
-		turn = 0
 		if rand_sleep_bt_report and cfg.main == fmain_repeat and math.random(1,100) < 17 then
 			sleep(7500,9500)
 		end
@@ -136,6 +134,9 @@ func[view_bt_get_waifu] = {
 func[view_bt_next] = {
 	[target_default] = function()
 		click_btn(btn_bt_next)
+		turn = 0
+		new_turn = true
+		new_round = true
 		change_bt_playing_wait_time(1)
 	end
 }
@@ -730,7 +731,7 @@ turn = 0
 new_round = true
 round = 0
 
-function init_battle()
+function init_repeat_battle()
 	round = 0
 	turn = 0
 	new_round = true
@@ -791,6 +792,8 @@ function slc_action(N)
 	if not action[round] or not action[round][turn] or not action[round][turn][N] then
 		dlog("没有行动了。。。")
 		if cfg.extra_do == fextrado_auto then
+			new_turn = true
+			rand_sleep_bt_report = true
 			click_btn(btn_bt_auto)
 			sleep(1800,2000)
 			click_btn(btn_bt_auto)
