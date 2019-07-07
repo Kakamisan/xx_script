@@ -86,11 +86,21 @@ func[view_slc_team] = {
 	end
 }
 
+
+
+
+
 func[view_bt_slc_acn] = {
 	[target_default] = function()
 		if cfg.main == fmain_repeat then
 			slc_action()
 		end
+	end
+}
+
+func[view_bt_enemy_acn] = {
+	[target_default] = function()
+		click_btn(btn_start_turn)
 	end
 }
 
@@ -153,6 +163,18 @@ func[view_bt_over] = {
 	end
 }
 
+func[view_bt_quit] = {
+	[target_default] = function()
+		click_btn(btn_ack_quit)
+	end
+}
+
+
+
+
+
+
+
 func[view_stop_repeat] = {
 	[target_mission] = function()
 		click_btn(btn_stop_repeat)
@@ -202,13 +224,6 @@ func[view_sys_online] = {
 			end
 			new_bt_add_count = false
 		end
-	end
-}
-
-
-func[view_bt_enemy_acn] = {
-	[target_default] = function()
-		click_btn(btn_start_turn)
 	end
 }
 
@@ -296,12 +311,6 @@ func[view_reback_get] = {
 func[view_reback_get2] = {
 	[target_default] = function()
 		click_btn(btn_ack_get)
-	end
-}
-
-func[view_bt_quit] = {
-	[target_default] = function()
-		click_btn(btn_ack_quit)
 	end
 }
 
@@ -740,6 +749,13 @@ end
 
 function slc_action(N)
 	
+	if re_do_action > 6 then
+		dlog("重做行动太多次。。。")
+		re_do_action = 0
+		click_btn(btn_bt_quit)
+		return true
+	end
+	
 	if new_round then
 		round = round + 1
 		new_round = false
@@ -812,7 +828,12 @@ function slc_action(N)
 	end
 end
 
+re_do_action = 0
 function do_action(a)
+	
+	if re_do_action > 6 then
+		return true
+	end
 	
 	local x,y
 	local over
@@ -859,6 +880,7 @@ function do_action(a)
 							item[item_move_reset].body[3]+x,
 							item[item_move_reset].body[4]+y
 						})
+					re_do_action = re_do_action + 1
 					return do_action(a)
 				end
 			end
