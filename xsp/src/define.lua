@@ -288,3 +288,5 @@ timeout_opt_update_view2 = {
 	count = 8
 	,sleep = 1000
 }
+
+min_alarm = 9000

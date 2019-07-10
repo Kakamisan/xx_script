@@ -13,7 +13,7 @@ state.clock_reback	= 0		--等待固定时间分解一次
 
 
 
-state.alarm = mTime() + math.max(cfg.alarm,9000)*1000	--最小9000秒，即2.5小时
+state.alarm = mTime() + math.max(cfg.alarm,min_alarm)*1000	--最小9000秒，即2.5小时
 state.clock_reback = mTime() + math.random(3000,4000)*1000	--约一个小时主动分解一次
 
 return state

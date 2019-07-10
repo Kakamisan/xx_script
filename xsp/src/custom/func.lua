@@ -79,6 +79,17 @@ func[view_slc_team] = {
 			init_repeat_battle()
 			click_btn(btn_enter_bt)
 			change_bt_playing_wait_time(1)
+			--如果闹钟模式，进入等待
+			if cfg.main == fmain_alarm then
+				state.alarm = mTime() + math.max(cfg.alarm,min_alarm)*1000
+				state.target = target_wait
+			end
+		end
+	end,
+	[target_wait] = function()
+		if mTime() > state.alarm then
+			if can_to_target_reback() then return true end
+			if can_to_target_mission() then return true end
 		end
 	end,
 	[target_default] = function()
@@ -180,6 +191,9 @@ func[view_stop_repeat] = {
 		click_btn(btn_stop_repeat)
 	end,
 	[target_reback] = function()
+		click_btn(btn_stop_repeat)
+	end,
+	[target_reback2] = function()
 		click_btn(btn_stop_repeat)
 	end,
 	[target_back] = function()
@@ -316,24 +330,12 @@ func[view_reback_get2] = {
 
 func[view_full_bag] = {
 	[target_default] = function()
-		if cfg.main == fmain_alarm then
-			if mTime() > state.alarm then
-				state.alarm = mTime() + math.max(cfg.alarm,9000)*1000
-				if not reback_just_now and can_to_target_reback() then
-					return true
-				end
-				cfg.btcount = 0
-				if can_to_target_mission() then return true end
-				state.target = target_back
-			end
-		else
-			if not reback_just_now and can_to_target_reback() then
-				return true
-			end
-			cfg.btcount = 0
-			if can_to_target_mission() then return true end
-			state.target = target_back
+		if not reback_just_now and can_to_target_reback() then
+			return true
 		end
+		cfg.btcount = 0
+		if can_to_target_mission() then return true end
+		state.target = target_back
 	end,
 	[target_mission] = function()
 		click_btn(btn_full_bag_close)
@@ -563,8 +565,9 @@ end
 stop_repeat_auto_count = 0
 had_do_stop_repeat = false
 handle_stop_repeat = {
-	[default] = function() end,
-	[fmain_auto] = function()
+--	[default] = function() end,
+--	[fmain_auto] = function()
+	[default] = function()
 		if not had_do_stop_repeat and find_item(item_mission_over) then
 			had_do_stop_repeat = true
 			if math.random(1,10) > 3 or stop_repeat_auto_count >= cfg.misscnt then
@@ -575,16 +578,16 @@ handle_stop_repeat = {
 			end
 		end
 	end,
-	[fmain_alarm] = function()
-		if state.alarm < mTime() then
-			state.alarm = mTime() + math.max(cfg.alarm,9000)*1000
-			if can_to_target_reback() then return true end
-			if can_to_target_mission() then return true end
-		end
-	end,
-	[fmain_mission] = function()
-		can_to_target_mission()
+	[fmain_repeat] = function()
+		click_btn(btn_stop_repeat)
 	end
+--	[fmain_alarm] = function()
+--		if can_to_target_reback() then return true end
+--		if can_to_target_mission() then return true end
+--	end,
+--	[fmain_mission] = function()
+--		can_to_target_mission()
+--	end
 }
 
 

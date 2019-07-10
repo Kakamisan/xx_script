@@ -34,7 +34,10 @@ function main_loop()
 	," had_bt = ",state.had_bt
 	)
 	else
-		dlog("mission time = ",math.floor((only_mission_wait_ts - mTime()) / 1000))
+		dlog(
+		"mission time = ",math.floor((only_mission_wait_ts - mTime()) / 1000)
+		," alarm = ",math.floor((state.alarm - mTime()) / 1000)
+		)
 	end
 	
 	run()
