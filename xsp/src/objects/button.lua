@@ -234,4 +234,8 @@ btn[btn_event_enter] = {
 	body = {1310,139,1341,190}
 }
 
+btn[btn_reback_scroll_bottom] = {
+	body = {1173,655,1178,693}
+}
+
 return btn

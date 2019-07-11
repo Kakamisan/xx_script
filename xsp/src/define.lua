@@ -50,6 +50,7 @@ btn_cancel1		= 47	--取消1-取消修复
 btn_ack3		= 48	--重连-确定
 btn_event		= 49	--选副本类型-活动EVENT
 btn_event_enter = 50	--活动EVENT-进入
+btn_reback_scroll_bottom = 51	--分解滚动条最底端
 
 
 

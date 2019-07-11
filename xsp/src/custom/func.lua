@@ -618,6 +618,7 @@ function handle_reback()
 	if cfg.reback == "" then return true end
 	if not had_reback then
 		click_btn(btn_reback_enter)
+		already_bottom = false
 		return false
 	end
 	local txt = get_text(text_reback_gain)
@@ -638,6 +639,7 @@ function handle_reback2()
 	if not swc_on(swc_change_eqm) then return false end
 	if not had_reback2 then
 		click_btn(btn_reback_enter)
+		already_bottom = false
 		return false
 	end
 	local txt = get_text(text_reback_gain)
@@ -653,6 +655,7 @@ function handle_reback2()
 	return true
 end
 
+already_bottom = false
 function reback_waifu_slc()
 	if not swc_off(swc_reback_ss) then return false end
 	if not swc_off(swc_reback_s) then return false end
@@ -684,6 +687,11 @@ function reback_waifu_slc()
 	end
 	if find_item(item_reback_scroll) then
 		click_item(item_reback_scroll)
+		return false
+	end
+	if not already_bottom then
+		click_btn(btn_reback_scroll_bottom)
+		already_bottom = true
 		return false
 	end
 	return true
@@ -720,6 +728,11 @@ function reback_eqm_slc()
 	end
 	if find_item(item_reback_scroll) then
 		click_item(item_reback_scroll)
+		return false
+	end
+	if not already_bottom then
+		click_btn(btn_reback_scroll_bottom)
+		already_bottom = true
 		return false
 	end
 	return true
