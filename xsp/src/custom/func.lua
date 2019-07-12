@@ -956,8 +956,7 @@ action_do_2 = {
 	["A"] = function()
 		sleep(270,358)
 		if timeout({count=7,sleep=200},find_items,item_target_enemy) then
-			local N
-			if math.random(1,10) > 5 then N = 1 else N = #(items_positions[item_target_enemy]) end
+			local N = math.random(1,#(items_positions[item_target_enemy]))
 			local x = items_positions[item_target_enemy][N].x
 			local y = items_positions[item_target_enemy][N].y
 			click({
