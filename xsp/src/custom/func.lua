@@ -953,6 +953,29 @@ action_do_2 = {
 		sleep(270,358)
 		return false
 	end,
+	["A"] = function()
+		sleep(270,358)
+		if timeout({count=7,sleep=200},find_items,item_target_enemy) then
+			local N
+			if math.random(1,10) > 5 then N = 1 else N = #(items_positions[item_target_enemy]) end
+			local x = items_positions[item_target_enemy][N].x
+			local y = items_positions[item_target_enemy][N].y
+			click({
+					item[item_target_enemy].body[1]+x,
+					item[item_target_enemy].body[2]+y,
+					item[item_target_enemy].body[3]+x,
+					item[item_target_enemy].body[4]+y
+				})
+			sleep(180,280)
+			click({
+					item[item_target_enemy].body[1]+x,
+					item[item_target_enemy].body[2]+y,
+					item[item_target_enemy].body[3]+x,
+					item[item_target_enemy].body[4]+y
+				})
+		end
+		return true
+	end
 }
 
 action_do_3 = {
