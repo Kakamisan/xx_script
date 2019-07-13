@@ -203,6 +203,7 @@ vt[view_reback_waifu_ac] = {
 	view_reback_waifu_ac
 	,view_reback_get
 	,view_reback_get2
+	,view_reback
 }
 
 --24--老婆分解-获得物品

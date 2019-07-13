@@ -42,8 +42,8 @@ view[view_slc_dg_type] = {
 --3--选择主线副本，6-8，5-8e等
 view[view_slc_dg_main] = {
 	feature = {
-	{x=0+19,y=0+29,color=0x242222},
-	{x=12+19,y=0+29,color=0x242222},
+--	{x=0+19,y=0+29,color=0x242222},
+--	{x=12+19,y=0+29,color=0x242222},
 --	{x=79+19,y=-15+29,color=0xffcc00},
 --	{x=79+19,y=31+29,color=0xffcc00},
 	{x=119+19,y=218+29,color=0xffffff},
@@ -293,12 +293,20 @@ view[view_creator] = {
 --20--分解中心
 view[view_reback] = {
 	feature = {
-	{x=0+28,y=0+46,color=0x232323},
-	{x=92+28,y=-23+46,color=0xffcc00},
-	{x=794+28,y=-14+46,color=0x3f392e},
-	{x=266+28,y=333+46,color=0x20d7f7},
-	{x=1402+28,y=445+46,color=0xffcc00},
-	{x=274+28,y=565+46,color=0x59e1f8}
+	{x=220+24,y=65+40,color=0x61616d},
+	{x=243+24,y=40+40,color=0x61616d},
+	{x=411+24,y=95+40,color=0x61616d},
+	{x=410+24,y=199+40,color=0x61616d},
+	{x=391+24,y=233+40,color=0x60606c},
+	{x=410+24,y=287+40,color=0x5e5d69},
+	{x=271+24,y=287+40,color=0x8af41f},
+	{x=258+24,y=350+40,color=0x1dcaf4},
+	{x=784+24,y=-12+40,color=0x3f392e},
+	{x=800+24,y=-12+40,color=0x3f392e},
+	{x=1117+24,y=0+40,color=0x9d9da0},
+	{x=1140+24,y=-1+40,color=0x9d9d9f},
+	{x=1094+24,y=24+40,color=0x9d9da0},
+	{x=1117+24,y=25+40,color=0x9d9da0}
 	},
 	degree = 98
 }
