@@ -881,8 +881,7 @@ function do_action(a)
 		local ret = timeout(find_items,item_move_reset)
 		
 		if ret and ret > 0 then
-			x = items_positions[item_move_reset][#(items_positions[item_move_reset])].x
-			y = items_positions[item_move_reset][#(items_positions[item_move_reset])].y
+			x,y = right_item(item_move_reset)
 		end
 	end
 	
@@ -910,8 +909,7 @@ function do_action(a)
 		if x and x > 0.057*pos.cx then	--在最左侧时不检测了
 			local ret = timeout({count=7,sleep=200},find_items,item_move_reset)
 			if ret and ret > 0 then
-				local x1 = items_positions[item_move_reset][#(items_positions[item_move_reset])].x
-				local y1 = items_positions[item_move_reset][#(items_positions[item_move_reset])].y
+				local x1,y1 = right_item(item_move_reset)
 				if ((x-x1)^2+(y-y1)^2)^0.5 < 2.25 then
 					click({
 							item[item_move_reset].body[1]+x,
@@ -928,6 +926,24 @@ function do_action(a)
 	
 	return true
 end
+
+
+function right_item(name)
+	if #(items_positions[name]) == 0 then 
+		return nil
+	end
+	if #(items_positions[name]) == 1 then 
+		return items_positions[name][1].x,items_positions[name][1].y
+	end
+	local x,y = items_positions[name][1].x,items_positions[name][1].y
+	for i,v in ipairs(items_positions[name]) do
+		if v.x > x then
+			x,y = v.x,v.y
+		end
+	end
+	return x,y
+end
+
 
 action_do_1 = {
 	["S1"] = function()
@@ -1127,6 +1143,8 @@ change_bt_playing_wait_time_list = {
 function change_bt_playing_wait_time(Stage)
 	sleep_time[view_bt_playing] = change_bt_playing_wait_time_list[Stage]
 end
+
+
 
 function can_to_target_mission()
 	if slc(cfg.extra,fextra_mission) then
