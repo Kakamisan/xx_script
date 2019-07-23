@@ -12,6 +12,7 @@ cfg.alarm	= tonumber(cfg.alarm)
 cfg.misscnt = tonumber(cfg.misscnt)
 cfg.extra_do= tonumber(cfg.extra_do)
 cfg.btcount = tonumber(cfg.btcount)
+cfg.xy_base = tonumber(cfg.xy_base)
 
 cfg.actionslc = tonumber(cfg.actionslc)+1
 
@@ -296,6 +297,9 @@ for i,v in ipairs(actions[cfg.actionslc]) do
 end
 
 
+--按坐标基准值计算缩放
+UI_pos_setting_scale = (cfg.xy_base and pos.cy/cfg.xy_base) or 1
+
 function decode_pos(txt)
 	if not txt or txt == "" then
 		return {}
@@ -309,7 +313,10 @@ function decode_pos(txt)
 	end
 	
 	local t = split(txt,",")
-	return {tonumber(t[1]),tonumber(t[2])}
+	
+	local scale = UI_pos_setting_scale
+	
+	return {math.ceil(tonumber(t[1])*scale),math.ceil(tonumber(t[2])*scale)}
 end
 
 E_pos = {
