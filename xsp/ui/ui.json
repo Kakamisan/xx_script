@@ -1,6 +1,6 @@
 {
    "style" : "custom",
-   "config" : "save_km_xx0.dat",
+   "config" : "save_lo_record_slc.dat",
    "width" : 960,
    "height" : 720,
    "cancelscroll" : true,

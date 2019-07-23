@@ -10,30 +10,9 @@ if ret ~= 1 then
 	lua_exit()
 end
 
---local cfgslclist = {
---	[0] = "ui1.json",
---	[1] = "ui2.json",
---	[2] = "ui3.json",
---	[3] = "ui4.json",
---	[4] = "ui5.json",
---	[5] = "ui6.json",
---	[6] = "ui7.json",
---	[7] = "ui8.json",
---	[8] = "ui9.json",
---	[9] = "ui10.json",
---	[10] = "ui11.json",
---	[11] = "ui12.json",
---	[12] = "ui13.json"
---}
-
---dlog(cfgslclist[tonumber(UI.cfgslc)])
-
---content = getUIContent(cfgslclist[tonumber(UI.cfgslc)])
-
 content = getUIContent("ui1.json")
-if tonumber(UI.cfgslc) ~= 0 then
-	content = string.gsub(content,"save_km_xx","save_km_xx"..(tonumber(UI.cfgslc)+1))
-end
+
+content = string.gsub(content,"save_lo_record","save_lo_record"..(tonumber(UI.cfgslc)+1))
 
 local ret,UI = showUI(content)
 
@@ -41,15 +20,28 @@ if ret ~= 1 then
 	lua_exit()
 end
 
-if UI.sshkey ~= "节奏123" then
-	dialog("明文密钥错误",5)
-	lua_exit()
-end
+--if UI.sshkey ~= "节奏123" then
+--	dialog("明文密钥错误",5)
+--	lua_exit()
+--end
 
-if debug_mode then
-	for k,v in pairs(UI) do
+--,
+--            {
+--               "id" : "sshkey",
+--               "align" : "left",
+--               "color" : "0,0,0",
+--               "kbtype" : "number",
+--               "prompt" : "密钥",
+--               "size" : 25,
+--               "rect" : "430,400,820,100",
+--               "text" : "",
+--               "type" : "Edit"
+--            }
+
+--if debug_mode then
+--	for k,v in pairs(UI) do
 --		dlog("UI.",k,"\t= ",v)
-	end
-end
+--	end
+--end
 
 return UI
