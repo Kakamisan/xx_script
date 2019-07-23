@@ -155,10 +155,7 @@ func[view_bt_get_waifu] = {
 func[view_bt_next] = {
 	[target_default] = function()
 		click_btn(btn_bt_next)
-		turn = 0
-		new_turn = true
-		new_round = true
-		change_bt_playing_wait_time(1)
+		round_over()
 	end
 }
 
@@ -761,17 +758,36 @@ turn = 0
 new_round = true
 round = 0
 
+--整场战斗开始时执行
 function init_repeat_battle()
 	round = 0
 	turn = 0
 	new_round = true
 	new_turn = true
+	re_do_action = 0
+end
+
+--回合结束时执行
+function turn_over()
+	new_turn = true
+	rand_sleep_bt_report = true
+	re_do_action = 0
+end
+
+--战斗单面结束时执行
+function round_over()
+	turn = 0
+	new_turn = true
+	new_round = true
+	re_do_action = 0
+	change_bt_playing_wait_time(1)
 end
 
 function slc_action(N)
 	
 	if re_do_action > 6 then
 		dlog("重做行动太多次。。。")
+		dialog("行动设置可能出问题了，请检查", 600)
 		re_do_action = 0
 		click_btn(btn_bt_quit)
 		return true
@@ -800,8 +816,8 @@ function slc_action(N)
 				click_btn(btn_turn_over)
 			end
 			
-			new_turn = true
-			rand_sleep_bt_report = true
+			turn_over()
+			
 			if N > 1 then
 				change_bt_playing_wait_time(2)
 			else
@@ -813,8 +829,9 @@ function slc_action(N)
 		if action[round] and action[round][turn] and N > #(action[round][turn]) then
 			sleep(100,230)
 			click_btn(btn_turn_over)
-			new_turn = true
-			rand_sleep_bt_report = true
+			
+			turn_over()
+			
 			if N > 3 then
 				change_bt_playing_wait_time(2)
 			else
@@ -829,8 +846,9 @@ function slc_action(N)
 	if not action[round] or not action[round][turn] or not action[round][turn][N] then
 		dlog("没有行动了。。。")
 		if cfg.extra_do == fextrado_auto then
-			new_turn = true
-			rand_sleep_bt_report = true
+		
+			turn_over()
+			
 			click_btn(btn_bt_auto)
 			sleep(1800,2000)
 			click_btn(btn_bt_auto)
