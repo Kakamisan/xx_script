@@ -906,6 +906,9 @@ function do_action(a)
 			sleep(100,300)
 			return true
 		end
+		if a[1] == "T" then	--纯等待直接跳出
+			return true
+		end
 		if x and x > 0.057*pos.cx then	--在最左侧时不检测了
 			local ret = timeout({count=7,sleep=200},find_items,item_move_reset)
 			if ret and ret > 0 then
@@ -965,6 +968,10 @@ action_do_1 = {
 		click_btn(btn_move)
 		sleep(20,150)
 		return false
+	end,
+	["T"] = function()
+		sleep(500,600)
+		return true
 	end
 }
 
@@ -1036,7 +1043,6 @@ action_do_3 = {
 						item[item_target_enemy].body[3]+x,
 						item[item_target_enemy].body[4]+y
 					})
-				return true
 			end
 		else
 			local x,y = E_pos[A][1],E_pos[A][2]
@@ -1053,8 +1059,8 @@ action_do_3 = {
 					item[item_target_set].body[3]+x,
 					item[item_target_set].body[4]+y
 				})
-			return true
 		end
+		return true
 	end,
 	["F"] = function(A)
 		if slc(cfg.auto_xy,fauto_xy_0) then		--自动坐标进行识别检测
@@ -1075,7 +1081,6 @@ action_do_3 = {
 						item[item_target_friend].body[3]+x,
 						item[item_target_friend].body[4]+y
 					})
-				return true
 			end
 		else
 			local x,y = F_pos[A][1],F_pos[A][2]
@@ -1092,8 +1097,8 @@ action_do_3 = {
 					item[item_target_set].body[3]+x,
 					item[item_target_set].body[4]+y
 				})
-			return true
 		end
+		return true
 	end,
 	["GE"] = function(A)
 		local name = GE_area[A]
