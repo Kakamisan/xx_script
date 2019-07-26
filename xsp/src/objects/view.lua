@@ -154,11 +154,23 @@ view[view_bt_waiting] = {
 --10--战斗中-捞到老婆
 view[view_bt_get_waifu] = {
 	feature = {
-	{x=0+20,y=0+17,color=0xfdfdfd},
-	{x=1383+20,y=11+17,color=0xffcb00},
-	{x=1320+20,y=7+17,color=0xffcc00},
-	{x=1279+20,y=595+17,color=0xfecb00},
-	{x=1221+20,y=469+17,color=0xffb800}
+--	{x=0+20,y=0+17,color=0xfdfdfd},
+--	{x=1383+20,y=11+17,color=0xffcb00},
+--	{x=1320+20,y=7+17,color=0xffcc00},
+--	{x=1279+20,y=595+17,color=0xfecb00},
+--	{x=1221+20,y=469+17,color=0xffb800}
+
+--	18,18
+	{x=0,y=0,color=0xffffff},
+	{x=-6,y=6,color=0xffffff},
+	{x=2,y=14,color=0xffffff},
+	{x=1222,y=469,color=0xffb900},
+	{x=1191,y=486,color=0xffb900},
+	{x=951,y=485,color=0xffbb00},
+	{x=955,y=488,color=0xfbb902},
+	{x=1203,y=476,color=0xfeb800},
+	{x=1281,y=596,color=0xfecb00},
+	{x=1281,y=604,color=0xfecb00}
 	},
 	degree = 98
 }
@@ -166,10 +178,22 @@ view[view_bt_get_waifu] = {
 --11--战斗中-下一波
 view[view_bt_next] = {
 	feature = {
-	{x=0+18,y=0+18,color=0xfefefe},
-	{x=1385+18,y=11+18,color=0xffcb00},
-	{x=1380+18,y=646+18,color=0xe7b540},
-	{x=1346+18,y=617+18,color=0xfef8e6}
+--	{x=0+18,y=0+18,color=0xfefefe},
+--	{x=1385+18,y=11+18,color=0xffcb00},
+--	{x=1380+18,y=646+18,color=0xe7b540},
+--	{x=1346+18,y=617+18,color=0xfef8e6}
+
+--	18,18
+	{x=0,y=0,color=0xffffff},
+	{x=-6,y=6,color=0xffffff},
+	{x=2,y=13,color=0xffffff},
+	{x=1375,y=15,color=0xffcb00},
+	{x=1388,y=15,color=0xffcb00},
+	{x=1298,y=594,color=0xfdf8e6},
+	{x=1315,y=639,color=0xfdf7e6},
+	{x=1372,y=570,color=0xecc840},
+	{x=1372,y=661,color=0xe5b03f},
+	{x=1284,y=634,color=0xe6a500}
 	},
 	degree = 98
 }
