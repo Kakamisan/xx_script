@@ -513,10 +513,12 @@ view[view_reback_get2] = {
 	{x=252+396,y=144+77,color=0x848691},
 	{x=385+396,y=156+77,color=0xfcffff},
 	{x=387+396,y=153+77,color=0xfffeff},
-	{x=410+396,y=498+77,color=0xfeca01},
-	{x=239+396,y=548+77,color=0xfdc804},
-	{x=265+396,y=497+77,color=0xfeca01},
-	{x=384+396,y=552+77,color=0xfdc803}
+--	{x=410+396,y=498+77,color=0xfeca01},
+--	{x=239+396,y=548+77,color=0xfdc804},
+--	{x=265+396,y=497+77,color=0xfeca01},
+--	{x=384+396,y=552+77,color=0xfdc803}
+	{x=1044,y=124,color=0x434350},
+	{x=-646+1044,y=432+124,color=0x4d4d5b}
 	},
 	degree = 98
 }
