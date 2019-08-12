@@ -808,7 +808,14 @@ function slc_action(N)
 	end
 	
 	if not slc(cfg.auto_xy,fauto_xy_quick) then
-		if find_item(item_turn_end) then
+		local ret
+		--没有下次行动了，多检测几次
+		if action[round] and action[round][turn] and N > #(action[round][turn]) then
+			ret = timeout({count=6,sleep=250},find_item,item_turn_end)
+		else
+			ret = find_item(item_turn_end)
+		end
+		if ret then
 			click_btn(btn_turn_over)
 			
 			local ret = timeout({count = 20,sleep = 300},in_view,view_bt_playing)
@@ -898,12 +905,12 @@ function do_action(a)
 	end
 	
 	if over then
-		sleep(200,230)
+		sleep(280,350)
 		if slc(cfg.auto_xy,fauto_xy_quick) then	--快速模式直接跳出到下一步
 			return true
 		end
 		if find_item(item_turn_end) then
-			sleep(100,300)
+			sleep(100,250)
 			return true
 		end
 		if a[1] == "T" then	--纯等待直接跳出
@@ -950,6 +957,7 @@ end
 
 action_do_1 = {
 	["S1"] = function()
+		sleep(110,160)
 		return false
 	end,
 	["S2"] = function()
