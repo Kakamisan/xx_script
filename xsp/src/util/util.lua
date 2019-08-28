@@ -291,3 +291,31 @@ function update_view()
 --	click_btn(btn_back_any)	--默认操作
 	return false
 end
+
+
+idle_times = {}
+idle_last_view = 0
+function do_calc_idle_times()
+	if state.view == idle_last_view then
+		idle_times[idle_last_view] = (idle_times[idle_last_view] or 0) + 1
+	else
+		idle_times[idle_last_view] = 0
+	end
+	idle_last_view = state.view
+end
+
+
+--获取空闲时间，若超时则返回true
+--空闲指的是一直留在这个view
+function get_calc_idle_time(Times)
+	if not idle_times[state.view] then return false end
+	--每次检测view间隔约0.5s，所以30次就是15秒
+	if not Times then
+		Times = 30
+	end
+	if idle_times[state.view] >= Times then
+		dlog("空闲超时")
+		return true
+	end
+	return false
+end

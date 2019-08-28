@@ -27,6 +27,8 @@ function main_loop()
 	if state.target ~= target_wait then
 	update_view()
 	
+	do_calc_idle_times()
+	
 	dlog(
 	"view = ",to_view_desc[state.view]
 	," target = ",to_target_desc[state.target]

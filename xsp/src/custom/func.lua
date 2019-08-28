@@ -217,14 +217,7 @@ new_bt_add_count = true
 func[view_sys_online] = {
 	[target_default] = function()
 		--do nothing
-		if mTime() > state.clock_reback and cfg.main ~= fmain_alarm then
-			state.clock_reback = mTime() + math.random(3000,4000)*1000
-			if can_to_target_reback() then
-				
-			else 
-				can_to_target_mission()
-			end
-		end
+		do_clock_reback()
 		if new_bt_add_count then
 			state.had_bt  = state.had_bt + 1
 			if state.had_bt >= cfg.btcount then
@@ -237,6 +230,18 @@ func[view_sys_online] = {
 		end
 	end
 }
+
+--非闹钟下定时出去收远征
+function do_clock_reback()
+	if mTime() > state.clock_reback and cfg.main ~= fmain_alarm then
+		state.clock_reback = mTime() + math.random(3000,4000)*1000
+		if can_to_target_reback() then
+
+		else
+			can_to_target_mission()
+		end
+	end
+end
 
 func[view_creator] = {
 	[target_reback] = function()
@@ -578,6 +583,10 @@ handle_stop_repeat = {
 			else
 				stop_repeat_auto_count = stop_repeat_auto_count + 1
 			end
+		end
+		if get_calc_idle_time(9) then
+			if can_to_target_reback() then return true end
+			if can_to_target_mission() then return true end
 		end
 	end,
 	[fmain_repeat] = function()
