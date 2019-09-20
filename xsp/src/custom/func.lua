@@ -34,6 +34,7 @@ func[view_home] = {
 		if return_home_sleep_a_lot then
 			return_home_sleep_a_lot = false
 			sleep(2000)
+			return true
 		end
 		click_btn(btn_world)
 	end,
@@ -41,6 +42,7 @@ func[view_home] = {
 		if return_home_sleep_a_lot then
 			return_home_sleep_a_lot = false
 			sleep(2000)
+			return true
 		end
 		local ret = check_mission()
 		if ret then
@@ -54,6 +56,7 @@ func[view_home] = {
 		if return_home_sleep_a_lot then
 			return_home_sleep_a_lot = false
 			sleep(2000)
+			return true
 		end
 		click_btn(btn_enter_reback)
 	end,
