@@ -31,9 +31,17 @@ func[view_home] = {
 		change_target()
 	end,
 	[target_atk] = function()
+		if return_home_sleep_a_lot then
+			return_home_sleep_a_lot = false
+			sleep(2000)
+		end
 		click_btn(btn_world)
 	end,
 	[target_mission] = function()
+		if return_home_sleep_a_lot then
+			return_home_sleep_a_lot = false
+			sleep(2000)
+		end
 		local ret = check_mission()
 		if ret then
 			local ret2 = change_target()
@@ -43,6 +51,10 @@ func[view_home] = {
 		end
 	end,
 	[target_reback] = function()
+		if return_home_sleep_a_lot then
+			return_home_sleep_a_lot = false
+			sleep(2000)
+		end
 		click_btn(btn_enter_reback)
 	end,
 	[target_default] = function()
@@ -63,11 +75,13 @@ func[view_slc_dg_type] = {
 	end
 }
 
+return_home_sleep_a_lot = false
 func[view_slc_dg_main] = {
 	[target_atk] = function()
 		click_sub_fb()
 	end,
 	[target_default] = function()
+		return_home_sleep_a_lot = true
 		click_btn(btn_back_any)
 	end
 }

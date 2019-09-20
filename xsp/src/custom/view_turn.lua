@@ -67,7 +67,6 @@ vt[view_bt_playing2] = {
 	,view_bt_slc_acn
 	,view_stop_repeat
 	,view_bt_over
---	,view_bt_waiting
 }
 
 --8--战斗中-战斗经验结算
@@ -79,7 +78,6 @@ vt[view_bt_report] = {
 	,view_bt_playing
 	,view_stop_repeat
 	,view_level_up
---	,view_bt_waiting
 }
 
 --9--战斗中-打捞老婆
@@ -91,7 +89,6 @@ vt[view_bt_waiting] = {
 	,view_bt_next
 	,view_bt_over
 	,view_stop_repeat
---	,view_bt_waiting
 }
 
 --10--战斗中-捞到老婆
@@ -100,7 +97,6 @@ vt[view_bt_get_waifu] = {
 	,view_bt_next
 	,view_bt_over
 	,view_level_up
---	,view_bt_waiting
 }
 
 --11--战斗中-下一波

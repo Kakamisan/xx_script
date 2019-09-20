@@ -37,7 +37,7 @@ btn[btn_normal] = {
 
 --5--
 btn[btn_bt_next] = {
-	body = {1308,602,1387,669},
+	body = {1337,652,1377,688},
 	view = {view_bt_next}
 }
 
@@ -73,7 +73,7 @@ btn[btn_enter_bt] = {
 
 --11--
 btn[btn_start_turn] = {
-	body = {1309,386,1380,453},
+	body = {1333,340,1375,383},
 	view = {view_bt_slc_acn,view_bt_enemy_acn}
 }
 
@@ -118,24 +118,24 @@ btn[btn_ack_get] = {
 	view = {view_reback_get,view_reback_get2}
 }
 
---19--
+--19--和btn_start_turn一样，写重了懒得删
 btn[btn_turn_over] = {
-	body = {1314,390,1375,450}
+	body = {1333,340,1375,383}
 }
 
 --20--
 btn[btn_skill2] = {
-	body = {1162,625,1190,687}
+	body = {1086,627,1130,671}
 }
 
 --21--
 btn[btn_wait] = {
-	body = {1327,628,1354,689}
+	body = {1318,628,1363,667}
 }
 
 --22--
 btn[btn_move] = {
-	body = {1244,624,1269,686}
+	body = {1201,625,1246,672}
 }
 
 --23--
@@ -197,7 +197,7 @@ btn[btn_fe_9] = {
 }
 
 btn[btn_bt_auto] = {
-	body = {1141,19,1177,54}
+	body = {1071,29,1090,49}
 }
 btn[btn_bt_quit] = {
 	body = {21,11,74,37}

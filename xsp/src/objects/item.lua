@@ -80,55 +80,53 @@ item[item_reback_scroll] = {
 }
 
 item[item_move_reset] = {
-	body = {809-821,641-618,836-821,668-618},
-	area = {1,615,970,691},
+	body = {635-646,633-616,658-646,662-616},
+	area = {1,472,862,717},
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=1,y=27,color=0x000000},
-	{x=6,y=30,color=0x000000},
-	{x=0,y=38,color=0x000000},
-	{x=0,y=44,color=0x000000},
-	{x=-23,y=32,color=0xffffff},
-	{x=5,y=60,color=0xffffff},
-	{x=21,y=23,color=0xffffff}
+	{x=-22,y=16,color=0xffffff},
+	{x=-23,y=46,color=0xffffff},
+	{x=-13,y=41,color=0xffffff},
+	{x=-14,y=21,color=0xffffff},
+	{x=15,y=21,color=0xffffff},
+	{x=13,y=39,color=0xffffff},
+	{x=0,y=41,color=0x000000},
+	{x=1,y=58,color=0xffffff},
+	{x=27,y=31,color=0xfefefe}
 	},
 	degree = 98
 }
 
 item[item_turn_end] = {
-	area = {991,334,1404,502},
+	area = {1321,332,1384,392},
 	feature = {
-	{x=0,y=0,color=0xffc300},
-	{x=11,y=0,color=0xfdc100},
-	{x=-5,y=15,color=0xffc300},
-	{x=6,y=15,color=0xffc300},
-	{x=33,y=1,color=0xffc300},
-	{x=43,y=1,color=0xffc300},
-	{x=33,y=15,color=0xffc300},
-	{x=71,y=0,color=0xffc300},
-	{x=60,y=16,color=0xffc300},
-	{x=71,y=16,color=0xffc300},
-	{x=97,y=4,color=0xffc300},
-	{x=109,y=1,color=0xffc300},
-	{x=97,y=16,color=0xffc300},
-	{x=127,y=16,color=0xffc300},
-	{x=141,y=0,color=0xffc300},
-	{x=138,y=13,color=0xffc300}
+	{x=0,y=0,color=0xffffd7},
+	{x=4,y=6,color=0xffffe4},
+	{x=10,y=9,color=0xffffed},
+	{x=20,y=14,color=0xffffef},
+	{x=34,y=20,color=0xffffd2},
+	{x=3,y=11,color=0xffffe8},
+	{x=4,y=25,color=0xffffe5},
+	{x=3,y=32,color=0xffffda}
 	},
-	degree = 99
+	degree = 98
 }
 
 item[item_target_self] = {
-	body = {531-483,254-225,554-483,281-225},
+	body = {350-328,240-262,394-328,280-262},
 	area = {9,5,716,713},
 	feature = {
-	{x=0,y=0,color=0xffa72b},
-	{x=131,y=75,color=0xffa72b},
-	{x=95,y=104,color=0xff9c29},
-	{x=22,y=101,color=0xffac2a},
-	{x=-12,y=41,color=0xffa826},
-	{x=108,y=-26,color=0xffac2a},
-	{x=41,y=104,color=0xffa529}
+	{x=0,y=0,color=0xffad0c},
+	{x=8,y=-13,color=0xffb80e},
+	{x=75,y=-35,color=0x878787},
+	{x=79,y=-20,color=0x878787},
+	{x=87,y=-17,color=0x878787},
+	{x=95,y=-24,color=0xffffff},
+	{x=95,y=-36,color=0xffffff},
+	{x=86,y=-41,color=0xffffff},
+	{x=67,y=-9,color=0xffffff},
+	{x=50,y=13,color=0xffffff},
+	{x=36,y=9,color=0xffffff}
 	},
 	degree = 99
 }

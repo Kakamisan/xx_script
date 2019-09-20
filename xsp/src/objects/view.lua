@@ -73,22 +73,24 @@ view[view_slc_team] = {
 --5--战斗中-选择行动
 view[view_bt_slc_acn] = {
 	feature = {
-		{x=0+19,y=0+17,color=0xfdfdfd},
-	{x=-7+19,y=7+17,color=0xffffff},
-	{x=1+19,y=15+17,color=0xffffff},
---	{x=1135+19,y=15+17,color=0xfef469},
---	{x=1138+19,y=27+17,color=0xfdf268},
---	{x=1144+19,y=21+17,color=0xfff167},
-	{x=1227+19,y=10+17,color=0xffcc00},
-	{x=1245+19,y=10+17,color=0xffcb00},
-	{x=1366+19,y=26+17,color=0xfcc500},
-	{x=1383+19,y=8+17,color=0xffcc00},
-	{x=1355+19,y=98+17,color=0x93f212},
-	{x=1391+19,y=113+17,color=0xf6feef},
-	{x=1391+19,y=141+17,color=0xf9fff2},
-	{x=1415+19,y=153+17,color=0xafe406},
-	{x=1321+19,y=664+17,color=0xffd800},
-	{x=948+19,y=667+17,color=0xffcc00}
+	--上面一排
+		{x=0,y=0,color=0xffffff},
+	{x=-8,y=9,color=0xffffff},
+	{x=0,y=18,color=0xffffff},
+	{x=1123,y=16,color=0xffffff},
+	{x=1134,y=27,color=0xffffff},
+	{x=1195,y=16,color=0xffffff},
+	{x=1213,y=14,color=0xffffff},
+	{x=1270,y=24,color=0xffffff},
+	{x=1282,y=14,color=0xffffff},
+	{x=1333,y=-1,color=0xffe300},
+	{x=1411,y=2,color=0xffe300},
+	{x=1414,y=42,color=0xffe300},
+	
+	--等待图标
+	{x=1355,y=559,color=0xfff145},
+	{x=1360,y=564,color=0xfff145},
+	{x=1354,y=565,color=0xfff145}
 	},
 	degree = 98
 }
@@ -96,18 +98,22 @@ view[view_bt_slc_acn] = {
 --6--战斗中-播报中
 view[view_bt_playing] = {
 	feature = {
-	{x=0+1243,y=0+26,color=0xffcc00},
-	{x=22+1243,y=0+26,color=0xffce00},
-	{x=88+1243,y=0+26,color=0xffcc00},
-	{x=140+1243,y=16+26,color=0xfcc500},
-	{x=168+1243,y=8+26,color=0xffcb00},
-	{x=159+1243,y=1+26,color=0xffcb00},
-	{x=132+1243,y=89+26,color=0x93f212},
-	{x=167+1243,y=104+26,color=0xf6feef},
-	{x=167+1243,y=133+26,color=0xf9fff2},
-	{x=193+1243,y=145+26,color=0xafe406},
-	{x=-276+1243,y=659+26,color=0xffcc00},
-	{x=-193+1243,y=669+26,color=0xfffffe}
+	--上面一排
+	{x=0,y=0,color=0xffffff},
+	{x=11,y=11,color=0xffffff},
+	{x=72,y=0,color=0xffffff},
+	{x=90,y=-2,color=0xffffff},
+	{x=147,y=8,color=0xffffff},
+	{x=159,y=-2,color=0xffffff},
+	{x=210,y=-17,color=0xffe300},
+	{x=288,y=-14,color=0xffe300},
+	{x=291,y=26,color=0xffe300},
+	
+	--右下灰色点
+	{x=-9,y=609,color=0x403d3d},
+	{x=3,y=609,color=0x403d3e},
+	{x=-3,y=615,color=0xb6bdad},
+	{x=2,y=630,color=0x2b2928}
 	},
 	degree = 98
 }
@@ -126,11 +132,17 @@ view[view_bt_playing2] = {
 
 --8--战斗中-战斗经验结算
 view[view_bt_report] = {
-	feature = {
-	{x=0+19,y=0+18,color=0xfdfdfd},
-	{x=1247+19,y=7+18,color=0x8d7b2f},
-	{x=1384+19,y=10+18,color=0x8a762b},
-	{x=1316+19,y=18+18,color=0x857023}
+	feature = {	
+	{x=0,y=0,color=0xffffff},
+	{x=-7,y=8,color=0xffffff},
+	{x=1,y=16,color=0xffffff},
+	{x=1198,y=16,color=0x838383},
+	{x=1211,y=14,color=0x858585},
+	{x=1277,y=18,color=0x828282},
+	{x=1158,y=48,color=0x969696},
+	{x=1163,y=48,color=0x969696},
+	{x=1164,y=54,color=0x969696},
+	{x=1157,y=52,color=0x969696}
 	},
 	degree = 98
 }
@@ -154,23 +166,18 @@ view[view_bt_waiting] = {
 --10--战斗中-捞到老婆
 view[view_bt_get_waifu] = {
 	feature = {
---	{x=0+20,y=0+17,color=0xfdfdfd},
---	{x=1383+20,y=11+17,color=0xffcb00},
---	{x=1320+20,y=7+17,color=0xffcc00},
---	{x=1279+20,y=595+17,color=0xfecb00},
---	{x=1221+20,y=469+17,color=0xffb800}
-
---	18,18
 	{x=0,y=0,color=0xffffff},
-	{x=-6,y=6,color=0xffffff},
-	{x=2,y=14,color=0xffffff},
-	{x=1222,y=469,color=0xffb900},
-	{x=1191,y=486,color=0xffb900},
-	{x=951,y=485,color=0xffbb00},
-	{x=955,y=488,color=0xfbb902},
-	{x=1203,y=476,color=0xfeb800},
-	{x=1281,y=596,color=0xfecb00},
-	{x=1281,y=604,color=0xfecb00}
+	{x=-7,y=7,color=0xffffff},
+	{x=1,y=16,color=0xffffff},
+	{x=952,y=483,color=0xffbb00},
+	{x=956,y=485,color=0xfcb901},
+	{x=1194,y=485,color=0xfeb900},
+	{x=1204,y=477,color=0xfeb800},
+	{x=1215,y=470,color=0xfeba00},
+	{x=1229,y=470,color=0xfeb900},
+	{x=1228,y=465,color=0xffb800},
+	{x=1220,y=464,color=0xffb800},
+	{x=1275,y=591,color=0xfecb00}
 	},
 	degree = 98
 }
@@ -178,22 +185,18 @@ view[view_bt_get_waifu] = {
 --11--战斗中-下一波
 view[view_bt_next] = {
 	feature = {
---	{x=0+18,y=0+18,color=0xfefefe},
---	{x=1385+18,y=11+18,color=0xffcb00},
---	{x=1380+18,y=646+18,color=0xe7b540},
---	{x=1346+18,y=617+18,color=0xfef8e6}
-
---	18,18
 	{x=0,y=0,color=0xffffff},
-	{x=-6,y=6,color=0xffffff},
-	{x=2,y=13,color=0xffffff},
-	{x=1375,y=15,color=0xffcb00},
-	{x=1388,y=15,color=0xffcb00},
-	{x=1298,y=594,color=0xfdf8e6},
-	{x=1315,y=639,color=0xfdf7e6},
-	{x=1372,y=570,color=0xecc840},
-	{x=1372,y=661,color=0xe5b03f},
-	{x=1284,y=634,color=0xe6a500}
+	{x=-7,y=6,color=0xffffff},
+	{x=0,y=16,color=0xffffff},
+	{x=1271,y=22,color=0xffffff},
+	{x=1275,y=15,color=0xffffff},
+	{x=1286,y=17,color=0xffffff},
+	{x=1321,y=637,color=0xfffee9},
+	{x=1332,y=649,color=0xfffff5},
+	{x=1354,y=656,color=0xfffed6},
+	{x=1322,y=660,color=0xfffeea},
+	{x=1321,y=675,color=0xfffeda},
+	{x=1333,y=668,color=0xfffeea}
 	},
 	degree = 98
 }
@@ -267,11 +270,18 @@ view[view_player_info] = {
 --17--载入
 view[view_sys_online] = {
 	feature = {
-	{x=0+682,y=0+348,color=0xffa756},
-	{x=38+682,y=0+348,color=0xffa857},
-	{x=77+682,y=0+348,color=0xffa857},
-	{x=-523+682,y=334+348,color=0xefb502},
-	{x=188,y=694,color=0xe1a100}
+	{x=0,y=0,color=0xf8c714},
+	{x=4,y=4,color=0xefb500},
+	{x=4,y=13,color=0xe3a500},
+	{x=20,y=15,color=0xe2a200},
+	{x=3,y=22,color=0xefb811},
+	{x=13,y=22,color=0xefb70f},
+	{x=29,y=22,color=0xefb70f},
+	{x=50,y=22,color=0xefb710},
+	{x=71,y=22,color=0xefb710},
+	{x=64,y=6,color=0xeeb400},
+	{x=29,y=6,color=0xeeb400},
+	{x=34,y=4,color=0xefb501}
 	},
 	degree = 98
 }
@@ -279,24 +289,27 @@ view[view_sys_online] = {
 --18--战斗中-敌方行动
 view[view_bt_enemy_acn] = {
 	feature = {
-	{x=0+20,y=0+17,color=0xfdfdfd},
-	{x=-8+20,y=8+17,color=0xffffff},
-	{x=0+20,y=14+17,color=0xffffff},
-	{x=1137+20,y=20+17,color=0xfff469},
-	{x=1225+20,y=11+17,color=0xffcc00},
-	{x=1245+20,y=11+17,color=0xffcc00},
-	{x=1364+20,y=26+17,color=0xfcc500},
-	{x=1390+20,y=17+17,color=0xffcb00},
-	{x=1382+20,y=10+17,color=0xffcb00},
-	{x=1048+20,y=595+17,color=0xcecece},
-	{x=1079+20,y=598+17,color=0xcecece},
-	{x=1132+20,y=598+17,color=0xcecece},
-	{x=1161+20,y=595+17,color=0xcecece},
-	{x=949+20,y=674+17,color=0xffcc00},
-	{x=1358+20,y=99+17,color=0x93f212},
-	{x=1412+20,y=153+17,color=0xafe406},
-	{x=1390+20,y=121+17,color=0xf6fdef},
-	{x=1323+20,y=661+17,color=0x313131}
+	{x=0,y=0,color=0xffffff},
+	{x=-7,y=10,color=0xffffff},
+	{x=0,y=17,color=0xffffff},
+	{x=1134,y=17,color=0xffffff},
+	{x=1129,y=29,color=0xffffff},
+	{x=1196,y=15,color=0xffffff},
+	{x=1213,y=18,color=0xffffff},
+	{x=1210,y=14,color=0xffffff},
+	{x=1270,y=25,color=0xffffff},
+	{x=1275,y=17,color=0xffffff},
+	{x=1287,y=18,color=0xffffff},
+	{x=1342,y=2,color=0xffe300},
+	{x=1414,y=-1,color=0xffe300},
+	{x=1409,y=42,color=0xffe300},
+	{x=1310,y=328,color=0xffd803},
+	{x=1315,y=328,color=0xffffdc},
+	{x=1315,y=362,color=0xffffcd},
+	{x=1338,y=344,color=0xffffe3},
+	{x=1320,y=336,color=0xffffeb},
+	{x=1326,y=353,color=0xffffe8},
+	{x=1320,y=611,color=0xcecece}
 	},
 	degree = 98
 }
@@ -392,15 +405,22 @@ view[view_reback_get] = {
 --25--战斗中-撤退
 view[view_bt_quit] = {
 	feature = {
-	{x=0+18,y=0+18,color=0x7d7d7d},
-	{x=1+18,y=14+18,color=0x7d7d7d},
-	{x=1315+18,y=8+18,color=0x7d6400},
-	{x=1385+18,y=11+18,color=0x7d6400},
-	{x=1360+18,y=97+18,color=0x487709},
-	{x=495+18,y=388+18,color=0xff6200},
-	{x=656+18,y=354+18,color=0xff6200},
-	{x=746+18,y=386+18,color=0xffcc00},
-	{x=907+18,y=360+18,color=0xffcc00}
+	{x=0,y=0,color=0x7d7d7d},
+	{x=-8,y=8,color=0x7d7d7d},
+	{x=-1,y=18,color=0x7d7d7d},
+	{x=1195,y=16,color=0x7d7d7d},
+	{x=1209,y=16,color=0x7d7d7d},
+	{x=1282,y=16,color=0x7d7d7d},
+	{x=1391,y=3,color=0x7d6f00},
+	{x=1411,y=41,color=0x7d6f00},
+	{x=476,y=397,color=0xff6200},
+	{x=672,y=350,color=0xff6200},
+	{x=646,y=396,color=0xff6200},
+	{x=504,y=353,color=0xff6200},
+	{x=724,y=394,color=0xffcc00},
+	{x=752,y=351,color=0xffcc00},
+	{x=888,y=398,color=0xffcc00},
+	{x=909,y=355,color=0xffcc00}
 	},
 	degree = 98
 }
