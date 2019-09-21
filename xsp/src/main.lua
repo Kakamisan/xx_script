@@ -48,7 +48,8 @@ function main_loop()
 	
 	--手动停脚本（转竖屏就停止脚本）（按home键）
 	if getScreenDirection() == 0 then
-		lua_exit()
+--		lua_exit()
+		runApp("com.smartjoy.LastOrigin_C")
 	end
 
 --	return main_loop()
@@ -56,5 +57,7 @@ function main_loop()
 	end
 	
 end
+
+runApp("com.smartjoy.LastOrigin_C")
 
 main_loop()
