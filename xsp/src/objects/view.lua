@@ -147,6 +147,28 @@ view[view_bt_report] = {
 	degree = 98
 }
 
+--34--战斗中-战斗经验结算
+view[view_bt_report2] = {
+	feature = {	
+	{x=0,y=0,color=0xffffff},
+	{x=8,y=10,color=0xffffff},
+	{x=1131,y=9,color=0x838383},
+	{x=1143,y=14,color=0x7f7f7f},
+	{x=1204,y=7,color=0x858585},
+	{x=1219,y=9,color=0x838383},
+	{x=1156,y=34,color=0x969696},
+	{x=1157,y=39,color=0x969696},
+	{x=1159,y=44,color=0x969696},
+	{x=1165,y=46,color=0x969696},
+	{x=1187,y=39,color=0x969696},
+	{x=1254,y=42,color=0x969696},
+	{x=1269,y=31,color=0x969696},
+	{x=1279,y=14,color=0x7f7f7f},
+	{x=1290,y=7,color=0x858585}
+	},
+	degree = 98
+}
+
 --9--战斗中-打捞老婆
 view[view_bt_waiting] = {
 	feature = {

@@ -156,6 +156,7 @@ func[view_bt_report] = {
 		if cfg.main == fmain_repeat then click_btn(btn_normal) end
 	end
 }
+func[view_bt_report2] = func[view_bt_report]
 
 func[view_bt_waiting] = {
 	[target_default] = function()

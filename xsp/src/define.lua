@@ -158,6 +158,7 @@ view_bt_slc_acn		= 5		--战斗中-选择行动
 view_bt_playing		= 6		--战斗中-播报中
 view_bt_playing2	= 7		--战斗中-播报中-下面是蓝色点
 view_bt_report		= 8		--战斗中-战斗经验结算
+view_bt_report2		= 34	--中途经验结算界面，由于第一面和后面不一样，所以加多一个，功能上完全复制即可
 view_bt_waiting		= 9		--战斗中-打捞老婆
 view_bt_get_waifu	= 10	--战斗中-捞到老婆
 view_bt_next		= 11	--战斗中-下一波
@@ -183,7 +184,7 @@ view_reback_get2	= 30	--装备分解-获得物品
 view_re_connect2	= 31	--掉线重连2
 view_title			= 32	--标题界面
 view_event			= 33	--EVENT活动信息页
-
+--34 已占用，在上面
 
 
 to_view_desc = {
@@ -196,6 +197,7 @@ to_view_desc = {
 	,[view_bt_playing] = "战斗中-播报中"
 	,[view_bt_playing2] = "战斗中-播报中-下面是蓝色点"
 	,[view_bt_report] = "战斗中-战斗经验结算"
+	,[view_bt_report2] = "战斗中-战斗经验结算2"
 	,[view_bt_waiting] = "战斗中-打捞老婆"
 	,[view_bt_get_waifu] = "战斗中-捞到老婆"
 	,[view_bt_next] = "战斗中-下一波"

@@ -57,12 +57,14 @@ vt[view_bt_playing] = {
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
 	,view_bt_report
+	,view_bt_report2
 }
 
 --7--战斗中-播报中-下面是蓝色点
 vt[view_bt_playing2] = {
 	view_bt_playing
 	,view_bt_report
+	,view_bt_report2
 	,view_bt_enemy_acn
 	,view_bt_slc_acn
 	,view_stop_repeat
@@ -72,6 +74,16 @@ vt[view_bt_playing2] = {
 --8--战斗中-战斗经验结算
 vt[view_bt_report] = {
 	view_bt_report
+	,view_bt_get_waifu
+	,view_bt_next
+	,view_bt_over
+	,view_bt_playing
+	,view_stop_repeat
+	,view_level_up
+}
+--34
+vt[view_bt_report2] = {
+	view_bt_report2
 	,view_bt_get_waifu
 	,view_bt_next
 	,view_bt_over

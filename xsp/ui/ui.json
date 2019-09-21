@@ -217,6 +217,21 @@
                "rect" : "10,400,940,300"
             }
          ]
+      },
+      {
+         "text" : "当前版本",
+         "type" : "Page",
+         "views" : [
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : 30,
+               "text" : "\n\t\tVersion : 0.11\n\n\t\t\t\t\t\t--2019/09/22 0:50",
+               "bg" : "",
+               "type" : "Label",
+               "rect" : "10,10,940,300"
+            }
+         ]
       }
    ]
 }

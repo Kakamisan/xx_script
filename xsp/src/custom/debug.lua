@@ -1,6 +1,6 @@
 local d
 
 d = false
-d = true
+--d = true
 
 return d
