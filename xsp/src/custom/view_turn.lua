@@ -1,12 +1,7 @@
 local vt = {}
 
-vt[0] = {
-	1	,2	,3	,4	,5	,6	,8	,10	,11	,13
-	,14	,15	,16	,29	,17	,18	,19	,20	,21	,22
-	,23	,24	,25	,26	,27	,28	,30	,31	,32	,33
-	
-	,7	,12	,9
-}
+vt[0] = all_view
+
 --1--主页
 vt[view_home] = {
 	view_home
@@ -74,6 +69,7 @@ vt[view_bt_playing2] = {
 --8--战斗中-战斗经验结算
 vt[view_bt_report] = {
 	view_bt_report
+	,view_bt_report2
 	,view_bt_get_waifu
 	,view_bt_next
 	,view_bt_over
@@ -84,6 +80,7 @@ vt[view_bt_report] = {
 --34
 vt[view_bt_report2] = {
 	view_bt_report2
+	,view_bt_report
 	,view_bt_get_waifu
 	,view_bt_next
 	,view_bt_over

@@ -150,7 +150,9 @@ rand_sleep_bt_report = true
 func[view_bt_report] = {
 	[target_default] = function()
 		if rand_sleep_bt_report and cfg.main == fmain_repeat and math.random(1,100) < 17 then
+			dlog("rand_sleep_bt_report start")
 			sleep(7500,9500)
+			dlog("rand_sleep_bt_report stop")
 		end
 		rand_sleep_bt_report = false
 		if cfg.main == fmain_repeat then click_btn(btn_normal) end
