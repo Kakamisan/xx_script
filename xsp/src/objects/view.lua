@@ -208,17 +208,21 @@ view[view_bt_get_waifu] = {
 view[view_bt_next] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=-7,y=6,color=0xffffff},
-	{x=0,y=16,color=0xffffff},
-	{x=1271,y=22,color=0xffffff},
-	{x=1275,y=15,color=0xffffff},
-	{x=1286,y=17,color=0xffffff},
-	{x=1321,y=637,color=0xfffee9},
-	{x=1332,y=649,color=0xfffff5},
-	{x=1354,y=656,color=0xfffed6},
-	{x=1322,y=660,color=0xfffeea},
-	{x=1321,y=675,color=0xfffeda},
-	{x=1333,y=668,color=0xfffeea}
+	{x=-6,y=8,color=0xffffff},
+	{x=1,y=16,color=0xffffff},
+	{x=1274,y=20,color=0xffffff},
+	{x=1274,y=14,color=0xffffff},
+	{x=1281,y=21,color=0xffffff},
+	{x=1285,y=16,color=0xffffff},
+	{x=1311,y=621,color=0xfffede},
+	{x=1310,y=606,color=0xfffeeb},
+	{x=1309,y=588,color=0xfffeea},
+	{x=1320,y=595,color=0xfffff4},
+	{x=1340,y=603,color=0xfffed9},
+	{x=1332,y=603,color=0xfffee2},
+	{x=1326,y=605,color=0xfffff1},
+	{x=1326,y=613,color=0xfffeeb},
+	{x=1318,y=605,color=0xfffff1}
 	},
 	degree = 98
 }
