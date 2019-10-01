@@ -329,6 +329,7 @@ func[view_reback_waifu] = {
 func[view_reback_waifu_al] = {
 	[target_default] = function()
 		click_btn(btn_ack1)
+		sleep(5000)
 	end
 }
 
