@@ -299,18 +299,30 @@ view[view_player_info] = {
 --17--载入
 view[view_sys_online] = {
 	feature = {
-	{x=0,y=0,color=0xf8c714},
-	{x=4,y=4,color=0xefb500},
-	{x=4,y=13,color=0xe3a500},
-	{x=20,y=15,color=0xe2a200},
-	{x=3,y=22,color=0xefb811},
-	{x=13,y=22,color=0xefb70f},
-	{x=29,y=22,color=0xefb70f},
-	{x=50,y=22,color=0xefb710},
-	{x=71,y=22,color=0xefb710},
-	{x=64,y=6,color=0xeeb400},
-	{x=29,y=6,color=0xeeb400},
-	{x=34,y=4,color=0xefb501}
+--	{x=0,y=0,color=0xf8c714},
+--	{x=4,y=4,color=0xefb500},
+--	{x=4,y=13,color=0xe3a500},
+--	{x=20,y=15,color=0xe2a200},
+--	{x=3,y=22,color=0xefb811},
+--	{x=13,y=22,color=0xefb70f},
+--	{x=29,y=22,color=0xefb70f},
+--	{x=50,y=22,color=0xefb710},
+--	{x=71,y=22,color=0xefb710},
+--	{x=64,y=6,color=0xeeb400},
+--	{x=29,y=6,color=0xeeb400},
+--	{x=34,y=4,color=0xefb501}
+	{x=0,y=0,color=0xb2c7d3},
+	{x=-8,y=44,color=0xb3c9d5},
+	{x=114,y=45,color=0xb3c8d4},
+	{x=153,y=45,color=0xb2c7d3},
+	{x=205,y=2,color=0xb1c6d3},
+	{x=249,y=1,color=0xb0c5d1},
+	{x=274,y=45,color=0xb2c8d4},
+	{x=166,y=84,color=0xffa351},
+	{x=203,y=83,color=0xffa857},
+	{x=244,y=89,color=0xffbb67},
+	{x=423,y=43,color=0xb1c7d3},
+	{x=350,y=44,color=0xb2c8d4}
 	},
 	degree = 98
 }
