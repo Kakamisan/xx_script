@@ -249,10 +249,21 @@ view[view_bt_moving] = {
 --13--战斗中-总结算界面
 view[view_bt_over] = {
 	feature = {
-	{x=0+20,y=0+17,color=0xfdfdfd},
-	{x=1171+20,y=199+17,color=0xf1b002},
-	{x=1175+20,y=-11+17,color=0x049ee5},
-	{x=1241+20,y=40+17,color=0xd69300}
+	{x=0,y=0,color=0xffffff},
+	{x=-7,y=8,color=0xffffff},
+	{x=0,y=17,color=0xffffff},
+	{x=1155,y=-12,color=0xffc000},
+	{x=1147,y=24,color=0xffc000},
+	{x=1187,y=-1,color=0x089fe3},
+	{x=1284,y=-5,color=0x079ee3},
+	{x=1340,y=-7,color=0x039de4},
+	{x=1346,y=24,color=0x0a96d6},
+	{x=1374,y=17,color=0xffc000},
+	{x=1387,y=-11,color=0xffc000},
+	{x=1386,y=678,color=0xe4bf1d},
+	{x=917,y=193,color=0xf1b002},
+	{x=1258,y=199,color=0xf1b002},
+	{x=1224,y=25,color=0x22c4ec}
 	},
 	degree = 98
 }
