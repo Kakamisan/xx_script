@@ -102,6 +102,7 @@ end
 -------------------------------button---------------------------------
 last_click_btn = 0
 last_click_btn_pos = {0,0}
+last_click_btn_cnt = 0
 
 function click_btn(name)
 	assert(btn[name])
@@ -114,9 +115,17 @@ function click_btn(name)
 		return false
 	end
 	
+	--容错，点击5次后重置
+	if last_click_btn_cnt > 5 then
+		last_click_btn = 0
+		last_click_btn_pos = {0,0}
+		last_click_btn_cnt = 0
+	end
+	
 	--如果是上次按键，那就继续点那个位置，而不是重新随机位置
 	if name == last_click_btn then
 		click(last_click_btn_pos)
+		last_click_btn_cnt = last_click_btn_cnt + 1
 		return true
 	end
 	
@@ -125,6 +134,7 @@ function click_btn(name)
 	local body = btn[name].body
 	local x,y = math.random(body[1],body[3]),math.random(body[2],body[4])
 	last_click_btn_pos = {x,y}
+	last_click_btn_cnt = 0
 	
 	click(last_click_btn_pos)
 	return true
