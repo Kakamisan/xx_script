@@ -100,6 +100,9 @@ function dc(FuncStr,Pos)
 end
 
 -------------------------------button---------------------------------
+last_click_btn = 0
+last_click_btn_pos = {0,0}
+
 function click_btn(name)
 	assert(btn[name])
 	if btn[name].view and #(btn[name].view) ~= 0 and not in_table(state.view, btn[name].view) then
@@ -110,7 +113,20 @@ function click_btn(name)
 		dlog("特征不符 btn.name = ",name)
 		return false
 	end
-	click(btn[name].body)
+	
+	--如果是上次按键，那就继续点那个位置，而不是重新随机位置
+	if name == last_click_btn then
+		click(last_click_btn_pos)
+		return true
+	end
+	
+	--记录上次按键和随机一个按键内位置
+	last_click_btn = name
+	local body = btn[name].body
+	local x,y = math.random(body[1],body[3]),math.random(body[2],body[4])
+	last_click_btn_pos = {x,y}
+	
+	click(last_click_btn_pos)
 	return true
 end
 
