@@ -1,7 +1,17 @@
 --click({1,2,3,4})
+--click({1,2})
 function click(body)
-	assert(body[4])
+	if not body[4] then
+		return click2(body)
+	end
 	local x,y = math.random(body[1],body[3]),math.random(body[2],body[4])
+	touchDown(1,x,y)
+	sleep(34,54)
+	touchUp(1,x,y)
+end
+function click2(body)
+	assert(body[2])
+	local x,y = body[1],body[2]
 	touchDown(1,x,y)
 	sleep(34,54)
 	touchUp(1,x,y)
