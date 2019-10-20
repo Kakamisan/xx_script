@@ -32,7 +32,7 @@ btn[btn_main_story] = {
 
 --4--
 btn[btn_normal] = {
-	body = {718,430,1057,637}
+	body = {582,468,745,596}
 }
 
 --5--
@@ -73,7 +73,7 @@ btn[btn_enter_bt] = {
 
 --11--
 btn[btn_start_turn] = {
-	body = {1333,340,1375,383},
+	body = {1080,324,1385,392},
 	view = {view_bt_slc_acn,view_bt_enemy_acn}
 }
 
@@ -119,9 +119,9 @@ btn[btn_ack_get] = {
 }
 
 --19--和btn_start_turn一样，写重了懒得删
-btn[btn_turn_over] = {
-	body = {1333,340,1375,383}
-}
+btn[btn_turn_over] = btn[btn_start_turn]
+--	body = {1080,324,1385,392}
+--}
 
 --20--
 btn[btn_skill2] = {

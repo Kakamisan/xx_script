@@ -226,7 +226,7 @@
                "align" : "left",
                "color" : "0,0,0",
                "size" : 30,
-               "text" : "\n\t\tVersion : 0.16\n\n\t\t\t\t\t\t--2019/10/19 13:21",
+               "text" : "\n\t\tVersion : 0.17\n\n\t\t\t\t\t\t--2019/10/20 23:13",
                "bg" : "",
                "type" : "Label",
                "rect" : "10,10,940,300"
