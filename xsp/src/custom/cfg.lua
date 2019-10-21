@@ -78,6 +78,7 @@ function decode_move(txt)
 	if not txt or txt == "" then
 		return {}
 	end
+	txt = string.upper(txt)
 	local t = split(txt,";")
 	local t2 = {}
 	for i,v in ipairs(t) do
@@ -237,7 +238,16 @@ move_short = {
 	
 	["2A"] = {"S2","A"},
 	
-	["T"] = {"T"}
+	["T"] = {"T"},
+	
+	["W2"] = {"DW",2},
+	["W3"] = {"DW",3},
+	["W4"] = {"DW",4},
+	["W5"] = {"DW",5},
+	["W6"] = {"DW",6},
+	["W7"] = {"DW",7},
+	["W8"] = {"DW",8},
+	["W9"] = {"DW",9}
 }
 
 moves = {

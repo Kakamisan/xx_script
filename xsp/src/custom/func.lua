@@ -922,7 +922,7 @@ function do_action(a)
 		end
 	end
 	
-	if action_do_1[a[1]]() then
+	if action_do_1[a[1]](a[2]) then
 		over = true
 	end
 	
@@ -997,7 +997,7 @@ action_do_1 = {
 		return false
 	end,
 	["W"] = function()
-		sleep(50,100)
+		sleep(150,200)
 		click_btn(btn_wait)
 		return true
 	end,
@@ -1009,6 +1009,14 @@ action_do_1 = {
 	end,
 	["T"] = function()
 		sleep(500,600)
+		return true
+	end,
+	["DW"] = function(Cnt)
+		sleep(270,358)
+		for i = 1,Cnt do
+			click_btn(btn_wait)
+			sleep(177,222)
+		end
 		return true
 	end
 }
