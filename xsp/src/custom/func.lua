@@ -935,7 +935,7 @@ function do_action(a)
 	end
 	
 	if over then
-		sleep(280,350)
+		sleep(150,350)
 		if slc(cfg.auto_xy,fauto_xy_quick) then	--快速模式直接跳出到下一步
 			return true
 		end
@@ -991,7 +991,7 @@ action_do_1 = {
 		return false
 	end,
 	["S2"] = function()
-		sleep(270,358)
+		sleep(150,358)
 		click_btn(btn_skill2)
 		sleep(20,150)
 		return false
@@ -1002,7 +1002,7 @@ action_do_1 = {
 		return true
 	end,
 	["M"] = function()
-		sleep(270,358)
+		sleep(150,358)
 		click_btn(btn_move)
 		sleep(20,150)
 		return false
@@ -1012,10 +1012,10 @@ action_do_1 = {
 		return true
 	end,
 	["DW"] = function(Cnt)
-		sleep(270,358)
+		sleep(150,358)
 		for i = 1,Cnt do
 			click_btn(btn_wait)
-			sleep(177,222)
+			sleep(147,203)
 		end
 		return true
 	end
@@ -1023,47 +1023,38 @@ action_do_1 = {
 
 action_do_2 = {
 	["SF"] = function()
-		sleep(270,358)
+		sleep(150,358)
 		if timeout({count=7,sleep=200},find_item,item_target_self) then
 			click_item(item_target_self)
 		end
 		return true
 	end,
 	["E"] = function()
-		sleep(270,358)
+		sleep(150,358)
 		return false
 	end,
 	["F"] = function()
-		sleep(270,358)
+		sleep(150,358)
 		return false
 	end,
 	["GE"] = function()
-		sleep(270,358)
+		sleep(150,358)
 		return false
 	end,
 	["GF"] = function()
-		sleep(270,358)
+		sleep(150,358)
 		return false
 	end,
 	["A"] = function()
-		sleep(270,358)
+		sleep(150,358)
 		if timeout({count=7,sleep=200},find_items,item_target_enemy) then
 			local N = math.random(1,#(items_positions[item_target_enemy]))
 			local x = items_positions[item_target_enemy][N].x
 			local y = items_positions[item_target_enemy][N].y
-			click({
-					item[item_target_enemy].body[1]+x,
-					item[item_target_enemy].body[2]+y,
-					item[item_target_enemy].body[3]+x,
-					item[item_target_enemy].body[4]+y
-				})
-			sleep(180,280)
-			click({
-					item[item_target_enemy].body[1]+x,
-					item[item_target_enemy].body[2]+y,
-					item[item_target_enemy].body[3]+x,
-					item[item_target_enemy].body[4]+y
-				})
+			local x1,y1 = math.random(item[item_target_enemy].body[1]+x,item[item_target_enemy].body[3]+x),math.random(item[item_target_enemy].body[2]+y,item[item_target_enemy].body[4]+y)
+			click({x1,y1})
+			sleep(147,278)
+			click({x1,y1})
 		end
 		return true
 	end
@@ -1076,35 +1067,17 @@ action_do_3 = {
 				local N = tonumber(A)
 				local x = items_positions[item_target_enemy][N].x
 				local y = items_positions[item_target_enemy][N].y
-				click({
-						item[item_target_enemy].body[1]+x,
-						item[item_target_enemy].body[2]+y,
-						item[item_target_enemy].body[3]+x,
-						item[item_target_enemy].body[4]+y
-					})
-				sleep(180,280)
-				click({
-						item[item_target_enemy].body[1]+x,
-						item[item_target_enemy].body[2]+y,
-						item[item_target_enemy].body[3]+x,
-						item[item_target_enemy].body[4]+y
-					})
+				local x1,y1 = math.random(item[item_target_enemy].body[1]+x,item[item_target_enemy].body[3]+x),math.random(item[item_target_enemy].body[2]+y,item[item_target_enemy].body[4]+y)
+				click({x1,y1})
+				sleep(147,278)
+				click({x1,y1})
 			end
 		else
 			local x,y = E_pos[A][1],E_pos[A][2]
-			click({
-					item[item_target_set].body[1]+x,
-					item[item_target_set].body[2]+y,
-					item[item_target_set].body[3]+x,
-					item[item_target_set].body[4]+y
-				})
-			sleep(180,280)
-			click({
-					item[item_target_set].body[1]+x,
-					item[item_target_set].body[2]+y,
-					item[item_target_set].body[3]+x,
-					item[item_target_set].body[4]+y
-				})
+			local x1,y1 = math.random(item[item_target_set].body[1]+x,item[item_target_set].body[3]+x),math.random(item[item_target_set].body[2]+y,item[item_target_set].body[4]+y)
+			click({x1,y1})
+			sleep(147,278)
+			click({x1,y1})
 		end
 		return true
 	end,
@@ -1114,49 +1087,31 @@ action_do_3 = {
 				local N = tonumber(A)
 				local x = items_positions[item_target_friend][N].x
 				local y = items_positions[item_target_friend][N].y
-				click({
-						item[item_target_friend].body[1]+x,
-						item[item_target_friend].body[2]+y,
-						item[item_target_friend].body[3]+x,
-						item[item_target_friend].body[4]+y
-					})
-				sleep(180,280)
-				click({
-						item[item_target_friend].body[1]+x,
-						item[item_target_friend].body[2]+y,
-						item[item_target_friend].body[3]+x,
-						item[item_target_friend].body[4]+y
-					})
+				local x1,y1 = math.random(item[item_target_friend].body[1]+x,item[item_target_friend].body[3]+x),math.random(item[item_target_friend].body[2]+y,item[item_target_friend].body[4]+y)
+				click({x1,y1})
+				sleep(147,278)
+				click({x1,y1})
 			end
 		else
 			local x,y = F_pos[A][1],F_pos[A][2]
-			click({
-					item[item_target_set].body[1]+x,
-					item[item_target_set].body[2]+y,
-					item[item_target_set].body[3]+x,
-					item[item_target_set].body[4]+y
-				})
-			sleep(180,280)
-			click({
-					item[item_target_set].body[1]+x,
-					item[item_target_set].body[2]+y,
-					item[item_target_set].body[3]+x,
-					item[item_target_set].body[4]+y
-				})
+			local x1,y1 = math.random(item[item_target_set].body[1]+x,item[item_target_set].body[3]+x),math.random(item[item_target_set].body[2]+y,item[item_target_set].body[4]+y)
+			click({x1,y1})
+			sleep(147,278)
+			click({x1,y1})
 		end
 		return true
 	end,
 	["GE"] = function(A)
 		local name = GE_area[A]
 		click_btn(name)
-		sleep(180,280)
+		sleep(147,278)
 		click_btn(name)
 		return true
 	end,
 	["GF"] = function(A)
 		local name = FE_area[A]
 		click_btn(name)
-		sleep(180,280)
+		sleep(147,278)
 		click_btn(name)
 		return true
 	end
