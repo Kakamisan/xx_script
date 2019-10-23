@@ -13,7 +13,6 @@ cfg.misscnt = tonumber(cfg.misscnt)
 cfg.extra_do= tonumber(cfg.extra_do)
 cfg.btcount = tonumber(cfg.btcount)
 cfg.xy_base = tonumber(cfg.xy_base)
-
 cfg.actionslc = tonumber(cfg.actionslc)+1
 
 
@@ -374,4 +373,34 @@ F_pos = {
 	["18"] = decode_pos(cfg.F18),
 	["19"] = decode_pos(cfg.F19)
 }
+
+function decode_pos_origin(txt)
+	if not txt or txt == "" then
+		return {}
+	end
+	
+	local t2 = split(txt,";")
+	if #t2 == 1 then
+		txt = t2[1]
+	else
+		txt = t2[2]
+	end
+	
+	local t = split(txt,",")
+	
+	return {tonumber(t[1]),tonumber(t[2])}
+end
+
+cfg.rest_set = decode_pos_origin(cfg.rest_set)
+cfg.rest_time = decode_pos_origin(cfg.rest_time)
+--检查休息设置
+if cfg.rest_set[2] < cfg.rest_set[1] or cfg.rest_set[1]<0 then
+	dialog("杂项设置出错",5)
+	lua_exit()
+end
+if cfg.rest_time[2] < cfg.rest_time[1] or cfg.rest_time[1]<0 then
+	dialog("杂项设置出错",5)
+	lua_exit()
+end
+
 return cfg

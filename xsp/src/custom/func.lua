@@ -92,6 +92,10 @@ func[view_slc_dg_main] = {
 func[view_slc_team] = {
 	[target_atk] = function()
 		if check_mission_slc_team() then return true end
+		if cfg.main == fmain_repeat and slc(cfg.extra,fextra_rest) and math.random(state.had_rest, state.had_rest+cfg.rest_set[2]-cfg.rest_set[1]) >= cfg.rest_set[2] then
+			state.had_rest = 0
+			dialog("休息中。。。",math.random(cfg.rest_time[1],cfg.rest_time[2]))
+		end
 		if slc_team() then
 			init_repeat_battle()
 			click_btn(btn_enter_bt)
@@ -240,6 +244,7 @@ func[view_sys_online] = {
 		do_clock_reback()
 		if new_bt_add_count then
 			state.had_bt  = state.had_bt + 1
+			state.had_rest = state.had_rest + 1
 			if state.had_bt >= cfg.btcount then
 				if can_to_target_mission() then
 				else

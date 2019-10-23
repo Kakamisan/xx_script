@@ -14,7 +14,7 @@
          "views" : [
             {
                "id" : "extra",
-               "list" : "自动远征,自动分解",
+               "list" : "自动远征,自动分解,偶尔休息",
                "select" : "0",
                "size" : 30,
                "rect" : "10,0,1380,100",
@@ -1476,7 +1476,7 @@
          ]
       },
       {
-         "text" : "坐标设置2",
+         "text" : "杂项设置",
          "type" : "Page",
          "views" : [
             {
@@ -1496,8 +1496,57 @@
                "prompt" : "坐标基准值",
                "size" : 25,
                "text" : "",
-               "rect" : "10,150,300,100",
+               "rect" : "10,110,300,100",
                "type" : "Edit"
+            },
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : 20,
+               "rect" : "320,140,300,100",
+               "text" : "坐标基准值",
+               "bg" : "",
+               "type" : "Label"
+            },
+            {
+               "id" : "rest_set",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "number",
+               "prompt" : "休息上下限",
+               "size" : 25,
+               "text" : "5,10",
+               "rect" : "10,220,300,100",
+               "type" : "Edit"
+            },
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : 20,
+               "rect" : "320,260,1000,100",
+               "text" : "休息上下限：默认5,10，意思为打5次后开始有概率休息，打10次后必定休息，休息后计数重置",
+               "bg" : "",
+               "type" : "Label"
+            },
+            {
+               "id" : "rest_time",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "number",
+               "prompt" : "休息时间",
+               "size" : 25,
+               "text" : "10,20",
+               "rect" : "10,330,300,100",
+               "type" : "Edit"
+            },
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : 20,
+               "rect" : "320,370,1000,100",
+               "text" : "休息时间：默认10,20，意思为随机10~20秒",
+               "bg" : "",
+               "type" : "Label"
             }
          ]
       },
