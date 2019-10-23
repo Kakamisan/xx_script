@@ -215,7 +215,7 @@ btn[btn_enter_reback2] = {
 }
 
 btn[btn_ack2] = {
-	body = {0.667*1006,0.667*845,0.667*1139,0.667*889}
+	body = {667,566,762,603}
 }
 
 btn[btn_cancel1] = {
