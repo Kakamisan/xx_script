@@ -37,7 +37,7 @@ btn[btn_normal] = {
 
 --5--
 btn[btn_bt_next] = {
-	body = {1312,584,1379,655},
+	body = {1330,604,1361,639},
 	view = {view_bt_next}
 }
 
@@ -197,7 +197,7 @@ btn[btn_fe_9] = {
 }
 
 btn[btn_bt_auto] = {
-	body = {1071,29,1090,49}
+	body = {1082,34,1091,45}
 }
 btn[btn_bt_quit] = {
 	body = {21,11,74,37}

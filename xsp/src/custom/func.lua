@@ -923,7 +923,7 @@ function do_action(a)
 	local over
 	
 	if not slc(cfg.auto_xy,fauto_xy_quick) then	--非快速模式才检查下面的行动头像下的问号
-		local ret = timeout(find_items,item_move_reset)
+		local ret = timeout({count=1,sleep=200},find_items,item_move_reset)
 		
 		if ret and ret > 0 then
 			x,y = right_item(item_move_reset)

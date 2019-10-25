@@ -80,19 +80,22 @@ item[item_reback_scroll] = {
 }
 
 item[item_move_reset] = {
-	body = {635-646,633-616,658-646,662-616},
-	area = {1,472,862,717},
+	body = {747-753,641-616,761-753,656-616},
+	area = {13,555,847,711},
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=-22,y=16,color=0xffffff},
-	{x=-23,y=46,color=0xffffff},
-	{x=-13,y=41,color=0xffffff},
-	{x=-14,y=21,color=0xffffff},
-	{x=15,y=21,color=0xffffff},
-	{x=13,y=39,color=0xffffff},
-	{x=0,y=41,color=0x000000},
-	{x=1,y=58,color=0xffffff},
-	{x=27,y=31,color=0xfefefe}
+	{x=1,y=42,color=0x000000},
+	{x=1,y=34,color=0x000000},
+	{x=7,y=27,color=0x000000},
+	{x=0,y=23,color=0x000000},
+	{x=-13,y=28,color=0xffffff},
+	{x=2,y=18,color=0xffffff},
+	{x=16,y=31,color=0xffffff},
+	{x=10,y=44,color=0xffffff},
+	{x=-12,y=41,color=0xffffff},
+	{x=0,y=59,color=0xffffff},
+	{x=18,y=13,color=0xffffff},
+	{x=-20,y=16,color=0xffffff}
 	},
 	degree = 98
 }

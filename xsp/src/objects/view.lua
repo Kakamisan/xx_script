@@ -73,24 +73,24 @@ view[view_slc_team] = {
 --5--战斗中-选择行动
 view[view_bt_slc_acn] = {
 	feature = {
-	--上面一排
-		{x=0,y=0,color=0xffffff},
-	{x=-8,y=9,color=0xffffff},
-	{x=0,y=18,color=0xffffff},
-	{x=1123,y=16,color=0xffffff},
-	{x=1134,y=27,color=0xffffff},
-	{x=1195,y=16,color=0xffffff},
-	{x=1213,y=14,color=0xffffff},
-	{x=1270,y=24,color=0xffffff},
-	{x=1282,y=14,color=0xffffff},
-	{x=1333,y=-1,color=0xffe300},
-	{x=1411,y=2,color=0xffe300},
-	{x=1414,y=42,color=0xffe300},
-	
-	--等待图标
-	{x=1355,y=559,color=0xfff145},
-	{x=1360,y=564,color=0xfff145},
-	{x=1354,y=565,color=0xfff145}
+	{x=0,y=0,color=0xffffff},
+	{x=-6,y=8,color=0xffffff},
+	{x=2,y=17,color=0xffffff},
+	{x=1131,y=16,color=0xffffff},
+	{x=1136,y=27,color=0xffffff},
+	{x=1205,y=15,color=0xffffff},
+	{x=1217,y=15,color=0xffffff},
+	{x=1278,y=16,color=0xffffff},
+	{x=1289,y=15,color=0xffffff},
+	{x=1338,y=1,color=0xffe300},
+	{x=1417,y=40,color=0xffe300},
+	{x=1398,y=17,color=0xffe300},
+	{x=1361,y=564,color=0xfff145},
+	{x=1362,y=560,color=0xfff145},
+	{x=1358,y=567,color=0xfff145},
+	{x=1357,y=567,color=0xfff145},
+	{x=1308,y=601,color=0xf7de39},
+	{x=1337,y=601,color=0xf7de39}
 	},
 	degree = 98
 }
@@ -98,22 +98,22 @@ view[view_bt_slc_acn] = {
 --6--战斗中-播报中
 view[view_bt_playing] = {
 	feature = {
-	--上面一排
 	{x=0,y=0,color=0xffffff},
-	{x=11,y=11,color=0xffffff},
-	{x=72,y=0,color=0xffffff},
-	{x=90,y=-2,color=0xffffff},
-	{x=147,y=8,color=0xffffff},
-	{x=159,y=-2,color=0xffffff},
-	{x=210,y=-17,color=0xffe300},
-	{x=288,y=-14,color=0xffe300},
-	{x=291,y=26,color=0xffe300},
-	
-	--右下灰色点
-	{x=-9,y=609,color=0x403d3d},
-	{x=3,y=609,color=0x403d3e},
-	{x=-3,y=615,color=0xb6bdad},
-	{x=2,y=630,color=0x2b2928}
+	{x=10,y=0,color=0xffffff},
+	{x=4,y=11,color=0xffffff},
+	{x=71,y=-2,color=0xffffff},
+	{x=76,y=-1,color=0xffffff},
+	{x=87,y=0,color=0xffffff},
+	{x=144,y=6,color=0xffffff},
+	{x=148,y=-1,color=0xffffff},
+	{x=159,y=2,color=0xffffff},
+	{x=208,y=-13,color=0xffe300},
+	{x=225,y=1,color=0xffe300},
+	{x=262,y=-2,color=0xffe300},
+	{x=285,y=22,color=0xffe300},
+	{x=-9,y=612,color=0x3d3b3b},
+	{x=3,y=614,color=0x3c3939},
+	{x=-4,y=617,color=0xb5bcab}
 	},
 	degree = 98
 }
@@ -135,14 +135,16 @@ view[view_bt_report] = {
 	feature = {	
 	{x=0,y=0,color=0xffffff},
 	{x=-7,y=8,color=0xffffff},
-	{x=1,y=16,color=0xffffff},
-	{x=1198,y=16,color=0x838383},
-	{x=1211,y=14,color=0x858585},
-	{x=1277,y=18,color=0x828282},
-	{x=1158,y=48,color=0x969696},
-	{x=1163,y=48,color=0x969696},
-	{x=1164,y=54,color=0x969696},
-	{x=1157,y=52,color=0x969696}
+	{x=0,y=16,color=0xffffff},
+	{x=1140,y=16,color=0x888888},
+	{x=1135,y=28,color=0x7f7f7f},
+	{x=1202,y=15,color=0x898989},
+	{x=1214,y=14,color=0x898989},
+	{x=1277,y=17,color=0x858585},
+	{x=1286,y=15,color=0x898989},
+	{x=1149,y=54,color=0x969696},
+	{x=1152,y=58,color=0x969696},
+	{x=1156,y=52,color=0x969696}
 	},
 	degree = 98
 }
@@ -189,17 +191,18 @@ view[view_bt_waiting] = {
 view[view_bt_get_waifu] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=-7,y=7,color=0xffffff},
-	{x=1,y=16,color=0xffffff},
-	{x=952,y=483,color=0xffbb00},
-	{x=956,y=485,color=0xfcb901},
-	{x=1194,y=485,color=0xfeb900},
-	{x=1204,y=477,color=0xfeb800},
-	{x=1215,y=470,color=0xfeba00},
-	{x=1229,y=470,color=0xfeb900},
-	{x=1228,y=465,color=0xffb800},
-	{x=1220,y=464,color=0xffb800},
-	{x=1275,y=591,color=0xfecb00}
+	{x=-7,y=8,color=0xffffff},
+	{x=0,y=16,color=0xffffff},
+	{x=1220,y=471,color=0xffb900},
+	{x=1215,y=472,color=0xffb900},
+	{x=1200,y=477,color=0xffbc00},
+	{x=1196,y=481,color=0xfeb800},
+	{x=1188,y=487,color=0xffb900},
+	{x=948,y=489,color=0xfeb900},
+	{x=946,y=487,color=0xfeb800},
+	{x=937,y=488,color=0xffb900},
+	{x=1279,y=598,color=0xfecb00},
+	{x=1279,y=605,color=0xfecb00}
 	},
 	degree = 98
 }
@@ -208,24 +211,21 @@ view[view_bt_get_waifu] = {
 view[view_bt_next] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=-3,y=5,color=0xffffff},
-	{x=-7,y=9,color=0xffffff},
-	{x=1,y=18,color=0xffffff},
-	{x=1271,y=24,color=0xffffff},
-	{x=1273,y=16,color=0xffffff},
-	{x=1286,y=18,color=0xffffff},
-	{x=1278,y=23,color=0xffffff},
-	{x=1312,y=591,color=0xffffff},
-	{x=1308,y=606,color=0xffffff},
-	{x=1308,y=625,color=0xffffff},
-	{x=1342,y=606,color=0xffffff},
-	{x=1331,y=599,color=0xffffff},
-	{x=1315,y=593,color=0xffffff},
-	{x=1317,y=620,color=0xffffff},
-	{x=1330,y=611,color=0xffffff},
-	{x=1310,y=605,color=0xffffff},
-	{x=1319,y=606,color=0xffffff},
-	{x=1276,y=555,color=0xfff600}
+	{x=-7,y=7,color=0xffffff},
+	{x=1,y=15,color=0xffffff},
+	{x=1277,y=19,color=0xffffff},
+	{x=1286,y=15,color=0xffffff},
+	{x=1287,y=13,color=0xffffff},
+	{x=1288,y=15,color=0xffffff},
+	{x=1312,y=590,color=0xffffff},
+	{x=1316,y=597,color=0xffffff},
+	{x=1315,y=608,color=0xffffff},
+	{x=1313,y=621,color=0xffffff},
+	{x=1335,y=606,color=0xffffff},
+	{x=1327,y=600,color=0xffffff},
+	{x=1324,y=610,color=0xffffff},
+	{x=1322,y=604,color=0xffffff},
+	{x=1371,y=650,color=0xfff600}
 	},
 	degree = 98
 }
@@ -250,20 +250,18 @@ view[view_bt_moving] = {
 view[view_bt_over] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=-7,y=8,color=0xffffff},
-	{x=0,y=17,color=0xffffff},
-	{x=1155,y=-12,color=0xffc000},
-	{x=1147,y=24,color=0xffc000},
-	{x=1187,y=-1,color=0x089fe3},
-	{x=1284,y=-5,color=0x079ee3},
-	{x=1340,y=-7,color=0x039de4},
-	{x=1346,y=24,color=0x0a96d6},
-	{x=1374,y=17,color=0xffc000},
-	{x=1387,y=-11,color=0xffc000},
-	{x=1386,y=678,color=0xe4bf1d},
-	{x=917,y=193,color=0xf1b002},
-	{x=1258,y=199,color=0xf1b002},
-	{x=1224,y=25,color=0x22c4ec}
+	{x=-8,y=8,color=0xffffff},
+	{x=-1,y=16,color=0xffffff},
+	{x=1150,y=-9,color=0xffc000},
+	{x=1158,y=-11,color=0xffc000},
+	{x=1156,y=-9,color=0xffc000},
+	{x=1170,y=-10,color=0x039de4},
+	{x=1297,y=4,color=0x0a9ee1},
+	{x=1328,y=-2,color=0x069ee3},
+	{x=1366,y=-1,color=0xffc000},
+	{x=1375,y=-11,color=0xffc000},
+	{x=1222,y=24,color=0x1ad8f4},
+	{x=1242,y=31,color=0xd49200}
 	},
 	degree = 98
 }
@@ -342,26 +340,25 @@ view[view_sys_online] = {
 view[view_bt_enemy_acn] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=-7,y=10,color=0xffffff},
-	{x=0,y=17,color=0xffffff},
-	{x=1134,y=17,color=0xffffff},
-	{x=1129,y=29,color=0xffffff},
-	{x=1196,y=15,color=0xffffff},
-	{x=1213,y=18,color=0xffffff},
-	{x=1210,y=14,color=0xffffff},
-	{x=1270,y=25,color=0xffffff},
-	{x=1275,y=17,color=0xffffff},
-	{x=1287,y=18,color=0xffffff},
-	{x=1342,y=2,color=0xffe300},
-	{x=1414,y=-1,color=0xffe300},
-	{x=1409,y=42,color=0xffe300},
-	{x=1310,y=328,color=0xffd803},
-	{x=1315,y=328,color=0xffffdc},
-	{x=1315,y=362,color=0xffffcd},
-	{x=1338,y=344,color=0xffffe3},
-	{x=1320,y=336,color=0xffffeb},
-	{x=1326,y=353,color=0xffffe8},
-	{x=1320,y=611,color=0xcecece}
+	{x=-5,y=6,color=0xffffff},
+	{x=2,y=14,color=0xffffff},
+	{x=1136,y=13,color=0xffffff},
+	{x=1137,y=25,color=0xffffff},
+	{x=1203,y=13,color=0xffffff},
+	{x=1219,y=14,color=0xffffff},
+	{x=1277,y=17,color=0xffffff},
+	{x=1290,y=15,color=0xffffff},
+	{x=1284,y=20,color=0xffffff},
+	{x=1346,y=2,color=0xffe300},
+	{x=1391,y=10,color=0xffe300},
+	{x=1411,y=26,color=0xffe300},
+	{x=1412,y=5,color=0xffe300},
+	{x=1324,y=337,color=0xffffe7},
+	{x=1335,y=352,color=0xfffff1},
+	{x=1325,y=357,color=0xffffe2},
+	{x=1362,y=563,color=0x8f9294},
+	{x=1361,y=560,color=0x8f9294},
+	{x=1324,y=613,color=0xcecece}
 	},
 	degree = 98
 }
