@@ -266,7 +266,7 @@ function do_clock_reback()
 		if can_to_target_reback() then
 
 		else
-			can_to_target_mission()
+--			can_to_target_mission()
 		end
 	end
 end
