@@ -117,9 +117,7 @@ function click_btn(name)
 	
 	--容错，点击5次后重置
 	if last_click_btn_cnt > 5 then
-		last_click_btn = 0
-		last_click_btn_pos = {0,0}
-		last_click_btn_cnt = 0
+		reset_last_click()
 	end
 	
 	--如果是上次按键，那就继续点那个位置，而不是重新随机位置

@@ -5,16 +5,23 @@ function click(body)
 		return click2(body)
 	end
 	local x,y = math.random(body[1],body[3]),math.random(body[2],body[4])
-	touchDown(1,x,y)
-	sleep(34,54)
-	touchUp(1,x,y)
+	click({x,y})
 end
 function click2(body)
 	assert(body[2])
 	local x,y = body[1],body[2]
+	--无奈在这里耦合util相关代码
+	if last_click_btn ~= 0 and (x ~= last_click_btn_pos[1] or y ~= last_click_btn_pos[2]) then
+		reset_last_click()
+	end
 	touchDown(1,x,y)
 	sleep(34,54)
 	touchUp(1,x,y)
+end
+function reset_last_click()
+	last_click_btn = 0
+	last_click_btn_pos = {0,0}
+	last_click_btn_cnt = 0
 end
 
 --check_feature(E)
