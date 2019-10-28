@@ -89,15 +89,12 @@ func[view_slc_dg_main] = {
 	end
 }
 
-check_rest_state = true
 func[view_slc_team] = {
 	[target_atk] = function()
 		if check_mission_slc_team() then return true end
-		if check_rest_state and cfg.main == fmain_repeat and slc(cfg.extra,fextra_rest) and math.random(state.had_rest, state.had_rest+cfg.rest_set[2]-cfg.rest_set[1]) >= cfg.rest_set[2] then
-			state.had_rest = 0
-			dialog("休息中。。。",math.random(cfg.rest_time[1],cfg.rest_time[2]))
-		end
-		check_rest_state = false
+		
+		sometime_rest(1)
+		
 		if slc_team() then
 			init_repeat_battle()
 			click_btn(btn_enter_bt)
@@ -127,6 +124,7 @@ func[view_slc_team] = {
 func[view_bt_slc_acn] = {
 	[target_default] = function()
 		if cfg.main == fmain_repeat then
+			sometime_rest(2)
 			slc_action()
 		end
 	end
@@ -134,6 +132,7 @@ func[view_bt_slc_acn] = {
 
 func[view_bt_enemy_acn] = {
 	[target_default] = function()
+		sometime_rest(2)
 		click_btn(btn_start_turn)
 	end
 }
@@ -161,7 +160,10 @@ func[view_bt_report] = {
 			dlog("rand_sleep_bt_report stop")
 		end
 		rand_sleep_bt_report = false
-		if cfg.main == fmain_repeat then click_btn(btn_normal) end
+		if cfg.main == fmain_repeat then 
+			sometime_rest(3)
+			click_btn(btn_normal) 
+		end
 	end
 }
 func[view_bt_report2] = func[view_bt_report]
@@ -174,7 +176,10 @@ func[view_bt_waiting] = {
 
 func[view_bt_get_waifu] = {
 	[target_default] = function()
-		if cfg.main == fmain_repeat then click_btn(btn_normal) end
+		if cfg.main == fmain_repeat then 
+			sometime_rest(3)
+			click_btn(btn_normal) 
+		end
 	end
 }
 
@@ -243,11 +248,11 @@ new_bt_add_count = true
 func[view_sys_online] = {
 	[target_default] = function()
 		--do nothing
-		check_rest_state = true
 		do_clock_reback()
 		if new_bt_add_count then
 			state.had_bt  = state.had_bt + 1
 			state.had_rest = state.had_rest + 1
+			check_rest_state = true
 			if state.had_bt >= cfg.btcount then
 				if can_to_target_mission() then
 				else
@@ -1190,6 +1195,20 @@ function can_to_target_reback2()
 		return true
 	end
 	return false
+end
+
+sometime_rest_cnt = 0
+sometime_rest_max_cnt = 3		--根据调用该函数的N的最大值来填
+check_rest_state = true			--打一把为一个周期，一个周期仅判断一次
+function sometime_rest(N)
+	if check_rest_state and cfg.main == fmain_repeat and slc(cfg.extra,fextra_rest) and N == (sometime_rest_cnt%sometime_rest_max_cnt)+1 then
+		if math.random(state.had_rest, state.had_rest+cfg.rest_set[2]-cfg.rest_set[1]) >= cfg.rest_set[2] then
+			state.had_rest = 0
+			sometime_rest_cnt = sometime_rest_cnt + 1
+			dialog("休息中。。。",math.random(cfg.rest_time[1],cfg.rest_time[2]))
+		end
+		check_rest_state = false
+	end
 end
 
 return func
