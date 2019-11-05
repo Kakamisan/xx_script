@@ -19,6 +19,7 @@ function test()
 	return test()
 end
 
+--debug_mode = true
 --test()
 
 function main_loop()

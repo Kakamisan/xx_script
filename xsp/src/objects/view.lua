@@ -250,18 +250,21 @@ view[view_bt_moving] = {
 view[view_bt_over] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=-8,y=8,color=0xffffff},
-	{x=-1,y=16,color=0xffffff},
-	{x=1150,y=-9,color=0xffc000},
-	{x=1158,y=-11,color=0xffc000},
-	{x=1156,y=-9,color=0xffc000},
-	{x=1170,y=-10,color=0x039de4},
-	{x=1297,y=4,color=0x0a9ee1},
-	{x=1328,y=-2,color=0x069ee3},
-	{x=1366,y=-1,color=0xffc000},
-	{x=1375,y=-11,color=0xffc000},
-	{x=1222,y=24,color=0x1ad8f4},
-	{x=1242,y=31,color=0xd49200}
+	{x=-6,y=7,color=0xffffff},
+	{x=2,y=14,color=0xffffff},
+	{x=1142,y=-13,color=0xffc000},
+	{x=1128,y=32,color=0xf7ba03},
+	{x=1368,y=-14,color=0xffc000},
+	{x=1351,y=23,color=0xfabd01},
+	{x=849,y=193,color=0xf1b002},
+	{x=956,y=206,color=0xf1b002},
+	{x=1240,y=207,color=0xf1b002},
+	{x=1306,y=197,color=0xf1b002},
+	{x=1233,y=40,color=0x1979a3},
+	{x=1178,y=-14,color=0x0699de},
+	{x=1166,y=15,color=0x0990d0},
+	{x=1330,y=-12,color=0x089add},
+	{x=1291,y=10,color=0x0a93d3}
 	},
 	degree = 98
 }
