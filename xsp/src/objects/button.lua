@@ -61,7 +61,7 @@ btn[btn_check_fb_state] = {
 
 --9--
 btn[btn_stop_repeat] = {
-	body = {657,541,781,567},
+	body = {686,543,756,570},
 	view = {view_stop_repeat}
 }
 

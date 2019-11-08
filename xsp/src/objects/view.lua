@@ -61,11 +61,17 @@ view[view_slc_dg_main] = {
 --4--选择队伍，队伍1，队伍5等
 view[view_slc_team] = {
 	feature = {
-	{x=0+1,y=0+19,color=0xffcd00,anchor={-1,0}},
-	{x=34+1,y=12+19,color=0x262423,anchor={-1,0}},
-	{x=256+1+80,y=12+19,color=0xfdfdfd,anchor={0,0}},
-	{x=1161+1+80,y=574+19,color=0x20d7f7,anchor={0,0}},
-	{x=1032+1+80,y=579+19,color=0x84ef18,anchor={0,0}}
+	{x=0,y=0,color=0x242323},
+	{x=83,y=-13,color=0xf3c100},
+	{x=71,y=17,color=0xf3c100},
+	{x=205,y=-21,color=0xb6b6c7},
+	{x=219,y=8,color=0x8e8e9d},
+	{x=271,y=-15,color=0xffffff},
+	{x=1232,y=0,color=0x828290},
+	{x=765,y=-13,color=0x61616e},
+	{x=962,y=521,color=0xffcc00},
+	{x=1214,y=518,color=0xffcc00},
+	{x=1067,y=552,color=0x85f119}
 	},
 	degree = 98
 }
@@ -272,11 +278,19 @@ view[view_bt_over] = {
 --14--选择是否停止反复战斗
 view[view_stop_repeat] = {
 	feature = {
-	{x=0+34,y=0+31,color=0x1b1312},
-	{x=74+34,y=-14+31,color=0x876801},
-	{x=765+34,y=502+31,color=0xffcc00},
-	{x=608+34,y=546+31,color=0xffcc00},
-	{x=1290+34,y=643+31,color=0x7e6302}
+	{x=0,y=0,color=0x161211},
+	{x=167,y=92,color=0xb6b6c7},
+	{x=168,y=108,color=0xb6b6c7},
+	{x=179,y=118,color=0x8e8e9d},
+	{x=239,y=118,color=0x6c6c7b},
+	{x=255,y=93,color=0x6c6c7b},
+	{x=1110,y=117,color=0x5d5d6b},
+	{x=1127,y=99,color=0x61616e},
+	{x=618,y=534,color=0xffcc00},
+	{x=742,y=532,color=0xffcc00},
+	{x=646,y=492,color=0xffcc00},
+	{x=741,y=491,color=0xffcc00},
+	{x=1067,y=553,color=0x43780d}
 	},
 	degree = 98
 }
@@ -382,20 +396,14 @@ view[view_creator] = {
 --20--分解中心
 view[view_reback] = {
 	feature = {
-	{x=220+24,y=65+40,color=0x61616d},
-	{x=243+24,y=40+40,color=0x61616d},
-	{x=411+24,y=95+40,color=0x61616d},
-	{x=410+24,y=199+40,color=0x61616d},
-	{x=391+24,y=233+40,color=0x60606c},
-	{x=410+24,y=287+40,color=0x5e5d69},
-	{x=271+24,y=287+40,color=0x8af41f},
-	{x=258+24,y=350+40,color=0x1dcaf4},
-	{x=784+24,y=-12+40,color=0x3f392e},
-	{x=800+24,y=-12+40,color=0x3f392e},
-	{x=1117+24,y=0+40,color=0x9d9da0},
-	{x=1140+24,y=-1+40,color=0x9d9d9f},
-	{x=1094+24,y=24+40,color=0x9d9da0},
-	{x=1117+24,y=25+40,color=0x9d9da0}
+	{x=0,y=0,color=0x232323},
+	{x=268,y=287,color=0x85f119},
+	{x=274,y=428,color=0x3f392e},
+	{x=261,y=427,color=0x3f392e},
+	{x=251,y=352,color=0x1ec6f1},
+	{x=1294,y=486,color=0xffcc00},
+	{x=1403,y=454,color=0xffcc00},
+	{x=1399,y=482,color=0xffcc00}
 	},
 	degree = 98
 }
@@ -403,11 +411,19 @@ view[view_reback] = {
 --21--老婆分解
 view[view_reback_waifu] = {
 	feature = {
-	{x=0+28,y=0+47,color=0x000000},
-	{x=1262+28,y=81+47,color=0xffcc00},
-	{x=1397+28,y=659+47,color=0xffc900},
-	{x=7+28,y=356+47,color=0x20d7f7},
-	{x=441+28,y=16+47,color=0x9e9e9e}
+	{x=0,y=0,color=0x232323},
+	{x=203,y=-17,color=0xaeadb0},
+	{x=213,y=10,color=0x807f83},
+	{x=371,y=-16,color=0x5c5b61},
+	{x=408,y=-12,color=0x9d9da0},
+	{x=427,y=14,color=0x9d9da0},
+	{x=1266,y=35,color=0xffcc00},
+	{x=1356,y=83,color=0xffcc00},
+	{x=7,y=315,color=0x88f21d},
+	{x=-5,y=371,color=0x1ec6f1},
+	{x=1396,y=113,color=0xffffff},
+	{x=1399,y=64,color=0xffffff},
+	{x=1372,y=55,color=0x000000}
 	},
 	degree = 98
 }
@@ -651,22 +667,22 @@ view[view_title] = {
 --33--EVENT活动信息页
 view[view_event] = {
 	feature = {
-	{x=0+23,y=0+28,color=0x232323},
-	{x=11+23,y=0+28,color=0x222222},
-	{x=10+23,y=12+28,color=0x232323},
-	{x=0+23,y=12+28,color=0x232323},
-	{x=1080+23,y=99+28,color=0xfdc705},
-	{x=1250+23,y=102+28,color=0xfdc705},
-	{x=1170+23,y=182+28,color=0xfdc705},
-	{x=1109+23,y=164+28,color=0xfdc705},
-	{x=1149+23,y=179+28,color=0xfed850},
-	{x=1311+23,y=102+28,color=0x90f927},
-	{x=1316+23,y=102+28,color=0x90f927},
-	{x=1292+23,y=101+28,color=0x90f927},
-	{x=1244+23,y=163+28,color=0x90f927},
-	{x=1274+23,y=163+28,color=0x90f927},
-	{x=1297+23,y=164+28,color=0x90f927},
-	{x=1312+23,y=164+28,color=0x90f927}
+	{x=0,y=0,color=0x232323},
+	{x=87,y=-13,color=0xffcc00},
+	{x=75,y=19,color=0xffcc00},
+	{x=1052,y=106,color=0xfed850},
+	{x=1063,y=85,color=0xfdc705},
+	{x=1192,y=84,color=0xfdc705},
+	{x=1134,y=161,color=0xfed850},
+	{x=1277,y=91,color=0x90f927},
+	{x=1301,y=91,color=0x90f927},
+	{x=1245,y=149,color=0x90f927},
+	{x=1269,y=149,color=0x90f927},
+	{x=1281,y=149,color=0x90f927},
+	{x=1302,y=149,color=0x90f927},
+	{x=1072,y=167,color=0xfed850},
+	{x=1062,y=156,color=0xfed850},
+	{x=1051,y=145,color=0xfcc606}
 	},
 	degree = 98
 }

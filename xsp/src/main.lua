@@ -61,4 +61,6 @@ end
 
 runApp("com.smartjoy.LastOrigin_C")
 
+--state.target = target_reback
+
 main_loop()

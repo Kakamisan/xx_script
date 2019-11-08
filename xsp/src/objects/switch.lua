@@ -423,26 +423,26 @@ swc[swc_fb_8e] = {
 
 
 swc[swc_team_sld_up] = {
-	body = {917,261,922,325},
-	area = {917,256,922,262},
+	body = {882,275,886,303},
+	area = {882,275,886,303},
 	feature = {
-		{x=0,y=0,color=0xffcc00}
+		{x=0,y=0,color=0xfecb00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x222228}
+		{x=0,y=0,color=0x212125}
 	},
-	degree = 90,
+	degree = 92,
 	view = {view_slc_team}
 }
 
 swc[swc_team_sld_down] = {
-	body = {917,628,922,688},
-	area = {917,682,921,688},
+	body = {883,625,887,665},
+	area = {883,625,887,665},
 	feature = {
-		{x=0,y=0,color=0xffcc00}
+		{x=0,y=0,color=0xfecb00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x222228}
+		{x=0,y=0,color=0x212125}
 	},
 	degree = 90,
 	view = {view_slc_team}
@@ -451,8 +451,8 @@ swc[swc_team_sld_down] = {
 
 
 swc[swc_team_1] = {
-	body = {508,272,881,337},
-	area = {406,276,409,279},
+	body = {506,281,794,328},
+	area = {370,273,376,275},
 	feature = {
 		{x=0,y=0,color=0x000000}
 	},
@@ -464,8 +464,8 @@ swc[swc_team_1] = {
 }
 
 swc[swc_team_2] = {
-	body = {508,272+110,881,337+110},
-	area = {406,276+110,409,279+110},
+	body = {506,281+110,794,328+110},
+	area = {370,273+110,376,275+110},
 	feature = {
 		{x=0,y=0,color=0x000000}
 	},
@@ -477,8 +477,8 @@ swc[swc_team_2] = {
 }
 
 swc[swc_team_3] = {
-	body = {508,272+220,881,337+220},
-	area = {406,276+220,409,279+220},
+	body = {506,281+220,794,328+220},
+	area = {370,273+220,376,275+220},
 	feature = {
 		{x=0,y=0,color=0x000000}
 	},
@@ -490,8 +490,8 @@ swc[swc_team_3] = {
 }
 
 swc[swc_team_4] = {
-	body = {508,272+330,881,337+330},
-	area = {406,276+330,409,279+330},
+	body = {506,281+330,794,328+330},
+	area = {370,273+330,376,275+330},
 	feature = {
 		{x=0,y=0,color=0x000000}
 	},
@@ -503,8 +503,8 @@ swc[swc_team_4] = {
 }
 
 swc[swc_auto_atk] = {
-	body = {1036,24,1059,46},
-	area = {1044,38,1046,40},
+	body = {1004,26,1021,44},
+	area = {1008,38,1012,39},
 	feature = {
 		{x=0,y=0,color=0xb5eb05}
 	},
@@ -516,8 +516,8 @@ swc[swc_auto_atk] = {
 }
 
 swc[swc_repeat] = {
-	body = {1175,25,1196,46},
-	area = {1181,38,1183,40},
+	body = {1141,25,1162,44},
+	area = {1146,38,1149,39},
 	feature = {
 		{x=0,y=0,color=0xb0e600}
 	},
