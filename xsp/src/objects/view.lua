@@ -197,18 +197,16 @@ view[view_bt_waiting] = {
 view[view_bt_get_waifu] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=-7,y=8,color=0xffffff},
-	{x=0,y=16,color=0xffffff},
-	{x=1220,y=471,color=0xffb900},
-	{x=1215,y=472,color=0xffb900},
-	{x=1200,y=477,color=0xffbc00},
-	{x=1196,y=481,color=0xfeb800},
-	{x=1188,y=487,color=0xffb900},
-	{x=948,y=489,color=0xfeb900},
-	{x=946,y=487,color=0xfeb800},
-	{x=937,y=488,color=0xffb900},
-	{x=1279,y=598,color=0xfecb00},
-	{x=1279,y=605,color=0xfecb00}
+	{x=-7,y=7,color=0xffffff},
+	{x=1,y=13,color=0xffffff},
+	{x=1222,y=470,color=0xffb900},
+	{x=1213,y=470,color=0xffb900},
+	{x=1205,y=473,color=0xfeb800},
+	{x=1198,y=478,color=0xfeb800},
+	{x=1189,y=486,color=0xffb900},
+	{x=955,y=488,color=0xfab903},
+	{x=1280,y=596,color=0xfecb00},
+	{x=1280,y=603,color=0xfecb00}
 	},
 	degree = 98
 }
@@ -431,11 +429,23 @@ view[view_reback_waifu] = {
 --22--老婆分解-分A级以上弹窗警告
 view[view_reback_waifu_al] = {
 	feature = {
-	{x=0+28,y=0+45,color=0x000000},
-	{x=510+28,y=511+45,color=0xff6700},
-	{x=711+28,y=534+45,color=0xfec700},
-	{x=872+28,y=486+45,color=0xfecd00},
-	{x=7+28,y=358+45,color=0x106b7b}
+	{x=0,y=0,color=0x111111},
+	{x=8,y=0,color=0x111111},
+	{x=205,y=-7,color=0x575658},
+	{x=362,y=5,color=0x2b2b2e},
+	{x=423,y=10,color=0x4e4e50},
+	{x=168,y=98,color=0xb6b6c7},
+	{x=183,y=116,color=0x8e8e9d},
+	{x=224,y=99,color=0x6c6c7b},
+	{x=1082,y=105,color=0x60606d},
+	{x=1120,y=112,color=0x5e5e6c},
+	{x=1196,y=121,color=0x2c2c39},
+	{x=523,y=530,color=0xff6200},
+	{x=663,y=499,color=0xff6200},
+	{x=1386,y=100,color=0x000000},
+	{x=1400,y=115,color=0x7f7f7f},
+	{x=1354,y=40,color=0x7f6600},
+	{x=1399,y=65,color=0x7f7f7f}
 	},
 	degree = 98
 }
@@ -443,12 +453,24 @@ view[view_reback_waifu_al] = {
 --23--老婆分解-确定分解
 view[view_reback_waifu_ac] = {
 	feature = {
-	{x=0+29,y=0+46,color=0x111111},
-	{x=161+29,y=81+46,color=0xb6b6c7},
-	{x=540+29,y=496+46,color=0xff6200},
-	{x=739+29,y=494+46,color=0xffcc00},
-	{x=1398+29,y=450+46,color=0x7f6600},
-	{x=273+29,y=565+46,color=0x2c707c}
+	{x=0,y=0,color=0x111111},
+	{x=7,y=8,color=0x111111},
+	{x=169,y=92,color=0xb6b6c7},
+	{x=172,y=107,color=0xb6b6c7},
+	{x=181,y=123,color=0x8e8e9d},
+	{x=251,y=105,color=0x6c6c7b},
+	{x=1059,y=114,color=0x5e5e6c},
+	{x=1111,y=122,color=0x5c5c6c},
+	{x=1130,y=103,color=0x61616d},
+	{x=1214,y=104,color=0x2c2c38},
+	{x=1297,y=488,color=0x7f6600},
+	{x=1398,y=456,color=0x7f6600},
+	{x=525,y=535,color=0xff6200},
+	{x=667,y=496,color=0xff6200},
+	{x=203,y=-7,color=0x575658},
+	{x=364,y=-9,color=0x2e2d30},
+	{x=430,y=18,color=0x4e4e50},
+	{x=797,y=-3,color=0x1f1c17}
 	},
 	degree = 98
 }

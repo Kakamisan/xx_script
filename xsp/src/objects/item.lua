@@ -33,11 +33,11 @@ item[item_mission_over2] = {
 }
 
 item[item_mission_over3] = {
-	area = {147,657,217,666},
+	area = {147,655,219,667},
 	feature = {
-		{x=0,y=0,color=0x436600}
+		{x=0,y=0,color=0x3f6100}
 	},
-	degree = 99
+	degree = 98
 }
 
 item[item_A_waifu] = {
