@@ -61,17 +61,18 @@ view[view_slc_dg_main] = {
 --4--选择队伍，队伍1，队伍5等
 view[view_slc_team] = {
 	feature = {
-	{x=0,y=0,color=0x242323},
-	{x=83,y=-13,color=0xf3c100},
-	{x=71,y=17,color=0xf3c100},
-	{x=205,y=-21,color=0xb6b6c7},
-	{x=219,y=8,color=0x8e8e9d},
-	{x=271,y=-15,color=0xffffff},
-	{x=1232,y=0,color=0x828290},
-	{x=765,y=-13,color=0x61616e},
-	{x=962,y=521,color=0xffcc00},
-	{x=1214,y=518,color=0xffcc00},
-	{x=1067,y=552,color=0x85f119}
+	{x=0,y=0,color=0xb8b7c7},
+	{x=63,y=5,color=0xffffff},
+	{x=954,y=24,color=0x5d5c69},
+	{x=974,y=5,color=0x62606d},
+	{x=1024,y=15,color=0x848290},
+	{x=760,y=536,color=0xffcc00},
+	{x=715,y=543,color=0xffcc00},
+	{x=980,y=539,color=0xffcc00},
+	{x=1036,y=547,color=0xffcc00},
+	{x=858,y=568,color=0x8cf320},
+	{x=955,y=581,color=0x1cc3f3},
+	{x=966,y=578,color=0x1cc8f0}
 	},
 	degree = 98
 }

@@ -555,7 +555,7 @@ swc[swc_reback_ss] = {
 		{x=0,y=0,color=0xffcc00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x504f53}
+		{x=0,y=0,color=0x514e55}
 	},
 	view = {view_reback_waifu}
 }
@@ -567,7 +567,7 @@ swc[swc_reback_s] = {
 		{x=0,y=0,color=0xffcc00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x504f53}
+		{x=0,y=0,color=0x514e55}
 	},
 	view = {view_reback_waifu}
 }
@@ -579,7 +579,7 @@ swc[swc_reback_a] = {
 		{x=0,y=0,color=0xffcc00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x504f53}
+		{x=0,y=0,color=0x514e55}
 	},
 	view = {view_reback_waifu}
 }
@@ -591,7 +591,7 @@ swc[swc_reback_b] = {
 		{x=0,y=0,color=0xffcc00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x504f53}
+		{x=0,y=0,color=0x514e55}
 	},
 	view = {view_reback_waifu}
 }
@@ -603,7 +603,7 @@ swc[swc_change_eqm] = {
 		{x=0,y=0,color=0xffcc00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x535256}
+		{x=0,y=0,color=0x555255}
 	},
 	view = {view_reback}
 }
