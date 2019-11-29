@@ -277,19 +277,18 @@ view[view_bt_over] = {
 --14--选择是否停止反复战斗
 view[view_stop_repeat] = {
 	feature = {
-	{x=0,y=0,color=0x161211},
-	{x=167,y=92,color=0xb6b6c7},
-	{x=168,y=108,color=0xb6b6c7},
-	{x=179,y=118,color=0x8e8e9d},
-	{x=239,y=118,color=0x6c6c7b},
-	{x=255,y=93,color=0x6c6c7b},
-	{x=1110,y=117,color=0x5d5d6b},
-	{x=1127,y=99,color=0x61616e},
-	{x=618,y=534,color=0xffcc00},
-	{x=742,y=532,color=0xffcc00},
-	{x=646,y=492,color=0xffcc00},
-	{x=741,y=491,color=0xffcc00},
-	{x=1067,y=553,color=0x43780d}
+	{x=0,y=0,color=0x5d5b63},
+	{x=62,y=3,color=0x7f7f7f},
+	{x=1023,y=14,color=0x424148},
+	{x=-42,y=107,color=0xb6b7c7},
+	{x=-45,y=123,color=0xb6b7c7},
+	{x=-33,y=133,color=0x8e8e9e},
+	{x=896,y=134,color=0x5c5c6d},
+	{x=916,y=113,color=0x61606d},
+	{x=954,y=575,color=0x0e6478},
+	{x=404,y=547,color=0xffcc00},
+	{x=855,y=568,color=0x43780d},
+	{x=554,y=507,color=0xffcc00}
 	},
 	degree = 98
 }
