@@ -269,6 +269,7 @@ fmain_test		= 5		--测试坐标模式
 fextra_mission	= 0		--自动远征
 fextra_reback	= 1		--自动分解
 fextra_rest		= 2		--偶尔休息
+fextra_quick	= 3		--极速炼金
 
 
 

@@ -261,6 +261,15 @@ func[view_sys_online] = {
 			end
 			new_bt_add_count = false
 		end
+		--自动模式+极速炼金
+		if slc(cfg.extra, fextra_quick) and cfg.main == fmain_auto then
+			sleep(7000,10000)
+			while(not in_view(view_bt_playing)) do
+				pressKey('BACK',false)
+				dlog("按返回键")
+				sleep(253,435)
+			end
+		end
 	end
 }
 
