@@ -515,6 +515,32 @@ view[view_bt_quit] = {
 	degree = 98
 }
 
+--35--战斗中-撤退
+view[view_bt_quit2] = {
+	feature = {
+	{x=0,y=0,color=0x7d7d7d},
+	{x=3,y=-5,color=0x7d7d7d},
+	{x=10,y=-2,color=0x7d7d7d},
+	{x=10,y=-7,color=0x7d7d7d},
+	{x=-795,y=379,color=0xff6200},
+	{x=-793,y=353,color=0xff6200},
+	{x=-768,y=333,color=0xff6200},
+	{x=-601,y=329,color=0xff6200},
+	{x=-605,y=352,color=0xff6200},
+	{x=-628,y=376,color=0xff6200},
+	{x=-554,y=377,color=0xffcc00},
+	{x=-549,y=357,color=0xffcc00},
+	{x=-531,y=333,color=0xffcc00},
+	{x=-359,y=330,color=0xffcc00},
+	{x=-364,y=352,color=0xffcc00},
+	{x=-387,y=378,color=0xffcc00},
+	{x=-490,y=379,color=0xffcc00},
+	{x=-427,y=330,color=0xffcc00},
+	{x=1,y=-8,color=0x7d7d7d}
+	},
+	degree = 98
+}
+
 --26--仓库满了
 view[view_full_bag] = {
 	feature = {

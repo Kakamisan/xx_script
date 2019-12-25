@@ -208,6 +208,12 @@ func[view_bt_quit] = {
 	end
 }
 
+func[view_bt_quit2] = {
+	[target_default] = function()
+		pressKey("BACK",false)
+	end
+}
+
 
 
 
@@ -263,11 +269,13 @@ func[view_sys_online] = {
 		end
 		--自动模式+极速炼金
 		if slc(cfg.extra, fextra_quick) and cfg.main == fmain_auto then
-			sleep(7000,10000)
-			while(not in_view(view_bt_playing)) do
+			while(in_view(view_sys_online)) do
+				sleep(200)
+			end
+			while(not in_view(view_bt_quit2)) do
 				pressKey('BACK',false)
 				dlog("按返回键")
-				sleep(253,435)
+				sleep(200,260)
 			end
 		end
 	end

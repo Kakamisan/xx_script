@@ -176,6 +176,7 @@ view_reback_waifu_al= 22	--老婆分解-分A级以上弹窗警告
 view_reback_waifu_ac= 23	--老婆分解-确定分解
 view_reback_get		= 24	--老婆分解-获得物品
 view_bt_quit		= 25	--战斗中-撤退
+view_bt_quit2		= 35	--自动时的假撤退
 view_full_bag		= 26	--仓库满了
 view_level_up		= 27	--升级
 view_need_repair	= 28	--要修复
@@ -185,6 +186,7 @@ view_re_connect2	= 31	--掉线重连2
 view_title			= 32	--标题界面
 view_event			= 33	--EVENT活动信息页
 --34 已占用，在上面
+--35 已占用，在上面
 
 all_view = {
 	 1	,2	,3	,4	,5	,6	,8	,10	,11	,13

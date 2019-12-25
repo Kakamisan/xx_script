@@ -164,6 +164,7 @@ vt[view_sys_online] = {
 	,view_bt_playing
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
+	,view_bt_quit2
 }
 
 --18--战斗中-敌方行动
@@ -222,6 +223,12 @@ vt[view_bt_quit] = {
 	view_bt_quit
 	,view_slc_team
 	,view_need_repair
+}
+
+--35--撤退
+vt[view_bt_quit2] = {
+	view_bt_quit2
+	,view_bt_playing
 }
 
 --26--仓库满了
