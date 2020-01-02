@@ -86,7 +86,7 @@ view[view_slc_team] = {
 	{x=955,y=581,color=0x1cc3f3},
 	{x=966,y=578,color=0x1cc8f0}
 	},
-	degree = 98
+	degree = 95
 }
 
 --5--战斗中-选择行动

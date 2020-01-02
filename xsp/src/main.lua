@@ -35,6 +35,7 @@ function main_loop()
 	," target = ",to_target_desc[state.target]
 	," alarm = ",math.floor((state.alarm - mTime()) / 1000)
 	," had_bt = ",state.had_bt
+	," idle_times = ",idle_times[state.view]
 	)
 	else
 		dlog(

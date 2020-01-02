@@ -227,6 +227,7 @@ to_view_desc = {
 	,[view_reback_waifu_ac] = "老婆分解-确定分解"
 	,[view_reback_get] = "老婆分解-获得物品"
 	,[view_bt_quit] = "战斗中-撤退"
+	,[view_bt_quit2] = "战斗中-撤退2"
 	,[view_full_bag] = "仓库满了"
 	,[view_level_up] = "升级"
 	,[view_need_repair] = "要修复"
