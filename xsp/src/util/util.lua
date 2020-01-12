@@ -3,7 +3,7 @@ require "util.private_util"
 --dlog("A = %d\nB = %d",123,321)	格式化打印（首参数是带格式字符串）
 --dlog("A = ",123,"\nB = ",321)		拼接打印
 function dlog(...)
-	if not debug_mode then
+	if not debug_mode and not cfg.debug_mode then
 		return false
 	end
 	local t = {...}
@@ -14,7 +14,8 @@ function dlog(...)
 		local str,cnt = string.gsub(t[1],"%%%%","")
 		str,cnt = string.gsub(str,"%%","")
 		if #t == cnt + 1 then
-			print("[debug] "..string.format(...))
+			if debug_mode then print("[debug] "..string.format(...)) end
+			if cfg.debug_mode then hud(string.format(...),-1) end
 			return true
 		end
 	end
@@ -22,7 +23,8 @@ function dlog(...)
 	for i,v in ipairs(t) do
 		str = str .. tostring(v)
 	end
-	print("[debug] "..str)
+	if debug_mode then print("[debug] "..str) end
+	if cfg.debug_mode then hud(str,-1) end
 	return true
 end
 
@@ -117,9 +119,7 @@ function click_btn(name)
 	
 	--容错，点击5次后重置
 	if last_click_btn_cnt > 5 then
-		last_click_btn = 0
-		last_click_btn_pos = {0,0}
-		last_click_btn_cnt = 0
+		reset_last_click()
 	end
 	
 	--如果是上次按键，那就继续点那个位置，而不是重新随机位置
@@ -316,4 +316,89 @@ function update_view()
 	dlog("未检测到view，将执行默认操作：点击返回")
 --	click_btn(btn_back_any)	--默认操作
 	return false
+end
+
+
+idle_times = {}
+idle_last_view = 0
+function do_calc_idle_times()
+	if state.view == idle_last_view then
+		idle_times[idle_last_view] = (idle_times[idle_last_view] or 0) + 1
+	else
+		idle_times[idle_last_view] = 0
+	end
+	idle_last_view = state.view
+end
+
+
+--获取空闲时间，若超时则返回true
+--空闲指的是一直留在这个view
+function get_calc_idle_time(Times)
+	if not idle_times[state.view] then return false end
+	--每次检测view间隔约0.5s，所以30次就是15秒
+	if not Times then
+		Times = 30
+	end
+	if idle_times[state.view] >= Times then
+		dlog("空闲超时")
+		return true
+	end
+	return false
+end
+
+----------------------------------hud-----------------------------
+
+global_hud = {id = -1}
+
+--检查HUD消亡
+function dead_hud()
+	if global_hud.id == -1 then
+		return false
+	end
+	if (global_hud.dead_time ~= -1 and global_hud.dead_time - mTime() < 0)
+	or (global_hud.view ~= -1 and global_hud.view ~= state.view)
+	then
+		hideHUD(global_hud.id)
+		global_hud.id = -1
+	end
+end
+
+--hud(txt,-1)			显示到当前界面流转为止
+--hud(txt,Time)			显示到时间到达为止
+--hud(txt,Time,-1)		显示到时间到达或当前界面流转为止
+function hud(txt,T,T2)
+	if not txt then
+		return false
+	end
+	if not T then
+		return false
+	end
+	if global_hud.id == -1 then
+		global_hud.id = createHUD()
+	end
+	--检查有多高
+	local temp_txt,h = string.gsub(txt,"\n","")
+	--检查有多宽
+	local w = 0
+	for i in string.gmatch(txt, "[^\n]+") do
+		local len = string.len(i)
+		if len > w then
+			w = len
+		end
+	end
+--	dlog("[debug] w = ",w," h = ",h)
+	showHUD(global_hud.id,txt,20,"0xff3a3a3a","0x50ffffff",1,0,-pos.cw/3,math.max(w*9,100),(h+1)*28)
+	
+--	dlog("[debug] HUD关闭时间 = ",T)
+	
+	if T < 0 then
+		global_hud.dead_time = -1
+		global_hud.view = state.view
+	elseif not T2 then
+		global_hud.dead_time = mTime() + T*1000
+		global_hud.view = -1
+	else
+		global_hud.dead_time = mTime() + T*1000
+		global_hud.view = state.view
+	end
 end
