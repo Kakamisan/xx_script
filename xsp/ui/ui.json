@@ -253,7 +253,7 @@
                "align" : "left",
                "color" : "0,0,0",
                "size" : 30,
-               "text" : "\n\t\tVersion : 0.21\n\n\t\t\t\t\t\t--2019/12/25 12:40",
+               "text" : "\n\t\tVersion : 0.22\n\n\t\t\t\t\t\t--2020/01/12 15:50",
                "bg" : "",
                "type" : "Label",
                "rect" : "10,10,940,300"

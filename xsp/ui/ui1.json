@@ -1547,6 +1547,16 @@
                "text" : "休息时间：默认10,20，意思为随机10~20秒",
                "bg" : "",
                "type" : "Label"
+            },
+			{
+	            "id" : "debug_mode",
+	            "list" : "Debug Mode",
+	            "select" : "",
+	            "size" : 30,
+	            "type" : "CheckBoxGroup",
+	            "orientation" : "horizontal",
+	            "color" : "0,0,225",
+                "rect" : "10,450,1000,100"
             }
          ]
       },

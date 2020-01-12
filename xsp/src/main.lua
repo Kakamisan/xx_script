@@ -48,6 +48,11 @@ function main_loop()
 	
 	sleep()
 	
+	if cfg.debug_mode then
+	--每轮实时监测HUD消亡情况
+	dead_hud()
+	end
+	
 	--手动停脚本（转竖屏就停止脚本）（按home键）
 	if getScreenDirection() == 0 then
 --		lua_exit()
