@@ -3,7 +3,7 @@ require "util.private_util"
 --dlog("A = %d\nB = %d",123,321)	格式化打印（首参数是带格式字符串）
 --dlog("A = ",123,"\nB = ",321)		拼接打印
 function dlog(...)
-	if not debug_mode then
+	if not debug_mode and not cfg.debug_mode then
 		return false
 	end
 	local t = {...}
@@ -14,7 +14,8 @@ function dlog(...)
 		local str,cnt = string.gsub(t[1],"%%%%","")
 		str,cnt = string.gsub(str,"%%","")
 		if #t == cnt + 1 then
-			print("[debug] "..string.format(...))
+			if debug_mode then print("[debug] "..string.format(...)) end
+			if cfg.debug_mode then hud(string.format(...),-1) end
 			return true
 		end
 	end
@@ -22,7 +23,8 @@ function dlog(...)
 	for i,v in ipairs(t) do
 		str = str .. tostring(v)
 	end
-	print("[debug] "..str)
+	if debug_mode then print("[debug] "..str) end
+	if cfg.debug_mode then hud(str,-1) end
 	return true
 end
 
@@ -342,4 +344,61 @@ function get_calc_idle_time(Times)
 		return true
 	end
 	return false
+end
+
+----------------------------------hud-----------------------------
+
+global_hud = {id = -1}
+
+--检查HUD消亡
+function dead_hud()
+	if global_hud.id == -1 then
+		return false
+	end
+	if (global_hud.dead_time ~= -1 and global_hud.dead_time - mTime() < 0)
+	or (global_hud.view ~= -1 and global_hud.view ~= state.view)
+	then
+		hideHUD(global_hud.id)
+		global_hud.id = -1
+	end
+end
+
+--hud(txt,-1)			显示到当前界面流转为止
+--hud(txt,Time)			显示到时间到达为止
+--hud(txt,Time,-1)		显示到时间到达或当前界面流转为止
+function hud(txt,T,T2)
+	if not txt then
+		return false
+	end
+	if not T then
+		return false
+	end
+	if global_hud.id == -1 then
+		global_hud.id = createHUD()
+	end
+	--检查有多高
+	local temp_txt,h = string.gsub(txt,"\n","")
+	--检查有多宽
+	local w = 0
+	for i in string.gmatch(txt, "[^\n]+") do
+		local len = string.len(i)
+		if len > w then
+			w = len
+		end
+	end
+--	dlog("[debug] w = ",w," h = ",h)
+	showHUD(global_hud.id,txt,20,"0xff3a3a3a","0x50ffffff",1,0,-pos.cw/3,math.max(w*9,100),(h+1)*28)
+	
+--	dlog("[debug] HUD关闭时间 = ",T)
+	
+	if T < 0 then
+		global_hud.dead_time = -1
+		global_hud.view = state.view
+	elseif not T2 then
+		global_hud.dead_time = mTime() + T*1000
+		global_hud.view = -1
+	else
+		global_hud.dead_time = mTime() + T*1000
+		global_hud.view = state.view
+	end
 end
