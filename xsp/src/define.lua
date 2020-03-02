@@ -60,7 +60,7 @@ item_mission_over2	= 2		--主页-远征完成
 item_mission_over3	= 3		--选择队伍-远征完成
 item_A_waifu		= 4		--A级老婆
 item_B_waifu		= 5		--B级老婆
-item_reback_scroll	= 6		--分解滚动条
+item_reback_scroll	= 6		--分解滚动条-顶端
 item_move_reset		= 7		--行动条上那个圆圈问号
 item_turn_end		= 8		--回合结束-开始行动
 item_target_self	= 9		--技能目标是自己
@@ -69,11 +69,13 @@ item_target_friend	= 11	--目标自己人
 item_target_set		= 12	--目标是设置坐标
 item_A_eqm			= 13	--A级装备
 item_B_eqm			= 14	--B级装备
+item_reback_scroll_bottom = 15	--分解滚动条-底端
 
 
 
 
-sld_sample		= 1
+sld_sample			= 1
+sld_reback_up		= 1		--分解往上滑
 
 
 
@@ -133,6 +135,7 @@ swc_reback_a	= 43	--分解-筛选a
 swc_reback_b	= 44	--分解-筛选b
 
 swc_change_eqm	= 45	--分解-转到装备分解
+swc_slc_all_b	= 46	--分解-快速选择全部b
 
 
 
@@ -177,7 +180,7 @@ view_reback_waifu_ac= 23	--老婆分解-确定分解
 view_reback_get		= 24	--老婆分解-获得物品
 view_bt_quit		= 25	--战斗中-撤退
 view_bt_quit2		= 35	--自动时的假撤退
-view_full_bag		= 26	--仓库满了
+view_full_bag		= 26	--仓库满-手动
 view_level_up		= 27	--升级
 view_need_repair	= 28	--要修复
 view_re_connect		= 29	--掉线重连
@@ -187,12 +190,15 @@ view_title			= 32	--标题界面
 view_event			= 33	--EVENT活动信息页
 --34 已占用，在上面
 --35 已占用，在上面
+view_full_bag2		= 36	--仓库满-自动
+view_notice			= 37	--上线公告
+view_rebacking		= 38	--分解-分解中
 
 all_view = {
 	 1	,2	,3	,4	,5	,6	,8	,10	,11	,13
 	,14	,15	,16	,29	,17	,18	,19	,20	,21	,22
 	,23	,24	,25	,26	,27	,28	,30	,31	,32	,33
-	,34
+	,34	,35 ,36 ,37 ,38
 	
 	--忽视的界面
 	--,7,9,12
@@ -236,6 +242,9 @@ to_view_desc = {
 	,[view_re_connect2] = "掉线重连2"
 	,[view_title] = "标题界面"
 	,[view_event] = "EVENT活动信息页"
+	,[view_full_bag2] = "仓库满了2"
+	,[view_notice] = "上线公告"
+	,[view_rebacking] = "分解-分解中"
 }
 
 
@@ -256,6 +265,7 @@ to_target_desc = {
 	,[target_atk] = "主线出击"
 	,[target_mission] = "远征"
 	,[target_reback] = "分解"
+	,[target_reback2] = "分解2"
 }
 
 

@@ -14,107 +14,107 @@ btn[btn_sample]	= {
 
 --1--
 btn[btn_back_any] = {
-	body = {10,30,108,63},
+	body = {14,30,100,59},
 	anchor = {-1,-1}
 }
 
 --2--
 btn[btn_world] = {
-	body = {1306,434,1390,515},
-	view = {view_home}
+	body = {1167,451,1211,495},
+	view = {view_home,view_notice}
 }
 
 --3--
 btn[btn_main_story] = {
-	body = {900,368,1073,532},
+	body = {863,397,955,502},
 	view = {view_slc_dg_type}
 }
 
 --4--
 btn[btn_normal] = {
-	body = {582,468,745,596}
+	body = {534,195,670,463}
 }
 
 --5--
 btn[btn_bt_next] = {
-	body = {1330,604,1361,639},
+	body = {1177,613,1215,656},
 	view = {view_bt_next}
 }
 
 --6--
 btn[btn_ctn_mission] = {
-	body = {716,524,830,564},
+	body = {651,531,742,554},
 	view = {view_ctn_mission}
 }
 
 --7--
 btn[btn_back_info] = {
-	body = {1393,17,1435,50},
+	body = {1238,17,1265,46},
 	view = {view_player_info}
 }
 
 --8--
 btn[btn_check_fb_state] = {
-	body = {1247,609,1332,667},
+	body = {1172,609,1243,656},
 	view = {view_slc_dg_main}
 }
 
 --9--
 btn[btn_stop_repeat] = {
-	body = {686,543,756,570},
+	body = {594,540,686,568},
 	view = {view_stop_repeat}
 }
 
 --10--
 btn[btn_enter_bt] = {
-	body = {1050,647,1244,681},
+	body = {900,648,1053,682},
 	view = {view_slc_team}
 }
 
 --11--
 btn[btn_start_turn] = {
-	body = {1080,324,1385,392},
+	body = {1183,385,1226,426},
 	view = {view_bt_slc_acn,view_bt_enemy_acn}
 }
 
 --12--
 btn[btn_enter_reback] = {
-	body = {1199,260,1269,311},
+	body = {1055,254,1101,303},
 	view = {view_home}
 }
 
 --13--
 btn[btn_to_reback] = {
-	body = {1330,493,1419,533},
+	body = {1188,504,1253,535},
 	view = {view_creator}
 }
 
 --14--
 btn[btn_reback_start] = {
-	body = {1049,645,1165,683},
+	body = {975,647,1066,682},
 	view = {view_reback}
 }
 
 --15--
 btn[btn_reback_enter] = {
-	body = {477,159,545,267},
+	body = {393,169,444,255},
 	view = {view_reback}
 }
 
 --16--
 btn[btn_reback_slc_ok] = {
-	body = {1344,672,1418,704},
+	body = {1188,670,1251,698},
 	view = {view_reback_waifu}
 }
 
 --17--
 btn[btn_ack1] = {
-	body = {765,539,864,571}
+	body = {708,539,774,568}
 }
 
 --18--
 btn[btn_ack_get] = {
-	body = {668,583,766,620},
+	body = {599,587,674,613},
 	view = {view_reback_get,view_reback_get2}
 }
 
@@ -125,117 +125,117 @@ btn[btn_turn_over] = btn[btn_start_turn]
 
 --20--
 btn[btn_skill2] = {
-	body = {1114,576,1148,664}
+	body = {992,600,1020,660}
 }
 
 --21--
 btn[btn_wait] = {
-	body = {1341,577,1376,660}
+	body = {1192,594,1225,653}
 }
 
 --22--
 btn[btn_move] = {
-	body = {1225,585,1263,647}
+	body = {1089,597,1123,659}
 }
 
 --23--
 btn[btn_ge_1] = {
-	body = {894,218,934,240}
+	body = {800,233,822,255}
 }
 btn[btn_ge_2] = {
-	body = {1057,216,1092,237}
+	body = {941,234,966,257}
 }
 btn[btn_ge_3] = {
-	body = {1206,218,1245,241}
+	body = {1080,233,1105,256}
 }
 btn[btn_ge_4] = {
-	body = {908,319,940,341}
+	body = {809,324,834,345}
 }
 btn[btn_ge_5] = {
-	body = {1074,315,1118,343}
+	body = {959,324,985,346}
 }
 btn[btn_ge_6] = {
-	body = {1250,319,1281,349}
+	body = {1106,325,1134,347}
 }
 btn[btn_ge_7] = {
-	body = {918,431,956,464}
+	body = {823,426,845,450}
 }
 btn[btn_ge_8] = {
-	body = {1099,427,1144,460}
+	body = {982,430,1010,450}
 }
 btn[btn_ge_9] = {
-	body = {1273,433,1319,460}
+	body = {1136,425,1167,447}
 }
 
 
 btn[btn_fe_1] = {
-	body = {204,220,226,242}
+	body = {175,233,201,254}
 }
 btn[btn_fe_2] = {
-	body = {366,218,389,240}
+	body = {318,230,350,252}
 }
 btn[btn_fe_3] = {
-	body = {518,215,539,237}
+	body = {453,237,494,261}
 }
 btn[btn_fe_4] = {
-	body = {175,318,196,342}
+	body = {152,325,181,347}
 }
 btn[btn_fe_5] = {
-	body = {347,322,367,344}
+	body = {302,326,327,346}
 }
 btn[btn_fe_6] = {
-	body = {510,321,532,344}
+	body = {449,329,479,348}
 }
 btn[btn_fe_7] = {
-	body = {137,439,159,461}
+	body = {122,426,146,450}
 }
 btn[btn_fe_8] = {
-	body = {319,440,342,462}
+	body = {282,431,304,449}
 }
 btn[btn_fe_9] = {
-	body = {502,439,523,461}
+	body = {442,429,473,446}
 }
 
 btn[btn_bt_auto] = {
-	body = {1082,34,1091,45}
+	body = {951,27,966,42}
 }
 btn[btn_bt_quit] = {
-	body = {21,11,74,37}
+	body = {19,13,66,30}
 }
 btn[btn_ack_quit] = {
-	body = {781,374,895,405}
+	body = {699,372,792,402}
 }
 
 btn[btn_full_bag_close] = {
-	body = {1200,144,1220,166}
+	body = {1124,147,1139,162}
 }
 
 btn[btn_enter_reback2] = {
-	body = {488,540,551,568}
+	body = {408,542,475,569}
 }
 
 btn[btn_ack2] = {
-	body = {667,566,762,603}
+	body = {600,543,678,569}
 }
 
 btn[btn_cancel1] = {
-	body = {576,541,659,570}
+	body = {495,543,577,568}
 }
 
 btn[btn_ack3] = {
-	body = {673,541,766,565}
+	body = {595,543,682,568}
 }
 
 btn[btn_event] = {
-	body = {445,242,536,330}
+	body = {381,258,436,310}
 }
 
 btn[btn_event_enter] = {
-	body = {1310,139,1341,190}
+	body = {1216,148,1258,185}
 }
 
 btn[btn_reback_scroll_bottom] = {
-	body = {1173,655,1178,693}
+	body = {1093,690,1099,696}
 }
 
 return btn

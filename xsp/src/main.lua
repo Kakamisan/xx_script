@@ -34,6 +34,7 @@ function main_loop()
 	"view = ",to_view_desc[state.view]
 	," target = ",to_target_desc[state.target]
 	," alarm = ",math.floor((state.alarm - mTime()) / 1000)
+	," clock_reback = ",math.floor((state.clock_reback - mTime()) / 1000)
 	," had_bt = ",state.had_bt
 	," idle_times = ",idle_times[state.view]
 	)

@@ -160,9 +160,9 @@ func[view_bt_report] = {
 			dlog("rand_sleep_bt_report stop")
 		end
 		rand_sleep_bt_report = false
-		if cfg.main == fmain_repeat then 
+		if cfg.main == fmain_repeat then
 			sometime_rest(3)
-			click_btn(btn_normal) 
+			click_btn(btn_normal)
 		end
 	end
 }
@@ -176,9 +176,9 @@ func[view_bt_waiting] = {
 
 func[view_bt_get_waifu] = {
 	[target_default] = function()
-		if cfg.main == fmain_repeat then 
+		if cfg.main == fmain_repeat then
 			sometime_rest(3)
-			click_btn(btn_normal) 
+			click_btn(btn_normal)
 		end
 	end
 }
@@ -286,9 +286,9 @@ function do_clock_reback()
 	if mTime() > state.clock_reback and cfg.main ~= fmain_alarm then
 		state.clock_reback = mTime() + math.random(3000,4000)*1000
 		if can_to_target_reback() then
-
+			
 		else
---			can_to_target_mission()
+			--			can_to_target_mission()
 		end
 	end
 end
@@ -359,7 +359,7 @@ func[view_reback_waifu] = {
 func[view_reback_waifu_al] = {
 	[target_default] = function()
 		click_btn(btn_ack1)
-		sleep(5000)
+		sleep(1500)
 	end
 }
 
@@ -447,6 +447,35 @@ func[view_event] = {
 }
 
 
+func[view_full_bag2] = {
+	[target_default] = func[view_full_bag].target_default,
+	[target_mission] = function()
+		click_btn(btn_ack2)
+	end,
+	[target_back] = function()
+		click_btn(btn_ack2)
+	end,
+	[target_reback] = function()
+		click_btn(btn_ack2)
+	end
+}
+
+
+func[view_notice] = {
+	[target_default] = function()
+		click_btn(btn_world)
+	end
+}
+
+
+func[view_rebacking] = {
+	[target_default] = function()
+		--do nothing
+		dlog("没干啥，就等分解")
+	end
+}
+
+
 
 
 
@@ -515,8 +544,8 @@ handle_change_target = {
 
 --章节是否是活动章节
 function is_event(C)
-	if C == 7 
-	or C == 8 
+	if C == 7
+	or C == 8
 	or C == 9
 	then return true end
 	return false
@@ -623,8 +652,8 @@ end
 stop_repeat_auto_count = 0
 had_do_stop_repeat = false
 handle_stop_repeat = {
---	[default] = function() end,
---	[fmain_auto] = function()
+	--	[default] = function() end,
+	--	[fmain_auto] = function()
 	[default] = function()
 		if not had_do_stop_repeat and find_item(item_mission_over) then
 			had_do_stop_repeat = true
@@ -643,13 +672,13 @@ handle_stop_repeat = {
 	[fmain_repeat] = function()
 		click_btn(btn_stop_repeat)
 	end
---	[fmain_alarm] = function()
---		if can_to_target_reback() then return true end
---		if can_to_target_mission() then return true end
---	end,
---	[fmain_mission] = function()
---		can_to_target_mission()
---	end
+	--	[fmain_alarm] = function()
+	--		if can_to_target_reback() then return true end
+	--		if can_to_target_mission() then return true end
+	--	end,
+	--	[fmain_mission] = function()
+	--		can_to_target_mission()
+	--	end
 }
 
 
@@ -718,6 +747,7 @@ function handle_reback2()
 end
 
 already_bottom = false
+need_sld = false
 function reback_waifu_slc()
 	if not swc_off(swc_reback_ss) then return false end
 	if not swc_off(swc_reback_s) then return false end
@@ -739,39 +769,53 @@ function reback_waifu_slc()
 			return false
 		end
 	end
-	if slc(cfg.reback,freback_B_waifu) then
-		if find_item(item_B_waifu) then
-			click_item(item_B_waifu)
-			sleep(80,133)
-			click_item(item_B_waifu)
-			return false
+	if find_item(item_reback_scroll_bottom) or find_item(item_B_waifu) then
+		
+		--快捷选b
+		if slc(cfg.reback,freback_B_waifu) and not swc_on(swc_slc_all_b, true) then
+			--		if find_item(item_B_waifu) then
+			--			click_item(item_B_waifu)
+			--			sleep(80,133)
+			--			click_item(item_B_waifu)
+			--			return false
+			--		end
+			timeout(swc_on,swc_slc_all_b)
 		end
+		
+		need_sld = false
+		return true
+	end
+	if need_sld then
+		drag(sld_reback_up)
+		return false
 	end
 	if find_item(item_reback_scroll) then
-		click_item(item_reback_scroll)
+		--		click_item(item_reback_scroll)
+		--		return false
+		need_sld = true
 		return false
 	end
-	if not already_bottom then
-		click_btn(btn_reback_scroll_bottom)
-		already_bottom = true
-		return false
-	end
+	--	if not already_bottom then
+	--		click_btn(btn_reback_scroll_bottom)
+	--		already_bottom = true
+	--		return false
+	--	end
 	return true
 end
 
 function reback_eqm_slc()
-	if not swc_off(swc_reback_ss) then return false end
-	if not swc_off(swc_reback_s) then return false end
-	if slc(cfg.reback2,freback_A_eqm) then
-		if not swc_on(swc_reback_a) then return false end
-	else
-		if not swc_off(swc_reback_a) then return false end
-	end
-	if slc(cfg.reback2,freback_B_eqm) then
-		if not swc_on(swc_reback_b) then return false end
-	else
-		if not swc_off(swc_reback_b) then return false end
-	end
+	--	if not swc_off(swc_reback_ss) then return false end
+	--	if not swc_off(swc_reback_s) then return false end
+	--	if slc(cfg.reback2,freback_A_eqm) then
+	--		if not swc_on(swc_reback_a) then return false end
+	--	else
+	--		if not swc_off(swc_reback_a) then return false end
+	--	end
+	--	if slc(cfg.reback2,freback_B_eqm) then
+	--		if not swc_on(swc_reback_b) then return false end
+	--	else
+	--		if not swc_off(swc_reback_b) then return false end
+	--	end
 	if slc(cfg.reback2,freback_A_eqm) then
 		if find_item(item_A_eqm) then
 			click_item(item_A_eqm)
@@ -780,23 +824,37 @@ function reback_eqm_slc()
 			return false
 		end
 	end
-	if slc(cfg.reback2,freback_B_eqm) then
-		if find_item(item_B_eqm) then
-			click_item(item_B_eqm)
-			sleep(80,133)
-			click_item(item_B_eqm)
-			return false
+	if find_item(item_reback_scroll_bottom) then
+		
+		--快捷选b
+		if slc(cfg.reback2,freback_B_eqm) and not swc_on(swc_slc_all_b, true) then
+			--		if find_item(item_B_eqm) then
+			--			click_item(item_B_eqm)
+			--			sleep(80,133)
+			--			click_item(item_B_eqm)
+			--			return false
+			--		end
+			timeout(swc_on,swc_slc_all_b)
 		end
+		
+		need_sld = false
+		return true
+	end
+	if need_sld then
+		drag(sld_reback_up)
+		return false
 	end
 	if find_item(item_reback_scroll) then
-		click_item(item_reback_scroll)
+		--		click_item(item_reback_scroll)
+		--		return false
+		need_sld = true
 		return false
 	end
-	if not already_bottom then
-		click_btn(btn_reback_scroll_bottom)
-		already_bottom = true
-		return false
-	end
+	--	if not already_bottom then
+	--		click_btn(btn_reback_scroll_bottom)
+	--		already_bottom = true
+	--		return false
+	--	end
 	return true
 end
 
@@ -813,10 +871,11 @@ end
 
 
 
-new_turn = true
-turn = 0
-new_round = true
-round = 0
+new_turn = true		-- 新回合标志
+turn = 0			-- 回合数
+new_round = true	-- 新面标志
+round = 0			-- 面数
+no_action_quit = 0	-- 设置异常退出次数
 
 --整场战斗开始时执行
 function init_repeat_battle()
@@ -847,10 +906,11 @@ function slc_action(N)
 	
 	if re_do_action > 6 then
 		dlog("重做行动太多次。。。")
-		dialog("行动设置可能出问题了，请检查", 600)
-		re_do_action = 0
-		click_btn(btn_bt_quit)
-		return true
+		dialog("行动重做5次，行动设置可能出问题了，请检查", 60000)
+		lua_exit()
+--		re_do_action = 0
+--		click_btn(btn_bt_quit)
+--		return true
 	end
 	
 	if new_round then
@@ -913,7 +973,7 @@ function slc_action(N)
 	if not action[round] or not action[round][turn] or not action[round][turn][N] then
 		dlog("没有行动了。。。")
 		if cfg.extra_do == fextrado_auto then
-		
+			
 			turn_over()
 			
 			click_btn(btn_bt_auto)
@@ -922,6 +982,12 @@ function slc_action(N)
 			return true
 		end
 		if cfg.extra_do == fextrado_quit then
+			if no_action_quit > 5 then
+				dlog("撤退太多次。。。")
+				dialog("已撤退5次，行动设置可能出问题了，请检查", 60000)
+				lua_exit()
+			end
+			no_action_quit = no_action_quit + 1
 			click_btn(btn_bt_quit)
 			return true
 		end
@@ -999,10 +1065,10 @@ end
 
 
 function right_item(name)
-	if #(items_positions[name]) == 0 then 
+	if #(items_positions[name]) == 0 then
 		return nil
 	end
-	if #(items_positions[name]) == 1 then 
+	if #(items_positions[name]) == 1 then
 		return items_positions[name][1].x,items_positions[name][1].y
 	end
 	local x,y = items_positions[name][1].x,items_positions[name][1].y

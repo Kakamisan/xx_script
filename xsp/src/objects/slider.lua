@@ -8,4 +8,10 @@ sld[sld_sample]	= {
 	len			= 30					--曲线点个数
 }
 
+sld[sld_reback_up] = {
+	from		= {833,589,858,612},
+	to			= {795,236,943,329},
+	len			= 30
+}
+
 return sld

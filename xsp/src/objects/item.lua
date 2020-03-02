@@ -12,7 +12,7 @@ item[item_sample]	= {
 }
 
 item[item_mission_over] = {
-	area = {145,654,218,668},
+	area = {65,654,139,667},
 	feature = {
 		{x=0,y=0,color=0x213300}
 	},
@@ -21,7 +21,7 @@ item[item_mission_over] = {
 
 item[item_mission_over2] = {
 	body = {161-160,329-322,188-160,345-322},
-	area = {146,316,202,475},
+	area = {141,314,204,477},
 	feature = {
 		{x=0,y=0,color=0x71e500},
 	{x=37,y=0,color=0x71e500},
@@ -33,16 +33,16 @@ item[item_mission_over2] = {
 }
 
 item[item_mission_over3] = {
-	area = {147,655,219,667},
+	area = {65,654,139,667},
 	feature = {
-		{x=0,y=0,color=0x3f6100}
+		{x=0,y=0,color=0x426600}
 	},
 	degree = 98
 }
 
 item[item_A_waifu] = {
 	body = {479-415,248-245,489-415,258-245},
-	area = {226,74,1136,709},
+	area = {158,80,1079,685},
 	feature = {
 		{x=0,y=0,color=0x13cbee},
 	{x=-3,y=14,color=0x10c0e9},
@@ -55,7 +55,7 @@ item[item_A_waifu] = {
 
 item[item_B_waifu] = {
 	body = {788-723,490-484,799-723,502-484},
-	area = {226,74,1136,709},
+	area = {158,80,1079,685},
 	feature = {
 		{x=0,y=0,color=0x25a814},
 	{x=-4,y=4,color=0x22a611},
@@ -72,7 +72,17 @@ item[item_B_waifu] = {
 item[item_reback_scroll] = {
 	--body = {1173-1175,655-82,1178-1175,693-82},
 	body = {1173-1175,368-82,1178-1175,400-82},
-	area = {1174,81,1176,83},
+	area = {1089,82,1103,106},
+	feature = {
+		{x=0,y=0,color=0xffcc00}
+	},
+	degree = 98
+}
+
+item[item_reback_scroll_bottom] = {
+	--body = {1173-1175,655-82,1178-1175,693-82},
+	body = {1173-1175,368-82,1178-1175,400-82},
+	area = {1089,681,1105,703},
 	feature = {
 		{x=0,y=0,color=0xffcc00}
 	},
@@ -81,7 +91,7 @@ item[item_reback_scroll] = {
 
 item[item_move_reset] = {
 	body = {747-753,641-616,761-753,656-616},
-	area = {13,555,847,711},
+	area = {5,583,740,679},
 	feature = {
 	{x=0,y=0,color=0xffffff},
 	{x=1,y=42,color=0x000000},
@@ -101,7 +111,7 @@ item[item_move_reset] = {
 }
 
 item[item_turn_end] = {
-	area = {1321,332,1384,392},
+	area = {1139,345,1266,463},
 	feature = {
 	{x=0,y=0,color=0xffffd7},
 	{x=4,y=6,color=0xffffe4},
@@ -117,7 +127,7 @@ item[item_turn_end] = {
 
 item[item_target_self] = {
 	body = {350-328,240-262,394-328,280-262},
-	area = {9,5,716,713},
+	area = {3,88,712,571},
 	feature = {
 	{x=0,y=0,color=0xffad0c},
 	{x=8,y=-13,color=0xffb80e},
@@ -136,7 +146,7 @@ item[item_target_self] = {
 
 item[item_target_enemy] = {
 	body = {777-779,95-102,789-779,106-102},
-	area = {699,41,1421,559},
+	area = {627,57,1275,556},
 	feature = {
 	{x=0,y=0,color=0xff404e},
 	{x=1,y=0,color=0xff404e},
@@ -150,7 +160,7 @@ item[item_target_enemy] = {
 
 item[item_target_friend] = {
 	body = {559-559,166-183,570-559,182-183},
-	area = {35,8,704,655},
+	area = {3,88,712,571},
 	feature = {
 	{x=0,y=0,color=0xe2f508},
 	{x=1,y=0,color=0xe3f508},
@@ -173,7 +183,7 @@ item[item_target_set] = {
 
 item[item_A_eqm] = {
 	body = {312-251,220-220,323-251,233-220},
-	area = {226,74,1136,709},
+	area = {158,80,1079,685},
 	feature = {
 	{x=0,y=0,color=0x13caf0},
 	{x=-3,y=3,color=0x10c6ef},
@@ -187,7 +197,7 @@ item[item_A_eqm] = {
 
 item[item_B_eqm] = {
 	body = {618-558,432-433,630-558,443-433},
-	area = {226,74,1136,709},
+	area = {158,80,1079,685},
 	feature = {
 	{x=0,y=0,color=0x26a914},
 	{x=-5,y=5,color=0x21a910},

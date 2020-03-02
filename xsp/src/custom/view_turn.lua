@@ -36,6 +36,8 @@ vt[view_slc_team] = {
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
 	,view_full_bag
+	,view_full_bag2
+	,view_need_repair
 --	,view_bt_playing
 }
 
@@ -53,6 +55,7 @@ vt[view_bt_playing] = {
 	,view_bt_enemy_acn
 	,view_bt_report
 	,view_bt_report2
+	,view_full_bag2
 }
 
 --7--战斗中-播报中-下面是蓝色点
@@ -143,7 +146,6 @@ vt[view_stop_repeat] = {
 	,view_bt_playing
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
-	,view_full_bag
 }
 
 --15--主页-继续远征
@@ -171,6 +173,7 @@ vt[view_sys_online] = {
 vt[view_bt_enemy_acn] = {
 	view_bt_enemy_acn
 	,view_bt_playing
+	,view_bt_quit
 }
 
 --19--建造中心
@@ -189,6 +192,7 @@ vt[view_reback] = {
 	,view_home
 	,view_slc_team
 	,view_ctn_mission
+	,view_rebacking
 }
 
 --21--老婆分解
@@ -200,8 +204,8 @@ vt[view_reback_waifu] = {
 
 --22--老婆分解-分A级以上弹窗警告
 vt[view_reback_waifu_al] = {
-	view_reback_waifu_al
-	,view_reback
+	view_reback
+	,view_reback_waifu_al
 }
 
 --23--老婆分解-确定分解
@@ -210,6 +214,7 @@ vt[view_reback_waifu_ac] = {
 	,view_reback_get
 	,view_reback_get2
 	,view_reback
+	,view_rebacking
 }
 
 --24--老婆分解-获得物品
@@ -275,6 +280,7 @@ vt[view_re_connect2] = {
 vt[view_title] = {
 	view_home
 	,view_ctn_mission
+	,view_notice
 	,view_title
 }
 
@@ -283,6 +289,26 @@ vt[view_event] = {
 	view_event
 	,view_slc_dg_main
 	,view_slc_dg_type
+}
+
+--36--仓库满了-自动
+vt[view_full_bag2] = {
+	view_full_bag2
+	,view_slc_team
+}
+
+--37--上线公告
+vt[view_notice] = {
+	view_notice
+	,view_home
+}
+
+--38--分解-分解中
+vt[view_rebacking] = {
+	view_reback_get
+	,view_reback_get2
+	,view_reback
+	,view_rebacking
 }
 
 return vt
