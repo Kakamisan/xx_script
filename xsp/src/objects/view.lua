@@ -366,18 +366,23 @@ view[view_player_info] = {
 --17--载入
 view[view_sys_online] = {
 	feature = {
-	{x=0,y=0,color=0xf7c30f},
-	{x=1,y=12,color=0xe4a401},
-	{x=13,y=11,color=0xe5a600},
-	{x=306,y=-366,color=0xb0c5d2},
-	{x=334,y=-334,color=0xb2c8d4},
-	{x=407,y=-378,color=0xafc4d0},
-	{x=499,y=-376,color=0xb1c7d3},
-	{x=622,y=-333,color=0xb3c9d5},
-	{x=594,y=-377,color=0xb1c6d3},
-	{x=540,y=-289,color=0xffbb68}
+	{x=0,y=0,color=0xafc5d1},
+	{x=-13,y=33,color=0xb3c9d5},
+	{x=41,y=45,color=0xb2c8d4},
+	{x=97,y=2,color=0xb1c7d3},
+	{x=153,y=1,color=0xaec3cf},
+	{x=154,y=46,color=0xb2c7d3},
+	{x=273,y=47,color=0xb3c9d5},
+	{x=313,y=46,color=0xb3c9d5},
+	{x=423,y=1,color=0xb2c7d3},
+	{x=166,y=85,color=0xffa351},
+	{x=168,y=90,color=0xffbb67},
+	{x=204,y=85,color=0xffa554},
+	{x=205,y=90,color=0xffbb67},
+	{x=244,y=85,color=0xffa452},
+	{x=244,y=90,color=0xffbb68}
 	},
-	degree = 98
+	degree = 95
 }
 
 --18--战斗中-敌方行动
@@ -429,23 +434,22 @@ view[view_creator] = {
 view[view_reback] = {
 	feature = {
 	{x=0,y=0,color=0x232323},
-	{x=-4,y=-4,color=0x232323},
-	{x=6,y=-6,color=0x232323},
-	{x=86,y=-24,color=0xffcc00},
-	{x=76,y=23,color=0xffcc00},
-	{x=1245,y=68,color=0x424448},
-	{x=1243,y=96,color=0x424448},
-	{x=1245,y=160,color=0x424448},
-	{x=1243,y=236,color=0x424448},
-	{x=1243,y=311,color=0x424448},
-	{x=1246,y=401,color=0x424448},
-	{x=1239,y=462,color=0xffcc00},
-	{x=1240,y=490,color=0xffcc00},
-	{x=1126,y=486,color=0xffcc00},
-	{x=1142,y=500,color=0xffcc00},
-	{x=187,y=284,color=0x8af425}
+	{x=308,y=-18,color=0x9e9da2},
+	{x=349,y=17,color=0x9e9da2},
+	{x=1242,y=65,color=0x424448},
+	{x=1242,y=106,color=0x424448},
+	{x=171,y=286,color=0x84ef19},
+	{x=173,y=288,color=0x83f019},
+	{x=182,y=283,color=0x8bf225},
+	{x=187,y=279,color=0x93fc2d},
+	{x=189,y=285,color=0x89f41f},
+	{x=168,y=354,color=0x1ec3ed},
+	{x=187,y=347,color=0x1cc8f2},
+	{x=185,y=338,color=0x1fd9f6},
+	{x=703,y=-9,color=0x413931},
+	{x=714,y=-10,color=0x413931}
 	},
-	degree = 98
+	degree = 95
 }
 
 --21--老婆分解
