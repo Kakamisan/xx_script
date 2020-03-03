@@ -193,6 +193,8 @@ vt[view_reback] = {
 	,view_slc_team
 	,view_ctn_mission
 	,view_rebacking
+	,view_reback_get
+	,view_reback_get2
 }
 
 --21--老婆分解

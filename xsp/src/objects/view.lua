@@ -15,20 +15,22 @@ view[view_sample]	= {
 --1--主页
 view[view_home] = {
 	feature = {
-	{x=0,y=0,color=0x30b7df},
-	{x=48,y=1,color=0x30a1df},
-	{x=51,y=20,color=0x309fdf},
-	{x=134,y=3,color=0xffffff},
-	{x=33,y=116,color=0x8bf421},
-	{x=20,y=171,color=0x1cc7f3},
-	{x=1099,y=-107,color=0x77ffff},
-	{x=985,y=233,color=0x665951},
-	{x=1063,y=259,color=0x44423b},
-	{x=855,y=413,color=0xf8fcfd},
-	{x=932,y=409,color=0xf8fcfd},
-	{x=1180,y=292,color=0xfcc900}
+	{x=0,y=0,color=0x30b8df},
+	{x=52,y=19,color=0x309fdf},
+	{x=126,y=27,color=0xffffff},
+	{x=137,y=-1,color=0xffffff},
+	{x=20,y=116,color=0x85f11b},
+	{x=30,y=114,color=0x8bf421},
+	{x=36,y=117,color=0x86f019},
+	{x=33,y=158,color=0x20d8f7},
+	{x=17,y=172,color=0x1fc4ed},
+	{x=33,y=166,color=0x21cbef},
+	{x=989,y=229,color=0x665850},
+	{x=1031,y=270,color=0x248ca2},
+	{x=1048,y=258,color=0x44423b},
+	{x=1065,y=254,color=0x44423b}
 	},
-	degree = 98
+	degree = 95
 }
 
 --2--选择副本类型：每日，主线，活动等
