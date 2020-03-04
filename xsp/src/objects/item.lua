@@ -90,39 +90,46 @@ item[item_reback_scroll_bottom] = {
 }
 
 item[item_move_reset] = {
-	body = {747-753,641-616,761-753,656-616},
-	area = {5,583,740,679},
+	body = {411-417,636-612,425-417,652-612},
+	area = {15,503,741,684},
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=1,y=42,color=0x000000},
-	{x=1,y=34,color=0x000000},
-	{x=7,y=27,color=0x000000},
-	{x=0,y=23,color=0x000000},
-	{x=-13,y=28,color=0xffffff},
-	{x=2,y=18,color=0xffffff},
-	{x=16,y=31,color=0xffffff},
+	{x=-22,y=32,color=0xffffff},
+	{x=24,y=33,color=0xffffff},
+	{x=1,y=55,color=0xffffff},
+	{x=1,y=40,color=0x000000},
+	{x=0,y=34,color=0x000000},
+	{x=7,y=26,color=0x000000},
+	{x=1,y=23,color=0x000000},
+	{x=1,y=27,color=0xffffff},
+	{x=-10,y=42,color=0xffffff},
 	{x=10,y=44,color=0xffffff},
-	{x=-12,y=41,color=0xffffff},
-	{x=0,y=59,color=0xffffff},
-	{x=18,y=13,color=0xffffff},
-	{x=-20,y=16,color=0xffffff}
+	{x=14,y=23,color=0xffffff},
+	{x=-8,y=18,color=0xffffff},
+	{x=14,y=12,color=0xffffff},
+	{x=-15,y=14,color=0xffffff}
 	},
-	degree = 98
+	degree = 95
 }
 
 item[item_turn_end] = {
-	area = {1139,345,1266,463},
+	area = {1168,12,1266,449},
 	feature = {
-	{x=0,y=0,color=0xffffd7},
-	{x=4,y=6,color=0xffffe4},
-	{x=10,y=9,color=0xffffed},
-	{x=20,y=14,color=0xffffef},
-	{x=34,y=20,color=0xffffd2},
-	{x=3,y=11,color=0xffffe8},
-	{x=4,y=25,color=0xffffe5},
-	{x=3,y=32,color=0xffffda}
+	{x=0,y=0,color=0xffe300},
+	{x=44,y=0,color=0xffe300},
+	{x=53,y=26,color=0xffe300},
+	{x=0,y=59,color=0xffe300},
+	{x=43,y=59,color=0xffe300},
+	{x=47,y=89,color=0xffe300},
+	{x=-15,y=389,color=0xfffff1},
+	{x=-21,y=383,color=0xffffee},
+	{x=-23,y=393,color=0xffffe3},
+	{x=-9,y=384,color=0xffffee},
+	{x=-23,y=375,color=0xffffe5},
+	{x=-21,y=396,color=0xffffe1},
+	{x=-2,y=387,color=0xffffda}
 	},
-	degree = 98
+	degree = 92
 }
 
 item[item_target_self] = {
