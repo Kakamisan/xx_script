@@ -268,15 +268,20 @@ func[view_sys_online] = {
 			new_bt_add_count = false
 		end
 		--自动模式+极速炼金
-		if slc(cfg.extra, fextra_quick) and cfg.main == fmain_auto then
+--		if slc(cfg.extra, fextra_quick) and cfg.main == fmain_auto then
+		if slc(cfg.extra, fextra_quick) then
 			while(in_view(view_sys_online)) do
 				sleep(200)
 			end
-			while(not in_view(view_bt_quit2)) do
-				pressKey('BACK',false)
-				dlog("按返回键")
-				sleep(200,260)
-			end
+--			while(not in_view(view_bt_quit2)) do
+--				pressKey('BACK',false)
+--				dlog("按返回键")
+--				sleep(200,260)
+--			end
+			sleep(500)
+			pressKey('BACK',false)
+			sleep(147,203)
+			pressKey('BACK',false)
 		end
 	end
 }
