@@ -453,7 +453,14 @@ func[view_event] = {
 
 
 func[view_full_bag2] = {
-	[target_default] = func[view_full_bag].target_default,
+	[target_default] = function()
+		if not reback_just_now and can_to_target_reback() then
+			return true
+		end
+		cfg.btcount = 0
+		if can_to_target_mission() then return true end
+		state.target = target_back
+	end,
 	[target_mission] = function()
 		click_btn(btn_ack2)
 	end,
