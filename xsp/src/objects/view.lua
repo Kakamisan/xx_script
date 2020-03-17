@@ -307,9 +307,10 @@ view[view_stop_repeat] = {
 	{x=686,y=491,color=0xffcc00},
 	{x=556,y=491,color=0xffcc00},
 	{x=1130,y=643,color=0x7d6302},
-	{x=1170,y=640,color=0x7d6302}
+	{x=1170,y=640,color=0x7d6302},
+	{x=1040,y=-7,color=0x587300}
 	},
-	degree = 98
+	degree = 97
 }
 
 --15--主页-继续远征

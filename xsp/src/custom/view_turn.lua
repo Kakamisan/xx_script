@@ -55,7 +55,6 @@ vt[view_bt_playing] = {
 	,view_bt_enemy_acn
 	,view_bt_report
 	,view_bt_report2
-	,view_full_bag2
 }
 
 --7--战斗中-播报中-下面是蓝色点
@@ -78,6 +77,7 @@ vt[view_bt_report] = {
 	,view_bt_over
 	,view_bt_playing
 	,view_stop_repeat
+	,view_full_bag2
 	,view_level_up
 }
 --34
@@ -133,6 +133,7 @@ vt[view_bt_over] = {
 	,view_slc_team
 	,view_stop_repeat
 	,view_full_bag
+	,view_full_bag2
 	,view_level_up
 	,view_need_repair
 --	,view_re_connect
