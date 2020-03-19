@@ -193,12 +193,13 @@ view_event			= 33	--EVENT活动信息页
 view_full_bag2		= 36	--仓库满-自动
 view_notice			= 37	--上线公告
 view_rebacking		= 38	--分解-分解中
+view_reback_full	= 39	--分解-选取上限
 
 all_view = {
 	 1	,2	,3	,4	,5	,6	,8	,10	,11	,13
 	,14	,15	,16		,17	,18	,19	,20	,21	,22
 	,23	,24	,25	,26	,27	,28	,30		,32	,33
-	,34	,35 ,36 ,37 ,38
+	,34	,35 ,36 ,37 ,38	,39
 	
 	--掉线界面
 	,29	,31
@@ -248,6 +249,7 @@ to_view_desc = {
 	,[view_full_bag2] = "仓库满了2"
 	,[view_notice] = "上线公告"
 	,[view_rebacking] = "分解-分解中"
+	,[view_reback_full] = "分解-选取上限"
 }
 
 

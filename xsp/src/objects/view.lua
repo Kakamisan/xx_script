@@ -863,5 +863,27 @@ view[view_rebacking] = {
 	degree = 98
 }
 
+--39--分解-选取上限
+view[view_reback_full] = {
+	feature = {
+	{x=0,y=0,color=0x42780d},
+	{x=-11,y=53,color=0x0e6379},
+	{x=76,y=-227,color=0xb6b7c7},
+	{x=80,y=-209,color=0xb6b7c7},
+	{x=131,y=-222,color=0x6c6c7d},
+	{x=167,y=-203,color=0x6c6c7d},
+	{x=513,y=-213,color=0x61606d},
+	{x=803,y=-218,color=0x61606d},
+	{x=1063,y=-233,color=0x65646f},
+	{x=1028,y=-206,color=0x5e5e6e},
+	{x=523,y=213,color=0xffcc00},
+	{x=676,y=176,color=0xffcc00},
+	{x=314,y=-329,color=0x4f4e51},
+	{x=330,y=-306,color=0x4f4e51},
+	{x=1234,y=233,color=0x3a7104}
+	},
+	degree = 98
+}
+
 
 return view

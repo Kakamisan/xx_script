@@ -262,7 +262,7 @@
                "align" : "left",
                "color" : "0,0,0",
                "size" : 30,
-               "text" : "\n\t\tVersion : 0.169.0  (16:9 0号机)\n\n\t\t\t\t\t\t--2020/03/02 20:30",
+               "text" : "\n\t\tVersion : 0.169.6\n\n\t\t\t\t\t\t--2020/03/19 15:30",
                "bg" : "",
                "type" : "Label",
                "rect" : "10,10,940,300"

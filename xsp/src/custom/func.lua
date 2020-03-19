@@ -488,6 +488,15 @@ func[view_rebacking] = {
 }
 
 
+func[view_reback_full] = {
+	[target_default] = function()
+		click_btn(btn_ack2)
+		sleep(500,800)
+		click_btn(btn_reback_slc_ok)
+	end
+}
+
+
 
 
 
@@ -791,7 +800,7 @@ function reback_waifu_slc()
 			--			click_item(item_B_waifu)
 			--			return false
 			--		end
-			timeout(swc_on,swc_slc_all_b)
+			swc_on(swc_slc_all_b)
 		end
 		
 		need_sld = false
@@ -836,7 +845,7 @@ function reback_eqm_slc()
 			return false
 		end
 	end
-	if find_item(item_reback_scroll_bottom) then
+	if find_item(item_reback_scroll_bottom) or find_item(item_B_eqm) then
 		
 		--快捷选b
 		if slc(cfg.reback2,freback_B_eqm) and not swc_on(swc_slc_all_b, true) then
@@ -846,7 +855,7 @@ function reback_eqm_slc()
 			--			click_item(item_B_eqm)
 			--			return false
 			--		end
-			timeout(swc_on,swc_slc_all_b)
+			swc_on(swc_slc_all_b)
 		end
 		
 		need_sld = false

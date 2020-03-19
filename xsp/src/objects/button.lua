@@ -103,8 +103,7 @@ btn[btn_reback_enter] = {
 
 --16--
 btn[btn_reback_slc_ok] = {
-	body = {1188,670,1251,698},
-	view = {view_reback_waifu}
+	body = {1188,670,1251,698}
 }
 
 --17--

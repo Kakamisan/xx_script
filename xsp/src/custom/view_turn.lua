@@ -203,6 +203,7 @@ vt[view_reback_waifu] = {
 	view_reback_waifu
 	,view_reback_waifu_al
 	,view_reback
+	,view_reback_full
 }
 
 --22--老婆分解-分A级以上弹窗警告
@@ -312,6 +313,13 @@ vt[view_rebacking] = {
 	,view_reback_get2
 	,view_reback
 	,view_rebacking
+}
+
+--39--分解-选取上限
+vt[view_reback_full] = {
+	view_reback_waifu_al
+	,view_reback
+	,view_reback_full
 }
 
 return vt
