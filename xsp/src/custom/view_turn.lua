@@ -299,6 +299,7 @@ vt[view_event] = {
 vt[view_full_bag2] = {
 	view_full_bag2
 	,view_slc_team
+	,view_sys_online
 }
 
 --37--上线公告

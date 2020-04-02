@@ -454,12 +454,14 @@ func[view_event] = {
 
 func[view_full_bag2] = {
 	[target_default] = function()
-		if not reback_just_now and can_to_target_reback() then
-			return true
+		if get_calc_idle_time(9) then
+			if not reback_just_now and can_to_target_reback() then
+				return true
+			end
+			cfg.btcount = 0
+			if can_to_target_mission() then return true end
+			state.target = target_back
 		end
-		cfg.btcount = 0
-		if can_to_target_mission() then return true end
-		state.target = target_back
 	end,
 	[target_mission] = function()
 		click_btn(btn_ack2)
