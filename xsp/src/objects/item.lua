@@ -70,21 +70,17 @@ item[item_B_waifu] = {
 }
 
 item[item_reback_scroll] = {
-	--body = {1173-1175,655-82,1178-1175,693-82},
-	body = {1173-1175,368-82,1178-1175,400-82},
-	area = {1089,82,1103,106},
+	area = {1046,165,1053,173},
 	feature = {
-		{x=0,y=0,color=0xffcc00}
+		{x=0,y=0,color=0x627789}
 	},
 	degree = 98
 }
 
 item[item_reback_scroll_bottom] = {
-	--body = {1173-1175,655-82,1178-1175,693-82},
-	body = {1173-1175,368-82,1178-1175,400-82},
-	area = {1089,681,1105,703},
+	area = {1045,696,1053,702},
 	feature = {
-		{x=0,y=0,color=0xffcc00}
+		{x=0,y=0,color=0x627789}
 	},
 	degree = 98
 }

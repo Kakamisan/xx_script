@@ -10,7 +10,7 @@ text[text_sample]	= {
 }
 
 text[text_reback_gain] = {
-	area = {229,372,329,412},
+	area = {165,247,327,281},
 	white_list = "1234567890",
 	diff = {"0xe7e7e7-0x444444"},
 	view = {view_reback}

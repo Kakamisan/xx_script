@@ -549,73 +549,73 @@ swc[swc_mission_open2] = {
 }
 
 swc[swc_reback_ss] = {
-	body = {1142,188,1174,205},
-	area = {1179,183,1187,194},
+	body = {1100,243,1163,272},
+	area = {1149,246,1164,270},
 	feature = {
-		{x=0,y=0,color=0xffcc00}
+		{x=0,y=0,color=0xffcf04}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x514e55}
+		{x=0,y=0,color=0x292929}
 	},
 	view = {view_reback_waifu}
 }
 
 swc[swc_reback_s] = {
-	body = {1221,187,1251,211},
-	area = {1253,185,1261,195},
+	body = {1194,243,1241,269},
+	area = {1236,249,1246,270},
 	feature = {
-		{x=0,y=0,color=0xffcc00}
+		{x=0,y=0,color=0xffcf04}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x514e55}
+		{x=0,y=0,color=0x292929}
 	},
 	view = {view_reback_waifu}
 }
 
 swc[swc_reback_a] = {
-	body = {1147,246,1172,265},
-	area = {1177,240,1189,252},
+	body = {1107,295,1159,318},
+	area = {1153,299,1164,320},
 	feature = {
-		{x=0,y=0,color=0xffcc00}
+		{x=0,y=0,color=0xffcf04}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x514e55}
+		{x=0,y=0,color=0x292929}
 	},
 	view = {view_reback_waifu}
 }
 
 swc[swc_reback_b] = {
-	body = {1222,245,1247,263},
-	area = {1258,241,1266,253},
+	body = {1192,298,1245,318},
+	area = {1234,299,1243,317},
 	feature = {
-		{x=0,y=0,color=0xffcc00}
+		{x=0,y=0,color=0xffcf04}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x514e55}
+		{x=0,y=0,color=0x292929}
 	},
 	view = {view_reback_waifu}
 }
 
 swc[swc_change_eqm] = {
-	body = {997,85,1036,106},
-	area = {973,90,985,105},
+	body = {270,110,358,127},
+	area = {260,112,267,131},
 	feature = {
-		{x=0,y=0,color=0xffcc00}
+		{x=0,y=0,color=0xffce00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x555255}
+		{x=0,y=0,color=0x133347}
 	},
 	view = {view_reback}
 }
 
 swc[swc_slc_all_b] = {
-	body = {1183,603,1245,624},
-	area = {1160,591,1275,631},
+	body = {1107,605,1242,628},
+	area = {1083,597,1093,608},
 	feature = {
-		{x=0,y=0,color=0xe15e00}
+		{x=0,y=0,color=0xda6666}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x75e308}
+		{x=0,y=0,color=0x96ec34}
 	},
 	degree = 95,
 	view = {view_reback_waifu}

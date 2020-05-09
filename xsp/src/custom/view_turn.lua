@@ -23,6 +23,7 @@ vt[view_slc_dg_type] = {
 vt[view_slc_dg_main] = {
 	view_slc_dg_main
 	,view_slc_team
+	,view_slc_dg_type
 	,view_home
 	,view_ctn_mission
 }
@@ -153,6 +154,7 @@ vt[view_stop_repeat] = {
 vt[view_ctn_mission] = {
 	view_ctn_mission
 	,view_home
+	,view_slc_dg_type
 }
 
 --16--主页-玩家信息

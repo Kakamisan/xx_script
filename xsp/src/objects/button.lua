@@ -43,7 +43,7 @@ btn[btn_bt_next] = {
 
 --6--
 btn[btn_ctn_mission] = {
-	body = {651,531,742,554},
+	body = {655,533,734,557},
 	view = {view_ctn_mission}
 }
 
@@ -61,7 +61,7 @@ btn[btn_check_fb_state] = {
 
 --9--
 btn[btn_stop_repeat] = {
-	body = {594,540,686,568},
+	body = {578,542,692,572},
 	view = {view_stop_repeat}
 }
 
@@ -91,13 +91,13 @@ btn[btn_to_reback] = {
 
 --14--
 btn[btn_reback_start] = {
-	body = {975,647,1066,682},
+	body = {905,642,982,674},
 	view = {view_reback}
 }
 
 --15--
 btn[btn_reback_enter] = {
-	body = {393,169,444,255},
+	body = {438,162,497,254},
 	view = {view_reback}
 }
 
@@ -113,7 +113,7 @@ btn[btn_ack1] = {
 
 --18--
 btn[btn_ack_get] = {
-	body = {599,587,674,613},
+	body = {599,566,683,597},
 	view = {view_reback_get,view_reback_get2}
 }
 
@@ -222,7 +222,7 @@ btn[btn_cancel1] = {
 }
 
 btn[btn_ack3] = {
-	body = {595,543,682,568}
+	body = {599,548,684,573}
 }
 
 btn[btn_event] = {
