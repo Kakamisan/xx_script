@@ -87,6 +87,7 @@ swc_chapter3	= 3		--主线章节3
 swc_chapter4	= 4		--主线章节4
 swc_chapter5	= 5		--主线章节5
 swc_chapter6	= 6		--主线章节6
+swc_chapter7	= 47	--主线章节7
 
 swc_fb_1		= 7		--主线副本1
 swc_fb_2		= 8		--主线副本2
@@ -136,6 +137,8 @@ swc_reback_b	= 44	--分解-筛选b
 
 swc_change_eqm	= 45	--分解-转到装备分解
 swc_slc_all_b	= 46	--分解-快速选择全部b
+
+--swc_chapter7	= 47	--主线章节7
 
 
 

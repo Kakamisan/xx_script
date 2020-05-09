@@ -93,6 +93,19 @@ swc[swc_chapter6] = {
 	view = {view_slc_dg_main}
 }
 
+swc[swc_chapter7] = {
+	body = {1178,440,1256,466},
+	area = {1267,445,1276,457},
+	feature = {
+		{x=0,y=0,color=0xffcc00}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x3a3f42}
+	},
+	degree = 70,
+	view = {view_slc_dg_main}
+}
+
 swc[swc_fb_1] = {
 	body = {303-80,424,335-80,440},
 	area = {297-80,433,299-80,437},

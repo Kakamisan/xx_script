@@ -567,9 +567,9 @@ handle_change_target = {
 
 --章节是否是活动章节
 function is_event(C)
-	if C == 7
-	or C == 8
+	if C == 8
 	or C == 9
+	or C == 10
 	then return true end
 	return false
 end
@@ -591,10 +591,11 @@ chapter_swc = {
 	[4] = swc_chapter4,
 	[5] = swc_chapter5,
 	[6] = swc_chapter6,
+	[7] = swc_chapter7,
 	
-	[7] = swc_chapter1,
-	[8] = swc_chapter2,
-	[9] = swc_chapter3
+	[8] = swc_chapter1,
+	[9] = swc_chapter2,
+	[10] = swc_chapter3
 }
 sub_fb_swc = {
 	[1] = swc_fb_1,
