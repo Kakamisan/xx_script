@@ -500,19 +500,19 @@ view[view_reback_waifu_ac] = {
 view[view_reback_get] = {
 	feature = {
 	{x=0,y=0,color=0x7d7d7d},
-	{x=8,y=-8,color=0x7d7d7d},
-	{x=93,y=296,color=0x45780c},
-	{x=93,y=354,color=0x19667b},
-	{x=1082,y=469,color=0x7d6502},
-	{x=1229,y=474,color=0x7d6502},
-	{x=1096,y=112,color=0x040b10},
-	{x=321,y=90,color=0xd3d5dc},
-	{x=816,y=84,color=0xd3d5dc},
+	{x=91,y=294,color=0x45780c},
+	{x=93,y=353,color=0x19667b},
+	{x=288,y=96,color=0xd3d5dc},
+	{x=838,y=97,color=0xd3d5dc},
 	{x=497,y=130,color=0xd3d5dc},
-	{x=503,y=150,color=0xd3d5dc},
-	{x=497,y=331,color=0xd3d5dc},
-	{x=501,y=347,color=0xd3d5dc},
-	{x=679,y=572,color=0xfcc705}
+	{x=504,y=148,color=0xd3d5dc},
+	{x=497,y=332,color=0xd3d5dc},
+	{x=504,y=349,color=0xd3d5dc},
+	{x=1106,y=466,color=0x7d6502},
+	{x=1229,y=471,color=0x7d6502},
+	{x=578,y=314,color=0x1d303a},
+	{x=770,y=334,color=0x1f323f},
+	{x=1094,y=105,color=0x040b10}
 	},
 	degree = 98
 }
