@@ -14,7 +14,7 @@ btn[btn_sample]	= {
 
 --1--
 btn[btn_back_any] = {
-	body = {14,30,100,59},
+	body = {21,23,50,48},
 	anchor = {-1,-1}
 }
 
