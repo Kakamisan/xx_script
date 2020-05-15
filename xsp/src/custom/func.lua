@@ -289,7 +289,7 @@ func[view_sys_online] = {
 --非闹钟下定时出去收远征
 function do_clock_reback()
 	if mTime() > state.clock_reback and cfg.main ~= fmain_alarm then
-		state.clock_reback = mTime() + math.random(3000,4000)*1000
+		state.clock_reback = mTime() + math.random(cfg.reback_time[1],cfg.reback_time[2])*1000
 		if can_to_target_reback() then
 			
 		else
@@ -426,6 +426,7 @@ func[view_need_repair] = {
 
 func[view_re_connect] = {
 	[target_default] = function()
+		if in_view(view_stop_repeat) then return true end
 		click_btn(btn_ack3)
 	end
 }
@@ -454,7 +455,7 @@ func[view_event] = {
 
 func[view_full_bag2] = {
 	[target_default] = function()
-		if get_calc_idle_time(9) then
+		if get_calc_idle_time(7) then
 			if not reback_just_now and can_to_target_reback() then
 				return true
 			end
@@ -688,7 +689,7 @@ handle_stop_repeat = {
 				stop_repeat_auto_count = stop_repeat_auto_count + 1
 			end
 		end
-		if get_calc_idle_time(9) then
+		if get_calc_idle_time(7) then
 			if can_to_target_reback() then return true end
 			if can_to_target_mission() then return true end
 		end

@@ -17,6 +17,7 @@ vt[view_slc_dg_type] = {
 	,view_slc_dg_main
 	,view_event
 	,view_home
+	,view_ctn_mission
 }
 
 --3--选择主线副本，6-8，5-8e等
@@ -39,6 +40,7 @@ vt[view_slc_team] = {
 	,view_full_bag
 	,view_full_bag2
 	,view_need_repair
+	,view_full_bag2
 --	,view_bt_playing
 }
 
@@ -72,13 +74,13 @@ vt[view_bt_playing2] = {
 --8--战斗中-战斗经验结算
 vt[view_bt_report] = {
 	view_bt_report
+	,view_bt_playing
+	,view_bt_waiting
 	,view_bt_report2
 	,view_bt_get_waifu
 	,view_bt_next
 	,view_bt_over
-	,view_bt_playing
 	,view_stop_repeat
-	,view_full_bag2
 	,view_level_up
 }
 --34
@@ -95,10 +97,11 @@ vt[view_bt_report2] = {
 
 --9--战斗中-打捞老婆
 vt[view_bt_waiting] = {
-	view_bt_get_waifu
+	view_bt_playing
+	,view_bt_get_waifu
+	,view_bt_waiting
 	,view_bt_slc_acn
 	,view_bt_enemy_acn
-	,view_bt_playing
 	,view_bt_next
 	,view_bt_over
 	,view_stop_repeat
@@ -265,8 +268,9 @@ vt[view_need_repair] = {
 --29--掉线重连
 vt[view_re_connect] = {
 	view_home
-	,view_re_connect
+	,view_stop_repeat
 	,view_slc_team
+	,view_re_connect
 }
 
 --30--装备分解-获得物品
@@ -277,9 +281,7 @@ vt[view_reback_get2] = {
 
 --31--掉线重连
 vt[view_re_connect2] = {
-	view_home
-	,view_re_connect2
-	,view_slc_team
+	view_re_connect
 }
 
 --32--标题界面

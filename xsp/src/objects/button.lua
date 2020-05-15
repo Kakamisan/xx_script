@@ -14,8 +14,7 @@ btn[btn_sample]	= {
 
 --1--
 btn[btn_back_any] = {
-	body = {21,23,50,48},
-	anchor = {-1,-1}
+	body = {24,22,46,45}
 }
 
 --2--
@@ -85,7 +84,7 @@ btn[btn_enter_reback] = {
 
 --13--
 btn[btn_to_reback] = {
-	body = {1188,504,1253,535},
+	body = {1132,467,1266,496},
 	view = {view_creator}
 }
 
@@ -210,11 +209,11 @@ btn[btn_full_bag_close] = {
 }
 
 btn[btn_enter_reback2] = {
-	body = {408,542,475,569}
+	body = {363,545,469,568}
 }
 
 btn[btn_ack2] = {
-	body = {600,543,678,569}
+	body = {600,544,679,579}
 }
 
 btn[btn_cancel1] = {

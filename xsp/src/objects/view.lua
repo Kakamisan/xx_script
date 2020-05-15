@@ -37,20 +37,18 @@ view[view_home] = {
 view[view_slc_dg_type] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=6,y=-8,color=0xffffff},
-	{x=7,y=9,color=0xffffff},
-	{x=128,y=-4,color=0xffffff},
-	{x=577,y=576,color=0x3eb3f7},
-	{x=615,y=554,color=0x39aeea},
-	{x=625,y=548,color=0x3aadef},
-	{x=899,y=553,color=0x4abaf5},
-	{x=924,y=538,color=0x46b5ec},
-	{x=977,y=508,color=0x48b0ec},
-	{x=1105,y=289,color=0x40c0f6},
-	{x=1135,y=271,color=0x3cbbef},
-	{x=1165,y=253,color=0x3dbaee}
+	{x=100,y=11,color=0xffffff},
+	{x=133,y=-2,color=0xffffff},
+	{x=1099,y=295,color=0x41c5f5},
+	{x=1161,y=259,color=0x3fbaf1},
+	{x=899,y=556,color=0x49b9f0},
+	{x=975,y=512,color=0x45b3eb},
+	{x=576,y=580,color=0x3db0f8},
+	{x=614,y=557,color=0x37aaeb},
+	{x=1238,y=527,color=0x44d0a7},
+	{x=1134,y=527,color=0x44d0a7}
 	},
-	degree = 95
+	degree = 93
 }
 
 --3--选择主线副本，6-8，5-8e等
@@ -191,20 +189,28 @@ view[view_bt_report2] = {
 	degree = 98
 }
 
---9--战斗中-打捞老婆（弃用）
+--9--战斗中-打捞老婆
 view[view_bt_waiting] = {
 	feature = {
-	{x=0+19,y=0+18,color=0xfdfdfd},
-	{x=1247+19,y=7+18,color=0xffce00},
-	{x=1384+19,y=9+18,color=0xffcb00},
-	{x=1322+19,y=6+18,color=0xffcc00},
-	{x=1244,y=47,color=0xfbc300}
+	{x=0,y=0,color=0xffffff},
+	{x=-7,y=7,color=0xffffff},
+	{x=-1,y=12,color=0xffffff},
+	{x=1014,y=18,color=0xffffff},
+	{x=1074,y=13,color=0xffffff},
+	{x=1066,y=14,color=0xffffff},
+	{x=1080,y=11,color=0xffffff},
+	{x=1134,y=16,color=0xffffff},
+	{x=1143,y=15,color=0xffffff},
+	{x=1196,y=63,color=0xffe300},
+	{x=1227,y=60,color=0xffe300},
+	{x=1254,y=61,color=0xffe300},
+	{x=1255,y=92,color=0xffe300},
+	{x=1213,y=96,color=0xffe300},
+	{x=621,y=671,color=0xbf9307},
+	{x=442,y=671,color=0xbf9307},
+	{x=943,y=671,color=0xc09308}
 	},
-	degree = 98,
-	disable = {
-	{x=1022+19,y=522+18,color=0xa4fd23},
-	{x=1041,y=538,color=0x21f7ff}
-	}
+	degree = 90
 }
 
 --10--战斗中-捞到老婆
@@ -564,23 +570,19 @@ view[view_bt_quit2] = {
 --26--仓库满了(手动)
 view[view_full_bag] = {
 	feature = {
-	{x=0,y=0,color=0x080808},
-	{x=-6,y=-5,color=0x080808},
-	{x=84,y=-17,color=0x3e3200},
-	{x=75,y=16,color=0x3e3200},
-	{x=127,y=-13,color=0x5b5b63},
-	{x=82,y=87,color=0xb6b7c7},
-	{x=86,y=103,color=0xb6b7c7},
-	{x=126,y=94,color=0x6c6c7d},
-	{x=371,y=104,color=0x5f5f6d},
-	{x=333,y=527,color=0xff6200},
-	{x=485,y=493,color=0xff6200},
-	{x=534,y=531,color=0xffcc00},
-	{x=681,y=491,color=0xffcc00},
-	{x=738,y=530,color=0xffcc00},
-	{x=883,y=491,color=0xffcc00},
-	{x=985,y=552,color=0x43790e},
-	{x=1088,y=559,color=0x0e6379}
+	{x=0,y=0,color=0x201b06},
+	{x=48,y=3,color=0x2f3037},
+	{x=73,y=110,color=0xd3d5dc},
+	{x=697,y=122,color=0xd3d5dc},
+	{x=976,y=99,color=0xd3d5dc},
+	{x=1035,y=115,color=0xd3d5dc},
+	{x=233,y=509,color=0xfe4701},
+	{x=367,y=551,color=0xfd4701},
+	{x=445,y=504,color=0xfeca01},
+	{x=606,y=551,color=0xfdc804},
+	{x=671,y=504,color=0xfeca01},
+	{x=836,y=552,color=0xfdc804},
+	{x=1089,y=539,color=0x403506}
 	},
 	degree = 98
 }
@@ -588,26 +590,19 @@ view[view_full_bag] = {
 --27--升级
 view[view_level_up] = {
 	feature = {
-	{x=0,y=0,color=0xb6b7c7},
-	{x=0,y=17,color=0xb6b7c7},
-	{x=27,y=7,color=0x6c6c7d},
-	{x=107,y=22,color=0x6c6c7d},
-	{x=140,y=4,color=0x61626d},
-	{x=167,y=20,color=0x5e5e6e},
-	{x=856,y=27,color=0x5d5c69},
-	{x=905,y=3,color=0x63636f},
-	{x=1006,y=-3,color=0x65646d},
-	{x=448,y=445,color=0xffcc00},
-	{x=447,y=423,color=0xffcc00},
-	{x=470,y=399,color=0xffcc00},
-	{x=606,y=400,color=0xffcc00},
-	{x=604,y=417,color=0xffcc00},
-	{x=586,y=440,color=0xffcc00},
-	{x=556,y=443,color=0xffcc00},
-	{x=520,y=444,color=0xffcc00},
-	{x=487,y=443,color=0xffcc00},
-	{x=499,y=399,color=0xffcc00},
-	{x=556,y=401,color=0xffcc00}
+	{x=0,y=0,color=0xd3d5dc},
+	{x=86,y=17,color=0xd3d5dc},
+	{x=526,y=11,color=0xd3d5dc},
+	{x=764,y=-2,color=0xd3d5dc},
+	{x=280,y=396,color=0xfeca01},
+	{x=421,y=395,color=0xfeca01},
+	{x=450,y=447,color=0xfdc804},
+	{x=308,y=448,color=0xfcc705},
+	{x=89,y=8,color=0xd3d5dc},
+	{x=241,y=8,color=0xd3d5dc},
+	{x=767,y=-1,color=0xd3d5dc},
+	{x=364,y=451,color=0xfdc804},
+	{x=350,y=399,color=0xfeca01}
 	},
 	degree = 98
 }
@@ -678,31 +673,31 @@ view[view_reback_get2] = {
 	degree = 98
 }
 
---31--掉线重连2
+--31--掉线重连2（弃用）
 view[view_re_connect2] = {
 	feature = {
-	{x=0,y=0,color=0xb6b7c7},
-	{x=0,y=17,color=0xb6b7c7},
-	{x=27,y=7,color=0x6c6c7d},
+	{x=0,y=0,color=0xff0000},
+	{x=0,y=17,color=0x0000ff},
+	{x=27,y=7,color=0x00ff00},
 	{x=107,y=22,color=0x6c6c7d},
-	{x=140,y=4,color=0x61626d},
-	{x=167,y=20,color=0x5e5e6e},
+	{x=140,y=4,color=0x00ff00},
+	{x=167,y=20,color=0x0000ff},
 	{x=856,y=27,color=0x5d5c69},
-	{x=905,y=3,color=0x63636f},
-	{x=1006,y=-3,color=0x65646d},
-	{x=448,y=445,color=0xffcc00},
-	{x=447,y=423,color=0xffcc00},
+	{x=905,y=3,color=0x00ff00},
+	{x=1006,y=-3,color=0xff0000},
+	{x=448,y=445,color=0x0000ff},
+	{x=447,y=423,color=0x0000ff},
 	{x=470,y=399,color=0xffcc00},
-	{x=606,y=400,color=0xffcc00},
-	{x=604,y=417,color=0xffcc00},
-	{x=586,y=440,color=0xffcc00},
+	{x=606,y=400,color=0x00ff00},
+	{x=604,y=417,color=0xff0000},
+	{x=586,y=440,color=0x00ff00},
 	{x=556,y=443,color=0xffcc00},
-	{x=520,y=444,color=0xffcc00},
-	{x=487,y=443,color=0xffcc00},
-	{x=499,y=399,color=0xffcc00},
+	{x=520,y=444,color=0x0000ff},
+	{x=487,y=443,color=0x00ff00},
+	{x=499,y=399,color=0xff0000},
 	{x=556,y=401,color=0xffcc00}
 	},
-	degree = 98
+	degree = 100
 }
 
 --32--标题界面
@@ -755,26 +750,20 @@ view[view_event] = {
 --36--仓库满了(自动)
 view[view_full_bag2] = {
 	feature = {
-	{x=0,y=0,color=0x080808},
-	{x=-4,y=-5,color=0x090808},
-	{x=7,y=-4,color=0x090808},
-	{x=129,y=-17,color=0x5b5b63},
-	{x=91,y=92,color=0xb6b7c7},
-	{x=145,y=100,color=0x6c6c7d},
-	{x=296,y=95,color=0x61626d},
-	{x=984,y=98,color=0x61606d},
-	{x=10,y=315,color=0x213c07},
-	{x=1,y=369,color=0x07313b},
-	{x=534,y=532,color=0xffcc00},
-	{x=536,y=516,color=0xffcc00},
-	{x=563,y=490,color=0xffcc00},
-	{x=684,y=490,color=0xffcc00},
-	{x=684,y=505,color=0xffcc00},
-	{x=664,y=533,color=0xffcc00},
-	{x=607,y=532,color=0xffcc00},
-	{x=618,y=489,color=0xffcc00},
-	{x=986,y=553,color=0x42780d},
-	{x=1091,y=561,color=0x0e6379}
+	{x=0,y=0,color=0x04060a},
+	{x=83,y=-9,color=0x1f1b06},
+	{x=133,y=-16,color=0x2d3037},
+	{x=112,y=105,color=0xd3d5dc},
+	{x=996,y=100,color=0xd3d5dc},
+	{x=1059,y=91,color=0xd3d5dc},
+	{x=1122,y=99,color=0x1b2d39},
+	{x=526,y=488,color=0xfeca01},
+	{x=565,y=540,color=0xfcc705},
+	{x=686,y=535,color=0xfdc804},
+	{x=674,y=493,color=0xfeca01},
+	{x=1171,y=526,color=0x403506},
+	{x=1153,y=0,color=0x20232a},
+	{x=623,y=-7,color=0x181a21}
 	},
 	degree = 98
 }
@@ -819,21 +808,21 @@ view[view_rebacking] = {
 --39--分解-选取上限
 view[view_reback_full] = {
 	feature = {
-	{x=0,y=0,color=0x42780d},
-	{x=-11,y=53,color=0x0e6379},
-	{x=76,y=-227,color=0xb6b7c7},
-	{x=80,y=-209,color=0xb6b7c7},
-	{x=131,y=-222,color=0x6c6c7d},
-	{x=167,y=-203,color=0x6c6c7d},
-	{x=513,y=-213,color=0x61606d},
-	{x=803,y=-218,color=0x61606d},
-	{x=1063,y=-233,color=0x65646f},
-	{x=1028,y=-206,color=0x5e5e6e},
-	{x=523,y=213,color=0xffcc00},
-	{x=676,y=176,color=0xffcc00},
-	{x=314,y=-329,color=0x4f4e51},
-	{x=330,y=-306,color=0x4f4e51},
-	{x=1234,y=233,color=0x3a7104}
+	{x=0,y=0,color=0x404245},
+	{x=248,y=6,color=0x0c3908},
+	{x=409,y=-6,color=0x0a3344},
+	{x=1042,y=79,color=0x403607},
+	{x=-15,y=105,color=0xd3d5dc},
+	{x=-38,y=123,color=0xd3d5dc},
+	{x=889,y=121,color=0xd3d5dc},
+	{x=933,y=98,color=0xd3d5dc},
+	{x=392,y=504,color=0xfeca01},
+	{x=396,y=524,color=0xfdc804},
+	{x=419,y=552,color=0xfdc804},
+	{x=538,y=504,color=0xfeca01},
+	{x=556,y=531,color=0xfdc705},
+	{x=558,y=556,color=0xfdc804},
+	{x=1071,y=131,color=0x0e1013}
 	},
 	degree = 98
 }

@@ -1548,15 +1548,15 @@
                "bg" : "",
                "type" : "Label"
             },
-			{
-	            "id" : "debug_mode",
-	            "list" : "Debug Mode",
-	            "select" : "",
-	            "size" : 30,
-	            "type" : "CheckBoxGroup",
-	            "orientation" : "horizontal",
-	            "color" : "0,0,225",
-                "rect" : "10,450,1000,100"
+            {
+               "id" : "debug_mode",
+               "list" : "Debug Mode",
+               "select" : "",
+               "size" : 30,
+               "type" : "CheckBoxGroup",
+               "orientation" : "horizontal",
+               "color" : "0,0,225",
+               "rect" : "10,450,1000,100"
             }
          ]
       },
@@ -1585,13 +1585,33 @@
             },
             {
                "id" : "reback2",
-               "list" : "A级装备,B级装备",
+               "list" : "A级装备,B级装备（装备分解目前失效）",
                "select" : "",
                "size" : 30,
                "rect" : "10,200,1380,100",
                "type" : "CheckBoxGroup",
                "orientation" : "horizontal",
                "color" : "0,0,225"
+            },
+            {
+               "id" : "reback_time",
+               "align" : "left",
+               "color" : "0,0,0",
+               "kbtype" : "number",
+               "prompt" : "分解间隔",
+               "size" : 25,
+               "text" : "3000,4000",
+               "rect" : "10,280,300,100",
+               "type" : "Edit"
+            },
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : 20,
+               "rect" : "320,320,1000,100",
+               "text" : "分解间隔：默认3000,4000，意思为随机3000~4000秒",
+               "bg" : "",
+               "type" : "Label"
             }
          ]
       }

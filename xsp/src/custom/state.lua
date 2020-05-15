@@ -15,6 +15,6 @@ state.had_rest		= 0		--偶尔休息的场数计数
 
 
 state.alarm = mTime() + math.max(cfg.alarm,min_alarm)*1000	--最小9000秒，即2.5小时
-state.clock_reback = mTime() + math.random(3000,4000)*1000	--约一个小时主动分解一次
+state.clock_reback = mTime() + math.random(cfg.reback_time[1],cfg.reback_time[2])*1000	--约一个小时主动分解一次
 
 return state

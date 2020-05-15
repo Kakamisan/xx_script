@@ -394,6 +394,7 @@ end
 
 cfg.rest_set = decode_pos_origin(cfg.rest_set)
 cfg.rest_time = decode_pos_origin(cfg.rest_time)
+cfg.reback_time = decode_pos_origin(cfg.reback_time)
 --检查休息设置
 if cfg.rest_set[2] < cfg.rest_set[1] or cfg.rest_set[1]<0 then
 	dialog("杂项设置出错",5)
@@ -401,6 +402,10 @@ if cfg.rest_set[2] < cfg.rest_set[1] or cfg.rest_set[1]<0 then
 end
 if cfg.rest_time[2] < cfg.rest_time[1] or cfg.rest_time[1]<0 then
 	dialog("杂项设置出错",5)
+	lua_exit()
+end
+if cfg.reback_time[2] < cfg.reback_time[1] or cfg.reback_time[1]<0 then
+	dialog("分解设置出错",5)
 	lua_exit()
 end
 

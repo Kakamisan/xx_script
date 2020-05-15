@@ -322,6 +322,7 @@ end
 idle_times = {}
 idle_last_view = 0
 function do_calc_idle_times()
+	if state.view == 0 then return false end
 	if state.view == idle_last_view then
 		idle_times[idle_last_view] = (idle_times[idle_last_view] or 0) + 1
 	else

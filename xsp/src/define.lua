@@ -188,7 +188,7 @@ view_level_up		= 27	--升级
 view_need_repair	= 28	--要修复
 view_re_connect		= 29	--掉线重连
 view_reback_get2	= 30	--装备分解-获得物品
-view_re_connect2	= 31	--掉线重连2
+view_re_connect2	= 31	--掉线重连2（弃用）
 view_title			= 32	--标题界面
 view_event			= 33	--EVENT活动信息页
 --34 已占用，在上面
