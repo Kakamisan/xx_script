@@ -37,16 +37,20 @@ view[view_home] = {
 view[view_slc_dg_type] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=100,y=11,color=0xffffff},
-	{x=133,y=-2,color=0xffffff},
-	{x=1099,y=295,color=0x41c5f5},
-	{x=1161,y=259,color=0x3fbaf1},
-	{x=899,y=556,color=0x49b9f0},
-	{x=975,y=512,color=0x45b3eb},
-	{x=576,y=580,color=0x3db0f8},
-	{x=614,y=557,color=0x37aaeb},
-	{x=1238,y=527,color=0x44d0a7},
-	{x=1134,y=527,color=0x44d0a7}
+	{x=-6,y=9,color=0xffffff},
+	{x=1,y=16,color=0xffffff},
+	{x=98,y=12,color=0xffffff},
+	{x=130,y=2,color=0xfefefe},
+	{x=-25,y=138,color=0x37d4d4},
+	{x=65,y=138,color=0x40dccc},
+	{x=-36,y=226,color=0x41b896},
+	{x=38,y=226,color=0x3eb593},
+	{x=1085,y=24,color=0x2eb6c7},
+	{x=1236,y=529,color=0x44d0a7},
+	{x=1178,y=529,color=0x44d0a7},
+	{x=1095,y=529,color=0x44d0a7},
+	{x=544,y=112,color=0x3d987f},
+	{x=1221,y=678,color=0x346a69}
 	},
 	degree = 93
 }
