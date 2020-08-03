@@ -84,7 +84,7 @@ btn[btn_enter_reback] = {
 
 --13--
 btn[btn_to_reback] = {
-	body = {1132,467,1266,496},
+	body = {1159,531,1260,567},
 	view = {view_creator}
 }
 
