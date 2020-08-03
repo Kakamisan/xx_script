@@ -435,17 +435,17 @@ view[view_creator] = {
 --20--分解中心
 view[view_reback] = {
 	feature = {
-	{x=0,y=0,color=0xffffff},
-	{x=7,y=-8,color=0xffffff},
-	{x=5,y=6,color=0xffffff},
-	{x=132,y=-3,color=0xfefefe},
-	{x=1075,y=114,color=0x091823},
-	{x=1227,y=119,color=0x08131c},
-	{x=1069,y=468,color=0xffcf04},
-	{x=1223,y=470,color=0xffcf04},
-	{x=99,y=222,color=0xffce04},
-	{x=92,y=295,color=0x8df519},
-	{x=92,y=354,color=0x33d1fb}
+	{x=0,y=0,color=0xffcf04},
+	{x=-1,y=47,color=0xffcf04},
+	{x=-6,y=-388,color=0x08131c},
+	{x=-1240,y=-493,color=0xffffff},
+	{x=-1140,y=-282,color=0xffce04},
+	{x=-1148,y=-197,color=0x8df519},
+	{x=-1150,y=-136,color=0x33d1fb},
+	{x=-1143,y=-144,color=0x33d1fb},
+	{x=-702,y=-504,color=0x2dc8fb},
+	{x=-257,y=150,color=0xfcc705},
+	{x=-412,y=113,color=0xfec903}
 	},
 	degree = 95
 }
