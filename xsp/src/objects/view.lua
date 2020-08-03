@@ -490,18 +490,18 @@ view[view_reback_waifu_al] = {
 --23--老婆分解-确定分解
 view[view_reback_waifu_ac] = {
 	feature = {
-	{x=0,y=0,color=0x404245},
-	{x=4,y=-7,color=0x404245},
-	{x=137,y=101,color=0xd3d5dc},
-	{x=963,y=117,color=0xd3d5dc},
-	{x=1152,y=469,color=0x403607},
-	{x=1237,y=419,color=0x403607},
-	{x=404,y=500,color=0xfe4700},
-	{x=633,y=500,color=0xfeca01},
-	{x=800,y=549,color=0xfdc804},
-	{x=1183,y=120,color=0x02070d},
-	{x=839,y=649,color=0x3f3407},
-	{x=980,y=649,color=0x3f3407}
+	{x=0,y=0,color=0x403607},
+	{x=-2,y=34,color=0x403607},
+	{x=-440,y=52,color=0xfdc804},
+	{x=-445,y=28,color=0xfdc705},
+	{x=-596,y=11,color=0xfec903},
+	{x=-822,y=6,color=0xfe4700},
+	{x=-660,y=53,color=0xfd4701},
+	{x=-405,y=126,color=0x3f3407},
+	{x=-1103,y=-499,color=0x404245},
+	{x=-697,y=-505,color=0x0b3344},
+	{x=-1149,y=-373,color=0xd3d5dc},
+	{x=-169,y=-401,color=0xd3d5dc}
 	},
 	degree = 98
 }
@@ -509,20 +509,19 @@ view[view_reback_waifu_ac] = {
 --24--老婆分解-获得物品
 view[view_reback_get] = {
 	feature = {
-	{x=0,y=0,color=0x7d7d7d},
-	{x=91,y=294,color=0x45780c},
-	{x=93,y=353,color=0x19667b},
-	{x=288,y=96,color=0xd3d5dc},
-	{x=838,y=97,color=0xd3d5dc},
-	{x=497,y=130,color=0xd3d5dc},
-	{x=504,y=148,color=0xd3d5dc},
-	{x=497,y=332,color=0xd3d5dc},
-	{x=504,y=349,color=0xd3d5dc},
-	{x=1106,y=466,color=0x7d6502},
-	{x=1229,y=471,color=0x7d6502},
-	{x=578,y=314,color=0x1d303a},
-	{x=770,y=334,color=0x1f323f},
-	{x=1094,y=105,color=0x040b10}
+	{x=0,y=0,color=0xd3d5dc},
+	{x=7,y=14,color=0xd3d5dc},
+	{x=-5,y=196,color=0xd3d5dc},
+	{x=2,y=211,color=0xd3d5dc},
+	{x=233,y=76,color=0xffffff},
+	{x=223,y=75,color=0x2ad5fc},
+	{x=240,y=85,color=0x07c5f1},
+	{x=740,y=359,color=0x7d6502},
+	{x=628,y=398,color=0x7d6502},
+	{x=-492,y=-135,color=0x7d7d7d},
+	{x=-402,y=161,color=0x45780c},
+	{x=-401,y=217,color=0x19667b},
+	{x=-393,y=85,color=0x7d6502}
 	},
 	degree = 98
 }

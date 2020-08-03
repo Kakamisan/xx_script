@@ -41,14 +41,15 @@ item[item_mission_over3] = {
 }
 
 item[item_A_waifu] = {
-	body = {479-415,248-245,489-415,258-245},
-	area = {158,80,1079,685},
+	body = {130-72,257-323,164-72,316-323},
+	area = {56,216,104,382},
 	feature = {
-		{x=0,y=0,color=0x13cbee},
-	{x=-3,y=14,color=0x10c0e9},
-	{x=-3,y=45,color=0x06b1e5},
-	{x=1,y=47,color=0x05b1e3},
-	{x=0,y=24,color=0x0cbae6}
+		{x=0,y=0,color=0x12c7ec},
+	{x=4,y=-4,color=0x14caee},
+	{x=3,y=11,color=0x10c0e8},
+	{x=1,y=20,color=0x0cbae6},
+	{x=3,y=40,color=0x06b1e3},
+	{x=4,y=23,color=0x0bb8e5}
 	},
 	degree = 98
 }
