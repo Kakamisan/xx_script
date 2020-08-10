@@ -610,13 +610,13 @@ swc[swc_reback_b] = {
 }
 
 swc[swc_change_eqm] = {
-	body = {270,110,358,127},
-	area = {260,112,267,131},
+	body = {244,106,381,132},
+	area = {354,109,378,129},
 	feature = {
 		{x=0,y=0,color=0xffce00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x133347}
+		{x=0,y=0,color=0x11303e}
 	},
 	view = {view_reback}
 }
@@ -631,7 +631,7 @@ swc[swc_slc_all_b] = {
 		{x=0,y=0,color=0x96ec34}
 	},
 	degree = 95,
-	view = {view_reback_waifu}
+	view = {view_reback_waifu,view_reback_eqm}
 }
 
 return swc

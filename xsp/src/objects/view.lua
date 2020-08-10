@@ -830,5 +830,27 @@ view[view_reback_full] = {
 	degree = 98
 }
 
+--40--装备分解
+view[view_reback_eqm] = {
+	feature = {
+	{x=0,y=0,color=0xffffff},
+	{x=127,y=0,color=0xfeffff},
+	{x=371,y=0,color=0x4de40e},
+	{x=533,y=-6,color=0x27bffb},
+	{x=1166,y=88,color=0xffcf04},
+	{x=1165,y=132,color=0xffcf04},
+	{x=1185,y=151,color=0xffffff},
+	{x=1215,y=646,color=0xffe269},
+	{x=1215,y=672,color=0xffe269},
+	{x=1056,y=672,color=0xffe269},
+	{x=1051,y=634,color=0xffe269},
+	{x=1064,y=70,color=0xffcf04},
+	{x=1064,y=157,color=0xffcf04},
+	{x=1212,y=101,color=0xffffff},
+	{x=1202,y=87,color=0x000000}
+	},
+	degree = 95
+}
+
 
 return view

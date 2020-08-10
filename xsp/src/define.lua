@@ -197,6 +197,7 @@ view_full_bag2		= 36	--仓库满-自动
 view_notice			= 37	--上线公告
 view_rebacking		= 38	--分解-分解中
 view_reback_full	= 39	--分解-选取上限
+view_reback_eqm		= 40	--装备分解
 
 all_view = {
 	 1	,2	,3	,4	,5	,6	,8	,10	,11	,13
@@ -253,6 +254,7 @@ to_view_desc = {
 	,[view_notice] = "上线公告"
 	,[view_rebacking] = "分解-分解中"
 	,[view_reback_full] = "分解-选取上限"
+	,[view_reback_eqm] = "装备分解"
 }
 
 

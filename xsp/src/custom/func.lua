@@ -350,6 +350,24 @@ func[view_reback_waifu] = {
 			click_btn(btn_reback_slc_ok)
 		end
 	end,
+--	[target_reback2] = function()
+--		if reback_eqm_slc() then
+--			had_reback2 = true
+--			click_btn(btn_reback_slc_ok)
+--		end
+--	end,
+	[target_default] = function()
+		click_btn(btn_back_any)
+	end
+}
+
+func[view_reback_eqm] = {
+--	[target_reback] = function()
+--		if reback_waifu_slc() then
+--			had_reback = true
+--			click_btn(btn_reback_slc_ok)
+--		end
+--	end,
 	[target_reback2] = function()
 		if reback_eqm_slc() then
 			had_reback2 = true

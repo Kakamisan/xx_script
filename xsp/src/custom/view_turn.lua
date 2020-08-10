@@ -194,6 +194,7 @@ vt[view_creator] = {
 vt[view_reback] = {
 	view_reback
 	,view_reback_waifu
+	,view_reback_eqm
 	,view_reback_waifu_ac
 	,view_home
 	,view_slc_team
@@ -323,6 +324,14 @@ vt[view_rebacking] = {
 --39--分解-选取上限
 vt[view_reback_full] = {
 	view_reback_waifu_al
+	,view_reback
+	,view_reback_full
+}
+
+--40--装备分解
+vt[view_reback_eqm] = {
+	view_reback_eqm
+	,view_reback_waifu_al
 	,view_reback
 	,view_reback_full
 }
