@@ -1,7 +1,7 @@
 local pos = {}
 
 pos.rotate			= 1								--参考init的说明
-pos.dw,pos.dh		= 720,1280						--开发环境分辨率(需按自适应UI的基准比例开发)
+pos.dw,pos.dh		= 810,1440						--开发环境分辨率(需按自适应UI的基准比例开发)
 pos.cw,pos.ch 		= getScreenSize()				--当前设备分辨率
 
 pos.dx,pos.dy		= (function()					--开发环境下横轴坐标最大值

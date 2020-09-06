@@ -8,5 +8,48 @@
 	"cancelname" : "取消",
 	"okname" : "确定",
 	"views" : [
+	    {
+	        "align" : "left",
+	        "color" : "0,0,0",
+	        "size" : 20,
+	        "text" : "初始队伍组",
+	        "type" : "Label"
+        },
+	    {
+	        "id" : "InitTeam",
+	        "list" : "1,2,3,4",
+	        "select" : "0",
+	        "size" : 30,
+	        "type" : "RadioGroup",
+	        "orientation" : "horizontal",
+	        "color" : "0,0,225"
+        },
+		{
+	        "align" : "left",
+	        "color" : "0,0,0",
+	        "size" : 20,
+	        "text" : "换防时间",
+	        "type" : "Label"
+        },
+		{
+	        "id" : "T1",
+	        "align" : "left",
+	        "color" : "0,0,0",
+	        "kbtype" : "number",
+	        "prompt" : "多少秒",
+	        "size" : 25,
+	        "text" : "30",
+	        "type" : "Edit"
+        },
+		{
+	        "id" : "T2",
+	        "align" : "left",
+	        "color" : "0,0,0",
+	        "kbtype" : "number",
+	        "prompt" : "到多少秒",
+	        "size" : 25,
+	        "text" : "150",
+	        "type" : "Edit"
+        }
 	]
 }
