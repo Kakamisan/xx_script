@@ -3,7 +3,7 @@ require "util.private_util"
 --dlog("A = %d\nB = %d",123,321)	格式化打印（首参数是带格式字符串）
 --dlog("A = ",123,"\nB = ",321)		拼接打印
 function dlog(...)
-	if not debug_mode and not cfg.debug_mode then
+	if not debug_mode and not (cfg and cfg.debug_mode) then
 		return false
 	end
 	local t = {...}
@@ -15,7 +15,7 @@ function dlog(...)
 		str,cnt = string.gsub(str,"%%","")
 		if #t == cnt + 1 then
 			if debug_mode then print("[debug] "..string.format(...)) end
-			if cfg.debug_mode then hud(string.format(...),-1) end
+			if cfg and cfg.debug_mode then hud(string.format(...),-1) end
 			return true
 		end
 	end
