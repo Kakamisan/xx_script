@@ -24,7 +24,7 @@ function dlog(...)
 		str = str .. tostring(v)
 	end
 	if debug_mode then print("[debug] "..str) end
-	if cfg.debug_mode then hud(str,-1) end
+	if cfg and cfg.debug_mode then hud(str,-1) end
 	return true
 end
 
