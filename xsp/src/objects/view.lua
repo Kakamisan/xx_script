@@ -26,7 +26,8 @@ view[view_pjjc]	= {
 	{x=183,y=490,color=0x5a96f7},
 	{x=158,y=540,color=0x5a96f7},
 	{x=370,y=538,color=0x5a96f7}
-	}
+	},
+	degree = 95
 }
 
 view[view_pjjc_team]	= {
@@ -45,7 +46,8 @@ view[view_pjjc_team]	= {
 	{x=1026,y=603,color=0xffffff},
 	{x=1026,y=634,color=0xf7f7f7},
 	{x=1270,y=599,color=0x85d7ff}
-	}
+	},
+	degree = 95
 }
 
 view[view_slc_team]	= {
@@ -70,7 +72,8 @@ view[view_slc_team]	= {
 	{x=1206,y=551,color=0x4d94ff},
 	{x=1025,y=555,color=0x4a8eff},
 	{x=1026,y=377,color=0x4a8eff}
-	}
+	},
+	degree = 95
 }
 
 return view
