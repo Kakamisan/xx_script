@@ -4,7 +4,7 @@
 	"width" : 960,
 	"height" : 540,
 	"cancelscroll" : true,
-	"countdown" : 10,
+	"countdown" : 0,
 	"cancelname" : "取消",
 	"okname" : "确定",
 	"views" : [
