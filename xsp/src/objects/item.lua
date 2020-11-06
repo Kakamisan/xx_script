@@ -67,7 +67,7 @@ item[item_B_waifu] = {
 	{x=-1,y=38,color=0x199c09},
 	{x=-4,y=33,color=0x1b9e0b}
 	},
-	degree = 98
+	degree = 95
 }
 
 item[item_reback_scroll] = {
@@ -196,21 +196,22 @@ item[item_A_eqm] = {
 	{x=0,y=34,color=0x08b5e4},
 	{x=0,y=47,color=0x05b0e3}
 	},
-	degree = 98
+	degree = 95
 }
 
 item[item_B_eqm] = {
 	body = {618-558,432-433,630-558,443-433},
 	area = {158,80,1079,685},
 	feature = {
-	{x=0,y=0,color=0x26a914},
-	{x=-5,y=5,color=0x21a910},
-	{x=0,y=10,color=0x22a60f},
-	{x=-5,y=16,color=0x20a011},
-	{x=0,y=24,color=0x1da00d},
-	{x=0,y=49,color=0x189808}
+	{x=0,y=0,color=0x25a813},
+	{x=-2,y=3,color=0x24a713},
+	{x=0,y=15,color=0x1fa20f},
+	{x=-1,y=19,color=0x1ea10e},
+	{x=-1,y=24,color=0x1d9f0d},
+	{x=-1,y=34,color=0x1a9d09},
+	{x=-1,y=41,color=0x189b08}
 	},
-	degree = 98
+	degree = 95
 }
 
 return item
