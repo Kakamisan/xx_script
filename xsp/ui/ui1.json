@@ -281,8 +281,8 @@
          "views" : [
             {
                "id" : "auto_xy",
-               "list" : "自动坐标,快速模式",
-               "select" : "",
+               "list" : "自动坐标（失效）,快速模式",
+               "select" : "1",
                "size" : 30,
                "rect" : "10,0,1380,100",
                "type" : "CheckBoxGroup",
@@ -730,7 +730,7 @@
                "prompt" : "填坐标",
                "size" : 25,
                "rect" : "60,100,340,100",
-               "text" : "随手就是一个坐标;1000,800",
+               "text" : "58E眼睛;856,215",
                "type" : "Edit"
             },
             {
@@ -1495,7 +1495,7 @@
                "kbtype" : "number",
                "prompt" : "坐标基准值",
                "size" : 25,
-               "text" : "",
+               "text" : "720",
                "rect" : "10,110,300,100",
                "type" : "Edit"
             },
