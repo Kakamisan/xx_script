@@ -42,7 +42,7 @@ item[item_mission_over3] = {
 
 item[item_A_waifu] = {
 	body = {130-72,257-323,164-72,316-323},
-	area = {56,216,104,382},
+	area = {48,136,1030,709},
 	feature = {
 		{x=0,y=0,color=0x12c7ec},
 	{x=4,y=-4,color=0x14caee},
@@ -51,12 +51,12 @@ item[item_A_waifu] = {
 	{x=3,y=40,color=0x06b1e3},
 	{x=4,y=23,color=0x0bb8e5}
 	},
-	degree = 98
+	degree = 95
 }
 
 item[item_B_waifu] = {
 	body = {788-723,490-484,799-723,502-484},
-	area = {158,80,1079,685},
+	area = {48,136,1030,709},
 	feature = {
 		{x=0,y=0,color=0x25a814},
 	{x=-4,y=4,color=0x22a611},

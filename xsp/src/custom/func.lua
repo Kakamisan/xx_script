@@ -823,6 +823,7 @@ function reback_waifu_slc()
 			--			return false
 			--		end
 			swc_on(swc_slc_all_b)
+			sleep()
 		end
 		
 		need_sld = false
