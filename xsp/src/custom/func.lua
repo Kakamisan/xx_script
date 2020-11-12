@@ -55,7 +55,7 @@ func[view_pjjc_team] = {
 		sleep()
 		while(not in_view(view_slc_team)) do
 			click_btn(btn_my_team)
-			sleep()
+			sleep(800)
 		end
 	end
 }
@@ -72,14 +72,14 @@ func[view_slc_team] = {
 		sleep()
 		while(not in_view(view_pjjc_team)) do
 			click_btn(config[2])
-			sleep()
+			sleep(800)
 		end
 		--sleep()
 		while(not swc_on(swc_team2)) do sleep() end
 		sleep()
 		while(not in_view(view_slc_team)) do
 			click_btn(btn_my_team)
-			sleep()
+			sleep(800)
 		end
 		--sleep()
 		
@@ -87,14 +87,14 @@ func[view_slc_team] = {
 		sleep()
 		while(not in_view(view_pjjc_team)) do
 			click_btn(config[3])
-			sleep()
+			sleep(800)
 		end
 		--sleep()
 		while(not swc_on(swc_team3)) do sleep() end
 		sleep()
 		while(not in_view(view_slc_team)) do
 			click_btn(btn_my_team)
-			sleep()
+			sleep(800)
 		end
 		--sleep()
 		
@@ -102,7 +102,7 @@ func[view_slc_team] = {
 		sleep()
 		while(not in_view(view_pjjc_team)) do
 			click_btn(config[4])
-			sleep()
+			sleep(800)
 		end
 		--sleep()
 		
