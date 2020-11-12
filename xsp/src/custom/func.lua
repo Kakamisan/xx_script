@@ -13,8 +13,9 @@ func[view_pjjc] = {
 	[target_wait] = function()
 		if mTime()>state.next_ts then
 			state.target = target_default
+			state.next_ts = mTime() + math.random(cfg.T1,cfg.T2)*1000
 		else
-		dlog("下一次换防:",(state.next_ts - mTime())/1000,"秒后")
+			dlog("下一次换防:",(state.next_ts - mTime())/1000,"秒后")
 			sleep()
 		end
 	end,
@@ -52,7 +53,10 @@ func[view_pjjc_team] = {
 		
 		while(not swc_on(swc_team1)) do sleep() end
 		sleep()
-		click_btn(btn_my_team)
+		while(not in_view(view_slc_team)) do
+			click_btn(btn_my_team)
+			sleep()
+		end
 	end
 }
 
@@ -66,28 +70,43 @@ func[view_slc_team] = {
 		
 		while(not swc_on(config[1])) do sleep() end
 		sleep()
-		click_btn(config[2])
-		sleep()
+		while(not in_view(view_pjjc_team)) do
+			click_btn(config[2])
+			sleep()
+		end
+		--sleep()
 		while(not swc_on(swc_team2)) do sleep() end
 		sleep()
-		click_btn(btn_my_team)
-		sleep()
+		while(not in_view(view_slc_team)) do
+			click_btn(btn_my_team)
+			sleep()
+		end
+		--sleep()
 		
 		while(not swc_on(config[1])) do sleep() end
 		sleep()
-		click_btn(config[3])
-		sleep()
+		while(not in_view(view_pjjc_team)) do
+			click_btn(config[3])
+			sleep()
+		end
+		--sleep()
 		while(not swc_on(swc_team3)) do sleep() end
 		sleep()
-		click_btn(btn_my_team)
-		sleep()
+		while(not in_view(view_slc_team)) do
+			click_btn(btn_my_team)
+			sleep()
+		end
+		--sleep()
 		
 		while(not swc_on(config[1])) do sleep() end
 		sleep()
-		click_btn(config[4])
-		sleep()
+		while(not in_view(view_pjjc_team)) do
+			click_btn(config[4])
+			sleep()
+		end
+		--sleep()
 		
-		state.next_ts = mTime() + math.random(cfg.T1,cfg.T2)*1000
+		--state.next_ts = mTime() + math.random(cfg.T1,cfg.T2)*1000
 		state.target = target_wait
 	end
 }

@@ -38,8 +38,16 @@ team_slc = {1,9,17,19,3,11,13,21,5,7,15,23,2,10,18,20,4,12,14,22,6,8,16,24,}
 team_slc_n = cfg.InitTeam
 
 function next_team_slc()
-	if team_slc_n > 24 then
-		team_slc_n = 1
+	if cfg.InitTeam == 5 then
+		local tmp = math.random(1,24)
+		while(tmp==team_slc_n) do
+			tmp = math.random(1,24)
+		end
+		team_slc_n = tmp
+	else
+		if team_slc_n > 24 then
+			team_slc_n = 1
+		end
 	end
 	local slc = team_slc[team_slc_n]
 	team_slc_n = team_slc_n + 1

@@ -17,7 +17,7 @@
         },
 	    {
 	        "id" : "InitTeam",
-	        "list" : "1,2,3,4",
+	        "list" : "1,2,3,4,R",
 	        "select" : "0",
 	        "size" : 30,
 	        "type" : "RadioGroup",
