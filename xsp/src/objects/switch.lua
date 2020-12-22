@@ -106,6 +106,19 @@ swc[swc_chapter7] = {
 	view = {view_slc_dg_main}
 }
 
+swc[swc_chapter8] = {
+	body = {1178,510,1256,536},
+	area = {1267,515,1276,527},
+	feature = {
+		{x=0,y=0,color=0xffcc00}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x3a3f42}
+	},
+	degree = 70,
+	view = {view_slc_dg_main}
+}
+
 swc[swc_fb_1] = {
 	body = {303-80,424,335-80,440},
 	area = {297-80,433,299-80,437},
@@ -632,6 +645,54 @@ swc[swc_slc_all_b] = {
 	},
 	degree = 95,
 	view = {view_reback_waifu,view_reback_eqm}
+}
+
+swc[swc_reback_ss_eqm] = {
+	body = {1114,273,1154,293},
+	area = {1157,288,1164,298},
+	feature = {
+		{x=0,y=0,color=0xffcf04}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x292929}
+	},
+	view = {view_reback_eqm}
+}
+
+swc[swc_reback_s_eqm] = {
+	body = {1200,272,1242,291},
+	area = {1241,286,1249,297},
+	feature = {
+		{x=0,y=0,color=0xffcf04}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x292929}
+	},
+	view = {view_reback_eqm}
+}
+
+swc[swc_reback_a_eqm] = {
+	body = {1111,325,1159,345},
+	area = {1153,337,1160,346},
+	feature = {
+		{x=0,y=0,color=0xffcf04}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x292929}
+	},
+	view = {view_reback_eqm}
+}
+
+swc[swc_reback_b_eqm] = {
+	body = {1198,325,1238,345},
+	area = {1242,336,1251,347},
+	feature = {
+		{x=0,y=0,color=0xffcf04}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x292929}
+	},
+	view = {view_reback_eqm}
 }
 
 return swc

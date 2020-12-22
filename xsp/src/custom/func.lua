@@ -389,6 +389,7 @@ func[view_reback_waifu_al] = {
 func[view_reback_waifu_ac] = {
 	[target_default] = function()
 		click_btn(btn_ack1)
+		timeout({count = 20,sleep = 500},in_view,view_reback_get)
 	end
 }
 
@@ -586,9 +587,9 @@ handle_change_target = {
 
 --章节是否是活动章节
 function is_event(C)
-	if C == 8
-	or C == 9
+	if C == 9
 	or C == 10
+	or C == 11
 	then return true end
 	return false
 end
@@ -611,10 +612,11 @@ chapter_swc = {
 	[5] = swc_chapter5,
 	[6] = swc_chapter6,
 	[7] = swc_chapter7,
+	[8] = swc_chapter8,
 	
-	[8] = swc_chapter1,
-	[9] = swc_chapter2,
-	[10] = swc_chapter3
+	[9] = swc_chapter1,
+	[10] = swc_chapter2,
+	[11] = swc_chapter3
 }
 sub_fb_swc = {
 	[1] = swc_fb_1,
@@ -848,18 +850,18 @@ function reback_waifu_slc()
 end
 
 function reback_eqm_slc()
-	--	if not swc_off(swc_reback_ss) then return false end
-	--	if not swc_off(swc_reback_s) then return false end
-	--	if slc(cfg.reback2,freback_A_eqm) then
-	--		if not swc_on(swc_reback_a) then return false end
-	--	else
-	--		if not swc_off(swc_reback_a) then return false end
-	--	end
-	--	if slc(cfg.reback2,freback_B_eqm) then
-	--		if not swc_on(swc_reback_b) then return false end
-	--	else
-	--		if not swc_off(swc_reback_b) then return false end
-	--	end
+	if not swc_off(swc_reback_ss_eqm) then return false end
+	if not swc_off(swc_reback_s_eqm) then return false end
+	if slc(cfg.reback2,freback_A_eqm) then
+		if not swc_on(swc_reback_a_eqm) then return false end
+	else
+		if not swc_off(swc_reback_a_eqm) then return false end
+	end
+	if slc(cfg.reback2,freback_B_eqm) then
+		if not swc_on(swc_reback_b_eqm) then return false end
+	else
+		if not swc_off(swc_reback_b_eqm) then return false end
+	end
 	if slc(cfg.reback2,freback_A_eqm) then
 		if find_item(item_A_eqm) then
 			click_item(item_A_eqm)

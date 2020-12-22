@@ -110,6 +110,7 @@ vt[view_bt_waiting] = {
 --10--战斗中-捞到老婆
 vt[view_bt_get_waifu] = {
 	view_bt_get_waifu
+	,view_bt_waiting
 	,view_bt_next
 	,view_bt_over
 	,view_level_up
@@ -138,8 +139,8 @@ vt[view_bt_over] = {
 	,view_stop_repeat
 	,view_full_bag
 	,view_full_bag2
-	,view_level_up
 	,view_need_repair
+--	,view_level_up
 --	,view_re_connect
 }
 

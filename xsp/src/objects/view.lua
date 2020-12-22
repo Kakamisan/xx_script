@@ -114,7 +114,7 @@ view[view_bt_slc_acn] = {
 	{x=1215,y=571,color=0xfff145},
 	{x=1212,y=577,color=0xfff145}
 	},
-	degree = 98
+	degree = 95
 }
 
 --6--战斗中-播报中
@@ -136,7 +136,7 @@ view[view_bt_playing] = {
 	{x=-77,y=638,color=0x2d2d2d},
 	{x=-71,y=630,color=0xb4bbab}
 	},
-	degree = 98
+	degree = 95
 }
 
 --7--战斗中-播报中-下面是蓝色点（弃用）
@@ -148,7 +148,7 @@ view[view_bt_playing2] = {
 	{x=-191+1264,y=589+28,color=0x21f7ff},
 	{x=-297+1264,y=657+28,color=0xffcc00}
 	},
-	degree = 98
+	degree = 95
 }
 
 --8--战斗中-战斗经验结算
@@ -169,7 +169,7 @@ view[view_bt_report] = {
 	{x=1265,y=88,color=0xffe300},
 	{x=1263,y=57,color=0xffe300}
 	},
-	degree = 98
+	degree = 95
 }
 
 --34--战斗中-战斗经验结算
@@ -190,7 +190,7 @@ view[view_bt_report2] = {
 	{x=1265,y=88,color=0xffe300},
 	{x=1263,y=57,color=0xffe300}
 	},
-	degree = 98
+	degree = 95
 }
 
 --9--战斗中-打捞老婆
@@ -236,7 +236,7 @@ view[view_bt_get_waifu] = {
 	{x=1072,y=498,color=0xffbd00},
 	{x=1143,y=601,color=0xfecb00}
 	},
-	degree = 98
+	degree = 95
 }
 
 --11--战斗中-下一波
@@ -259,7 +259,7 @@ view[view_bt_next] = {
 	{x=1144,y=11,color=0xffffff},
 	{x=1148,y=8,color=0xffffff}
 	},
-	degree = 98
+	degree = 95
 }
 
 --12--战斗中-赶路到下一波（弃用）
@@ -271,7 +271,7 @@ view[view_bt_moving] = {
 	{x=1388+19,y=13+18,color=0xffcb00},
 	{x=1371+19,y=18+18,color=0xfec900}
 	},
-	degree = 98,
+	degree = 95,
 --	disable = {
 --	{x=1320+20,y=7+17,color=0xffcc00},
 --	{x=1379+20,y=647+17,color=0xe7b540}
@@ -297,7 +297,7 @@ view[view_bt_over] = {
 	{x=1228,y=676,color=0xeabf17},
 	{x=682,y=572,color=0xd8bf2a}
 	},
-	degree = 98
+	degree = 95
 }
 
 --14--选择是否停止反复战斗
@@ -340,7 +340,7 @@ view[view_ctn_mission] = {
 	{x=115,y=188,color=0xffc704},
 	{x=114,y=101,color=0xffc704}
 	},
-	degree = 98
+	degree = 95
 }
 
 --16--主页-玩家信息
@@ -365,7 +365,7 @@ view[view_player_info] = {
 	{x=734,y=-351,color=0xffcc00},
 	{x=742,y=-4,color=0x5e5e67}
 	},
-	degree = 98
+	degree = 95
 }
 
 --17--载入
@@ -410,7 +410,7 @@ view[view_bt_enemy_acn] = {
 	{x=1182,y=619,color=0xcecece},
 	{x=1188,y=653,color=0xcecece}
 	},
-	degree = 98
+	degree = 95
 }
 
 --19--建造中心
@@ -465,7 +465,7 @@ view[view_reback_waifu] = {
 	{x=1061,y=654,color=0xffe269},
 	{x=1220,y=671,color=0xffe269}
 	},
-	degree = 98
+	degree = 95
 }
 
 --22--老婆分解-分A级以上弹窗警告
@@ -484,7 +484,7 @@ view[view_reback_waifu_al] = {
 	{x=1212,y=666,color=0x403b20},
 	{x=1199,y=129,color=0x0e1013}
 	},
-	degree = 98
+	degree = 95
 }
 
 --23--老婆分解-确定分解
@@ -503,7 +503,7 @@ view[view_reback_waifu_ac] = {
 	{x=-1149,y=-373,color=0xd3d5dc},
 	{x=-169,y=-401,color=0xd3d5dc}
 	},
-	degree = 98
+	degree = 95
 }
 
 --24--老婆分解-获得物品
@@ -523,7 +523,7 @@ view[view_reback_get] = {
 	{x=-401,y=217,color=0x19667b},
 	{x=-393,y=85,color=0x7d6502}
 	},
-	degree = 98
+	degree = 95
 }
 
 --25--战斗中-撤退
@@ -545,7 +545,7 @@ view[view_bt_quit] = {
 	{x=1252,y=57,color=0x7d6f00},
 	{x=1219,y=89,color=0x7d6f00}
 	},
-	degree = 98
+	degree = 95
 }
 
 --35--战斗中-撤退2
@@ -567,7 +567,7 @@ view[view_bt_quit2] = {
 	{x=714,y=-369,color=0x7d7d7d},
 	{x=714,y=-375,color=0x7d7d7d}
 	},
-	degree = 98
+	degree = 95
 }
 
 --26--仓库满了(手动)
@@ -587,7 +587,7 @@ view[view_full_bag] = {
 	{x=836,y=552,color=0xfdc804},
 	{x=1089,y=539,color=0x403506}
 	},
-	degree = 98
+	degree = 95
 }
 
 --27--升级
@@ -607,7 +607,7 @@ view[view_level_up] = {
 	{x=364,y=451,color=0xfdc804},
 	{x=350,y=399,color=0xfeca01}
 	},
-	degree = 98
+	degree = 95
 }
 
 --28--修复
@@ -631,7 +631,7 @@ view[view_need_repair] = {
 	{x=986,y=551,color=0x43790e},
 	{x=1094,y=559,color=0x0e6379}
 	},
-	degree = 98
+	degree = 95
 }
 
 --29--重连
@@ -651,7 +651,7 @@ view[view_re_connect] = {
 	{x=364,y=451,color=0xfdc804},
 	{x=350,y=399,color=0xfeca01}
 	},
-	degree = 98
+	degree = 95
 }
 
 --30--装备分解-获得物品
@@ -673,7 +673,7 @@ view[view_reback_get2] = {
 	{x=535,y=574,color=0xffc903},
 	{x=680,y=542,color=0xffc904}
 	},
-	degree = 98
+	degree = 95
 }
 
 --31--掉线重连2（弃用）
@@ -723,7 +723,7 @@ view[view_title] = {
 	{x=817,y=316,color=0xffffff},
 	{x=948,y=289,color=0xffffff}
 	},
-	degree = 98
+	degree = 95
 }
 
 --33--EVENT活动信息页
@@ -747,7 +747,7 @@ view[view_event] = {
 	{x=995,y=165,color=0xffd951},
 	{x=974,y=145,color=0xffc704}
 	},
-	degree = 98
+	degree = 95
 }
 
 --36--仓库满了(自动)
@@ -768,7 +768,7 @@ view[view_full_bag2] = {
 	{x=1153,y=0,color=0x20232a},
 	{x=623,y=-7,color=0x181a21}
 	},
-	degree = 98
+	degree = 95
 }
 
 --37--上线公告
@@ -786,7 +786,7 @@ view[view_notice] = {
 	{x=696,y=555,color=0x3b3b42},
 	{x=1008,y=565,color=0x68767a}
 	},
-	degree = 98
+	degree = 95
 }
 
 --38--分解-分解中
@@ -805,7 +805,7 @@ view[view_rebacking] = {
 	{x=729,y=513,color=0x32495e},
 	{x=493,y=503,color=0x2f485a}
 	},
-	degree = 98
+	degree = 95
 }
 
 --39--分解-选取上限
@@ -827,7 +827,7 @@ view[view_reback_full] = {
 	{x=558,y=556,color=0xfdc804},
 	{x=1071,y=131,color=0x0e1013}
 	},
-	degree = 98
+	degree = 95
 }
 
 --40--装备分解
