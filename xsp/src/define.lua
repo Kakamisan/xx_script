@@ -146,6 +146,8 @@ swc_reback_ss_eqm= 49	--分解-筛选ss
 swc_reback_s_eqm= 50	--分解-筛选s
 swc_reback_a_eqm= 51	--分解-筛选a
 swc_reback_b_eqm= 52	--分解-筛选b
+swc_reback_sss_eqm= 53	--分解-筛选sss
+swc_reback_no_eqm= 54	--分解-筛选狗粮
 
 
 

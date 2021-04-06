@@ -635,8 +635,8 @@ swc[swc_change_eqm] = {
 }
 
 swc[swc_slc_all_b] = {
-	body = {1107,605,1242,628},
-	area = {1083,597,1093,608},
+	body = {1084,603,1266,624},
+	area = {1253,607,1269,623},
 	feature = {
 		{x=0,y=0,color=0xda6666}
 	},
@@ -648,8 +648,8 @@ swc[swc_slc_all_b] = {
 }
 
 swc[swc_reback_ss_eqm] = {
-	body = {1114,273,1154,293},
-	area = {1157,288,1164,298},
+	body = {1107,311,1165,340},
+	area = {1153,313,1165,334},
 	feature = {
 		{x=0,y=0,color=0xffcf04}
 	},
@@ -660,8 +660,8 @@ swc[swc_reback_ss_eqm] = {
 }
 
 swc[swc_reback_s_eqm] = {
-	body = {1200,272,1242,291},
-	area = {1241,286,1249,297},
+	body = {1193,314,1250,339},
+	area = {1238,319,1249,336},
 	feature = {
 		{x=0,y=0,color=0xffcf04}
 	},
@@ -672,8 +672,8 @@ swc[swc_reback_s_eqm] = {
 }
 
 swc[swc_reback_a_eqm] = {
-	body = {1111,325,1159,345},
-	area = {1153,337,1160,346},
+	body = {1107,357,1156,383},
+	area = {1150,363,1162,379},
 	feature = {
 		{x=0,y=0,color=0xffcf04}
 	},
@@ -684,8 +684,32 @@ swc[swc_reback_a_eqm] = {
 }
 
 swc[swc_reback_b_eqm] = {
-	body = {1198,325,1238,345},
-	area = {1242,336,1251,347},
+	body = {1195,357,1243,380},
+	area = {1234,361,1248,379},
+	feature = {
+		{x=0,y=0,color=0xffcf04}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x292929}
+	},
+	view = {view_reback_eqm}
+}
+
+swc[swc_reback_sss_eqm] = {
+	body = {1144,269,1210,292},
+	area = {1206,274,1217,289},
+	feature = {
+		{x=0,y=0,color=0xffcf04}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x292929}
+	},
+	view = {view_reback_eqm}
+}
+
+swc[swc_reback_no_eqm] = {
+	body = {1196,528,1245,553},
+	area = {1242,534,1252,551},
 	feature = {
 		{x=0,y=0,color=0xffcf04}
 	},

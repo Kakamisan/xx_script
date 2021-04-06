@@ -25,7 +25,7 @@ btn[btn_world] = {
 
 --3--
 btn[btn_main_story] = {
-	body = {863,397,955,502},
+	body = {891,390,1018,510},
 	view = {view_slc_dg_type}
 }
 
@@ -225,7 +225,7 @@ btn[btn_ack3] = {
 }
 
 btn[btn_event] = {
-	body = {381,258,436,310}
+	body = {749,185,829,264}
 }
 
 btn[btn_event_enter] = {

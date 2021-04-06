@@ -1594,6 +1594,16 @@
                "color" : "0,0,225"
             },
             {
+               "id" : "active_reback",
+               "list" : "主动分解",
+               "select" : "",
+               "size" : 30,
+               "rect" : "10,300,300,100",
+               "type" : "CheckBoxGroup",
+               "orientation" : "horizontal",
+               "color" : "0,0,225"
+            },
+            {
                "id" : "reback_time",
                "align" : "left",
                "color" : "0,0,0",
@@ -1601,14 +1611,14 @@
                "prompt" : "分解间隔",
                "size" : 25,
                "text" : "3000,4000",
-               "rect" : "10,280,300,100",
+               "rect" : "210,280,300,100",
                "type" : "Edit"
             },
             {
                "align" : "left",
                "color" : "0,0,0",
                "size" : 20,
-               "rect" : "320,320,1000,100",
+               "rect" : "520,320,1000,100",
                "text" : "分解间隔：默认3000,4000，意思为随机3000~4000秒",
                "bg" : "",
                "type" : "Label"

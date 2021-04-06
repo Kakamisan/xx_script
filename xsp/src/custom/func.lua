@@ -288,7 +288,7 @@ func[view_sys_online] = {
 
 --非闹钟下定时出去收远征
 function do_clock_reback()
-	if mTime() > state.clock_reback and cfg.main ~= fmain_alarm then
+	if mTime() > state.clock_reback and cfg.main ~= fmain_alarm and slc(cfg.active_reback,0) then
 		state.clock_reback = mTime() + math.random(cfg.reback_time[1],cfg.reback_time[2])*1000
 		if can_to_target_reback() then
 			
@@ -362,12 +362,9 @@ func[view_reback_waifu] = {
 }
 
 func[view_reback_eqm] = {
---	[target_reback] = function()
---		if reback_waifu_slc() then
---			had_reback = true
---			click_btn(btn_reback_slc_ok)
---		end
---	end,
+	[target_reback] = function()
+		state.target = target_reback2
+	end,
 	[target_reback2] = function()
 		if reback_eqm_slc() then
 			had_reback2 = true
@@ -701,8 +698,8 @@ handle_stop_repeat = {
 	--	[fmain_auto] = function()
 	[default] = function()
 		if not had_do_stop_repeat and find_item(item_mission_over) then
-			had_do_stop_repeat = true
 			if math.random(1,10) > 3 or stop_repeat_auto_count >= cfg.misscnt then
+				had_do_stop_repeat = true
 				stop_repeat_auto_count = 0
 				can_to_target_mission()
 			else
@@ -852,6 +849,8 @@ end
 function reback_eqm_slc()
 	if not swc_off(swc_reback_ss_eqm) then return false end
 	if not swc_off(swc_reback_s_eqm) then return false end
+	if not swc_off(swc_reback_sss_eqm) then return false end
+	if not swc_off(swc_reback_no_eqm) then return false end
 	if slc(cfg.reback2,freback_A_eqm) then
 		if not swc_on(swc_reback_a_eqm) then return false end
 	else

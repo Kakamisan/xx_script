@@ -37,7 +37,7 @@ item[item_mission_over3] = {
 	feature = {
 		{x=0,y=0,color=0x426600}
 	},
-	degree = 98
+	degree = 95
 }
 
 item[item_A_waifu] = {
@@ -186,15 +186,18 @@ item[item_target_set] = {
 }
 
 item[item_A_eqm] = {
-	body = {312-251,220-220,323-251,233-220},
-	area = {158,80,1079,685},
+	body = {133-74,254-311,155-74,283-311},
+	area = {59,158,1015,695},
 	feature = {
-	{x=0,y=0,color=0x13caf0},
-	{x=-3,y=3,color=0x10c6ef},
-	{x=0,y=11,color=0x10c2ea},
-	{x=-3,y=16,color=0x10bfe8},
-	{x=0,y=34,color=0x08b5e4},
-	{x=0,y=47,color=0x05b0e3}
+	{x=0,y=0,color=0x11caed},
+	{x=3,y=-2,color=0x14cbef},
+	{x=1,y=18,color=0x0cbde7},
+	{x=2,y=24,color=0x0abbe7},
+	{x=1,y=34,color=0x08b5e3},
+	{x=3,y=25,color=0x0bbbe7},
+	{x=134,y=-132,color=0x00dfff},
+	{x=107,y=-118,color=0x00dfff},
+	{x=133,y=-106,color=0x00e0ff}
 	},
 	degree = 95
 }
