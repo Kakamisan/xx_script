@@ -37,37 +37,38 @@ view[view_home] = {
 view[view_slc_dg_type] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=128,y=-4,color=0xffffff},
-	{x=941,y=557,color=0x50b9f4},
-	{x=1222,y=521,color=0x44d0a7},
-	{x=1115,y=521,color=0x44d0a7},
-	{x=767,y=635,color=0x30a796},
-	{x=807,y=600,color=0x3b9e86},
-	{x=1116,y=260,color=0x37b9e1},
-	{x=1142,y=244,color=0x3db2ea},
-	{x=220,y=635,color=0x2fb7d9},
-	{x=553,y=635,color=0x2f8484},
-	{x=953,y=16,color=0x2ac3d1},
-	{x=563,y=104,color=0x38937a},
-	{x=523,y=130,color=0x348f7f}
+	{x=-7,y=7,color=0xffffff},
+	{x=2,y=15,color=0xffffff},
+	{x=129,y=1,color=0xffffff},
+	{x=100,y=11,color=0xffffff},
+	{x=1081,y=23,color=0x2db7c8},
+	{x=1233,y=528,color=0x44d0a7},
+	{x=-35,y=137,color=0x37d4d5},
+	{x=184,y=642,color=0x2fb7d9},
+	{x=-25,y=375,color=0x202c38}
 	},
-	degree = 93
+	degree = 95
 }
 
 --3--选择主线副本，6-8，5-8e等
 view[view_slc_dg_main] = {
 	feature = {
-	{x=0,y=0,color=0xffffff},
-	{x=-62,y=21,color=0xffffff},
-	{x=-94,y=113,color=0x8bf421},
-	{x=-106,y=171,color=0x1fc4ed},
-	{x=-41,y=321,color=0x55544d},
-	{x=61,y=321,color=0xffc704},
-	{x=409,y=299,color=0xffc704},
-	{x=967,y=300,color=0xffc704},
-	{x=986,y=308,color=0xffffff}
+	{x=0,y=0,color=0x242323},
+	{x=7,y=9,color=0x242323},
+	{x=-1,y=15,color=0x242222},
+	{x=87,y=-13,color=0xffcc00},
+	{x=1157,y=632,color=0xffc704},
+	{x=1242,y=654,color=0xffc703},
+	{x=514,y=502,color=0xffc704},
+	{x=540,y=529,color=0xffc704},
+	{x=238,y=530,color=0xffc900},
+	{x=190,y=569,color=0x8dffff},
+	{x=1,y=375,color=0x1cc9f2},
+	{x=14,y=320,color=0x8ff51e},
+	{x=33,y=203,color=0x30a0df},
+	{x=113,y=209,color=0xffffff}
 	},
-	degree = 97
+	degree = 93
 }
 
 --4--选择队伍，队伍1，队伍5等

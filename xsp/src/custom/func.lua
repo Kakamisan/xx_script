@@ -793,6 +793,7 @@ need_sld = false
 function reback_waifu_slc()
 	if not swc_off(swc_reback_ss) then return false end
 	if not swc_off(swc_reback_s) then return false end
+	if not swc_off(swc_reback_no) then return false end
 	if slc(cfg.reback,freback_A_waifu) then
 		if not swc_on(swc_reback_a) then return false end
 	else
