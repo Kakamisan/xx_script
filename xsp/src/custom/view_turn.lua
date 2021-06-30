@@ -53,11 +53,11 @@ vt[view_bt_slc_acn] = {
 
 --6--战斗中-播报中-下面是绿色点
 vt[view_bt_playing] = {
-	view_bt_playing
-	,view_bt_slc_acn
+	view_bt_slc_acn
 	,view_bt_enemy_acn
 	,view_bt_report
 	,view_bt_report2
+	,view_bt_playing
 }
 
 --7--战斗中-播报中-下面是蓝色点

@@ -15,20 +15,17 @@ view[view_sample]	= {
 --1--主页
 view[view_home] = {
 	feature = {
-	{x=0,y=0,color=0x30b8df},
-	{x=52,y=19,color=0x309fdf},
-	{x=126,y=27,color=0xffffff},
-	{x=137,y=-1,color=0xffffff},
-	{x=20,y=116,color=0x85f11b},
-	{x=30,y=114,color=0x8bf421},
-	{x=36,y=117,color=0x86f019},
-	{x=33,y=158,color=0x20d8f7},
-	{x=17,y=172,color=0x1fc4ed},
-	{x=33,y=166,color=0x21cbef},
-	{x=989,y=229,color=0x665850},
-	{x=1031,y=270,color=0x248ca2},
-	{x=1048,y=258,color=0x44423b},
-	{x=1065,y=254,color=0x44423b}
+	{x=0,y=0,color=0x309fdf},
+	{x=-3,y=19,color=0x3399dd},
+	{x=7,y=27,color=0xffffff},
+	{x=80,y=1,color=0xffffff},
+	{x=-20,y=117,color=0x86f11a},
+	{x=-36,y=170,color=0x1cc9f2},
+	{x=-22,y=167,color=0x1ecbed},
+	{x=1204,y=-199,color=0xf3f9fc},
+	{x=994,y=134,color=0x8bffff},
+	{x=1009,y=145,color=0x82ffff},
+	{x=1026,y=133,color=0x86ffff}
 	},
 	degree = 95
 }
@@ -120,21 +117,30 @@ view[view_bt_slc_acn] = {
 --6--战斗中-播报中
 view[view_bt_playing] = {
 	feature = {
-	{x=0,y=0,color=0xffffff},
-	{x=7,y=0,color=0xffffff},
-	{x=66,y=4,color=0xffffff},
-	{x=71,y=2,color=0xffffff},
-	{x=62,y=6,color=0xffffff},
-	{x=129,y=-6,color=0xffe300},
-	{x=175,y=-7,color=0xffe300},
-	{x=179,y=8,color=0xffe300},
-	{x=127,y=52,color=0xffe300},
-	{x=185,y=50,color=0xffe300},
-	{x=-67,y=640,color=0x2b2c2b},
-	{x=-65,y=626,color=0x393a3a},
-	{x=-75,y=627,color=0x39393a},
-	{x=-77,y=638,color=0x2d2d2d},
-	{x=-71,y=630,color=0xb4bbab}
+--	{x=0,y=0,color=0xffffff},
+--	{x=7,y=0,color=0xffffff},
+--	{x=66,y=4,color=0xffffff},
+--	{x=71,y=2,color=0xffffff},
+--	{x=62,y=6,color=0xffffff},
+--	{x=129,y=-6,color=0xffe300},
+--	{x=175,y=-7,color=0xffe300},
+--	{x=179,y=8,color=0xffe300},
+--	{x=127,y=52,color=0xffe300},
+--	{x=185,y=50,color=0xffe300},
+--	{x=-67,y=640,color=0x2b2c2b},
+--	{x=-65,y=626,color=0x393a3a},
+--	{x=-75,y=627,color=0x39393a},
+--	{x=-77,y=638,color=0x2d2d2d},
+--	{x=-71,y=630,color=0xb4bbab}
+{x=0,y=0,color=0xffffff},
+	{x=63,y=-2,color=0xffffff},
+	{x=125,y=1,color=0xffffff},
+	{x=187,y=-9,color=0xffe300},
+	{x=233,y=-6,color=0xffe300},
+	{x=190,y=51,color=0xffe300},
+	{x=244,y=82,color=0xffe300},
+	{x=-379,y=667,color=0xe8b101},
+	{x=-324,y=669,color=0xe7b002}
 	},
 	degree = 95
 }
