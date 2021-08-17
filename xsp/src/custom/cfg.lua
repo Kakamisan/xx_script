@@ -14,6 +14,7 @@ cfg.extra_do= tonumber(cfg.extra_do)
 cfg.btcount = tonumber(cfg.btcount)
 cfg.xy_base = tonumber(cfg.xy_base)
 cfg.actionslc = tonumber(cfg.actionslc)+1
+cfg.old_event = tonumber(cfg.old_event)
 cfg.debug_mode = slc(cfg.debug_mode, 0)
 
 

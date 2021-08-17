@@ -229,11 +229,27 @@ btn[btn_event] = {
 }
 
 btn[btn_event_enter] = {
-	body = {1216,148,1258,185}
+	body = {1131,590,1258,640}
 }
 
 btn[btn_reback_scroll_bottom] = {
 	body = {1093,690,1099,696}
+}
+
+btn[btn_old_event_1] = {
+	body = {240,601,338,643}
+}
+
+btn[btn_old_event_2] = {
+	body = {486,599,582,636}
+}
+
+btn[btn_old_event_3] = {
+	body = {706,606,802,634}
+}
+
+btn[btn_old_event_4] = {
+	body = {900,607,971,631}
 }
 
 return btn

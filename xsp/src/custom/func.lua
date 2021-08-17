@@ -464,7 +464,26 @@ func[view_title] = {
 
 func[view_event] = {
 	[target_default] = function()
-		click_btn(btn_event_enter)
+		if is_old_event() then
+			--切换到复刻界面
+			while not swc_on(swc_old_event) do
+				sleep()
+			end
+			--点标签点两次增加容错
+			for i=1,2,1 do
+			if cfg.old_event == 1 then click_btn(btn_old_event_1)
+			elseif cfg.old_event == 2 then click_btn(btn_old_event_2)
+			elseif cfg.old_event == 3 then click_btn(btn_old_event_3)
+			elseif cfg.old_event == 4 then click_btn(btn_old_event_4)
+			else end
+			sleep()
+			end
+			click_btn(btn_event_enter)
+			--再等待一会，防卡
+			sleep()
+		else
+			click_btn(btn_event_enter)
+		end
 	end
 }
 
@@ -587,6 +606,13 @@ function is_event(C)
 	if C == 9
 	or C == 10
 	or C == 11
+	then return true end
+	return false
+end
+
+--章节是否复刻活动
+function is_old_event()
+	if cfg.old_event > 0
 	then return true end
 	return false
 end

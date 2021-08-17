@@ -52,6 +52,11 @@ btn_event		= 49	--选副本类型-活动EVENT
 btn_event_enter = 50	--活动EVENT-进入
 btn_reback_scroll_bottom = 51	--分解滚动条最底端
 
+btn_old_event_1	= 52	-- 复刻活动标签1
+btn_old_event_2	= 53	-- 复刻活动标签2
+btn_old_event_3	= 54	-- 复刻活动标签3
+btn_old_event_4	= 55	-- 复刻活动标签4
+
 
 
 item_sample			= 1
@@ -149,6 +154,7 @@ swc_reback_b_eqm= 52	--分解-筛选b
 swc_reback_sss_eqm= 53	--分解-筛选sss
 swc_reback_no_eqm= 54	--分解-筛选狗粮
 swc_reback_no = 55		--分解-筛选人物狗粮
+swc_old_event = 56		--event-转到复刻界面
 
 
 

@@ -731,4 +731,16 @@ swc[swc_reback_no] = {
 	view = {view_reback_waifu}
 }
 
+swc[swc_old_event] = {
+	body = {981,50,1086,74},
+	area = {1097,49,1114,66},
+	feature = {
+		{x=0,y=0,color=0x68cf04}
+	},
+	feature_off = {
+		{x=0,y=0,color=0x52a600}
+	},
+	view = {view_event}
+}
+
 return swc

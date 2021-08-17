@@ -736,22 +736,16 @@ view[view_title] = {
 view[view_event] = {
 	feature = {
 	{x=0,y=0,color=0x232323},
-	{x=-5,y=-7,color=0x232323},
-	{x=5,y=-8,color=0x232323},
-	{x=83,y=-19,color=0xffcc00},
-	{x=81,y=15,color=0xffcc00},
-	{x=1112,y=86,color=0xffc704},
-	{x=1121,y=115,color=0xffc704},
-	{x=1156,y=84,color=0xffc704},
-	{x=1207,y=86,color=0x90f927},
-	{x=1229,y=84,color=0x90f927},
-	{x=1231,y=147,color=0x90f927},
-	{x=1143,y=147,color=0x90f927},
-	{x=1187,y=144,color=0x90f927},
-	{x=1051,y=158,color=0xffd951},
-	{x=1060,y=155,color=0xffd951},
-	{x=995,y=165,color=0xffd951},
-	{x=974,y=145,color=0xffc704}
+	{x=84,y=-18,color=0xffcc00},
+	{x=76,y=23,color=0xffcc00},
+	{x=-14,y=22,color=0xffcc00},
+	{x=-15,y=-19,color=0xffcc00},
+	{x=1068,y=559,color=0xffd951},
+	{x=1029,y=540,color=0xffc704},
+	{x=1239,y=538,color=0xffc704},
+	{x=1242,y=601,color=0xffc703},
+	{x=1100,y=619,color=0xffd951},
+	{x=1028,y=617,color=0xfed951}
 	},
 	degree = 95
 }
