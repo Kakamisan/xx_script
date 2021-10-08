@@ -34,15 +34,13 @@ view[view_home] = {
 view[view_slc_dg_type] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=-7,y=7,color=0xffffff},
-	{x=2,y=15,color=0xffffff},
-	{x=129,y=1,color=0xffffff},
-	{x=100,y=11,color=0xffffff},
-	{x=1081,y=23,color=0x2db7c8},
-	{x=1233,y=528,color=0x44d0a7},
-	{x=-35,y=137,color=0x37d4d5},
-	{x=184,y=642,color=0x2fb7d9},
-	{x=-25,y=375,color=0x202c38}
+	{x=1244,y=521,color=0x44d0a7},
+	{x=1113,y=521,color=0x44d0a7},
+	{x=848,y=600,color=0x44cba6},
+	{x=1120,y=258,color=0x37b9e6},
+	{x=986,y=531,color=0x43b0ec},
+	{x=-24,y=130,color=0x37d4d4},
+	{x=123,y=130,color=0x3adfc6}
 	},
 	degree = 95
 }
@@ -72,24 +70,18 @@ view[view_slc_dg_main] = {
 view[view_slc_team] = {
 	feature = {
 	{x=0,y=0,color=0x111111},
-	{x=-4,y=-5,color=0x111111},
-	{x=82,y=-21,color=0x7d6400},
-	{x=73,y=19,color=0x7d6400},
-	{x=128,y=-20,color=0xb6b7c7},
-	{x=750,y=-16,color=0x61616d},
-	{x=1152,y=-4,color=0x828290},
-	{x=831,y=512,color=0xffcc00},
-	{x=831,y=524,color=0xffcc00},
-	{x=1171,y=527,color=0xffcc00},
-	{x=1173,y=518,color=0xffcc00},
-	{x=983,y=548,color=0x8cf522},
-	{x=987,y=547,color=0x8bf425},
-	{x=986,y=553,color=0x82ef17},
-	{x=1081,y=560,color=0x1fc4ed},
-	{x=1096,y=555,color=0x1cc9f3},
-	{x=9,y=312,color=0x447810},
-	{x=-2,y=367,color=0x0e6277},
-	{x=65,y=524,color=0x282924}
+	{x=-20,y=-10,color=0x7d6400},
+	{x=127,y=-12,color=0xb7b7c8},
+	{x=199,y=-13,color=0xffffff},
+	{x=1155,y=-1,color=0x828290},
+	{x=988,y=550,color=0x8df621},
+	{x=1091,y=558,color=0x1ccbf2},
+	{x=1125,y=520,color=0xffcc00},
+	{x=928,y=527,color=0xffcc00},
+	{x=875,y=521,color=0xffcc00},
+	{x=1175,y=522,color=0xffcc00},
+	{x=8,y=318,color=0x42760b},
+	{x=1,y=369,color=0x0e6377}
 	},
 	degree = 95
 }
@@ -834,20 +826,15 @@ view[view_reback_full] = {
 view[view_reback_eqm] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=127,y=0,color=0xfeffff},
-	{x=371,y=0,color=0x4de40e},
-	{x=533,y=-6,color=0x27bffb},
-	{x=1166,y=88,color=0xffcf04},
-	{x=1165,y=132,color=0xffcf04},
-	{x=1185,y=151,color=0xffffff},
-	{x=1215,y=646,color=0xffe269},
-	{x=1215,y=672,color=0xffe269},
-	{x=1056,y=672,color=0xffe269},
-	{x=1051,y=634,color=0xffe269},
-	{x=1064,y=70,color=0xffcf04},
-	{x=1064,y=157,color=0xffcf04},
-	{x=1212,y=101,color=0xffffff},
-	{x=1202,y=87,color=0x000000}
+	{x=23,y=-12,color=0x153451},
+	{x=1202,y=147,color=0x000000},
+	{x=1189,y=159,color=0xffffff},
+	{x=1214,y=135,color=0xffffff},
+	{x=1170,y=86,color=0xffcf04},
+	{x=1214,y=108,color=0xffffff},
+	{x=1070,y=163,color=0xffcf04},
+	{x=372,y=-2,color=0x47e20d},
+	{x=537,y=-9,color=0x27bffb}
 	},
 	degree = 95
 }

@@ -529,21 +529,21 @@ swc[swc_team_4] = {
 }
 
 swc[swc_auto_atk] = {
-	body = {1004-80,26,1021-80,44},
-	area = {1008-80,38,1012-80,39},
+	body = {912,24,935,45},
+	area = {920,38,922,40},
 	feature = {
-		{x=0,y=0,color=0xb5eb05}
+		{x=0,y=0,color=0xb0e600}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x303037}
+		{x=0,y=0,color=0x000000}
 	},
 	degree = 90,
 	view = {view_slc_team}
 }
 
 swc[swc_repeat] = {
-	body = {1141-80,25,1162-80,44},
-	area = {1146-80,38,1149-80,39},
+	body = {1050,25,1073,47},
+	area = {1058,38,1060,40},
 	feature = {
 		{x=0,y=0,color=0xb0e600}
 	},
@@ -623,13 +623,13 @@ swc[swc_reback_b] = {
 }
 
 swc[swc_change_eqm] = {
-	body = {244,106,381,132},
-	area = {354,109,378,129},
+	body = {257,104,373,133},
+	area = {371,106,380,117},
 	feature = {
 		{x=0,y=0,color=0xffce00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x11303e}
+		{x=0,y=0,color=0x112f3b}
 	},
 	view = {view_reback}
 }
