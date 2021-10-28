@@ -14,4 +14,16 @@ sld[sld_reback_up] = {
 	len			= 30
 }
 
+sld[sld_chapter_up] = {
+	from		= {1220,425,1235,445},
+	to			= {1212,235,1228,251},
+	len			= 30
+}
+
+sld[sld_chapter_down] = {
+	from		= {1212,235,1228,251},
+	to			= {1220,425,1235,445},
+	len			= 30
+}
+
 return sld

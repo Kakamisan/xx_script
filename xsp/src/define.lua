@@ -81,6 +81,8 @@ item_reback_scroll_bottom = 15	--分解滚动条-底端
 
 sld_sample			= 1
 sld_reback_up		= 1		--分解往上滑
+sld_chapter_up		= 2		--章节往上滑
+sld_chapter_down	= 3		--章节往下滑
 
 
 

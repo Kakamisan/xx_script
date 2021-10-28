@@ -67,7 +67,7 @@ func[view_home] = {
 
 func[view_slc_dg_type] = {
 	[target_atk] = function()
-		if is_event(cfg.chapter) then
+		if is_event() then
 			click_btn(btn_event)
 			return true
 		end
@@ -602,10 +602,10 @@ handle_change_target = {
 
 
 --章节是否是活动章节
-function is_event(C)
-	if C == 9
-	or C == 10
-	or C == 11
+function is_event()
+	if cfg.chapter == 10
+	or cfg.chapter == 11
+	or cfg.chapter == 12
 	then return true end
 	return false
 end
@@ -617,16 +617,38 @@ function is_old_event()
 	return false
 end
 
-
+chapter_sld_once = true
 function click_sub_fb()
+	if not is_event() and chapter_sld_once then 
+		drag(chapter_sld[cfg.chapter])
+		chapter_sld_once = false
+	end
 	if not swc_on(chapter_swc[cfg.chapter]) then return false end
 	if not swc_on(sub_fb_swc[cfg.subfb]) then return false end
 	sleep()
 	click_btn(btn_check_fb_state)
 	local ret = timeout(in_view,view_slc_team)
 	if not ret then return false end
+	chapter_sld_once = true
+	dlog("滑条重置")
 	return true
 end
+chapter_sld = {
+	[1] = sld_chapter_down,
+	[2] = sld_chapter_down,
+	[3] = sld_chapter_down,
+	[4] = sld_chapter_down,
+	[5] = sld_chapter_down,
+	[6] = sld_chapter_down,
+	[7] = sld_chapter_down,
+	[8] = sld_chapter_down,
+	[9] = sld_chapter_up
+	
+	--活动的
+--	[10] = sld_chapter_down,
+--	[11] = sld_chapter_down,
+--	[12] = sld_chapter_down
+}
 chapter_swc = {
 	[1] = swc_chapter1,
 	[2] = swc_chapter2,
@@ -636,10 +658,12 @@ chapter_swc = {
 	[6] = swc_chapter6,
 	[7] = swc_chapter7,
 	[8] = swc_chapter8,
+	[9] = swc_chapter8,
 	
-	[9] = swc_chapter1,
-	[10] = swc_chapter2,
-	[11] = swc_chapter3
+	--活动的
+	[10] = swc_chapter1,
+	[11] = swc_chapter2,
+	[12] = swc_chapter3
 }
 sub_fb_swc = {
 	[1] = swc_fb_1,

@@ -629,8 +629,9 @@ swc[swc_change_eqm] = {
 		{x=0,y=0,color=0xffce00}
 	},
 	feature_off = {
-		{x=0,y=0,color=0x112f3b}
+		{x=0,y=0,color=0x11303e}
 	},
+	degree = 95,
 	view = {view_reback}
 }
 

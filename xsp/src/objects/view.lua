@@ -34,13 +34,12 @@ view[view_home] = {
 view[view_slc_dg_type] = {
 	feature = {
 	{x=0,y=0,color=0xffffff},
-	{x=1244,y=521,color=0x44d0a7},
-	{x=1113,y=521,color=0x44d0a7},
-	{x=848,y=600,color=0x44cba6},
-	{x=1120,y=258,color=0x37b9e6},
-	{x=986,y=531,color=0x43b0ec},
-	{x=-24,y=130,color=0x37d4d4},
-	{x=123,y=130,color=0x3adfc6}
+	{x=-4,y=8,color=0xffffff},
+	{x=2,y=16,color=0xffffff},
+	{x=-31,y=137,color=0x37d4d4},
+	{x=1030,y=23,color=0x2eb7c7},
+	{x=1201,y=528,color=0x44d0a7},
+	{x=893,y=548,color=0x50c0f0}
 	},
 	degree = 95
 }
@@ -69,19 +68,15 @@ view[view_slc_dg_main] = {
 --4--选择队伍，队伍1，队伍5等
 view[view_slc_team] = {
 	feature = {
-	{x=0,y=0,color=0x111111},
-	{x=-20,y=-10,color=0x7d6400},
-	{x=127,y=-12,color=0xb7b7c8},
-	{x=199,y=-13,color=0xffffff},
-	{x=1155,y=-1,color=0x828290},
-	{x=988,y=550,color=0x8df621},
-	{x=1091,y=558,color=0x1ccbf2},
-	{x=1125,y=520,color=0xffcc00},
-	{x=928,y=527,color=0xffcc00},
-	{x=875,y=521,color=0xffcc00},
-	{x=1175,y=522,color=0xffcc00},
-	{x=8,y=318,color=0x42760b},
-	{x=1,y=369,color=0x0e6377}
+	{x=0,y=0,color=0x121111},
+	{x=78,y=-16,color=0x7e6400},
+	{x=128,y=-11,color=0xb6b7c7},
+	{x=194,y=-13,color=0xffffff},
+	{x=1145,y=524,color=0xfdca08},
+	{x=990,y=552,color=0x8df61b},
+	{x=1095,y=559,color=0x1ecbf3},
+	{x=11,y=316,color=0x44780d},
+	{x=-1,y=370,color=0x0e6377}
 	},
 	degree = 95
 }
