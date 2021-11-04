@@ -33,34 +33,39 @@ view[view_home] = {
 --2--选择副本类型：每日，主线，活动等
 view[view_slc_dg_type] = {
 	feature = {
-	{x=0,y=0,color=0xffffff},
-	{x=-4,y=8,color=0xffffff},
-	{x=2,y=16,color=0xffffff},
-	{x=-31,y=137,color=0x37d4d4},
-	{x=1030,y=23,color=0x2eb7c7},
-	{x=1201,y=528,color=0x44d0a7},
-	{x=893,y=548,color=0x50c0f0}
+	{x=0,y=0,color=0x44d0a7},
+	{x=-1241,y=-514,color=0xffffff},
+	{x=-1238,y=-529,color=0xffffff},
+	{x=-1238,y=-528,color=0xffffff},
+	{x=-1241,y=-526,color=0xffffff},
+	{x=-1244,y=-523,color=0xffffff},
+	{x=-1246,y=-521,color=0xffffff},
+	{x=-1241,y=-517,color=0xffffff},
+	{x=-1239,y=-515,color=0xffffff},
+	{x=-1238,y=-511,color=0xffffff}
 	},
-	degree = 95
+	degree = 90
 }
 
 --3--选择主线副本，6-8，5-8e等
 view[view_slc_dg_main] = {
 	feature = {
-	{x=0,y=0,color=0x242323},
-	{x=7,y=9,color=0x242323},
-	{x=-1,y=15,color=0x242222},
-	{x=87,y=-13,color=0xffcc00},
-	{x=1157,y=632,color=0xffc704},
-	{x=1242,y=654,color=0xffc703},
-	{x=514,y=502,color=0xffc704},
-	{x=540,y=529,color=0xffc704},
-	{x=238,y=530,color=0xffc900},
-	{x=190,y=569,color=0x8dffff},
-	{x=1,y=375,color=0x1cc9f2},
-	{x=14,y=320,color=0x8ff51e},
-	{x=33,y=203,color=0x30a0df},
-	{x=113,y=209,color=0xffffff}
+	{x=0,y=0,color=0x232323},
+	{x=3,y=4,color=0x232323},
+	{x=9,y=9,color=0x232323},
+	{x=11,y=-1,color=0x222222},
+	{x=4,y=7,color=0x232323},
+	{x=0,y=11,color=0x232323},
+	{x=1094,y=507,color=0xffffff},
+	{x=1089,y=516,color=0xffffff},
+	{x=1100,y=518,color=0xffffff},
+	{x=37,y=231,color=0xffffff},
+	{x=113,y=206,color=0xffffff},
+	{x=78,y=204,color=0xffffff},
+	{x=12,y=318,color=0x8cf622},
+	{x=12,y=322,color=0x85f117},
+	{x=-1,y=373,color=0x20c9f3},
+	{x=3,y=375,color=0x20c8f3}
 	},
 	degree = 93
 }

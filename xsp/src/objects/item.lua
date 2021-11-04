@@ -204,7 +204,7 @@ item[item_A_eqm] = {
 
 item[item_B_eqm] = {
 	body = {618-558,432-433,630-558,443-433},
-	area = {158,80,1079,685},
+	area = {70,80,1079,685},
 	feature = {
 	{x=0,y=0,color=0x25a813},
 	{x=-2,y=3,color=0x24a713},

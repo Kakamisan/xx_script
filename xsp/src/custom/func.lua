@@ -471,10 +471,10 @@ func[view_event] = {
 			end
 			--点标签点两次增加容错
 			for i=1,2,1 do
-			if cfg.old_event == 1 then click_btn(btn_old_event_1)
-			elseif cfg.old_event == 2 then click_btn(btn_old_event_2)
-			elseif cfg.old_event == 3 then click_btn(btn_old_event_3)
-			elseif cfg.old_event == 4 then click_btn(btn_old_event_4)
+			if cfg.old_event == 2 then click_btn(btn_old_event_1)
+			elseif cfg.old_event == 3 then click_btn(btn_old_event_2)
+			elseif cfg.old_event == 4 then click_btn(btn_old_event_3)
+			elseif cfg.old_event == 5 then click_btn(btn_old_event_4)
 			else end
 			sleep()
 			end
@@ -603,16 +603,14 @@ handle_change_target = {
 
 --章节是否是活动章节
 function is_event()
-	if cfg.chapter == 10
-	or cfg.chapter == 11
-	or cfg.chapter == 12
+	if cfg.old_event > 0
 	then return true end
 	return false
 end
 
 --章节是否复刻活动
 function is_old_event()
-	if cfg.old_event > 0
+	if cfg.old_event > 1
 	then return true end
 	return false
 end
@@ -658,12 +656,12 @@ chapter_swc = {
 	[6] = swc_chapter6,
 	[7] = swc_chapter7,
 	[8] = swc_chapter8,
-	[9] = swc_chapter8,
+	[9] = swc_chapter8
 	
 	--活动的
-	[10] = swc_chapter1,
-	[11] = swc_chapter2,
-	[12] = swc_chapter3
+--	[10] = swc_chapter1,
+--	[11] = swc_chapter2,
+--	[12] = swc_chapter3
 }
 sub_fb_swc = {
 	[1] = swc_fb_1,
